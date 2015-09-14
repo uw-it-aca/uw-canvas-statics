@@ -1,0 +1,63 @@
+/* UW color scheme*/
+#header {
+  background: #382465;
+}
+
+#header.no-user { height: 70px; }
+
+/* UW logo */
+#header-logo, #header.no-user #header-logo {
+  background: url("uw-canvas-logo.png") no-repeat scroll 0 0 transparent;
+  top: 10px;
+  height: 49px;
+  left: 11px;
+  width: 164px;
+}
+
+/* secondary UW logo */
+#header-logo-secondary {
+  background: none;
+  top: 25px;
+  height: 45px;
+  position: absolute;
+  right: 13px;
+  width: 374px;
+  display: block;
+  opacity: .9;
+  color: #fff;
+  text-align: center;
+}
+
+#header-logo-secondary em { margin-left: 4px; margin-right: 6px; }
+#header-logo-secondary span { margin: 0 8px; }
+
+/* make room for the menu */
+#menu { margin-left: 200px; }
+
+/* custom menu text colors */
+.menu-item .menu-item-title, .menu-item .menu-item-no-drop { color: #bdb7c8; }
+.menu-item.hover .menu-item-title { color: #444; }
+
+/* custom styles for the profile bar (top right) */
+#identity { background: #655687; }
+#identity .user_name a{ color: #fff !important; }
+#identity a { color: #bdb7c8; }
+#identity #feedback_link{ border-color: #333; background-color: #333; }
+#identity .inbox a .unread-messages-count { background-color: #333; }
+
+/* login page */
+#modal-box {
+  background: url("uw-canvas-login.png") no-repeat !important;
+  color: #bdb7c8 !important;
+}
+#modal-box label {}
+#modal-box a.forgot_password_link { color: #fff !important; }
+
+/* remove the instructure registration banner on splash login screen */
+#register_link { display: none; }
+
+/* error messaging on login screen, and elsewhere */
+.error_box .error_text { color: #000; font-weight: bold; }
+
+/* hide conclude course links */
+a[href$="confirm_action?event=conclude"] { display: none !important; }

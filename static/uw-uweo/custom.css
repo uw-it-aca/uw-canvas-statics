@@ -1,0 +1,727 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Orig DLD Course CSS */
+code {
+    font-family: "Courier New", Courier, monospace;
+    color: #990000;
+    background: transparent;
+	border: none;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+pre {
+	color:#990000;
+	white-space: pre;
+	font-size: 95%;
+	background: #F3F3E9;
+	border: thin solid #85754d;
+	padding: 6px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+}
+
+/* *-*-*-*- Tag specific class implementations  *-*-* * */
+
+img.leftmargin {
+	margin: 0 0 0 15px;
+}
+
+img.banner {
+	margin: 0 0 0 0;
+}
+
+ul.plain {
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+
+/* *-*-*-*-    Specialized Classes   *-*-* * */
+
+.alphaLower {
+	list-style-type: lower-alpha;
+}
+
+.alphaUpper {
+	list-style-type: upper-alpha;
+}
+
+.bgnone {
+	background: none;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.boldi{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.border {
+	border: thin solid #85754d;
+	border-collapse: collapse;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	padding: 3px;
+}
+
+.border td, .border th  {
+	border: thin solid #85754d;
+	padding: 8px;
+	margin: 4px;
+}
+
+.breakhere { /*page break*/
+	page-break-before: always;
+}
+
+.caption {
+	font-size: 95%;
+	font-style: italic;
+	text-align: left;
+}
+
+.centered, .center {
+ 	text-align: center;
+}
+
+.clear, .headerBar {
+	clear: both;
+}
+
+.copyright {
+	clear: both;
+	font-size: 95%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.decimal {
+	list-style-type: decimal;
+}
+
+.floatleft{
+	 float:left;
+	 padding: 8px;
+}
+
+.floatright{
+	float:right;
+	padding: 8px;
+}
+
+.fontNormal {
+	font-weight: normal;
+}
+
+.foreign {
+	font-style: oblique;
+	color: #6A6A00;
+}
+
+.frontpageBlock {
+	float: left;
+	width: 200px;
+	height: 240px;
+	padding: 5px 5px 50px 5px;
+	text-align: center;
+}
+
+.giant {
+	font-size: 200%;
+}
+
+.halfBlock {
+	width: 50%;
+	margin-left: 75px;
+}
+
+.highlight{
+	background: #FFFF99;
+}
+
+.indent {
+	margin-left: 50px;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.keyterm {
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-style: oblique;
+	color: #336666;
+	background: url("img/key2.png") no-repeat top left;
+	text-indent: 20px;
+}
+
+.left {
+ 	text-align: left;
+}
+
+.lineheight {
+	line-height: 200%;
+}
+
+.math {
+    font-family: "Courier New", Courier, monospace;
+	font-size: 90%;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.noBottomPad {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.nopad {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.note {
+	color: #333399;
+	font-weight: normal;
+	font-size: 90%;
+	line-height: 110%;
+}
+
+.noTopPad {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.oddrow {
+	background: #F3F3E9;
+ 	color: #000000;
+}
+
+.oddrow a:link,
+.oddrow a:visited,
+.oddrow a:hover {color: #000000;}
+
+.oneM, .oneEm, .oneem, .oneEM {
+	font-size: 1em;
+}
+
+.onepttwoM, .onepttwoEm, .onepttwoem, .onepttwoEM {
+	font-size: 1.2em;
+}
+
+.oneptfiveM, .oneptfiveEm, .oneptfiveem, .oneptfiveEM {
+	font-size: 1.5em;
+}
+
+.padded {
+	padding-bottom: 14px;
+}
+
+.padRight {
+	padding-right: 50px;
+}
+
+.quote {
+	float: right;
+	width: 200px;
+	color: #003366;
+	margin-left: 8px;
+	border-top: thin solid #CCCCFF;
+	border-right: none;
+	border-bottom: thin solid #CCCCFF;
+	border-left: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.quote h4,
+.quote h5 {
+	color: #003366;
+}
+
+.quoteMark {
+	font-size: 200%;
+}
+
+.quote hr {
+	color: #003366;
+}
+
+.referenceList {
+	text-indent: -1em;
+	margin-left: 1em;
+	font-size: 90%;
+	list-style-type: none;
+}
+
+.right{
+ 	text-align: right;
+}
+
+.romanLower {
+	list-style-type: lower-roman;
+}
+
+.romanUpper {
+	list-style-type: upper-roman;
+}
+
+.rowhead {
+	background: #e8e3d3;
+}
+
+.singlespace {
+	line-height: 110%;
+}
+
+.small {
+	font-size: 90%;
+}
+
+.title{
+ 	text-align: left;
+	font-weight: bold;
+}
+
+.top{
+	vertical-align: top;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+
+/* *-*-*-*-  Positioning Elements    *-*-* * */
+
+#level2 {
+	position: relative;
+	background: none;
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+#EOmain {
+	margin-left:10px;
+	margin-right:179px;
+	padding-right: 5px;
+	background: none;
+	background-color: #FFFFFF;
+}
+
+/* *-*-*-*- right-hand and other boxes & inline icons  *-*-* * */
+
+#lesson-navigation {
+	list-style-type: none;
+	float: right;
+	width: 20%;
+	background-color: #F3F3E9;
+	padding: 5px 5px 20px 5px;
+	text-align: left;
+	border-radius: 4px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	border: outset;
+	margin-left: 10px;
+}
+
+#lesson-navigation li {
+	line-height: 200%;
+}
+
+.actionBox, .diacriticalBox, .importantBox, .infoBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox {
+	float:right;
+	width: 160px;
+	right: 10px;
+	font-size: 95%;
+	line-height: 150%;
+	padding: 8px;
+	z-index: 20;
+	border: thin solid #85754d;
+	border: outset;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+ }
+
+.actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox {
+   	background-color: #F3F3E9;
+}
+
+.blueBox {
+    background-color: #F0F4FF;
+}
+
+.grayBox, .instructorBox, .fullBox {
+   	background-color: #EEEEEE;
+}
+
+.orangeBox, .instructorImportantBox, .fullImportantBox {
+   	background-color: #FAF1D6;
+}
+
+.purpleBox, .fullActionBox {
+   	background-color: #f3efff;
+}
+
+.keytermBox {
+	background-color: #DDEEEE;
+
+}
+
+.actionBox p, .infoBox p, .importantBox p, .keytermBox p, .diacriticalBox p {
+	line-height: 150%;
+	margin: 1em 1em 1em .5em;
+}
+
+.action, .alertIcon, .assignment, .audio, .book, .discussion, .hardhat, .hourglass, .important, .info, .msite, .popup, .portfolio, .post, .question, .test, .tick, .turn, .video {
+	text-indent: 30px;
+	line-height: 150%;
+}
+
+.action {
+	background: url("img/action.png") no-repeat top left;
+}
+
+.actionBox h6, .book {
+	background: url("img/book.png") no-repeat top left;
+}
+
+.alertIcon {
+	background: url("img/alert.png") no-repeat top left;
+}
+
+.assignment {
+	background: url("img/assignment.png") no-repeat top left;
+}
+
+.diacriticalBox h6, .audio {
+	background: url("img/audio.png") no-repeat top left;
+}
+
+.discussion {
+	background: url("img/discussion.png") no-repeat top left;
+}
+
+.hardhat {
+	background: url("img/hardhat.png") no-repeat top left;
+}
+
+.hourglass {
+	background: url("img/hourglass.png") no-repeat top left;
+}
+
+.importantBox h6, .important {
+	background: url("img/important.png") no-repeat top left;
+}
+
+.infoBox h6, .info {
+	background: url("img/info.png") no-repeat top left;
+}
+
+.keytermBox h6 {
+	background: url("img/key.png") no-repeat top left;
+}
+
+.msite {
+	background: url("img/mediasite.png") no-repeat top left;
+}
+
+.popup {
+	background: url("img/popup.png") no-repeat top left;
+}
+
+.popuplink {
+	background: url("img/popup.png") no-repeat;
+	float: right;
+}
+
+.portfolio, .portfolioIcon {
+	background: url("img/portfolio.png") no-repeat top left;
+}
+
+.post {
+	background: url("img/post.png") no-repeat top left;
+}
+
+.question {
+	background: url("img/question.png") no-repeat top left;
+}
+
+.test {
+	background: url("img/test.png") no-repeat top left;
+}
+
+.tick {
+	background: url("img/tick.png") no-repeat top left;
+}
+
+.turn {
+	background: url("img/turn.png") no-repeat top left;
+}
+
+.video {
+	background: url("img/video.png") no-repeat top left;
+}
+
+.actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li {
+	padding-bottom: 2px;
+}
+
+.actionBox ul, .diacriticalBox ul, .importantBox ul, .infoBox ul, .instructorBox ul, .keytermBox ul {
+	margin: 1em 1em 1em 0em;
+	padding-left: 1.5em;
+}
+
+.actionBox ol, .diacriticalBox ol, .importantBox ol, .infoBox ol, .instructorBox ol, .keytermBox ol {
+	margin: 1em 1em 1em 0em;
+	padding-left: 1.5em;
+}
+
+.actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5 {
+    background: clear;
+    color: #000000;
+	font-weight: bold;
+}
+
+.actionBox h6, .diacriticalBox h6, .importantBox h6, .infoBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6 {
+	text-indent: 30px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 105%;
+    background: clear;
+    color: #000000;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.actionBox img, .diacriticalBox img, .infoBox img, .importantBox img, .keytermBox img {
+	margin-right: 3px;
+	margin-bottom: 0px;
+}
+
+.instructorBox img {
+	margin: 10px 15px 0px 15px;
+}
+
+.instructorBox, .instructorImportantBox, .fullBox, .fullActionBox, .fullImportantBox  { /*sidebar that flexs to size of instructor photo or email width*/
+	z-index: 0;
+	border: outset;
+	border-width: 1px;
+	float: right;
+	margin-left: 8px;
+	margin-bottom: 8px;
+	margin-right: 0px;
+	width: auto;
+	position: relative;
+	padding: 5px;
+	line-height: 120%;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+}
+
+.bigBox {
+	background: #F3F3E9;
+	border: thin solid #85754d;
+	padding: 8px;
+	margin: 8px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+	clear: both;
+}
+
+.readingBox {
+ 	border: groove #6A6A00;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color: #FFFFFF;
+	padding-top: 8px;
+	margin-top: 8px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius: 10px;
+}
+
+div.readingBox h4 {
+	margin-bottom: 0pt;
+	padding-bottom: 0pt;
+	margin-top: 0pt;
+	padding-top: 4pt;
+	color: #6A6A00;
+}
+
+div.readingBox p {
+	margin-top: 0pt;
+	padding-top: 0pt;
+}
+
+
+.video-container,
+.video-container43,
+.video-mediaAmp {
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-mediaAmp iframe,
+.video-mediaAmp object,
+.video-mediaAmp embed,
+.video-mediaAmp img  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	max-width: 640px;
+	max-height: 360px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container img  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	max-width: 640px;
+	max-height: 360px;
+}
+
+.video-container43 iframe,
+.video-container43 object,
+.video-container43 embed,
+.video-container43 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	max-width: 640px;
+	max-height: 480px;
+}
+
+.image-container {
+    position: relative;
+	overflow: auto;
+	min-width: 150px;
+	height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+	min-width: 150px;
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.image-container-full {
+    position: relative;
+	overflow: auto;
+	min-width: 150px;
+	height: auto;
+}
+
+.image-container-full img {
+    width: 100%;
+    height: auto;
+	min-width: 150px;
+	max-width: 100%;
+	max-height: auto;
+}
+
+.image-container-square {
+    position: relative;
+	overflow: auto;
+	min-width: 200px;
+	height: auto;
+}
+
+.image-container-square img {
+    width: 50%;
+    height: auto;
+	min-width: 200px;
+	min-height: 200px;
+	max-width: 400px;
+	max-height: 400px;
+}
+
+.image-container-tall {
+    position: relative;
+	overflow: auto;
+	width: 100%;
+}
+
+.image-container-tall img {
+    width: 35%;
+    height: auto;
+	min-width: 150px;
+	max-width: 267px;
+	max-height: 300px;
+}
+
+.image-container-zero {
+    position: relative;
+	overflow: auto;
+	min-width: 150px;
+	height: auto;
+}
+
+.image-container-zero img {
+    height: auto;
+	width: 100%;
+	max-height: 200px;
+	max-width: 300px;
+}
+
+.zeronav ul {
+	list-style: none;
+	padding: 4px;
+	margin: 4px;
+	text-indent: 0;
+}
+
+.zeronav li {
+	display: inline;
+	margin-top: 0em;
+	font-size: 95%;
+	color:#65567F;
+	font-weight: bold;
+	background-color: #F2F2F2;
+	padding: 4px;
+	border: #65567F thin solid;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.zeronav a {
+	color:#65567F;
+	text-decoration: none;
+}
+
+.zeronav a:hover {
+	color:#D7A804;
+	text-decoration: none;
+}
