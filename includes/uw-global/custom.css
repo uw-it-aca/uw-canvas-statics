@@ -46,12 +46,15 @@
 #identity .inbox a .unread-messages-count { background-color: #333; }
 
 /* login page */
-#modal-box {
-  background: url("uw-canvas-login.png") no-repeat !important;
+.login-box {
+  background: url("uw-canvas-login.png") no-repeat -10px -5px !important;
   color: #bdb7c8 !important;
+  width: 620px !important;
+  height: 330px !important;
 }
-#modal-box label {}
-#modal-box a.forgot_password_link { color: #fff !important; }
+.login-box h1 { background-position: 0 0 !important; }
+.login-box label {}
+.login-box a.forgot_password_link { color: #fff !important; }
 
 /* remove the instructure registration banner on splash login screen */
 #register_link { display: none; }
