@@ -2,8 +2,12 @@
 /* CSS Document */
 
 /* Orig DLD Course CSS */
+cite {
+	font-style: italic;
+}
+
 code {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
     color: #990000;
     background: transparent;
 	border: none;
@@ -163,6 +167,7 @@ ul.plain {
 	color: #336666;
 	background: url("img/key2.png") no-repeat top left;
 	text-indent: 20px;
+    display: inline-block;
 }
 
 .left {
@@ -246,6 +251,7 @@ ul.plain {
 	border-left: none;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	font-size: 110%;
 }
 
 .quote h4,
@@ -325,7 +331,7 @@ ul.plain {
 
 /* *-*-*-*- right-hand and other boxes & inline icons  *-*-* * */
 
-#lesson-navigation {
+#lesson-navigation, #course-navigation {
 	list-style-type: none;
 	float: right;
 	width: 20%;
@@ -350,6 +356,7 @@ ul.plain {
 	font-size: 95%;
 	line-height: 150%;
 	padding: 8px;
+	margin: 8px;
 	z-index: 20;
 	border: thin solid #85754d;
 	border: outset;
@@ -388,16 +395,17 @@ ul.plain {
 	margin: 1em 1em 1em .5em;
 }
 
-.action, .alertIcon, .assignment, .audio, .book, .discussion, .hardhat, .hourglass, .important, .info, .msite, .popup, .portfolio, .post, .question, .test, .tick, .turn, .video {
+.actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .bookIcon, .discussionIcon, .hardhatIcon, .hourglassIcon, .importantIcon, .infoIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .testIcon, .tickIcon, .turnIcon, .videoIcon {
 	text-indent: 30px;
-	line-height: 150%;
+	line-height: 200%;
+    display: inline-block;
 }
 
-.action {
+.actionIcon {
 	background: url("img/action.png") no-repeat top left;
 }
 
-.actionBox h6, .book {
+.actionBox h6, .bookIcon {
 	background: url("img/book.png") no-repeat top left;
 }
 
@@ -405,31 +413,31 @@ ul.plain {
 	background: url("img/alert.png") no-repeat top left;
 }
 
-.assignment {
+.assignmentIcon {
 	background: url("img/assignment.png") no-repeat top left;
 }
 
-.diacriticalBox h6, .audio {
+.diacriticalBox h6, .audioIcon {
 	background: url("img/audio.png") no-repeat top left;
 }
 
-.discussion {
+.discussionIcon {
 	background: url("img/discussion.png") no-repeat top left;
 }
 
-.hardhat {
+.hardhatIcon {
 	background: url("img/hardhat.png") no-repeat top left;
 }
 
-.hourglass {
+.hourglassIcon {
 	background: url("img/hourglass.png") no-repeat top left;
 }
 
-.importantBox h6, .important {
+.importantBox h6, .importantIcon {
 	background: url("img/important.png") no-repeat top left;
 }
 
-.infoBox h6, .info {
+.infoBox h6, .infoIcon {
 	background: url("img/info.png") no-repeat top left;
 }
 
@@ -441,40 +449,35 @@ ul.plain {
 	background: url("img/mediasite.png") no-repeat top left;
 }
 
-.popup {
+.popupIcon {
 	background: url("img/popup.png") no-repeat top left;
-}
-
-.popuplink {
-	background: url("img/popup.png") no-repeat;
-	float: right;
 }
 
 .portfolio, .portfolioIcon {
 	background: url("img/portfolio.png") no-repeat top left;
 }
 
-.post {
+.postIcon {
 	background: url("img/post.png") no-repeat top left;
 }
 
-.question {
+.questionIcon {
 	background: url("img/question.png") no-repeat top left;
 }
 
-.test {
+.testIcon {
 	background: url("img/test.png") no-repeat top left;
 }
 
-.tick {
+.tickIcon {
 	background: url("img/tick.png") no-repeat top left;
 }
 
-.turn {
+.turnIcon {
 	background: url("img/turn.png") no-repeat top left;
 }
 
-.video {
+.videoIcon {
 	background: url("img/video.png") no-repeat top left;
 }
 
@@ -503,6 +506,7 @@ ul.plain {
 	padding-bottom: 4px;
 	font-weight: bold;
 	font-size: 105%;
+	line-height: 200%;
     background: clear;
     color: #000000;
 	margin-bottom: 0px;
