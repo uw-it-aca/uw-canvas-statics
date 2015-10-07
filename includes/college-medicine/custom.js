@@ -9,11 +9,22 @@
         }
     }
 
+    function loadEvaluationKit() {
+        /*EvaluationKIT START*/
+        var evalkit_jshosted = document.createElement('script');
+        evalkit_jshosted.setAttribute('type', 'text/javascript');
+        evalkit_jshosted.setAttribute('src', 'https://uwsom.evaluationkit.com/CanvasScripts/uwsom.js?v=5');
+        document.getElementsByTagName('head')[0].appendChild(evalkit_jshosted);
+        /*EvaluationKIT END*/
+    }
+
     $(document).ready(function () {
         setTimeout(function () {
             if ($("button.add_module_link").length) {
                 $(document).on("ajaxSend", customizeExternalToolsURL);
             }
         }, 1000);
+
+        loadEvaluationKit();
     });
 }(jQuery));
