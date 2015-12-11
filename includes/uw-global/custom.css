@@ -64,3 +64,6 @@
 
 /* hide conclude course links */
 a[href$="confirm_action?event=conclude"] { display: none !important; }
+
+/* hide course photos link */
+a.context_external_tool_27411 { display: none !important; }
