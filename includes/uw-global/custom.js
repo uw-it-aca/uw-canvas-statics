@@ -15,9 +15,7 @@
         app_center_info: 'Apps are an easy way to add new features to Canvas. They can be added to individual courses, or to all courses in an account. Once configured, you can link to them through course modules and create assignments for assessment tools.<br/><br/>UW-IT has reviewed the third-party apps listed below, and found they meet our established minimum criteria. <a href="http://www.washington.edu/itconnect/learn/tools/canvas/canvas-help-for-instructors/canvas-app-center/" target="_blank">Find more information</a> or get help with the App Center.',
         gpa_scale_info: 'Use GPA Scale Grading to create a UW 4.0 grading scale. To create your scale, in the left-hand course navigation, go to &quot;UW 4.0 Grade Scale&quot;. Once you create a scale, it will be added to this course and ready for you to apply to assignments. To learn more, see <a href="http://www.washington.edu/itconnect/learn/tools/canvas/canvas-help-for-instructors/assignments-grading/grading/4-0-grade-scale/" target="_blank">Use a 4.0 Grade Scale for Canvas Assignments</a>.'
     },
-        app_center_attempts = 0,
-        add_users_external_id = "aaaaa",
-        course_photos_external_id = "bbbbb";
+        app_center_attempts = 0;
 
     function gettext(key) {
         return (catalog.hasOwnProperty(key)) ? catalog[key] : "";
@@ -30,15 +28,6 @@
 
         // In case of input errors, hide the example text
         $("div.alert-error").find("small:first").hide();
-    }
-
-    function hijackAddUsersButton(e) {
-        var tool = $('.context_external_tool_' + add_users_external_id);
-        if (tool.length === 1) {
-            e.preventDefault();
-            e.stopPropagation();
-            window.location = tool.attr('href');
-        }
     }
 
     // Set up the custom "Add People" dialog
@@ -102,17 +91,6 @@
         $("#ungraded").closest("div").remove();
     }
 
-    function addCoursePhotosButton() {
-        var link = $('a.context_external_tool_' + course_photos_external_id).first(),
-            btn;
-        if (link.length === 1) {
-            btn = $('<a/>').addClass('btn button-sidebar-wide')
-                   .attr('href', link.attr('href'))
-                   .html('<i class="icon-student-view"></i> ' + link.html());
-            $('#right-side div').append(btn);
-        }
-    }
-
     $(document).ready(function () {
         setTimeout(function () {
             var href = window.location.href;
@@ -127,9 +105,7 @@
 
             } else if (href.match(/\/courses\/\d+\/users$/)) {
                 // Course people page
-                //$("#addUsers").on("click", customizeAddPeopleDialog);
-                $("#addUsers").off("click").on("click", hijackAddUsersButton);
-                addCoursePhotosButton();
+                $("#addUsers").on("click", customizeAddPeopleDialog);
 
             } else if (href.match(/\/courses\/\d+\/gradebook/)) {
                 // Course gradebook page
