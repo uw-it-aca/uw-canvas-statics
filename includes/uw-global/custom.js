@@ -15,40 +15,14 @@
         app_center_info: 'Apps are an easy way to add new features to Canvas. They can be added to individual courses, or to all courses in an account. Once configured, you can link to them through course modules and create assignments for assessment tools.<br/><br/>UW-IT has reviewed the third-party apps listed below, and found they meet our established minimum criteria. <a href="http://www.washington.edu/itconnect/learn/tools/canvas/canvas-help-for-instructors/canvas-app-center/" target="_blank">Find more information</a> or get help with the App Center.',
         gpa_scale_info: 'Use GPA Scale Grading to create a UW 4.0 grading scale. To create your scale, in the left-hand course navigation, go to &quot;UW 4.0 Grade Scale&quot;. Once you create a scale, it will be added to this course and ready for you to apply to assignments. To learn more, see <a href="http://www.washington.edu/itconnect/learn/tools/canvas/canvas-help-for-instructors/assignments-grading/grading/4-0-grade-scale/" target="_blank">Use a 4.0 Grade Scale for Canvas Assignments</a>.'
     },
-        app_center_attempts = 0;
+        app_center_attempts = 0,
+        add_users_external_id = "30967",//'30979',//
+        uw_groups_external_id = "8655",
+        course_photos_external_id = "30978",
+        window_message;
 
     function gettext(key) {
         return (catalog.hasOwnProperty(key)) ? catalog[key] : "";
-    }
-
-    function customizeAddPeopleButtons() {
-        $("button.createUsersStartOver, button.createUsersStartOverFrd")
-            .off("click", customizeAddPeopleDialog)
-            .on("click", customizeAddPeopleDialog);
-
-        // In case of input errors, hide the example text
-        $("div.alert-error").find("small:first").hide();
-    }
-
-    // Set up the custom "Add People" dialog
-    function customizeAddPeopleDialog() {
-        setTimeout(function () {
-            $("#create-users-step-1").children("p")
-                                     .html(gettext("add_people_label"));
-            $("#user_list_textarea").attr("placeholder", gettext("add_people_placeholder"));
-            if ($("div.add_people_uwnetids").length === 0) {
-                $("#user_list_textarea").after(gettext("add_people_extra"));
-            }
-            $("#next-step").click(function () {
-                setTimeout(function () {
-                    $("div.error_box[id='']").find("div.error_text")
-                                             .html(gettext("add_people_error"));
-                }, 50);
-            });
-        }, 50);
-
-        $(document).off("ajaxComplete", customizeAddPeopleButtons)
-                   .on("ajaxComplete", customizeAddPeopleButtons);
     }
 
     // Custom text for App Center
@@ -91,28 +65,182 @@
         $("#ungraded").closest("div").remove();
     }
 
+    function hijackAddUsersButton() {
+      var $tool = $('.context_external_tool_' + add_users_external_id);
+        if ($tool.length !== 1) {
+          return;
+      }
+
+        $("#addUsers")
+            .off("click")
+            .on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if ($('#uw-add-people-slightofhand').length === 1) {
+                    $('#uw-add-people-slightofhand').find('.ReactModalPortal').show();
+                } else {
+                    $(e.target).attr('disabled', true);
+                    $('<div id="uw-add-people-slightofhand"><iframe style="height:1px;width:1px;" '
+                      + 'src="' + $tool.attr('href') + '"'
+                      + '></iframe><div id="uw_add_users"></div></div>').appendTo('body');
+                }
+            });
+    }
+
+    function addCoursePhotosButton(tool_id) {
+        moveNavToRightButton(tool_id, 'icon-student-view');
+    }
+
+    function addUWGroupsButton(tool_id) {
+        moveNavToRightButton(tool_id, 'uw-groups-button-image');
+    }
+
+    function moveNavToRightButton(nav_id, icon, position) {
+        var nav = $('a.context_external_tool_' + nav_id);
+        if (nav.length === 1) {
+            addRightButtonTool(icon, nav.text(), nav.attr('href'), position);
+        }
+    }
+
+    function addBackToPeopleButton() {
+        var m = window.location.pathname.match(/^\/courses\/(\d+)\//);
+        if (m) {
+            addRightButtonTool('icon-arrow-left',
+                               'Back to People',
+                               '/courses/' + m[1] + '/users');
+        }
+    }
+
+    function addRightButtonTool(icon, label, href, position) {
+        var $right = $('#not_right_side #right-side-wrapper'),
+            $node,
+            $a;
+
+        $node = $('<i></i>').addClass(icon);
+        $a = $('<a></a>')
+            .attr('href', href)
+            .addClass('btn button-sidebar-wide')
+            .append($node)
+            .append(document.createTextNode(' ' + label));
+        if ($right.length === 0) {
+            $right = $('<div></div>').attr('id', 'right-side-wrapper');
+            $('#not_right_side').append($right);
+        }
+
+        if ($right.find('> aside').length === 0) {
+            $node = $('<aside></aside>')
+                .addClass('right-side')
+                .attr('role', 'complementary');
+
+            $right.append($node);
+        }
+
+        if ($right.find('> aside > div').length === 0) {
+            $node = $('<div></div>')
+                .addClass('rs-margin-lr rs-margin-top');
+
+            $right.find('> aside').append($node);
+        }
+
+        if (position && position == 1) {
+            $right.find('> aside > div a:first-child').before($a);
+        } else if (position && position == 2) {
+            $right.find('> aside > div a:first-child').after($a);
+        } else {
+            $right.find('> aside > div').append($a);
+        }
+
+        $('body').addClass('with-right-side');
+    }
+
+    function addPeopleBreadCrumbs(tool_id) {
+        var $ul = $('#breadcrumbs ul'),
+            $li,
+            $a,
+            text;
+
+        if ($ul.length) {
+            $li = $('<li></li>');
+            $a = $('<a></a>').attr('href', $('a.people').attr('href'));
+            $a.append($('<span></span>').addClass('ellipsible').text('People'));
+            $li.append($a);
+            $ul.append($li);
+            $li = $('<li></li>');
+            $li.text($('a.context_external_tool_' + tool_id).text());
+            $ul.append($li);
+        }
+    }
+
+    function isSpecialToolPage(ids) {
+        var tool_id = 0;
+
+        $.each(ids, function () {
+            if ($('body.context_external_tool_' + this).length === 1) {
+                tool_id = this;
+                return false;
+            }
+        });
+
+        return tool_id;
+    }
+
     $(document).ready(function () {
         setTimeout(function () {
-            var href = window.location.href;
+            var href = window.location.href,
+                tool_id;
+
             if (href.match(/\/settings$/)) {
                 // Course or account settings page
                 customizePublicSyllabusLabel();
                 customizeAppCenterInfo();
-
             } else if (href.match(/\/courses\/\d+\/assignments/)) {
                 // Course assignments page
                 $("#gpa-scale-question").on("click", customizeGPAScaleDialog);
-
-            } else if (href.match(/\/courses\/\d+\/users$/)) {
+            } else if (href.match(/\/courses\/\d+\/users(\/(#.*)?)?$/)) {
                 // Course people page
-                $("#addUsers").on("click", customizeAddPeopleDialog);
-
+                addCoursePhotosButton(course_photos_external_id);
+                addUWGroupsButton(uw_groups_external_id);
+                hijackAddUsersButton();
             } else if (href.match(/\/courses\/\d+\/gradebook/)) {
                 // Course gradebook page
                 customizeGradebookMenu();
-
+            } else {
+                tool_id = isSpecialToolPage([uw_groups_external_id,
+                                             course_photos_external_id]);
+                if (tool_id !== 0) {
+                    // UW Groups LTI or Course Photos LTI
+                    addPeopleBreadCrumbs(tool_id);
+                    addBackToPeopleButton();
+                }
             }
+
             $(document).on("ajaxComplete", customizeReportProblemForm);
         }, 1000);
+
+        $(window).on('message', function (e) {
+            var msg = JSON.parse(e.originalEvent.data);
+            if (msg.hasOwnProperty('subject')) {
+                switch (msg.subject) {
+                case 'lti.uw.addUserUrl':
+                    if (window.top !== window) { // bubble up
+                        window.parent.postMessage(e.originalEvent.data,
+                                                  'https://uw.test.instructure.com');
+                    } else {
+                        $.ajax({
+                            type: 'GET',
+                            url: msg.message.url,
+                            contentType: 'text/plain',
+                            beforeSend: function (xhr, settings) {
+                                xhr.setRequestHeader("X-SessionId", msg.message.session_id);
+                            }
+                        }).done(function (data) {
+                            $('#uw_add_users').html(data);
+                        });
+                    }
+
+                    break;
+                }
+            }
+        });
     });
 }(jQuery));
