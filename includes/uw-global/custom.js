@@ -18,7 +18,7 @@
         app_center_attempts = 0,
         add_users_external_id = "31483",
         uw_groups_external_id = "31485",
-        course_photos_external_id = "31484",
+        course_photos_external_id = "31493",
         window_message;
 
     function gettext(key) {
