@@ -66,10 +66,10 @@
 a[href$="confirm_action?event=conclude"] { display: none !important; }
 
 /* hide course photos link */
-a.context_external_tool_30978 { display: none !important; }
+a.context_external_tool_31484 { display: none !important; }
 
 /* hide uw groups link */
-a.context_external_tool_8655 { display: none !important; }
+a.context_external_tool_31485 { display: none !important; }
 
 .uw-groups-button-image {
   height: 16px;
@@ -79,4 +79,4 @@ a.context_external_tool_8655 { display: none !important; }
 }
 
 /* hide uw people link */
-a.context_external_tool_30967 { display: none !important; }
+a.context_external_tool_31483 { display: none !important; }
