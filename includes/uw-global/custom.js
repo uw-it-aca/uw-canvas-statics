@@ -224,7 +224,7 @@
                 case 'lti.uw.addUserUrl':
                     if (window.top !== window) { // bubble up
                         window.parent.postMessage(e.originalEvent.data,
-                                                  'https://uw.test.instructure.com');
+                                                  'https://canvas.uw.edu');
                     } else {
                         $.ajax({
                             type: 'GET',
