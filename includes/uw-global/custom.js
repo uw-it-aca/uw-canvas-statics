@@ -84,7 +84,8 @@
                       + 'src="' + $tool.attr('href') + '"'
                       + '></iframe><div id="uw_add_users"></div></div>').appendTo('body');
                 }
-            });
+            })
+            .css('display', 'inline');
     }
 
     function addCoursePhotosButton(tool_id) {

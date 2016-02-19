@@ -65,10 +65,10 @@
 /* hide conclude course links */
 a[href$="confirm_action?event=conclude"] { display: none !important; }
 
-/* hide course photos link */
+/* hide course photos nav link */
 a.context_external_tool_31493 { display: none !important; }
 
-/* hide uw groups link */
+/* hide uw groups nav link */
 a.context_external_tool_31485 { display: none !important; }
 
 .uw-groups-button-image {
@@ -78,5 +78,8 @@ a.context_external_tool_31485 { display: none !important; }
   background: url("W-Logo_555_16x.png") no-repeat 0 2px;
 }
 
-/* hide uw people link */
+/* hide uw people nav link */
 a.context_external_tool_31483 { display: none !important; }
+
+/* hide +People till we hijack it */
+#addUsers { display: none; }
