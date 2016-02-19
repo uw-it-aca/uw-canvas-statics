@@ -80,6 +80,3 @@ a.context_external_tool_31485 { display: none !important; }
 
 /* hide uw people nav link */
 a.context_external_tool_31483 { display: none !important; }
-
-/* hide +People till we hijack it */
-#addUsers { display: none; }
