@@ -80,3 +80,16 @@ a.context_external_tool_31485 { display: none !important; }
 
 /* hide uw people nav link */
 a.context_external_tool_31483 { display: none !important; }
+
+#nav_enabled_list .uw_enabled_message {
+  display: block !important;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 10px;
+  line-height: 0.7em;
+}
+
+#nav_disabled_list .uw_disabled_message {
+    color: black;
+    font-weight: 800;
+}
