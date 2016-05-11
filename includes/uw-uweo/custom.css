@@ -165,7 +165,7 @@ ul.plain {
 	font-weight: bold;
 	font-style: oblique;
 	color: #336666;
-	background: url("img/key2.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key2.png") no-repeat top left;
 	text-indent: 20px;
     display: inline-block;
 }
@@ -402,83 +402,83 @@ ul.plain {
 }
 
 .actionIcon {
-	background: url("img/action.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/action.png") no-repeat top left;
 }
 
 .actionBox h6, .bookIcon {
-	background: url("img/book.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/book.png") no-repeat top left;
 }
 
 .alertIcon {
-	background: url("img/alert.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/alert.png") no-repeat top left;
 }
 
 .assignmentIcon {
-	background: url("img/assignment.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/assignment.png") no-repeat top left;
 }
 
 .diacriticalBox h6, .audioIcon {
-	background: url("img/audio.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/audio.png") no-repeat top left;
 }
 
 .discussionIcon {
-	background: url("img/discussion.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/discussion.png") no-repeat top left;
 }
 
 .hardhatIcon {
-	background: url("img/hardhat.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hardhat.png") no-repeat top left;
 }
 
 .hourglassIcon {
-	background: url("img/hourglass.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hourglass.png") no-repeat top left;
 }
 
 .importantBox h6, .importantIcon {
-	background: url("img/important.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/important.png") no-repeat top left;
 }
 
 .infoBox h6, .infoIcon {
-	background: url("img/info.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/info.png") no-repeat top left;
 }
 
 .keytermBox h6 {
-	background: url("img/key.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key.png") no-repeat top left;
 }
 
 .msite {
-	background: url("img/mediasite.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mediasite.png") no-repeat top left;
 }
 
 .popupIcon {
-	background: url("img/popup.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/popup.png") no-repeat top left;
 }
 
 .portfolio, .portfolioIcon {
-	background: url("img/portfolio.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/portfolio.png") no-repeat top left;
 }
 
 .postIcon {
-	background: url("img/post.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/post.png") no-repeat top left;
 }
 
 .questionIcon {
-	background: url("img/question.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/question.png") no-repeat top left;
 }
 
 .testIcon {
-	background: url("img/test.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/test.png") no-repeat top left;
 }
 
 .tickIcon {
-	background: url("img/tick.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/tick.png") no-repeat top left;
 }
 
 .turnIcon {
-	background: url("img/turn.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/turn.png") no-repeat top left;
 }
 
 .videoIcon {
-	background: url("img/video.png") no-repeat top left;
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/video.png") no-repeat top left;
 }
 
 .actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li {
