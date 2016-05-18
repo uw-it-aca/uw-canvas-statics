@@ -12,21 +12,6 @@
         missing_photos_and_groups_title = 'Add UW Groups &amp; View Student Photos Unavailable',
         missing_photos_and_groups_text = '<p>UW Groups and View Student Photos are unavailable because they have been hidden.</p><p>To restore this functionality, go to <a href="settings">Settings</a>, click the Navigation tab, scroll down to find &quot;Add &amp; Manage UW Groups&quot; and &quot;View Student Photos&quot; in the hidden list. Click and drag back up into the course navigation link. Click Save to save your changes.</p><p>Even when Add &amp; Manage UW Groups and View Student Photos are enabled, they will never appear in the course navigation (so they don&apos;t need to be hidden).</p><p style="font-size: smaller;">Note: If you are teaching a non-academic course, View Student Photos is unavailable.</p>';
 
-    function moveNavToRightButton(nav_id, icon, position) {
-        var nav = $('a.context_external_tool_' + nav_id);
-        if (nav.length === 1) {
-            UWCanvas.add_right_nav_button(icon, nav.text(), nav.attr('href'), position);
-        }
-    }
-
-    function addCoursePhotosButton(tool_id) {
-        moveNavToRightButton(tool_id, 'icon-student-view');
-    }
-
-    function addUWGroupsButton(tool_id) {
-        moveNavToRightButton(tool_id, 'uw-groups-button-image');
-    }
-
     function openWarningModal(title, text) {
         var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">'
             + '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">'
@@ -50,32 +35,45 @@
         }
     }
 
-    function hijackAddUsersButton() {
-        var $users = $('a.context_external_tool_' + UWCanvas.add_users_external_id),
-            $groups = $('a.context_external_tool_' + UWCanvas.uw_groups_external_id),
+    function openAddUsersModal(e) {
+        var $users = $('a.context_external_tool_' + UWCanvas.add_users_external_id);
+
+        e.preventDefault();
+        e.stopPropagation();
+        if (!$users.length) {
+            openWarningModal(missing_add_people_title, missing_add_people_text);
+        } else {
+            if ($('#uw-add-people-slightofhand').length === 1) {
+                $('#uw-add-people-slightofhand').find('.ReactModalPortal').show();
+            } else {
+                $(e.target).attr('disabled', true);
+                $('<div id="uw-add-people-slightofhand">' +
+                    '<iframe style="height:1px;width:1px;" src="' +
+                    $users.attr('href') + '"></iframe>' +
+                    '<div id="uw_add_users"></div></div>').appendTo('body');
+            }
+        }
+    }
+
+    function addExternalToolButtons() {
+        var $groups = $('a.context_external_tool_' + UWCanvas.uw_groups_external_id),
             $photos = $('a.context_external_tool_' + UWCanvas.course_photos_external_id);
 
-        $('#addUsers').off('click').on('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            if (!$users.length) {
-                openWarningModal(missing_add_people_title, missing_add_people_text);
-            } else {
-                if ($('#uw-add-people-slightofhand').length === 1) {
-                    $('#uw-add-people-slightofhand').find('.ReactModalPortal').show();
-                } else {
-                    $(e.target).attr('disabled', true);
-                    $('<div id="uw-add-people-slightofhand">' +
-                        '<iframe style="height:1px;width:1px;" src="' +
-                        $users.attr('href') + '"></iframe>' +
-                        '<div id="uw_add_users"></div></div>').appendTo('body');
-                }
-            }
-        });
+        if ($photos.length) {
+            UWCanvas.add_right_nav_button('icon-student-view',
+                                          $photos.text(),
+                                          $photos.attr('href'));
+        }
+
+        if ($groups.length) {
+            UWCanvas.add_right_nav_button('uw-groups-button-image',
+                                          $groups.text(),
+                                          $groups.attr('href'));
+        }
 
         if (!$groups.length && !$photos.length) {
             openWarningModal(missing_photos_and_groups_title,
-                        missing_photos_and_groups_text);
+                             missing_photos_and_groups_text);
         } else if (!$groups.length) {
             openWarningModal(missing_groups_title, missing_groups_text);
         } else if (!$photos.length) {
@@ -108,7 +106,8 @@
         }
     });
 
-    addCoursePhotosButton(UWCanvas.course_photos_external_id);
-    addUWGroupsButton(UWCanvas.uw_groups_external_id);
-    $('#addUsers').whenExists(hijackAddUsersButton);
+    addExternalToolButtons();
+    $('#addUsers').whenExists(function () {
+        $(this).off('click').on('click', openAddUsersModal);
+    });
 }(jQuery));
