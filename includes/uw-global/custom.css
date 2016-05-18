@@ -1,5 +1,5 @@
 /* remove the instructure registration banner on splash login screen */
-#register_link { display: none; }
+#register_link { display: none !important; }
 
 /* hide conclude course links */
 a[href$="confirm_action?event=conclude"] { display: none !important; }
@@ -10,6 +10,9 @@ a.context_external_tool_31493 { display: none !important; }
 /* hide uw groups nav link */
 a.context_external_tool_31485 { display: none !important; }
 
+/* hide uw people nav link */
+a.context_external_tool_31483 { display: none !important; }
+
 .uw-groups-button-image {
   height: 16px;
   width: 16px;
@@ -17,5 +20,16 @@ a.context_external_tool_31485 { display: none !important; }
   background: url("https://apps.canvas.uw.edu/includes/uw-global/img/W-Logo_555_16x.png") no-repeat 0 2px;
 }
 
-/* hide uw people nav link */
-a.context_external_tool_31483 { display: none !important; }
+/* warnings for disabled navigation links */
+#nav_enabled_list .uw_enabled_message {
+  display: block !important;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 10px;
+  line-height: 0.7em;
+}
+
+#nav_disabled_list .uw_disabled_message {
+    color: black;
+    font-weight: 800;
+}
