@@ -76,7 +76,7 @@ var UWCanvas = (function ($) {
     $(document).ready(function () {
         var href = window.location.href;
 
-        if (href.match(/\/settings$/)) {
+        if (href.match(/\/(settings|details)$/)) {
             load_script('/includes/uw-global/settings.js');
         } else if (href.match(/\/courses\/\d+\/assignments/)) {
             load_script('/includes/uw-global/assignments.js');
