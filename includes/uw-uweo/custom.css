@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	color: #000000;
+}
+
 /* Orig DLD Course CSS */
 cite {
 	font-style: italic;
@@ -15,6 +19,13 @@ code {
 
 h2, h3, h4, h5, h6 {
 	font-weight: bold;
+	color: #000000;
+}
+
+/* h3 Added for New Canvas UI 2016*/
+h3 {
+	margin-bottom: 0px;
+	line-height: inherit;
 }
 
 pre {
@@ -39,6 +50,26 @@ img.banner {
 	margin: 0 0 0 0;
 }
 
+li.btn {
+	border-color: #4b2e83;
+	display: inline-block;
+	margin: 6px;
+	font-weight: bold;
+	color: 	#0081bd;
+	background:#FFFFFF;
+}
+
+li.btn a {
+	font-weight: bold;
+	color: 	#0081bd;
+	padding-left: 8px;
+}
+
+ul.button {
+	list-style-type: none;
+	font-size: 1.5em;
+}
+
 ul.plain {
 	list-style-type: none;
 	margin-left: 10px;
@@ -47,25 +78,65 @@ ul.plain {
 
 /* *-*-*-*-    Specialized Classes   *-*-* * */
 
-.alphaLower {
+.alphaLower, .alphalower {
 	list-style-type: lower-alpha;
 }
 
-.alphaUpper {
+.alphaUpper, .alphaupper {
 	list-style-type: upper-alpha;
+}
+
+.amstyle {
+	margin: 0;
+	background-color: ghostwhite;
+	color: #FFFFFF;
+	font-size: 1.3em;
+	font-weight: bold;
+	border-top: 5px solid #b7a57a;
+	border-bottom: 5px solid #b7a57a;
+	padding: 10px 0;
+	clear: both;
+}
+
+.banner {
+	overflow: hidden;
+	position: relative;
+	background-color: #e8e3d3;
+	text-align: center;
+}
+
+.banner100 {
+	overflow: hidden;
+	position: relative;
+	height: 100px;
+	background-color: #e8e3d3;
+	text-align: center;
+}
+
+.banner125 {
+	overflow: hidden;
+	position: relative;
+	height: 125px;
+	background-color: #e8e3d3;
+	text-align: center;
 }
 
 .bgnone {
 	background: none;
 }
 
-.bold{
+.bold {
 	font-weight: bold;
 }
 
-.boldi{
+.boldi {
 	font-weight: bold;
 	font-style: italic;
+}
+
+.boldpad {
+	font-weight: bold;
+	padding-left: 8px;
 }
 
 .border {
@@ -87,6 +158,11 @@ ul.plain {
 	page-break-before: always;
 }
 
+.btnlist, .btnList {
+	list-style: none;
+	font-size: 1.2em;
+}
+
 .caption {
 	font-size: 95%;
 	font-style: italic;
@@ -97,7 +173,7 @@ ul.plain {
  	text-align: center;
 }
 
-.clear, .headerBar {
+.clear, .headerBar, .headerbar {
 	clear: both;
 }
 
@@ -112,17 +188,17 @@ ul.plain {
 	list-style-type: decimal;
 }
 
-.floatleft{
+.floatleft, .floatLeft{
 	 float:left;
 	 padding: 8px;
 }
 
-.floatright{
+.floatright, .floatRight{
 	float:right;
 	padding: 8px;
 }
 
-.fontNormal {
+.fontNormal, .fontnormal {
 	font-weight: normal;
 }
 
@@ -131,7 +207,7 @@ ul.plain {
 	color: #6A6A00;
 }
 
-.frontpageBlock {
+.frontpageBlock, .frontpageblock {
 	float: left;
 	width: 200px;
 	height: 240px;
@@ -143,7 +219,7 @@ ul.plain {
 	font-size: 200%;
 }
 
-.halfBlock {
+.halfBlock, .halfblock {
 	width: 50%;
 	margin-left: 75px;
 }
@@ -166,12 +242,24 @@ ul.plain {
 	font-style: oblique;
 	color: #336666;
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key2.png") no-repeat top left;
-	text-indent: 20px;
+	text-indent: 16px;
+	display: inherit;
+}
+
+/* Moved inline block into span-specific so keyterm can be used as paragraph or other container class without messing up spacing 2016 Canvas UI */
+span.keyterm {
     display: inline-block;
 }
 
 .left {
  	text-align: left;
+}
+
+.lessonstyle {
+	margin: 5px 0 10px 0;
+	padding: 5px 0;
+	border-bottom: 7px solid #b7a57a;
+	clear: both;
 }
 
 .lineheight {
@@ -183,11 +271,22 @@ ul.plain {
 	font-size: 90%;
 }
 
+.menulist {
+	list-style: none;
+}
+
 .middle {
 	vertical-align: middle;
 }
 
-.noBottomPad {
+.mobileheader, .mobileHeader {
+	position: absolute;
+	top: 10px;
+	background-color: #e8e3d3;
+	font-size: 1.3em;
+}
+
+.noBottomPad, .nobottompad {
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
@@ -206,7 +305,7 @@ ul.plain {
 	line-height: 110%;
 }
 
-.noTopPad {
+.noTopPad, .notoppad {
 	margin-top: 0px;
 	padding-top: 0px;
 }
@@ -220,15 +319,15 @@ ul.plain {
 .oddrow a:visited,
 .oddrow a:hover {color: #000000;}
 
-.oneM, .oneEm, .oneem, .oneEM {
+.oneM, .oneEm, .oneem, .oneEM, .onem, .oneem {
 	font-size: 1em;
 }
 
-.onepttwoM, .onepttwoEm, .onepttwoem, .onepttwoEM {
+.onepttwoM, .onepttwoEm, .onepttwoem, .onepttwoEM, .onepttwom {
 	font-size: 1.2em;
 }
 
-.oneptfiveM, .oneptfiveEm, .oneptfiveem, .oneptfiveEM {
+.oneptfiveM, .oneptfiveEm, .oneptfiveem, .oneptfiveEM, .oneptfivem {
 	font-size: 1.5em;
 }
 
@@ -236,7 +335,7 @@ ul.plain {
 	padding-bottom: 14px;
 }
 
-.padRight {
+.padRight, .padright {
 	padding-right: 50px;
 }
 
@@ -259,7 +358,7 @@ ul.plain {
 	color: #003366;
 }
 
-.quoteMark {
+.quoteMark, .quotemark {
 	font-size: 200%;
 }
 
@@ -267,7 +366,7 @@ ul.plain {
 	color: #003366;
 }
 
-.referenceList {
+.referenceList, .referencelist {
 	text-indent: -1em;
 	margin-left: 1em;
 	font-size: 90%;
@@ -278,11 +377,11 @@ ul.plain {
  	text-align: right;
 }
 
-.romanLower {
+.romanLower, .romanlower {
 	list-style-type: lower-roman;
 }
 
-.romanUpper {
+.romanUpper, .romanupper {
 	list-style-type: upper-roman;
 }
 
@@ -321,12 +420,19 @@ ul.plain {
 	text-align: left;
 }
 
-#EOmain {
+#EOmain, #eomain {
 	margin-left:10px;
 	margin-right:179px;
 	padding-right: 5px;
 	background: none;
 	background-color: #FFFFFF;
+}
+
+#top {
+	overflow: hidden;
+	position: relative;
+	background-color: #e8e3d3;
+	text-align: center;
 }
 
 /* *-*-*-*- right-hand and other boxes & inline icons  *-*-* * */
@@ -349,7 +455,7 @@ ul.plain {
 	line-height: 200%;
 }
 
-.actionBox, .diacriticalBox, .importantBox, .infoBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox {
+.actionBox, .diacriticalBox, .importantBox, .infoBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox, .actionbox, .diacriticalbox, .importantbox, .infobox, .keytermbox, .bluebox, .goldbox, .graybox, .orangebox, .purplebox {
 	float:right;
 	width: 160px;
 	right: 10px;
@@ -365,83 +471,84 @@ ul.plain {
 	-webkit-border-radius: 10px;
  }
 
-.actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox {
+.actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox {
    	background-color: #F3F3E9;
 }
 
-.blueBox {
+.blueBox, .bluebox {
     background-color: #F0F4FF;
 }
 
-.grayBox, .instructorBox, .fullBox {
+.grayBox, .instructorBox, .fullBox, .graybox, .instructorbox, .fullbox {
    	background-color: #EEEEEE;
 }
 
-.orangeBox, .instructorImportantBox, .fullImportantBox {
+.orangeBox, .instructorImportantBox, .fullImportantBox, .orangebox, .instructorimportantbox, .fullimportantbox  {
    	background-color: #FAF1D6;
 }
 
-.purpleBox, .fullActionBox {
+.purpleBox, .fullActionBox, .purplebox, .fullactionbox {
    	background-color: #f3efff;
 }
 
-.keytermBox {
+.keytermBox, .keytermbox {
 	background-color: #DDEEEE;
 
 }
 
-.actionBox p, .infoBox p, .importantBox p, .keytermBox p, .diacriticalBox p {
+.actionBox p, .infoBox p, .importantBox p, .keytermBox p, .diacriticalBox p, .actionbox p, .infobox p, .importantbox p, .keytermbox p, .diacriticalbox p  {
 	line-height: 150%;
 	margin: 1em 1em 1em .5em;
 }
 
-.actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .bookIcon, .discussionIcon, .hardhatIcon, .hourglassIcon, .importantIcon, .infoIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .testIcon, .tickIcon, .turnIcon, .videoIcon {
-	text-indent: 30px;
+.actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .bookIcon, .discussionIcon, .hardhatIcon, .hourglassIcon, .importantIcon, .infoIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .testIcon, .tickIcon, .turnIcon, .videoIcon,
+.chatIcon, .emailIcon, .mailboxIcon, .mobileIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .bookicon, .discussionicon, .hardhaticon, .hourglassicon, .importanticon, .infoicon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .testicon, .tickicon, .turnicon, .videoicon, .chaticon, .emailicon, .mailboxicon, .mobileicon, .printericon, .viewicon {
+	text-indent: 25px;
 	line-height: 200%;
     display: inline-block;
 }
 
-.actionIcon {
+.actionIcon, .actionicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/action.png") no-repeat top left;
 }
 
-.actionBox h6, .bookIcon {
+.actionBox h6. .actionicon h6, .bookIcon, .bookicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/book.png") no-repeat top left;
 }
 
-.alertIcon {
+.alertIcon, .alerticon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/alert.png") no-repeat top left;
 }
 
-.assignmentIcon {
+.assignmentIcon, .assignmenticon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/assignment.png") no-repeat top left;
 }
 
-.diacriticalBox h6, .audioIcon {
+.diacriticalBox h6, .diacriticalbox h6, .audioIcon, .audioicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/audio.png") no-repeat top left;
 }
 
-.discussionIcon {
+.discussionIcon, .discussionicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/discussion.png") no-repeat top left;
 }
 
-.hardhatIcon {
+.hardhatIcon, .hardhaticon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hardhat.png") no-repeat top left;
 }
 
-.hourglassIcon {
+.hourglassIcon, .hourglassicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hourglass.png") no-repeat top left;
 }
 
-.importantBox h6, .importantIcon {
+.importantBox h6, .importantbox h6, .importantIcon, .importanticon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/important.png") no-repeat top left;
 }
 
-.infoBox h6, .infoIcon {
+.infoBox h6, .infobox h6, .infoIcon, .infoicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/info.png") no-repeat top left;
 }
 
-.keytermBox h6 {
+.keytermBox h6, .keytermbox h6 {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key.png") no-repeat top left;
 }
 
@@ -449,60 +556,84 @@ ul.plain {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mediasite.png") no-repeat top left;
 }
 
-.popupIcon {
+.popupIcon, .popupicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/popup.png") no-repeat top left;
 }
 
-.portfolio, .portfolioIcon {
+.portfolio, .portfolioIcon, .portfolioicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/portfolio.png") no-repeat top left;
 }
 
-.postIcon {
+.postIcon, .posticon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/post.png") no-repeat top left;
 }
 
-.questionIcon {
+.questionIcon, .questionicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/question.png") no-repeat top left;
 }
 
-.testIcon {
+.testIcon, .testicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/test.png") no-repeat top left;
 }
 
-.tickIcon {
+.tickIcon, .tickicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/tick.png") no-repeat top left;
 }
 
-.turnIcon {
+.turnIcon, .turnicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/turn.png") no-repeat top left;
 }
 
-.videoIcon {
+.videoIcon, .videoicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/video.png") no-repeat top left;
 }
 
-.actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li {
+.chatIcon, .chaticon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/chat.png") no-repeat top left;
+}
+
+.emailIcon, .emailicon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/email.png") no-repeat top left;
+}
+
+.mailboxIcon, .mailboxicon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mailbox.png") no-repeat top left;
+}
+
+.mobileIcon, .mobileicon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mobile.png") no-repeat top left;
+}
+
+.printerIcon, .printericon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/printer.png") no-repeat top left;
+}
+
+.viewIcon, .viewicon {
+	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/view.png") no-repeat top left;
+}
+
+.actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li, .actionbox li, .diacriticalbox li, .importantbox li, .infobox li, .instructorbox li, .keytermbox li {
 	padding-bottom: 2px;
 }
 
-.actionBox ul, .diacriticalBox ul, .importantBox ul, .infoBox ul, .instructorBox ul, .keytermBox ul {
+.actionBox ul, .diacriticalBox ul, .importantBox ul, .infoBox ul, .instructorBox ul, .keytermBox ul, .actionbox ul, .diacriticalbox ul, .importantbox ul, .infobox ul, .instructorbox ul, .keytermbox ul {
 	margin: 1em 1em 1em 0em;
 	padding-left: 1.5em;
 }
 
-.actionBox ol, .diacriticalBox ol, .importantBox ol, .infoBox ol, .instructorBox ol, .keytermBox ol {
+.actionBox ol, .diacriticalBox ol, .importantBox ol, .infoBox ol, .instructorBox ol, .keytermBox ol, .actionbox ol, .diacriticalbox ol, .importantbox ol, .infobox ol, .instructorbox ol, .keytermbox ol {
 	margin: 1em 1em 1em 0em;
 	padding-left: 1.5em;
 }
 
-.actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5 {
+.actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5, .actionbox h5, .diacriticalbox h5, .importantbox h5, .infobox h5, .keytermbox h5 {
     background: clear;
     color: #000000;
 	font-weight: bold;
 }
 
-.actionBox h6, .diacriticalBox h6, .importantBox h6, .infoBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6 {
-	text-indent: 30px;
+.actionBox h6, .diacriticalBox h6, .importantBox h6, .infoBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .actionbox h6, .diacriticalbox h6, .importantbox h6, .infobox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6 {
+	text-indent: 25px;
 	padding-bottom: 4px;
 	font-weight: bold;
 	font-size: 105%;
@@ -513,16 +644,16 @@ ul.plain {
 	margin-top: 0px;
 }
 
-.actionBox img, .diacriticalBox img, .infoBox img, .importantBox img, .keytermBox img {
+.actionBox img, .diacriticalBox img, .infoBox img, .importantBox img, .keytermBox img, .actionbox img, .diacriticalbox img, .infobox img, .importantbox img, .keytermbox img {
 	margin-right: 3px;
 	margin-bottom: 0px;
 }
 
-.instructorBox img {
+.instructorBox img, .instructorbox img {
 	margin: 10px 15px 0px 15px;
 }
 
-.instructorBox, .instructorImportantBox, .fullBox, .fullActionBox, .fullImportantBox  { /*sidebar that flexs to size of instructor photo or email width*/
+.instructorBox, .instructorImportantBox, .fullBox, .fullActionBox, .fullImportantBox, .instructorbox, .instructorimportantbox, .fullbox, .fullactionbox, .fullimportantbox  { /*sidebar that flexs to size of instructor photo or email width*/
 	z-index: 0;
 	border: outset;
 	border-width: 1px;
@@ -539,7 +670,7 @@ ul.plain {
 	-webkit-border-radius: 10px;
 }
 
-.bigBox {
+.bigBox. .bigbox {
 	background: #F3F3E9;
 	border: thin solid #85754d;
 	padding: 8px;
@@ -548,9 +679,10 @@ ul.plain {
 	-moz-border-radius:10px;
 	-webkit-border-radius: 10px;
 	clear: both;
+
 }
 
-.readingBox {
+.readingBox, .readingBox {
  	border: groove #6A6A00;
 	padding-left: 6px;
 	padding-right: 6px;
@@ -564,7 +696,7 @@ ul.plain {
 	-webkit-border-radius: 10px;
 }
 
-div.readingBox h4 {
+div.readingBox h4, div.readingbox h4 {
 	margin-bottom: 0pt;
 	padding-bottom: 0pt;
 	margin-top: 0pt;
@@ -572,15 +704,15 @@ div.readingBox h4 {
 	color: #6A6A00;
 }
 
-div.readingBox p {
+div.readingBox p, div.readingbox p {
 	margin-top: 0pt;
 	padding-top: 0pt;
 }
 
-
 .video-container,
 .video-container43,
-.video-mediaAmp {
+.video-mediaAmp,
+.video-mediaamp {
     position: relative;
     padding-bottom: 50%;
     padding-top: 30px;
@@ -591,7 +723,11 @@ div.readingBox p {
 .video-mediaAmp iframe,
 .video-mediaAmp object,
 .video-mediaAmp embed,
-.video-mediaAmp img  {
+.video-mediaAmp img,
+.video-mediaamp iframe,
+.video-mediaamp object,
+.video-mediaamp embed,
+.video-mediaamp img  {
     position: absolute;
     top: 0;
     left: 0;
@@ -729,3 +865,33 @@ div.readingBox p {
 	color:#D7A804;
 	text-decoration: none;
 }
+
+/* Canvas Icon Overrides*/
+
+.icon-forward, .icon-collection, .icon-discussion, .icon-user {
+	color: #4b2e83;
+}
+
+/* Modules Page */
+.header-bar {
+	border-bottom: #4b2e83;
+}
+
+.ig-list .ig-row.ig-published .ig-title,
+.ig-list .ig-row.ig-published.student-view .ig-title,
+.publish-icon.publish-icon-published,
+.al-trigger,
+.al-trigger-gray,
+.al-trigger-gray: hover,
+.al-trigger-gray: focus,
+.al-options .ui-menu-item a,
+.context_module_item .item_name .title,
+.context_module_item .type_icon i {
+	color: #0081bd;
+}
+
+.item-group-containter {
+	border: 1px solid #4b2e83;
+	background: #FFFFFF;
+}
+
