@@ -23,7 +23,8 @@ h2, h3, h4, h5, h6 {
 }
 
 /* h3 Added for New Canvas UI 2016*/
-h3 {
+h3,
+.user_content h3, .user_content .h3, .mceContentBody h3, .mceContentBody .h3 {
 	margin-bottom: 0px;
 	line-height: inherit;
 }
@@ -62,7 +63,10 @@ li.btn {
 li.btn a {
 	font-weight: bold;
 	color: 	#0081bd;
-	padding-left: 8px;
+}
+
+li.btn img {
+	padding-right: 8px;
 }
 
 ul.button {
@@ -335,6 +339,10 @@ span.keyterm {
 	padding-bottom: 14px;
 }
 
+.padLeft, padleft {
+	padding-left: 8px;
+}
+
 .padRight, .padright {
 	padding-right: 50px;
 }
@@ -501,9 +509,21 @@ span.keyterm {
 	margin: 1em 1em 1em .5em;
 }
 
-.actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .bookIcon, .discussionIcon, .hardhatIcon, .hourglassIcon, .importantIcon, .infoIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .testIcon, .tickIcon, .turnIcon, .videoIcon,
-.chatIcon, .emailIcon, .mailboxIcon, .mobileIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .bookicon, .discussionicon, .hardhaticon, .hourglassicon, .importanticon, .infoicon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .testicon, .tickicon, .turnicon, .videoicon, .chaticon, .emailicon, .mailboxicon, .mobileicon, .printericon, .viewicon {
+.actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .bookIcon, .discussionIcon, .hardhatIcon, .importantIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .testIcon, .tickIcon, .turnIcon,
+.chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .bookicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .testicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon {
+	text-indent: 28px;
+	line-height: 200%;
+    display: inline-block;
+}
+
+.mobileIcon, .mobileicon, .hourglassIcon, .hourglassicon {
 	text-indent: 25px;
+	line-height: 200%;
+    display: inline-block;
+}
+
+.discussionicon, .discussionIcon, .infoIcon, .infoicon, .videoIcon, .videoicon {
+	text-indent: 30px;
 	line-height: 200%;
     display: inline-block;
 }
@@ -512,7 +532,7 @@ span.keyterm {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/action.png") no-repeat top left;
 }
 
-.actionBox h6. .actionicon h6, .bookIcon, .bookicon {
+.actionBox h6, .actionicon h6, .bookIcon, .bookicon {
 	background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/book.png") no-repeat top left;
 }
 
@@ -627,22 +647,36 @@ span.keyterm {
 }
 
 .actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5, .actionbox h5, .diacriticalbox h5, .importantbox h5, .infobox h5, .keytermbox h5 {
-    background: clear;
     color: #000000;
 	font-weight: bold;
+    background: none;
 }
 
-.actionBox h6, .diacriticalBox h6, .importantBox h6, .infoBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .actionbox h6, .diacriticalbox h6, .importantbox h6, .infobox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6 {
+.actionBox h6, .importantBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .actionbox h6, .importantbox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6 {
 	text-indent: 25px;
 	padding-bottom: 4px;
 	font-weight: bold;
 	font-size: 105%;
 	line-height: 200%;
-    background: clear;
+    background: none;
     color: #000000;
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
+.diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6 {
+	text-indent: 25px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 105%;
+	line-height: 200%;
+    background: none;
+    color: #000000;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+
 
 .actionBox img, .diacriticalBox img, .infoBox img, .importantBox img, .keytermBox img, .actionbox img, .diacriticalbox img, .infobox img, .importantbox img, .keytermbox img {
 	margin-right: 3px;
@@ -670,7 +704,7 @@ span.keyterm {
 	-webkit-border-radius: 10px;
 }
 
-.bigBox. .bigbox {
+.bigBox, .bigbox {
 	background: #F3F3E9;
 	border: thin solid #85754d;
 	padding: 8px;
@@ -790,7 +824,6 @@ div.readingBox p, div.readingbox p {
     height: auto;
 	min-width: 150px;
 	max-width: 100%;
-	max-height: auto;
 }
 
 .image-container-square {
@@ -874,23 +907,36 @@ div.readingBox p, div.readingbox p {
 
 /* Modules Page */
 .header-bar {
-	border-bottom: #4b2e83;
+	border-bottom-color: #4b2e83;
 }
 
 .ig-list .ig-row.ig-published .ig-title,
 .ig-list .ig-row.ig-published.student-view .ig-title,
 .publish-icon.publish-icon-published,
-.al-trigger,
 .al-trigger-gray,
-.al-trigger-gray: hover,
-.al-trigger-gray: focus,
-.al-options .ui-menu-item a,
+.al-trigger-gray a,
+.al-trigger-gray a:hover,
+.al-trigger-gray a:focus,
+.cog-menu-container .al-trigger-gray,
+.cog-menu-container .al-trigger-gray a,
+.al-options .ui-menu-item,
+.context_module_item .item_name a,
+.context_module_item .type-icon,
 .context_module_item .item_name .title,
+.ig-list .ig-row.ig-published .ig-title a,
+.ig-list .ig-row.ig-published.student-view .ig-title a,
+.publish-icon.publish-icon-published a,
+publish-icon module published publish-icon-published,
+publish-icon module published publish-icon-published i,
+.al-options .ui-menu-item a,
+.context_module_item .item_name .title a,
+.ig-list .type.icon,
+.ig-list .ig-row .ig-published item_name,
 .context_module_item .type_icon i {
 	color: #0081bd;
 }
 
-.item-group-containter {
+.item-group-container {
 	border: 1px solid #4b2e83;
 	background: #FFFFFF;
 }
