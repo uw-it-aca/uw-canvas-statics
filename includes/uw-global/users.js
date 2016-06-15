@@ -12,6 +12,34 @@
         missing_photos_and_groups_title = 'Add UW Groups &amp; View Student Photos Unavailable',
         missing_photos_and_groups_text = '<p>UW Groups and View Student Photos are unavailable because they have been hidden.</p><p>To restore this functionality, go to <a href="settings">Settings</a>, click the Navigation tab, scroll down to find &quot;Add &amp; Manage UW Groups&quot; and &quot;View Student Photos&quot; in the hidden list. Click and drag back up into the course navigation link. Click Save to save your changes.</p><p>Even when Add &amp; Manage UW Groups and View Student Photos are enabled, they will never appear in the course navigation (so they don&apos;t need to be hidden).</p><p style="font-size: smaller;">Note: If you are teaching a non-academic course, View Student Photos is unavailable.</p>';
 
+    function add_people_option(icon, label, href, position) {
+        var $ul = $('#people-options ul'),
+	    $li,
+            $node,
+            $a;
+
+        $node = $('<i>').addClass(icon);
+        $a = $('<a>').attr('href', href)
+                     .addClass('ui-corner-all')
+                     .attr('id', 'ui-id-2' + $ul.length)
+                     .attr('role', 'menuitem')
+                     .attr('tabindex', '-1')
+                     .append($node)
+                     .append(document.createTextNode(' ' + label));
+        $li = $('<li>')
+                     .attr('role', 'presentation')
+                     .addClass('ui-menu-item')
+                     .append($a);
+
+        if (position && position === 1) {
+            $ul.find('li:first-child').before($li);
+        } else if (position && position === 2) {
+            $ul.find('li:first-child').after($li);
+        } else {
+            $ul.append($li);
+        }
+    }
+
     function openWarningModal(title, text) {
         var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">'
             + '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">'
@@ -60,15 +88,15 @@
             $photos = $('a.context_external_tool_' + UWCanvas.course_photos_external_id);
 
         if ($photos.length) {
-            UWCanvas.add_right_nav_button('icon-student-view',
-                                          $photos.text(),
-                                          $photos.attr('href'));
+            add_people_option('icon-student-view',
+                               $photos.text(),
+                               $photos.attr('href'));
         }
 
         if ($groups.length) {
-            UWCanvas.add_right_nav_button('uw-groups-button-image',
-                                          $groups.text(),
-                                          $groups.attr('href'));
+            add_people_option('uw-groups-button-image',
+                               $groups.text(),
+                               $groups.attr('href'));
         }
 
         if (!$groups.length && !$photos.length) {
