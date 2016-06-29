@@ -5,7 +5,7 @@ var UWCanvas = (function ($) {
 
     var add_users_external_id = '31483',
         uw_groups_external_id = '31485',
-        course_photos_external_id = '31493';
+        course_photos_external_id = '37913';
 
     $.fn.whenExists = function (handler) {
         var selector = this.selector,
