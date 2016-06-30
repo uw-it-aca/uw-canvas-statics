@@ -56,13 +56,13 @@ li.btn {
   display: inline-block;
   margin: 6px;
   font-weight: bold;
-  color:   #0081bd;
-  background:#FFFFFF;
+  color: #0081bd;
+  background: #FFFFFF;
 }
 
 li.btn a {
   font-weight: bold;
-  color:   #0081bd;
+  color: #0081bd;
 }
 
 li.btn img {
@@ -80,7 +80,7 @@ ul.plain {
 }
 
 
-/* *-*-*-*-    Specialized Classes   *-*-* * */
+/* *-*-*-*-  Specialized Classes   *-*-* * */
 
 .alphaLower, .alphalower {
   list-style-type: lower-alpha;
@@ -193,8 +193,8 @@ ul.plain {
 }
 
 .floatleft, .floatLeft{
-   float:left;
-   padding: 8px;
+  float:left;
+  padding: 8px;
 }
 
 .floatright, .floatRight{
@@ -361,7 +361,8 @@ span.keyterm {
   font-size: 110%;
 }
 
-.quote h4, .quote h5 {
+.quote h4,
+.quote h5 {
   color: #003366;
 }
 
@@ -381,7 +382,7 @@ span.keyterm {
 }
 
 .right{
-   text-align: right;
+  text-align: right;
 }
 
 .romanLower, .romanlower {
@@ -417,7 +418,8 @@ span.keyterm {
   text-decoration: underline;
 }
 
-/* *-*-*-*-  Positioning Elements    *-*-* * */
+
+/* *-*-*-*-  Positioning Elements  *-*-* * */
 
 #level2 {
   position: relative;
@@ -475,7 +477,7 @@ span.keyterm {
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius:10px;
   -webkit-border-radius: 10px;
- }
+}
 
 .actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox {
   background-color: #F3F3E9;
