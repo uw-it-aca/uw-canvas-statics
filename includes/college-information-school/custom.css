@@ -1,0 +1,128 @@
+.ischool-boxed-content {
+	border: 3px solid #dcdcdc;
+	padding: 20px; 
+	margin-top: 20px; 
+	background: #f7f7f7;
+}
+.ischool-boxed-content ol {
+	font-size: 14px;
+}
+
+.ischool-btn-nav {
+	list-style-type: none;
+	padding: 0;
+}
+
+.ischool-top-nav li, .ischool-module-horizontal-nav li, .ischool-right-sidebar li {
+	border: solid 1px #dcdcdc;
+	margin-bottom: 10px; 
+}
+
+.ischool-top-nav {
+}
+.ischool-top-nav li {
+	display: inline-block; 
+	padding: 7px 10px; 
+	background-color: #4b2e83; 
+	margin-right: 7px; 
+	width: 150px; 
+}
+.ischool-top-nav a {
+	color: #e8e3d3;
+	font-weight: bold; 
+}
+.ischool-top-nav .current {
+	color: #ffffff;
+}
+
+
+.ischool-module-horizontal-nav {
+	margin: 0 0 10px 0; 
+}
+.ischool-module-horizontal-nav li {
+	display: inline-block; 
+	padding: 10px 8px; 
+	background-color: #f9f9f9; 
+	margin-right: 10px; 
+	width: 180px; 
+}
+.ischool-module-horizontal-nav a {
+	font-weight: bold; 
+}
+
+
+.ischool-right-sidebar {
+	margin: 0; 
+	color: #333;
+	clear: both;
+	padding-right: 40px;
+	margin-top: 10px;
+}
+.ischool-right-sidebar li {
+	text-align: left; 
+	padding: 10px 15px; 
+	background-color: #f9f9f9; 
+	width: 100%; 
+}
+.ischool-right-sidebar li a {
+	font-weight: bold; 
+}
+.ischool-right-sidebar .current {
+
+}
+
+
+.ischool-headerh3:nth-of-type(1) {
+	background-color: #dcdcdc;
+	margin: 10px 0 10px 0;
+}
+.ischool-headerh3 {
+	border-bottom: 1px solid #dcdcdc; 
+	font-weight: bold; 
+	line-height: 36px;
+	padding: 0 0 10px 0;
+	margin: 25px 0 10px 0;
+}
+.ischool-headerh3 a {
+	text-decoration: none; 
+	color: #4b2e83;
+}
+
+
+
+.ischool-tabs-headerh3 {
+	border-bottom: 1px solid #dcdcdc; 
+	font-weight: bold; 
+	line-height: 1.3; 
+	padding: 15px 0;
+}
+.ischool-tabs-headerh3 a {
+	text-decoration: none; 
+	color: #4b2e83;
+}
+
+
+.ischool-week-top {
+	text-align: center; 
+	padding: 8px 10px; 
+	line-height: 24px; 
+	background: #f7f7f7; 
+	font-weight: bold; 
+	font-size: 14px;
+}
+
+
+.ischool-backtotop {
+	font-size: 10px;
+}
+.ischool-backtotop a {
+	font-weight: bold;
+	background: #e8e3d3;
+	padding: 5px;
+}
+
+
+
+.ischool-purple-text {
+	color: #4b2e83;
+}
