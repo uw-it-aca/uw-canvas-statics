@@ -1,29 +1,36 @@
+/** Boxed Content **/
+
 .ischool-boxed-content {
 	border: 3px solid #dcdcdc;
 	padding: 20px; 
-	margin-top: 20px; 
+	margin: 20px 0; 
 	background: #f7f7f7;
 }
 .ischool-boxed-content ol {
 	font-size: 14px;
 }
 
-.ischool-btn-nav {
+/** li **/
+
+.ischool-top-nav, .ischool-module-horizontal-nav, .ischool-sidebar-nav, .ischool-sidebar-tabbed-nav {
 	list-style-type: none;
 	padding: 0;
 }
-
-.ischool-top-nav li, .ischool-module-horizontal-nav li, .ischool-right-sidebar li {
+.ischool-top-nav li, .ischool-module-horizontal-nav li, .ischool-sidebar-nav li, .ischool-sidebar-tabbed-nav li {
+	border-radius: 5px;
 	border: solid 1px #dcdcdc;
 	margin-bottom: 10px; 
 }
+
+
+/** Top Nav **/
 
 .ischool-top-nav {
 }
 .ischool-top-nav li {
 	display: inline-block; 
 	padding: 7px 10px; 
-	background-color: #4b2e83; 
+	background-color: #4b2e83; /** might need to make this inline **/
 	margin-right: 7px; 
 	width: 150px; 
 }
@@ -35,6 +42,8 @@
 	color: #ffffff;
 }
 
+
+/** Top Module Nav **/
 
 .ischool-module-horizontal-nav {
 	margin: 0 0 10px 0; 
@@ -50,57 +59,58 @@
 	font-weight: bold; 
 }
 
+/** Sidebar Nav and Sidebar Tabbed Nav **/
 
-.ischool-right-sidebar {
+.ischool-sidebar {
 	margin: 0; 
 	color: #333;
 	clear: both;
 	padding-right: 40px;
 	margin-top: 10px;
 }
-.ischool-right-sidebar li {
+.ischool-sidebar-tabbed {
+	clear: both;
+	padding-right: 40px;
+	margin-top: 35px;
+}
+.ischool-sidebar-nav li, .ischool-sidebar-tabbed-nav li {
 	text-align: left; 
 	padding: 10px 15px; 
 	background-color: #f9f9f9; 
 	width: 100%; 
 }
-.ischool-right-sidebar li a {
+.ischool-sidebar-nav li a, .ischool-sidebar-tabbed-nav {
 	font-weight: bold; 
 }
-.ischool-right-sidebar .current {
 
-}
 
+
+/** Headers **/
 
 .ischool-headerh3:nth-of-type(1) {
-	background-color: #dcdcdc;
-	margin: 10px 0 10px 0;
+	margin: 10px 0 5px 0;
 }
 .ischool-headerh3 {
 	border-bottom: 1px solid #dcdcdc; 
 	font-weight: bold; 
 	line-height: 36px;
 	padding: 0 0 10px 0;
-	margin: 25px 0 10px 0;
+	margin: 25px 0 5px 0;
 }
-.ischool-headerh3 a {
-	text-decoration: none; 
-	color: #4b2e83;
-}
-
-
-
 .ischool-tabs-headerh3 {
 	border-bottom: 1px solid #dcdcdc; 
 	font-weight: bold; 
-	line-height: 1.3; 
-	padding: 15px 0;
+	line-height: 36px;
+	padding: 0 0 10px 0; 
+	margin: 0 0 15px 0;
 }
-.ischool-tabs-headerh3 a {
+.ischool-headerh3 a, .ischool-tabs-headerh3 a {
 	text-decoration: none; 
 	color: #4b2e83;
 }
 
+
+/** Weekly Anchor Links **/
 
 .ischool-week-top {
 	text-align: center; 
@@ -111,6 +121,7 @@
 	font-size: 14px;
 }
 
+/** Back to Top **/
 
 .ischool-backtotop {
 	font-size: 10px;
@@ -121,8 +132,18 @@
 	padding: 5px;
 }
 
+/** Misc **/
 
-
-.ischool-purple-text {
+.ischool-purple {
 	color: #4b2e83;
+}
+.ischool-bold {
+	font-weight: bold;
+}
+.ischool-center {
+	text-align: center;
+}
+.ischool-highlighted {
+	background: #e8e3d3;
+	padding: 7px 10px;
 }
