@@ -102,7 +102,8 @@
 	font-weight: bold; 
 	line-height: 36px;
 	padding: 0 0 10px 0; 
-	margin: 0 0 15px 0;
+	margin-top: 0 !important;
+	margin-bottom: 15px;
 }
 .ischool-headerh3 a, .ischool-tabs-headerh3 a {
 	text-decoration: none; 
