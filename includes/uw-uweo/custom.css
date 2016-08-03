@@ -1023,7 +1023,7 @@ div.readingBox p, div.readingbox p {
 
 /* Canvas Icon Overrides*/
 
-.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubrics, .icon-student-view {
+.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view {
 	color: #4b2e83;
 }
 
