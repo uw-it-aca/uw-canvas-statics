@@ -225,16 +225,6 @@ ul.plain {
 }
 
 .btn100 {
-	list-style: none;
-	font-size: 1.2em;
-/*	width: 100px;
-	height: 100px;
-	line-height: 1.3;
-	display: inline-block;
-	margin: 10px;*/
-}
-
-.btn100 li {
 	width: 100px;
 	height: 100px;
 	line-height: 1.3;
@@ -250,15 +240,6 @@ ul.plain {
 }
 
 .btn150 {
-	list-style: none;
-	font-size: 1.2em;
-/*	width: 150px;
-	height: 150px;
-	line-height: 1.3;
-	display: inline-block;*/
-}
-
-.btn150 li {
 	width: 150px;
 	height: 150px;
 	line-height: 1.3;
@@ -270,6 +251,11 @@ ul.plain {
 .btn150 a:visited,
 .btn150 a:hover {
 	color: #1f76b1;
+}
+
+.btnlist, .btnList, .btnBG, .btnbg, .btnBg {
+	list-style: none;
+	font-size: 1.1em;
 }
 
 .btnBG li, .btnbg li, .btnBg li {
@@ -294,7 +280,7 @@ ul.plain {
 	height: 100px;
 }
 
-.btnlist, .btnList, .btnBG, .btnbg, .btnBg {
+.btnlist, .btnList {
 	list-style: none;
 	font-size: 1.2em;
 }
@@ -433,6 +419,7 @@ span.keyterm {
 	padding: 5px 0;
 	border-bottom: 7px solid #b7a57a;
 	clear: both;
+	overflow: hidden;
 }
 
 .lineheight {
