@@ -51,7 +51,7 @@ img.banner {
 	margin: 0 0 0 0;
 }
 
-li.btn {
+li.btn, .btnlist li, .btnList li {
 	border-color: #4b2e83;
 	display: inline-block;
 	margin: 6px;
@@ -60,16 +60,16 @@ li.btn {
 	background:#FFFFFF;
 }
 
-li.btn a {
+li.btn a, .btnList a, .btnlist a {
 	font-weight: bold;
 	color: 	#0081bd;
 }
 
-li.btn img {
+li.btn img, .btnList img, .btnlist img {
 	padding-right: 8px;
 }
 
-li.btn100 img, li.btn150 img {
+li.btn100 img, li.btn150 img, btn100 img, btn150 img {
 	padding-right: 0px;
 }
 
@@ -183,6 +183,7 @@ ul.plain {
 }
 
 .gbanner span, .gbanner span, .gbanner span, .gbanner span, .gbanner100 span, .gbanner100 span, .gbanner100 span, .gbanner100 span, .gbanner125 span, .gbanner125 span, .gbanner125 span, .gbanner125 span {
+	opacity: .8;
 	background: #FFFFFF;
 }
 
@@ -199,7 +200,7 @@ ul.plain {
 	font-style: italic;
 }
 
-.boldpad {
+.boldpad, .boldPad {
 	font-weight: bold;
 	padding-left: 8px;
 }
@@ -250,6 +251,33 @@ ul.plain {
 .btn150 a:visited,
 .btn150 a:hover {
 	color: #1f76b1;
+}
+
+.btnlist, .btnList, .btnBG, .btnbg, .btnBg {
+	list-style: none;
+	font-size: 1.1em;
+}
+
+.btnBG li, .btnbg li, .btnBg li {
+	width: 100px;
+	height: 120px;
+	line-height: 1.3;
+	display: inline-block;
+	float: left;
+	margin: 10px;
+	background-color: #85754d;
+	font: bold;
+	text-rendering: optimizeLegibility;
+	border: thin solid #85754d;
+}
+
+.btnBG a, .btnbg a, .btnBg a {
+	color: #FFFFFF;
+}
+
+.btnBG img, .btnbg img, .btnBg img {
+	width: 100px;
+	height: 100px;
 }
 
 .btnlist, .btnList {
@@ -391,6 +419,7 @@ span.keyterm {
 	padding: 5px 0;
 	border-bottom: 7px solid #b7a57a;
 	clear: both;
+	overflow: hidden;
 }
 
 .lineheight {
@@ -402,7 +431,7 @@ span.keyterm {
 	font-size: 90%;
 }
 
-.menulist {
+.menulist, .menuList {
 	list-style: none;
 }
 
@@ -559,7 +588,6 @@ span.keyterm {
 	margin-left:10px;
 	margin-right:179px;
 	padding-right: 5px;
-	background: none;
 	background-color: #FFFFFF;
 }
 
@@ -1023,7 +1051,7 @@ div.readingBox p, div.readingbox p {
 
 /* Canvas Icon Overrides*/
 
-.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubrics, .icon-student-view {
+.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view {
 	color: #4b2e83;
 }
 
@@ -1079,4 +1107,35 @@ icon-publish,
 
 div.entry-content {
   padding-left:0px !important;
+}
+
+/* Sticky menu classes */
+/*removes the max-width so that pages will utilize space on larger screens*/
+#wrapper-container.ic-app-container {
+    max-width: none;
+}
+
+/*makes left menu sticky*/
+.ic-app-course-menu {
+    position: fixed !important;
+    top: 70px;
+    left: 84px;
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 80px;
+}
+
+/*makes left menu snap to top of page when scrolled*/
+.ic-app-course-menu-fixed {
+    position: fixed !important;
+    top: 8px;
+    left: 108px;
+  overflow-y: scroll;
+  height: 100%;
+  width: 144px;
+}
+
+/*fixes overlaps on the RCE on smaller screens sizes*/
+.mce-btn-group .mce-btn {
+    float: left;
 }
