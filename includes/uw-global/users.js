@@ -53,6 +53,10 @@
             + '<button type="button" class="Button Button--primary uw-modal-close" data-dismiss="modal">OK, got it!</button>'
             + '</div></div></div></div></div></div>');
 
+        if ($('a.settings[href$="/settings"]').length === 0) {
+            return;
+        }
+
         if ($('#uw-modal-dialog').length) {
             $('#uw-modal-dialog').replaceWith($dialog);
         } else {
