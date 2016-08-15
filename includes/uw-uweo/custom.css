@@ -243,11 +243,6 @@ ul.plain {
   color: #1f76b1;
 }
 
-.btn100 img {
-  width: 100px;
-  height: 100px;
-}
-
 .btn150 {
   width: 150px;
   height: 150px;
@@ -1087,34 +1082,41 @@ div.readingBox p, div.readingbox p {
 
 /* Sticky menu classes */
 /*removes the max-width so that pages will utilize space on larger screens*/
-#wrapper-container.ic-app-container {
+/*#wrapper-container.ic-app-container {
     max-width: none;
-}
+}*/
 
 /*makes left menu sticky*/
-.ic-app-course-menu {
+/*.ic-app-course-menu {
     position: fixed !important;
     top: 70px;
     left: 84px;
-/*  overflow-y: scroll;
-    height: 100%;*/
-    padding-bottom: 80px;
+    overflow-y: auto;*/
+/*    height: 100%;*/
+/*    padding-bottom: 80px;
 }
 
+*/
+
 /*makes left menu snap to top of page when scrolled*/
-.ic-app-course-menu-fixed {
+/*.ic-app-course-menu-fixed {
     position: fixed !important;
     top: 8px;
     left: 108px;
     overflow-y: scroll;
     height: 100%;
     width: 144px;
-}
+}*/
 
 /*fixes overlaps on the RCE on smaller screens sizes*/
-.mce-btn-group .mce-btn {
+/*.mce-btn-group .mce-btn {
     float: left;
 }
+*/
+/*.with-left-side #left-side {
+  overflow: auto;
+}
+*/
 
 /* Canvas Icon Overrides*/
 
