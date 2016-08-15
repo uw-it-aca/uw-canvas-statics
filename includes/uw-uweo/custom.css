@@ -1069,7 +1069,7 @@ div.readingBox p, div.readingbox p {
 
 /* Canvas UI freezing */
 
-.ic-app-nav-toggle-and-crumbs {
+/*.ic-app-nav-toggle-and-crumbs {
   padding: 6px 0;
   position: fixed;
   z-index: 1000;
@@ -1083,7 +1083,7 @@ div.readingBox p, div.readingbox p {
 
 .ic-app-course-menu {
   top: 25px;
-}
+}*/
 
 /* Sticky menu classes */
 /*removes the max-width so that pages will utilize space on larger screens*/
@@ -1175,4 +1175,3 @@ icon-publish,
 div.entry-content {
   padding-left:0px !important;
 }
-
