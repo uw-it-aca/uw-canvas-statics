@@ -638,7 +638,7 @@ span.keyterm {
   -webkit-border-radius: 10px;
  }
 
-.actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox {
+.actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox, .instructorGoldBox, .instructorGoldbox, .instructorgoldbox, .instructorgoldBox  {
      background-color: #F3F3E9;
 }
 
@@ -669,7 +669,7 @@ span.keyterm {
 }
 
 .actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .discussionIcon, .hardhatIcon, .importantIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .tickIcon, .turnIcon,
-.chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon {
+.chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon, .presenterIcon, .presentericon, .connectIcon, .connecticon {
   text-indent: 28px;
   line-height: 200%;
     display: inline-block;
@@ -799,16 +799,16 @@ span.keyterm {
   background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/view.png") no-repeat top left;
 }
 
-.actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li, .actionbox li, .diacriticalbox li, .importantbox li, .infobox li, .instructorbox li, .keytermbox li {
+.actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li, .actionbox li, .diacriticalbox li, .importantbox li, .infobox li, .instructorbox li, .keytermbox li, .instructorGoldBox li, .instructorgoldBox li, .instructorGoldbox li, .instructorgoldbox li {
   padding-bottom: 2px;
 }
 
-.actionBox ul, .diacriticalBox ul, .importantBox ul, .infoBox ul, .instructorBox ul, .keytermBox ul, .actionbox ul, .diacriticalbox ul, .importantbox ul, .infobox ul, .instructorbox ul, .keytermbox ul {
+.actionBox ul, .diacriticalBox ul, .importantBox ul, .infoBox ul, .instructorBox ul, .keytermBox ul, .actionbox ul, .diacriticalbox ul, .importantbox ul, .infobox ul, .instructorbox ul, .keytermbox ul, .instructorGoldBox ul, .instructorgoldBox ul, .instructorGoldbox ul, .instructorgoldbox ul {
   margin: 1em 1em 1em 0em;
   padding-left: 1.5em;
 }
 
-.actionBox ol, .diacriticalBox ol, .importantBox ol, .infoBox ol, .instructorBox ol, .keytermBox ol, .actionbox ol, .diacriticalbox ol, .importantbox ol, .infobox ol, .instructorbox ol, .keytermbox ol {
+.actionBox ol, .diacriticalBox ol, .importantBox ol, .infoBox ol, .instructorBox ol, .keytermBox ol, .actionbox ol, .diacriticalbox ol, .importantbox ol, .infobox ol, .instructorbox ol, .keytermbox ol, .instructorGoldBox ol, .instructorgoldBox ol, .instructorGoldbox ol, .instructorgoldbox ol {
   margin: 1em 1em 1em 0em;
   padding-left: 1.5em;
 }
@@ -845,11 +845,11 @@ span.keyterm {
   margin-bottom: 0px;
 }
 
-.instructorBox img, .instructorbox img {
+.instructorBox img, .instructorbox img, .instructorGoldBox img, .instructorgoldBox img, .instructorGoldbox img, .instructorgoldbox img {
   margin: 10px 15px 0px 15px;
 }
 
-.instructorBox, .instructorImportantBox, .fullBox, .fullActionBox, .fullImportantBox, .instructorbox, .instructorimportantbox, .fullbox, .fullactionbox, .fullimportantbox  { /*sidebar that flexs to size of instructor photo or email width*/
+.instructorBox, .instructorImportantBox, .fullBox, .fullActionBox, .fullImportantBox, .instructorbox, .instructorimportantbox, .fullbox, .fullactionbox, .fullimportantbox, .instructorGoldBox, .instructorGoldbox, .instructorgoldbox, .instructorgoldBox  { /*sidebar that flexs to size of instructor photo or email width*/
   z-index: 0;
   border: outset;
   border-width: 1px;
@@ -1154,14 +1154,19 @@ icon-publish,
 .al-options .ui-menu-item a,
 .context_module_item .item_name .title a,
 .ig-list .type.icon,
-.ig-list .ig-row .ig-published item_name,
-.context_module_item .type_icon i {
+.ig-list .ig-row .ig-published item_name {
   color: #0081bd;
 }
 
 .item-group-container {
   border: 1px solid #4b2e83;
   background: #FFFFFF;
+}
+
+/* Assignment Page */
+
+div.ig-type-icon i {
+  color: #ffffff;
 }
 
 /* Discussion Forum Threading */
@@ -1177,3 +1182,4 @@ icon-publish,
 div.entry-content {
   padding-left:0px !important;
 }
+
