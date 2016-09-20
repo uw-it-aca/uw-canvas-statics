@@ -33,3 +33,13 @@ a.context_external_tool_31483 { display: none !important; }
     color: black;
     font-weight: 800;
 }
+
+#unauthorized_message { display: none; }
+#uw_unauthorized_message { margin: 4em auto; width: 700px; }
+#uw_unauthorized_message > span { padding-left: 4em; display: block; }
+h3.unauth-alert-head { font-size: 2em; }
+p.unauth-alert { padding-top: 0 3em; font-size: 1.2em; line-height: 1em; }
+p.unauth-alert-bold { font-weight: 800; }
+div.unauth-extra { padding-left: 4em; line-height: 1em; }
+div.unauth-extra p { margin-top: 12px; margin-bottom: 5px; }
+ul.unauth-extra-list { font-size: .9em; }
