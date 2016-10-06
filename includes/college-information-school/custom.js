@@ -1,11 +1,12 @@
 /*jslint browser: true */
-/*global jQuery */
+/*global jQuery, navigator, alert */
 (function ($) {
     "use strict";
 
-    $(document).ready(function () {
-        // https://jira.cac.washington.edu/browse/CVS-474
-        $("div.accordion").accordion();
+    $("#quiz-instructions:contains('[SEB]')").whenExists(function () {
+        if (navigator.userAgent.match(/SEB/) === null) {
+            $("#submit_quiz_form").hide();
+            alert('You must use the Safe Exam Browser to take this quiz');
+        }
     });
-
 }(jQuery));
