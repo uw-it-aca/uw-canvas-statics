@@ -11,9 +11,9 @@ cite {
 }
 
 code {
-    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-    color: #990000;
-    background: transparent;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  color: #990000;
+  background: transparent;
   border: none;
 }
 
@@ -27,6 +27,11 @@ h3,
 .user_content h3, .user_content .h3, .mceContentBody h3, .mceContentBody .h3 {
   margin-bottom: 0px;
   line-height: inherit;
+}
+
+/* Speed Grader Header Fix */
+#gradebook_header h2 a {
+  color: #FFFFFF;
 }
 
 pre {
@@ -84,7 +89,7 @@ ul.plain {
 }
 
 
-/* *-*-*-*-    Specialized Classes   *-*-* * */
+/* *-*-*-*-  Specialized Classes   *-*-* * */
 
 .alphaLower, .alphalower {
   list-style-type: lower-alpha;
@@ -406,12 +411,12 @@ ul.plain {
   color: #336666;
   background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key2.png") no-repeat top left;
   text-indent: 20px;
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Moved inline block into span-specific so keyterm can be used as paragraph or other container class without messing up spacing 2016 Canvas UI */
 span.keyterm {
-    display: inline-block;
+  display: inline-block;
 }
 
 .left {
@@ -430,8 +435,9 @@ span.keyterm {
   line-height: 200%;
 }
 
+
 .math {
-    font-family: "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 90%;
 }
 
@@ -579,7 +585,7 @@ span.keyterm {
 }
 
 
-/* *-*-*-*-  Positioning Elements    *-*-* * */
+/* *-*-*-*-  Positioning Elements  *-*-* * */
 
 #level2 {
   position: relative;
@@ -639,23 +645,23 @@ span.keyterm {
  }
 
 .actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox, .instructorGoldBox, .instructorGoldbox, .instructorgoldbox, .instructorgoldBox  {
-     background-color: #F3F3E9;
+   background-color: #F3F3E9;
 }
 
 .blueBox, .bluebox {
-    background-color: #F0F4FF;
+  background-color: #F0F4FF;
 }
 
 .grayBox, .instructorBox, .fullBox, .graybox, .instructorbox, .fullbox {
-     background-color: #EEEEEE;
+   background-color: #EEEEEE;
 }
 
 .orangeBox, .instructorImportantBox, .fullImportantBox, .orangebox, .instructorimportantbox, .fullimportantbox  {
-     background-color: #FAF1D6;
+   background-color: #FAF1D6;
 }
 
 .purpleBox, .fullActionBox, .purplebox, .fullactionbox {
-     background-color: #f3efff;
+   background-color: #f3efff;
 }
 
 .keytermBox, .keytermbox {
@@ -672,19 +678,19 @@ span.keyterm {
 .chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon, .presenterIcon, .presentericon, .connectIcon, .connecticon {
   text-indent: 28px;
   line-height: 200%;
-    display: inline-block;
+  display: inline-block;
 }
 
 .hourglassIcon, .hourglassicon, .mobileIcon, .mobileicon, .testIcon, .testicon {
   text-indent: 25px;
   line-height: 200%;
-    display: inline-block;
+  display: inline-block;
 }
 
 .bookIcon, .bookicon, .discussionicon, .discussionIcon, .infoIcon, .infoicon, .videoIcon, .videoicon {
   text-indent: 30px;
   line-height: 200%;
-    display: inline-block;
+  display: inline-block;
 }
 
 .actionIcon, .actionicon {
@@ -814,7 +820,7 @@ span.keyterm {
 }
 
 .actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5, .actionbox h5, .diacriticalbox h5, .importantbox h5, .infobox h5, .keytermbox h5 {
-    color: #262626;
+  color: #262626;
   font-weight: bold;
 }
 
@@ -824,7 +830,7 @@ span.keyterm {
   font-weight: bold;
   font-size: 105%;
   line-height: 200%;
-    color: #262626;
+  color: #262626;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -835,7 +841,7 @@ span.keyterm {
   font-weight: bold;
   font-size: 105%;
   line-height: 200%;
-    color: #262626;
+  color: #262626;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -909,9 +915,9 @@ div.readingBox p, div.readingbox p {
 .video-container43,
 .video-mediaAmp,
 .video-mediaamp {
-    position: relative;
-    padding-bottom: 50%;
-    padding-top: 30px;
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 30px;
   height: 0;
   overflow: hidden;
 }
@@ -924,11 +930,11 @@ div.readingBox p, div.readingbox p {
 .video-mediaamp object,
 .video-mediaamp embed,
 .video-mediaamp img  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   max-width: 640px;
   max-height: 360px;
 }
@@ -937,11 +943,11 @@ div.readingBox p, div.readingbox p {
 .video-container object,
 .video-container embed,
 .video-container img  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   max-width: 640px;
   max-height: 360px;
 }
@@ -950,54 +956,54 @@ div.readingBox p, div.readingbox p {
 .video-container43 object,
 .video-container43 embed,
 .video-container43 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   max-width: 640px;
   max-height: 480px;
 }
 
 .image-container {
-    position: relative;
+  position: relative;
   overflow: auto;
   min-width: 150px;
   height: auto;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
   min-width: 150px;
   max-width: 600px;
   max-height: 400px;
 }
 
 .image-container-full {
-    position: relative;
+  position: relative;
   overflow: auto;
   min-width: 150px;
   height: auto;
 }
 
 .image-container-full img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
   min-width: 150px;
   max-width: 100%;
 }
 
 .image-container-square {
-    position: relative;
+  position: relative;
   overflow: auto;
   min-width: 200px;
   height: auto;
 }
 
 .image-container-square img {
-    width: 50%;
-    height: auto;
+  width: 50%;
+  height: auto;
   min-width: 200px;
   min-height: 200px;
   max-width: 400px;
@@ -1005,28 +1011,28 @@ div.readingBox p, div.readingbox p {
 }
 
 .image-container-tall {
-    position: relative;
+  position: relative;
   overflow: auto;
   width: 100%;
 }
 
 .image-container-tall img {
-    width: 35%;
-    height: auto;
+  width: 35%;
+  height: auto;
   min-width: 150px;
   max-width: 267px;
   max-height: 300px;
 }
 
 .image-container-zero {
-    position: relative;
+  position: relative;
   overflow: auto;
   min-width: 150px;
   height: auto;
 }
 
 .image-container-zero img {
-    height: auto;
+  height: auto;
   width: 100%;
   max-height: 200px;
   max-width: 300px;
@@ -1083,34 +1089,34 @@ div.readingBox p, div.readingbox p {
 /* Sticky menu classes */
 /*removes the max-width so that pages will utilize space on larger screens*/
 /*#wrapper-container.ic-app-container {
-    max-width: none;
+  max-width: none;
 }*/
 
 /*makes left menu sticky*/
 /*.ic-app-course-menu {
-    position: fixed !important;
-    top: 70px;
-    left: 84px;
-    overflow-y: auto;*/
-/*    height: 100%;*/
-/*    padding-bottom: 80px;
+  position: fixed !important;
+  top: 70px;
+  left: 84px;
+  overflow-y: auto;*/
+/*  height: 100%;*/
+/*  padding-bottom: 80px;
 }
 
 */
 
 /*makes left menu snap to top of page when scrolled*/
 /*.ic-app-course-menu-fixed {
-    position: fixed !important;
-    top: 8px;
-    left: 108px;
-    overflow-y: scroll;
-    height: 100%;
-    width: 144px;
+  position: fixed !important;
+  top: 8px;
+  left: 108px;
+  overflow-y: scroll;
+  height: 100%;
+  width: 144px;
 }*/
 
 /*fixes overlaps on the RCE on smaller screens sizes*/
 /*.mce-btn-group .mce-btn {
-    float: left;
+  float: left;
 }
 */
 /*.with-left-side #left-side {
@@ -1182,4 +1188,3 @@ div.ig-type-icon i {
 div.entry-content {
   padding-left:0px !important;
 }
-
