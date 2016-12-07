@@ -68,6 +68,7 @@ li.btn, .btnlist li, .btnList li {
 li.btn a, .btnList a, .btnlist a {
   font-weight: bold;
   color:   #0081bd;
+  text-decoration: none;
 }
 
 li.btn img, .btnList img, .btnlist img {
@@ -76,6 +77,10 @@ li.btn img, .btnList img, .btnlist img {
 
 li.btn100 img, li.btn150 img, btn100 img, btn150 img {
   padding-right: 0px;
+}
+
+li.btn100 a, li.btn150 a, btn100 a, btn150 a {
+  text-decoration: none;
 }
 
 ul.button {
@@ -109,6 +114,10 @@ ul.plain {
   border-bottom: 5px solid #b7a57a;
   padding: 10px 0;
   clear: both;
+}
+
+.amstyle a {
+  text-decoration: none;
 }
 
 .banner, .gbanner {
@@ -246,6 +255,7 @@ ul.plain {
 .btn100 a:visited,
 .btn100 a:hover {
   color: #1f76b1;
+  text-decoration: none;
 }
 
 .btn150 {
@@ -260,6 +270,7 @@ ul.plain {
 .btn150 a:visited,
 .btn150 a:hover {
   color: #1f76b1;
+  text-decoration: none;
 }
 
 .btnlist, .btnList, .btnBG, .btnbg, .btnBg {
@@ -287,6 +298,7 @@ ul.plain {
 
 .btnBG a, .btnbg a, .btnBg a {
   color: #FFFFFF;
+  text-decoration: none;
 }
 
 .btnBG img, .btnbg img, .btnBg img {
@@ -503,6 +515,10 @@ span.keyterm {
 
 .padded {
   padding-bottom: 14px;
+}
+
+.padded li {
+  padding-bottom: 1em;
 }
 
 .padLeft, padleft {
