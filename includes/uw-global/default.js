@@ -27,9 +27,7 @@ var UWCanvas = (function ($) {
     function load_script(path) {
         var hostname = (window.location.hostname === 'canvas.uw.edu')
             ? 'apps.canvas.uw.edu' : 'canvas-test.s.uw.edu';
-        $('<script>').attr('type', 'text/javascript')
-                     .attr('src', 'https://' + hostname + path)
-                     .appendTo('head');
+        $.getScript('https://' + hostname + path);
     }
 
     function update_report_problem_form(ev, xhr, obj) {
