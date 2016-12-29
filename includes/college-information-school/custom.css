@@ -1,193 +1,214 @@
+a {
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 920px) {
+    .col-md-4 {
+        min-width: 100% !important;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .col-md-6 {
+        min-width: 100% !important;
+    }
+}
+
+
 /** Boxed Content **/
 
 .ischool-boxed-content {
-	border: 3px solid #dcdcdc;
-	padding: 12px 20px 20px 20px; 
-	margin-bottom: 20px; 
-	background: #f7f7f7;
+  border: 3px solid #dcdcdc;
+  padding: 12px 20px 20px 20px;
+  margin-bottom: 20px;
+  background: #f7f7f7;
 }
 .ischool-boxed-content ol {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 /** li **/
+.ischool-module-horizontal-nav {
+  margin-top: 10px !important;
+}
 
 .ischool-top-nav, .ischool-module-horizontal-nav, .ischool-sidebar-nav, .ischool-sidebar-tabbed-nav {
-	list-style-type: none;
-	padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 .ischool-sidebar-nav, .ischool-sidebar-tabbed-nav {
-	margin-left: 0;
+  margin-left: 0;
 }
 .ischool-top-nav li, .ischool-module-horizontal-nav li, .ischool-sidebar-nav li, .ischool-sidebar-tabbed-nav li {
-	border-radius: 3px;
-	border: solid 1px #dcdcdc;
-	margin-bottom: 10px; 
+  border-radius: 3px;
+  border: solid 1px #dcdcdc;
+  margin-bottom: 10px;
 }
 
 
 /** Top Nav **/
 
 .ischool-top-nav {
-	margin-bottom: -10px !important;
+  margin-bottom: -10px !important;
 }
 .ischool-top-nav li {
-	display: inline-block; 
-	padding: 7px 10px 8px 10px; 
-	background-color: #4b2e83; /** might need to make this inline **/
-	margin-right: 7px; 
-	width: 150px; 
+  display: inline-block;
+  padding: 7px 10px 8px 10px;
+  background-color: #4b2e83; /** might need to make this inline **/
+  margin-right: 7px;
+  width: 150px;
 }
 .ischool-top-nav a {
-	color: #ffffff;
+  color: #ffffff;
 }
 .ischool-top-nav .current {
-	color: #e8e3d3;
+  color: #e8e3d3;
 }
 .ischool-top-nav .external {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 /** Wrapper **/
 
 .ischool-wrapper {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .ischool-wrapper-inside {
-	clear: both;
+  clear: both;
 }
 
 /** Main Content **/
 
 .ischool-content {
-	padding-right: 10px;
+  padding-right: 10px;
 }
 
 /** Top Module Nav **/
 
 .ischool-module-horizontal-nav {
-	margin: 0 0 10px 0; 
+  margin: 0 0 10px 0;
 }
 .ischool-module-horizontal-nav li {
-	display: inline-block; 
-	padding: 10px 8px; 
-	background-color: #f9f9f9; 
-	margin-right: 10px; 
-	width: 180px; 
+  display: inline-block;
+  padding: 10px 8px;
+  background-color: #f9f9f9;
+  margin-right: 10px;
+  width: 180px;
 }
 
 /** Sidebar Nav and Sidebar Tabbed Nav **/
 
 .ischool-sidebar {
-	margin: 0; 
-	color: #333;
-	clear: both;
-	padding-right: 40px;
+  margin: 0;
+  color: #333;
+  clear: both;
+  padding-right: 40px;
 }
 .ischool-sidebar-tabbed {
-	clear: both;
-	padding-right: 40px;
-	margin-top: 35px;
+  clear: both;
+  padding-right: 40px;
+  margin-top: 35px;
 }
 .ischool-sidebar-nav li, .ischool-sidebar-tabbed-nav li {
-	position: relative;
-	display: inline-block;
-	width: 100%; 
-	background-color: #f9f9f9; 
-	padding: 10px 15px; 
-	margin-left: 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  margin-left: 0;
 }
 .ischool-top-nav a, .ischool-module-horizontal-nav a, .ischool-sidebar-nav li a, .ischool-sidebar-tabbed-nav {
-	font-weight: bold; 
-	display: block;
-	text-decoration: none !important;
+  font-weight: bold;
+  display: block;
+  text-decoration: none !important;
 }
 
 
 
 /** Headers **/
 
-.ischool-content .ischool-headerh3:nth-of-type(1) {
-	margin: 0 0 5px 0;
+.ischool-content h3:first-child {
+  margin: 0 0 10px 0 !important;
+}
+.ischool-content p:first-child {
+  margin-bottom: 10px !important;
 }
 .ischool-headerh3 {
-	border-bottom: 1px solid #dcdcdc; 
-	font-weight: bold; 
-	line-height: 36px;
-	padding: 0 0 10px 0;
-	margin: 25px 0 5px 0;
+  border-bottom: 1px solid #dcdcdc;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 0 10px 0 !important;
+  margin: 25px 0 10px 0 !important;
 }
 .ischool-tabs-headerh3 {
-	border-bottom: 1px solid #dcdcdc; 
-	font-weight: bold; 
-	line-height: 36px;
-	padding: 0 0 10px 0; 
-	margin-top: 0 !important;
-	margin-bottom: 15px;
+  border-bottom: 1px solid #dcdcdc;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 0 10px 0;
+  margin-top: 0 !important;
+  margin-bottom: 15px;
 }
 .ischool-headerh3 a, .ischool-tabs-headerh3 a {
-	text-decoration: none; 
-	color: #4b2e83;
+  text-decoration: none;
+  color: #4b2e83;
 }
 .ischool-headerh4-day {
-	font-weight: bold; 
-	font-size: 18px;
-	line-height: 24px;
-	padding: 0;
-	margin: 0 0 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0 0 10px 0;
 }
 .ischool-headerh4 {
-	font-weight: bold; 
-	font-size: 16px;
-	line-height: 24px;
-	padding: 0;
-	margin: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  margin: 10px 0;
 }
-
 
 
 /** Weekly Anchor Links **/
 
 .ischool-week-top {
-	text-align: center; 
-	padding: 8px 10px; 
-	line-height: 24px; 
-	background: #f7f7f7; 
-	font-size: 14px;
-	margin: 20px 0;
+  text-align: center;
+  padding: 8px 10px;
+  line-height: 24px;
+  background: #f7f7f7;
+  font-size: 14px;
+  margin: 20px 0;
 }
 .ischool-week-top a {
-	padding: 0 7px;
-	font-weight: bold; 
+  padding: 0 7px;
+  font-weight: bold;
 }
 
 /** Back to Top **/
 
 .ischool-backtotop {
-	font-size: 10px;
-	text-transform: uppercase;
+  font-size: 10px;
+  text-transform: uppercase;
 }
 .ischool-backtotop a {
-	font-weight: bold;
-	background: #e8e3d3;
-	padding: 5px 8px 5px 5px;
+  font-weight: bold;
+  background: #e8e3d3;
+  padding: 5px 8px 5px 5px;
 }
 
 /** Misc **/
 
 .ischool-purple {
-	color: #4b2e83;
+  color: #4b2e83;
 }
 .ischool-bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 .ischool-center {
-	text-align: center;
+  text-align: center;
 }
 .ischool-clear {
-	clear: both;
+  clear: both;
 }
 .ischool-highlighted {
-	background: #e8e3d3;
-	padding: 7px 10px;
+  background: #e8e3d3;
+  padding: 7px 10px;
 }
