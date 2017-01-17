@@ -578,10 +578,13 @@ span.keyterm {
 }
 
 .referenceList, .referencelist {
-  text-indent: -1em;
-  margin-left: 1em;
-  font-size: 90%;
+  text-indent: -2em;
+  margin-left: 2em;
   list-style-type: none;
+}
+
+.referenceList li, .referencelist li {
+  padding-bottom: 1em;
 }
 
 .right{
