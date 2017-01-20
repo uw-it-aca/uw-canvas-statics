@@ -134,22 +134,22 @@ a {
 }
 
 h3 {
-  border-bottom: 1px solid #dcdcdc !important;
   font-weight: bold;
-  line-height: 36px;
-  color: #4b2e83;
-  padding: 0 0 10px 0 !important;
-  margin: 25px 0 10px 0 !important;
+  line-height: 36px !important;
 }
 
 h3 a {
   font-size: 20px !important;
+  color: #4b2e83;
 }
 
+.ischool-headerh3 {
+  border-bottom: 1px solid #dcdcdc !important;
+  padding: 0 0 5px 0 !important;
+  margin: 25px 0 10px 0 !important;
+}
 .ischool-tabs-headerh3 {
   border-bottom: 1px solid #dcdcdc;
-  font-weight: bold;
-  line-height: 36px;
   padding: 0 0 10px 0;
   margin-top: 0 !important;
   margin-bottom: 15px;
