@@ -1,5 +1,9 @@
 /*jslint browser: true, plusplus: true */
 /*global jQuery */
+var ALLY_CFG = {
+    'baseUrl': 'https://prod.ally.ac',
+    'clientId': 5
+};
 var UWCanvas = (function ($) {
     'use strict';
 
@@ -7,11 +11,7 @@ var UWCanvas = (function ($) {
         uw_groups_external_id = '31485',
         course_photos_external_id = '37913',
         unauthorized_title = "You don't have access to this content",
-        unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>',
-        ALLY_CFG = {
-            'baseUrl': 'https://prod.ally.ac',
-            'clientId': 5
-        };
+        unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>';
 
     $.fn.whenExists = function (handler) {
         var selector = this.selector,
