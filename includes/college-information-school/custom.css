@@ -133,12 +133,12 @@ a {
   margin-bottom: 10px !important;
 }
 
-h3 {
+h3.ischool-headerh3 {
   font-weight: bold;
   line-height: 36px !important;
 }
 
-h3 a {
+h3.ischool-headerh3 a {
   font-size: 20px !important;
   color: #4b2e83;
 }
