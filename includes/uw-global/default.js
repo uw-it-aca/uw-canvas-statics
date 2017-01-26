@@ -1,5 +1,9 @@
 /*jslint browser: true, plusplus: true */
 /*global jQuery */
+var ALLY_CFG = {
+    'baseUrl': 'https://prod.ally.ac',
+    'clientId': 5
+};
 var UWCanvas = (function ($) {
     'use strict';
 
@@ -25,9 +29,9 @@ var UWCanvas = (function ($) {
     };
 
     function load_script(path) {
-        var hostname = (window.location.hostname === 'canvas.uw.edu')
-            ? 'apps.canvas.uw.edu' : 'canvas-test.s.uw.edu';
-        $.getScript('https://' + hostname + path);
+        var base_url = (window.location.hostname === 'canvas.uw.edu')
+            ? 'https://apps.canvas.uw.edu' : 'https://canvas-test.s.uw.edu';
+        $.getScript(base_url + path);
     }
 
     function update_report_problem_form(ev, xhr, obj) {
@@ -97,6 +101,7 @@ var UWCanvas = (function ($) {
 
         if (href.match(/\/courses\/\d+(\/.*)?$/)) {
             $('#unauthorized_holder').whenExists(show_unauthorized);
+            $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
         }
     });
 
