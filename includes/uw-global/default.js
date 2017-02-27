@@ -92,6 +92,7 @@ var UWCanvas = (function ($) {
         } else if (href.match(/\/courses\/\d+\/assignments/)) {
             load_script('/includes/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/(#.*)?)?$/)) {
+            load_script('/includes/vendor/handlebars-1.3.0.min.js');
             load_script('/includes/uw-global/users.js');
         } else if (href.match(/\/courses\/\d+\/gradebook/)) {
             load_script('/includes/uw-global/gradebook.js');
