@@ -4,6 +4,6 @@
     'use strict';
 
     $(document).ready(function () {
-        $.getScript('https://apps.canvas.uw.edu/includes/college-information-school/custom.js');
+        $.getScript('https://apps.canvas.uw.edu/includes/college-education/custom.js');
     });
 }(jQuery));
