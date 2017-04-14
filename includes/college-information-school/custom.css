@@ -221,11 +221,11 @@ p.ischool-backtotop a {
 }
 
 table caption {
-color: #4b2e83;
-font-size: 20px;
-font-weight: bold;
+  color: #4b2e83 !important;
+  font-size: 20px !important;
+  font-weight: bold;
 }
 
 ._235q2MA {
-font-weight: bold;
+  font-weight: bold;
 }
