@@ -1149,7 +1149,8 @@ p.early-ed-section-list-number {
   display: inline;
 }
 
-.early-ed-reading {
+.early-ed-reading,
+.early-ed-canvas-assignment {
   border-left: 10px solid red;
 }
 
@@ -1157,7 +1158,8 @@ p.early-ed-section-list-number {
   border-left: 10px solid blue;
 }
 
-.early-ed-reflection {
+.early-ed-reflection,
+.early-ed-portfolio {
   border-left: 10px solid green;
 }
 
@@ -1173,6 +1175,7 @@ p.early-ed-section-list-number {
 .early-ed-housekeeping {
   border-left: 10px solid #e7d516;
 }
+
 
 .early-ed-alt-option {
   font-size: 0.9em;
@@ -1514,7 +1517,7 @@ p.early-ed-section-list-number {
 }
 
 .early-ed-table table th {
-  display: none;
+  font-size: 1.3rem;
 }
 
 .early-ed-table table th,
@@ -1557,4 +1560,28 @@ p.early-ed-section-list-number {
   .early-ed-table table td {
     display: table-cell;
   }
+}
+
+/* Reply Buttons */
+
+.early-edu-discussion-button {
+  background: #6d6e71;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.early-edu-discussion-button:hover {
+  background: #085586;
+  color: #FFF;
+}
+
+/* Accordion */
+
+#early-edu-accordion {
+  font-size: 1em !important;
+}
+
+#early-edu-accordion .ui-accordion.ui-accordion--mini .ui-accordion-header a {
+  font-size: 1.3rem !important;
+  padding: .3em;
 }
