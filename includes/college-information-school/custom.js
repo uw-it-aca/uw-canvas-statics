@@ -9,24 +9,17 @@ var DT_variables = {
         iframeID: '',
         // Path to the hosted USU Design Tools
         path: 'https://designtools.ciditools.com/',
-        templateCourse: '1188947',
+        templateCourse: '1190741',
         // OPTIONAL: Button will be hidden from view until launched using shortcut keys
         hideButton: false,
         // OPTIONAL: Limit tools loading by users role
         limitByRole: false, // set to true to limit to roles in the roleArray
-        // adjust roles as needed
-        roleArray: [
-            'student',
-            'teacher',
-            'admin'
-        ],
+        // adjust roles as needed: 'student', 'teacher', ...
+        roleArray: [],
         // OPTIONAL: Limit tools to an array of Canvas user IDs
         limitByUser: false, // Change to true to limit by user
         // add users to array (Canvas user ID not SIS user ID)
-        userArray: [
-            '1234',
-            '987654'
-        ]
+        userArray: []
     };
 ////////////////////////////////////////////////////
 // END DESIGN TOOLS CONFIG                        //
