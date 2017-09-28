@@ -17,9 +17,17 @@ code {
   border: none;
 }
 
+h1 {
+	font-size: 2.2rem;
+}
+
 h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: #262626;
+}
+
+h2, .h2 {
+	font-size: 1.8em;
 }
 
 /* h3 Added for New Canvas UI 2016*/
@@ -27,6 +35,7 @@ h3,
 .user_content h3, .user_content .h3, .mceContentBody h3, .mceContentBody .h3 {
   margin-bottom: 0px;
   line-height: inherit;
+  font-size: 1.5em;
 }
 
 /* Canvas Icons class fontsize Jan2017 */
@@ -190,6 +199,7 @@ ul.plain {
 
 .gbanner h1, .gbanner h2, .gbanner h3, .gbanner h4 {
   margin-top: 0px;
+
   top: 0;
   font: bold 24px Helvetica, Sans-Serif;
 }
@@ -337,7 +347,7 @@ ul.plain {
 
 .copyright {
   clear: both;
-  font-size: 95%;
+  font-size: 85%;
   font-weight: bold;
   text-align: center;
 }
@@ -1107,62 +1117,9 @@ div.readingBox p, div.readingbox p {
   text-decoration: none;
 }
 
-
-/* Canvas UI freezing */
-
-/*.ic-app-nav-toggle-and-crumbs {
-  padding: 6px 0;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  background-color: #FFFFFF;
+.pages.show .page-title, .page-title {
+	font-size: 2.0em;
 }
-
-.header-bar {
-  padding: 25px 0;
-}
-
-.ic-app-course-menu {
-  top: 25px;
-}*/
-
-/* Sticky menu classes */
-/*removes the max-width so that pages will utilize space on larger screens*/
-/*#wrapper-container.ic-app-container {
-  max-width: none;
-}*/
-
-/*makes left menu sticky*/
-/*.ic-app-course-menu {
-  position: fixed !important;
-  top: 70px;
-  left: 84px;
-  overflow-y: auto;*/
-/*    height: 100%;*/
-/*    padding-bottom: 80px;
-}
-
-*/
-
-/*makes left menu snap to top of page when scrolled*/
-/*.ic-app-course-menu-fixed {
-    position: fixed !important;
-    top: 8px;
-    left: 108px;
-    overflow-y: scroll;
-    height: 100%;
-    width: 144px;
-}*/
-
-/*fixes overlaps on the RCE on smaller screens sizes*/
-/*.mce-btn-group .mce-btn {
-  float: left;
-}
-*/
-/*.with-left-side #left-side {
-  overflow: auto;
-}
-*/
 
 /* Canvas Icon Overrides*/
 
@@ -1227,4 +1184,69 @@ div.ig-type-icon i {
 
 div.entry-content {
   padding-left:0px !important;
+}
+
+/* Career Accelerator */
+.caH2, .caH3, .caH4  {
+	font-family: "Open Sans", sans-serif;
+	line-height: 130%;
+	color: #4b2e83;
+}
+
+.caH2 {
+	font-weight: bold;
+	font-size: 2.1rem;
+}
+
+.caH3 {
+	font-size: 32px;
+	font-weight: 300;
+}
+
+.caH4 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.caH4div {
+	border-radius: 5px;
+	padding-left:  5px;
+	border-left:   25px solid #f5f5f5; /*should match color of caNav*/
+}
+
+/*adapted from Using Canvas Styleguide Buttons from Jeremy Perkins*/
+.caBtn {
+    background: #f7f7f7;
+    color: #000000;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-weight: normal;
+}
+
+/* div with class="grid-row around-md clearunderlinestyle" role="navigation" */
+.caNav {
+	border-top: medium solid #4b2e83;
+	border-bottom: medium solid #4b2e83;
+	background-color: #f5f5f5;
+	color: #cccccc;
+	margin: auto;
+	font-weight: bold;
+	font-size: 0.875rem;
 }
