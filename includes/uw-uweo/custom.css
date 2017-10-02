@@ -18,7 +18,7 @@ code {
 }
 
 h1 {
-	font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 h2, h3, h4, h5, h6 {
@@ -27,7 +27,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h2, .h2 {
-	font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 /* h3 Added for New Canvas UI 2016*/
@@ -52,10 +52,10 @@ h3,
 
 /* Canvas no print links Jan2017 */
   @media print {
-     a:link:after,  a:visited:after {
-    content: none;
-    }
+   a:link:after,  a:visited:after {
+  content: none;
   }
+}
 
 /* Speed Grader Header Fix */
 #gradebook_header h2 {
@@ -695,7 +695,7 @@ span.keyterm {
  }
 
 .actionBox, .diacriticalBox, .goldBox, .importantBox, .infoBox, .actionbox, .diacriticalbox, .goldbox, .importantbox, .infobox, .instructorGoldBox, .instructorGoldbox, .instructorgoldbox, .instructorgoldBox  {
-     background-color: #F3F3E9;
+   background-color: #F3F3E9;
 }
 
 .blueBox, .bluebox {
@@ -703,15 +703,15 @@ span.keyterm {
 }
 
 .grayBox, .instructorBox, .fullBox, .graybox, .instructorbox, .fullbox {
-     background-color: #EEEEEE;
+   background-color: #EEEEEE;
 }
 
 .orangeBox, .instructorImportantBox, .fullImportantBox, .orangebox, .instructorimportantbox, .fullimportantbox  {
-     background-color: #FAF1D6;
+   background-color: #FAF1D6;
 }
 
 .purpleBox, .fullActionBox, .purplebox, .fullactionbox {
-     background-color: #f3efff;
+   background-color: #f3efff;
 }
 
 .keytermBox, .keytermbox {
@@ -1118,7 +1118,7 @@ div.readingBox p, div.readingbox p {
 }
 
 .pages.show .page-title, .page-title {
-	font-size: 2.0em;
+  font-size: 2.0em;
 }
 
 /* Canvas Icon Overrides*/
@@ -1188,65 +1188,65 @@ div.entry-content {
 
 /* Career Accelerator */
 .caH2, .caH3, .caH4  {
-	font-family: "Open Sans", sans-serif;
-	line-height: 130%;
-	color: #4b2e83;
+  font-family: "Open Sans", sans-serif;
+  line-height: 130%;
+  color: #4b2e83;
 }
 
 .caH2 {
-	font-weight: bold;
-	font-size: 2.1rem;
+  font-weight: bold;
+  font-size: 2.1rem;
 }
 
 .caH3 {
-	font-size: 32px;
-	font-weight: 300;
+  font-size: 32px  !important;
+  font-weight: 300;
 }
 
 .caH4 {
-	font-size: 24px;
-	font-weight: 300;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .caH4div {
-	border-radius: 5px;
-	padding-left:  5px;
-	border-left:   25px solid #f5f5f5; /*should match color of caNav*/
+  border-radius: 5px;
+  padding-left:  5px;
+  border-left:   25px solid #f5f5f5; /*should match color of caNav*/
 }
 
 /*adapted from Using Canvas Styleguide Buttons from Jeremy Perkins*/
 .caBtn {
-    background: #f7f7f7;
-    color: #000000;
-    border: 1px solid #d1d1d1;
-    border-radius: 3px;
-    transition: background-color 0.2s ease-in-out;
-    display: inline-block;
-    position: relative;
-    padding: 10px 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    text-decoration: none;
-    overflow: hidden;
-    text-shadow: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    font-weight: normal;
+  background: #f7f7f7;
+  color: #000000;
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  transition: background-color 0.2s ease-in-out;
+  display: inline-block;
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  text-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-weight: normal;
 }
 
 /* div with class="grid-row around-md clearunderlinestyle" role="navigation" */
 .caNav {
-	border-top: medium solid #4b2e83;
-	border-bottom: medium solid #4b2e83;
-	background-color: #f5f5f5;
-	color: #cccccc;
-	margin: auto;
-	font-weight: bold;
-	font-size: 0.875rem;
+  border-top: medium solid #4b2e83;
+  border-bottom: medium solid #4b2e83;
+  background-color: #f5f5f5;
+  color: #cccccc;
+  margin: auto;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
