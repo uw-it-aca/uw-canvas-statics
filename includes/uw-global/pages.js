@@ -11,9 +11,10 @@
             cookies = document.cookie.split(';'),
             cookie,
             match,
-            csrf;
+            csrf,
+            i;
 
-        for (var i = 0; i < cookies.length; i++) {
+        for (i = 0; i < cookies.length; i++) {
             cookie = cookies[i].trim();
             match = csrf_regex.exec(cookie);
             if (match) {
@@ -33,15 +34,15 @@
                 data: JSON.stringify({'wiki_page': {'front_page': false}}),
                 dataType: 'json',
             }).done(function () {
-                window.location.href = window.location.href;
+                var reload_url = window.location.href;
+                window.location.href = reload_url;
             });
         }
         return false;
     }
 
-    function add_deselect_front_page_option () {
+    function add_deselect_front_page_option() {
         /*jshint validthis: true */
-
         // This is the table of contents view
         var item = $(this).closest('tr').find('a.delete-menu-item').first(),
             url = $(this).closest('tr').find('a.wiki-page-link').first().attr('href'),
@@ -68,7 +69,7 @@
     $('span.front-page').whenExists(add_deselect_front_page_option);
 
     // ..and on the ajax request
-    $(document).ajaxComplete(function(ev, xhr, data) {
+    $(document).ajaxComplete(function (ev, xhr, data) {
         if (data.type === 'PUT' && data.url.match(/courses/)) {
             $('span.front-page').whenExists(add_deselect_front_page_option);
         }
