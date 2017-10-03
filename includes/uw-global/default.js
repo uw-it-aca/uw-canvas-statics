@@ -99,6 +99,8 @@ var UWCanvas = (function ($) {
             load_script('/includes/uw-global/gradebook.js');
         } else if (href.match(/\/courses\/\d+\/external_tools/)) {
             load_script('/includes/uw-global/external_tools.js');
+        } else if (href.match(/\/courses\/\d+\/pages/)) {
+            load_script('/includes/uw-global/pages.js');
         } else if (href.match(/\/profile\/settings$/)) {
             load_script('/includes/uw-global/profile.js');
         }
