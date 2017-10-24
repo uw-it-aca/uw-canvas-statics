@@ -11,7 +11,7 @@ var DT_variables = {
         path: 'https://designtools.ciditools.com/',
         templateCourse: '1190741',
         // OPTIONAL: Button will be hidden from view until launched using shortcut keys
-        hideButton: false,
+        hideButton: true,
         // OPTIONAL: Limit tools loading by users role
         limitByRole: false, // set to true to limit to roles in the roleArray
         // adjust roles as needed: 'student', 'teacher', ...
