@@ -17,8 +17,8 @@
         if (window.location.href.match(/-(test|beta)$/)) {
             host = "https://uw." + RegExp.$1 + ".instructure.com";
         }
-        login_urls["weblogin_option"] = host + "/login/83";
-        login_urls["google_option"] = host + "/login/792";
+        login_urls["weblogin_option"] = host + "/login/saml/83";
+        login_urls["google_option"] = host + "/login/saml/792";
 
         function getCookie(name) {
             var cookieValue,
