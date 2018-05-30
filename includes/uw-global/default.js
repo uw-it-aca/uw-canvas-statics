@@ -1,7 +1,7 @@
 /*jslint browser: true, plusplus: true */
 /*global jQuery */
 var ALLY_CFG = {
-    'loadScript': false,  // Set to true to enable ally
+    'loadScript': true,  // Set to true to enable ally
     'baseUrl': 'https://prod.ally.ac',
     'clientId': 5
 };
