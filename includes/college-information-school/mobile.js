@@ -34,7 +34,7 @@ var DT_variables = {
         $.getScript(DT_variables.path + 'js/master_controls.js');
 
         // Design Tools Mobile JS
-        //$.getScript(DT_variables.path + 'js/tools_liveView_app.js?' + now);
+        $.getScript(DT_variables.path + 'js/tools_liveView_app.js?' + now);
 
         // Atomic Search JS
         $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
