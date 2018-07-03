@@ -1,42 +1,33 @@
-/*jslint browser: true, plusplus: true */
-/*global jQuery, UWCanvas */
-
-////////////////////////////////////////////////////
-// DESIGN TOOLS CONFIG                            //
-////////////////////////////////////////////////////
-// Copyright (C) 2016  Utah State University
-var DT_variables = {
-        iframeID: '',
-        // Path to the hosted USU Design Tools
-        path: 'https://designtools.ciditools.com/',
-        templateCourse: '1190741',
-        // OPTIONAL: Button will be hidden from view until launched using shortcut keys
-        hideButton: true,
-        // OPTIONAL: Limit tools loading by users role
-        limitByRole: false, // set to true to limit to roles in the roleArray
-        // adjust roles as needed: 'student', 'teacher', ...
-        roleArray: [],
-        // OPTIONAL: Limit tools to an array of Canvas user IDs
-        limitByUser: false, // Change to true to limit by user
-        // add users to array (Canvas user ID not SIS user ID)
-        userArray: []
-    };
-////////////////////////////////////////////////////
-// END DESIGN TOOLS CONFIG                        //
-////////////////////////////////////////////////////
-
-(function ($) {
-    'use strict';
-
-    $(document).ready(function () {
-        var now = new Date().getTime();
-        // Design Tools JS
-        $.getScript(DT_variables.path + 'js/master_controls.js');
-
-        // Design Tools Mobile JS
-        $.getScript(DT_variables.path + 'js/tools_liveView_app.js?' + now);
-
-        // Atomic Search JS
-        $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
-    });
-}(jQuery));
+/*jslint browser: true */
+// Load APP JS File
+(function () {
+    "use strict";
+    function loadScript(url, scriptID, callback) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.id = scriptID;
+        if (script.readyState) { //IE
+            script.onreadystatechange = function () {
+                if (script.readyState === "loaded" ||
+                        script.readyState === "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function () {
+                callback();
+            };
+        }
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    var today = new Date(),
+        appScript = document.getElementById("dt_app_script"),
+        url = "https://designtools.ciditools.com/js/tools_liveView_app.js?";
+    if (appScript === null && window.jQuery === undefined) {
+        loadScript(url + today.getDate(), 'dt_app_script', function () {
+            console.log("Global App Stylesheet Ran");
+        });
+    }
+})();
