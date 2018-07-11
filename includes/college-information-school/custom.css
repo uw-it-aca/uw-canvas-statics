@@ -1513,7 +1513,7 @@ table caption {
 }
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo {
   background: #f5f5f5;
-  padding: 10px 20px;
+  padding: 5px 20px 15px 20px;
 }
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo p {
   font-size: 15px;
@@ -1525,6 +1525,13 @@ table caption {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column img {
+  float: left;
+  padding: 10px 10px 5px 0;
+  max-width: 95px;
+}
+
 #kl_wrapper_3.kl_uw_ischool_1>div, #kl_wrapper_3.kl_uw_ischool_1_mod>div {
   margin: 10px 0;
   position: relative;
@@ -1569,16 +1576,17 @@ table caption {
   top: -5px;
   left: -15px;
   padding-top: 5px;
-  padding-left: 15px;
-  width: 48px;
-  height: 46px;
+  padding-left: 2px;
+  width: 49px;
+  min-height: 46px;
   background-color: #4b2e83;
+  text-align: center;
   margin: 0 !important;
 }
 #kl_wrapper_3.kl_uw_ischool_1 #kl_banner {
   margin: 0;
   background: #f5f5f5;
-  padding: 12px 14px;
+  padding: 12px 20px;
 }
 #kl_wrapper_3.kl_uw_ischool_1 #kl_banner h2 {
   font-size: 24px;
@@ -1681,7 +1689,7 @@ table caption {
   display: table-cell;
   font-weight: 400;
   list-style-type: none;
-  padding: 12px 10px;
+  padding: 12px 20px !important;
   white-space: nowrap;
   overflow: hidden;
   display: block
@@ -1772,38 +1780,63 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 .modules li a:hover {
   text-decoration: none;
 }
+
+/* For expandable/collapsible styling in Canvas
+@media screen and (max-width:800px) {
+  .kl_uw_ischool_1 .ui-state-default {
+    background: #f5f5f5 !important;
+  }
+  .kl_uw_ischool_1 .ui-state-default:hover {
+    background: #F0F0F0 !important;
+    color: #000000;
+  }
+  .kl_uw_ischool_1 .ui-state-active a {
+    color: #000000 !important;
+  }
+
+  .kl_uw_ischool_1 .kl_panel_heading a {
+    padding-left: 10px !important;
+  }
+  .kl_uw_ischool_1 .kl_expand_controls {
+    margin: 10px 0 15px 0;
+  }
+  .kl_uw_ischool_1 .ui-state-active, .kl_uw_ischool_1 .ui-state-active:hover {
+  background: #f5f5f5 !important;
+  border-color: #C7CDD1 !important;
+  }
+}
+*/
+
+body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation ul {
+  padding-bottom: 0;
+  display: inline-block;
+}
+body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
+  display: inline-block;
+}
+
 @media screen and (min-width:500px) {
   body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation ul {
-    padding-bottom: 0;
-    display: inline-block;
-    float: left
+    float: left;
   }
   body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
-    display: inline-block;
     width: 44%;
-    float: left
+    float: left;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 h3:not(.ui-state-default) i:before, #kl_wrapper_3.kl_uw_ischool_1_mod h3:not(.ui-state-default) i:before {
+    font-size: 20px;
+    line-height: 36px
   }
 }
-@media screen and (max-width: 1400px) {
-    #kl_wrapper_3.kl_uw_ischool_1 #kl_banner .kl_subtitle {
-  float: none;
-  text-align: left;
-  }
-  #kl_wrapper_3.kl_uw_ischool_1 #kl_banner h2 {
-  float: none;
-  }
-}
+
+
 @media screen and (min-width:850px) {
   body.course-menu-expanded #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation ul {
-    padding-bottom: 0;
-    display: inline-block;
-    float: left
+    float: left;
   }
   body.course-menu-expanded #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
-    padding: 12px 15px;
-    display: inline-block;
     width: 44%;
-    float: left
+    float: left;
   }
 }
 @media screen and (min-width:900px) {
@@ -1814,7 +1847,6 @@ table caption {
   }
   body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
     display: table-cell;
-    padding: 12px 15px;
     width: 44%;
     float: none
   }
@@ -1830,9 +1862,17 @@ table caption {
   }
   body.course-menu-expanded #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
     display: table-cell;
-    padding: 12px 15px;
     width: 44%;
     float: none
+  }
+}
+@media screen and (max-width: 1400px) {
+  #kl_wrapper_3.kl_uw_ischool_1 #kl_banner .kl_subtitle {
+  float: none;
+  text-align: left;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 #kl_banner h2 {
+  float: none;
   }
 }
 
@@ -2411,5 +2451,3 @@ table caption {
 /*********************************************************************/
 /***** END DESIGN TOOLS THEME CUSTOMIZATIONS *************************/
 /********************************************************************
-
-
