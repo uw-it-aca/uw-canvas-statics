@@ -1514,6 +1514,7 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo {
   background: #f5f5f5;
   padding: 5px 20px 15px 20px;
+  overflow: auto;
 }
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo p {
   font-size: 15px;
@@ -1526,10 +1527,28 @@ table caption {
   margin-bottom: 0;
 }
 
-#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column img {
+#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column {
+  clear: both !important;
+  overflow: auto;
+}
+/*
+#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column div {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+*/
+
+#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column .photo {
   float: left;
-  padding: 10px 10px 5px 0;
-  max-width: 95px;
+  position: relative;
+  padding: 10px 10px 8px 0 !important;
+  max-width: 105px !important;
+}
+
+#kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column .photo img {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1>div, #kl_wrapper_3.kl_uw_ischool_1_mod>div {
@@ -1781,31 +1800,54 @@ table caption {
   text-decoration: none;
 }
 
-/* For expandable/collapsible styling in Canvas
-@media screen and (max-width:800px) {
-  .kl_uw_ischool_1 .ui-state-default {
-    background: #f5f5f5 !important;
-  }
-  .kl_uw_ischool_1 .ui-state-default:hover {
-    background: #F0F0F0 !important;
-    color: #000000;
-  }
-  .kl_uw_ischool_1 .ui-state-active a {
-    color: #000000 !important;
-  }
 
-  .kl_uw_ischool_1 .kl_panel_heading a {
-    padding-left: 10px !important;
-  }
-  .kl_uw_ischool_1 .kl_expand_controls {
-    margin: 10px 0 15px 0;
-  }
-  .kl_uw_ischool_1 .ui-state-active, .kl_uw_ischool_1 .ui-state-active:hover {
-  background: #f5f5f5 !important;
-  border-color: #C7CDD1 !important;
-  }
+.kl_uw_ischool_1 .ui-state-default {
+  background: #f5f5f5 url(http://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
 }
-*/
+.kl_uw_ischool_1 .ui-state-default:hover {
+  background: #F0F0F0 url(http://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
+  color: #000000 !important;
+}
+.kl_uw_ischool_1 .ui-icon {
+  background: none;
+  display: none !important;
+}
+
+.kl_uw_ischool_1 .ui-state-active, .kl_uw_ischool_1 .ui-state-active:hover {
+  background-position: 0 -72px !important;
+  border-color: #C7CDD1 !important;
+/*   background-color: #4b2e83 !important;
+   can keep this one */
+}
+
+.kl_uw_ischool_1 .ui-state-active a {
+  color: #000000 !important;
+}
+
+.kl_uw_ischool_1 .kl_panel_heading a {
+  padding-left: 50px !important;
+}
+.kl_uw_ischool_1 .kl_expand_controls {
+  margin: 10px 0 15px 0;
+}
+
+#kl_wrapper_3.kl_uw_ischool_1 .stacktable { width: 100%; }
+#kl_wrapper_3.kl_uw_ischool_1 .st-head-row { padding-top: 1em; }
+#kl_wrapper_3.kl_uw_ischool_1 .st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
+#kl_wrapper_3.kl_uw_ischool_1 .st-key { width: 24%; text-align: right; padding-right: 1%; }
+#kl_wrapper_3.kl_uw_ischool_1 .st-val { width: 74%; padding-left: 1%; }
+
+
+
+/* RESPONSIVE EXAMPLE */
+
+#kl_wrapper_3.kl_uw_ischool_1 .stacktable.large-only { display: table; }
+#kl_wrapper_3.kl_uw_ischool_1 .stacktable.small-only { display: none; }
+
+@media (max-width: 800px) {
+  #kl_wrapper_3.kl_uw_ischool_1 .stacktable.large-only { display: none; }
+  #kl_wrapper_3.kl_uw_ischool_1 .stacktable.small-only { display: table; }
+}
 
 body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation ul {
   padding-bottom: 0;
@@ -1813,6 +1855,46 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation ul 
 }
 body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li {
   display: inline-block;
+}
+
+@media screen and (max-width: 499px) {
+  .kl_uw_ischool_1 .ui-state-default {
+    background: #f5f5f5 !important;
+    background-image: none !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .kl_uw_ischool_1 .ui-state-default:hover {
+    background: #F0F0F0 !important;
+    background-image: none !important;
+    color: #000000 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .kl_uw_ischool_1 .kl_panel_heading a {
+    padding-left: 10px !important;
+    text-indent: 0 !important;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 .courseschedule .kl_flex_column .ui-icon {
+    display: none !important;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 .courseschedule .ui-accordion-header {
+    padding: 8px 10px !important;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 .courseschedule .ui-accordion-header a {
+    padding: 0 !important;
+    display: block;
+  }
+  #kl_wrapper_3.kl_uw_ischool_1 h3:not(.ui-state-default) i, #kl_wrapper_3.kl_uw_ischool_1_mod h3:not(.ui-state-default) i {
+    display: none !important;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 1339px) {
+  /* #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column .photo {
+    padding: 0px 10px 5px 0 !important;
+  } */
 }
 
 @media screen and (min-width:500px) {
@@ -1823,10 +1905,11 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
     width: 44%;
     float: left;
   }
-  #kl_wrapper_3.kl_uw_ischool_1 h3:not(.ui-state-default) i:before, #kl_wrapper_3.kl_uw_ischool_1_mod h3:not(.ui-state-default) i:before {
+/*  #kl_wrapper_3.kl_uw_ischool_1 h3:not(.ui-state-default) i:before, #kl_wrapper_3.kl_uw_ischool_1_mod h3:not(.ui-state-default) i:before {
     font-size: 20px;
     line-height: 36px
   }
+  */
 }
 
 
@@ -2397,57 +2480,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   background-color: #4b2e83;
 }
 
-.kl_uw_ischool_1 .ui-state-default {
-  background: #f5f5f5 url(http://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
-}
-.kl_uw_ischool_1 .ui-state-default:hover {
-  background: #F0F0F0 url(http://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
-  color: #000000 !important;
-}
-.kl_uw_ischool_1 .ui-icon {
-  background: none;
-  display: none !important;
-}
-
-.kl_uw_ischool_1 .ui-state-active, .kl_uw_ischool_1 .ui-state-active:hover {
-  background-position: 0 -72px !important;
-  border-color: #C7CDD1 !important;
-/*   background-color: #4b2e83 !important;
-   can keep this one */
-}
-
-.kl_uw_ischool_1 .ui-state-active a {
-  color: #000000 !important;
-}
-
-.kl_uw_ischool_1 .kl_panel_heading a {
-  padding-left: 50px !important;
-}
-.kl_uw_ischool_1 .kl_expand_controls {
-  margin: 10px 0 15px 0;
-}
-
-#kl_wrapper_3.kl_uw_ischool_1 .stacktable { width: 100%; }
-#kl_wrapper_3.kl_uw_ischool_1 .st-head-row { padding-top: 1em; }
-#kl_wrapper_3.kl_uw_ischool_1 .st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
-#kl_wrapper_3.kl_uw_ischool_1 .st-key { width: 24%; text-align: right; padding-right: 1%; }
-#kl_wrapper_3.kl_uw_ischool_1 .st-val { width: 74%; padding-left: 1%; }
-
-
-
-/* RESPONSIVE EXAMPLE */
-
-#kl_wrapper_3.kl_uw_ischool_1 .stacktable.large-only { display: table; }
-#kl_wrapper_3.kl_uw_ischool_1 .stacktable.small-only { display: none; }
-
-@media (max-width: 800px) {
-  #kl_wrapper_3.kl_uw_ischool_1 .stacktable.large-only { display: none; }
-  #kl_wrapper_3.kl_uw_ischool_1 .stacktable.small-only { display: table; }
-}
-/*********************************************************************/
-/***** END DESIGN TOOLS THEME CUSTOMIZATIONS *************************/
-/********************************************************************
 
 /*********************************************************************/
 /***** END DESIGN TOOLS THEME CUSTOMIZATIONS *************************/
-/********************************************************************
+/********************************************************************/
