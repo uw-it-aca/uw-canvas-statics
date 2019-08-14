@@ -21,12 +21,12 @@ code {
 
 /* add line numbers to a code tag with class=ln */
 code.ln:before{
-    counter-increment: line;
-    content: counter(line);
-    -webkit-user-select: none;
-	margin-right: 12px;
-	color: #999999;
-	text-align: right;
+  counter-increment: line;
+  content: counter(line);
+  -webkit-user-select: none;
+  margin-right: 12px;
+  color: #999999;
+  text-align: right;
 }
 
 h1 {
@@ -446,18 +446,14 @@ ul.plain {
   text-indent: -30px;
 }
 
-.highlight{
-  background: #FFFF99;
-}
-
 .hlist {
-	list-style-type: none; 
-	background-color: lavender;	
+  list-style-type: none;
+  background-color: lavender;
 }
 
 .hlist li {
-	display: inline-block; 
-	padding: 10px;
+  display: inline-block;
+  padding: 10px;
 }
 .highlight{
   background: #FFFF99;
@@ -501,6 +497,7 @@ span.keyterm {
 .lineheight {
   line-height: 200%;
 }
+
 
 .math {
   font-family: "Courier New", Courier, monospace;
@@ -551,7 +548,7 @@ span.keyterm {
    color: #000000;
 }
 
-.oddrow a:link, .oddRow a:link, 
+.oddrow a:link, .oddRow a:link,
 .oddrow a:visited, .oddRow a:visited,
 .oddrow a:hover, oddRow a:hover {
   color: #000000;
@@ -1148,7 +1145,7 @@ div.readingBox p, div.readingbox p {
 
 /* Canvas Icon Overrides*/
 
-.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module  {
+.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
   color: #4b2e83;
 }
 
@@ -1275,3 +1272,26 @@ div.entry-content {
   font-weight: bold;
   font-size: 0.875rem;
 }
+
+/* iSchool layout styles */
+.bgGold {
+  background-color: #e8e3d3;
+}
+
+.bgPurple {
+  background-color: #4b2e83;
+}
+
+.columns {
+  padding: 10px;
+}
+
+.fullColumn, .halfColumn, .thirdColumn, .twothirdColumn, .twoThirdColumn {
+  padding: 15px;
+  margin: 5px 10px 5px 0px
+}
+
+.halfColumn, .thirdColumn, .twothirdColumn, .twoThirdColumn {
+  float: left;
+}
+
