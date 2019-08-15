@@ -1295,3 +1295,15 @@ div.entry-content {
   float: left;
 }
 
+.halfColumn {
+  width: 43%;
+}
+
+.thirdColumn {
+  width: 23%;
+}
+
+.twoThirdColumn, .twothirdColumn {
+  width: 60%;
+}
+
