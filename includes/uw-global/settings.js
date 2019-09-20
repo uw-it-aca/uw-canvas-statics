@@ -5,7 +5,7 @@
 
     var nav_link_text_shown = '<span class="uw_enabled_message" style="display: none;">Never shown in course navigation. Hiding reduces functionality.</span>',
         nav_link_text_hidden = 'Never shown, but must appear above to provide functionality.',
-        public_syllabus_label = 'When set to &quot;Public&quot;, students will be able to read the syllabus description text when registering for courses. <a href="http://www.washington.edu/itconnect/learn/tools/canvas/use-canvas-to-publicize-your-individual-course-description/" target="_blank">Learn more</a>',
+        public_syllabus_label = 'When set to &quot;Public&quot;, students will be able to read the syllabus description text when registering for courses. <a href="https://itconnect.uw.edu/learn/tools/canvas/canvas-help-for-instructors/use-canvas-to-publicize-your-individual-course-description/" target="_blank">Learn more</a>',
         app_center_info = '<p>Apps are an easy way to add new features to Canvas. They can be added to individual courses, or to all courses in an account. Once configured, you can link to them through course modules and create assignments for assessment tools.</p><p>UW-IT has reviewed the third-party apps listed below, and found they meet our established minimum criteria. <a href="http://www.washington.edu/itconnect/learn/tools/canvas/canvas-help-for-instructors/canvas-app-center/" target="_blank">Find more information</a> or get help with the App Center.</p>';
 
     function add_navigation_warnings() {
