@@ -1,11 +1,12 @@
 /*jslint browser: true, plusplus: true */
 /*global jQuery */
 var ALLY_CFG = {
-    'loadScript': false,  // Set to true to enable ally
+    'loadScript': true,  // Set to true to enable ally
     'baseUrl': 'https://prod.ally.ac',
     'clientId': 5
 };
-var UWCanvas = (function ($) {
+
+var setUWCanvas = function ($) {
     'use strict';
 
     var add_users_external_id = '31483',
@@ -122,4 +123,14 @@ var UWCanvas = (function ($) {
         uw_groups_external_id: uw_groups_external_id,
         course_photos_external_id: course_photos_external_id
     };
-}(jQuery));
+};
+
+(function() {
+    var script = document.createElement('script');
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
+    script.type = 'text/javascript';
+    script.onload = function() {
+        window.UWCanvas = setUWCanvas(window.jQuery);
+    };
+    document.getElementsByTagName('head')[0].appendChild(script);
+})();
