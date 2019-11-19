@@ -367,7 +367,11 @@ ul.plain {
 .decimal {
   list-style-type: decimal;
 }
-
+/* Nov 2019 */
+.doubleu, .doubleU {
+	border-bottom: double; 
+}
+	
 .floatleft, .floatLeft{
    float:left;
    padding: 8px;
@@ -461,6 +465,10 @@ ul.plain {
 
 .indent {
   margin-left: 50px;
+}
+
+.mlis, .MLIS {
+	color: #085586; 	
 }
 
 .italics {
@@ -747,7 +755,7 @@ span.keyterm {
 }
 
 .actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .discussionIcon, .hardhatIcon, .importantIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .tickIcon, .turnIcon,
-.chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon, .presenterIcon, .presentericon, .connectIcon, .connecticon {
+.chatIcon, .emailIcon, .mailboxIcon, .printerIcon, .viewIcon, .actionicon, .alerticon, .assignmenticon, .audioicon, .hardhaticon, .importanticon, .msite, .popupicon, .portfolioicon, .posticon, .questionicon, .tickicon, .turnicon, .chaticon, .emailicon, .mailboxicon, .printericon, .viewicon, .presenterIcon, .presentericon, .connectIcon, .connecticon, .zoomicon, .zoomIcon {
   text-indent: 28px;
   line-height: 200%;
   display: inline-block;
@@ -875,6 +883,10 @@ span.keyterm {
 
 .viewIcon, .viewicon {
   background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/view.png") no-repeat top left;
+}
+
+.zoomIcon, .zoomicon {
+  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/zoom.jpg") no-repeat top left;
 }
 
 .actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li, .actionbox li, .diacriticalbox li, .importantbox li, .infobox li, .instructorbox li, .keytermbox li, .instructorGoldBox li, .instructorgoldBox li, .instructorGoldbox li, .instructorgoldbox li {
@@ -1306,4 +1318,3 @@ div.entry-content {
 .twoThirdColumn, .twothirdColumn {
 	width: 60%;	
 }
-
