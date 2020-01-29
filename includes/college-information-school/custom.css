@@ -2547,6 +2547,105 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   padding-left: 50px ;
   text-indent: -50px ;
 }
+.hangingindent span {
+  text-indent: 0;
+}
+
+
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules {
+  counter-reset: my-awesome-counter none;
+  list-style: none;
+  padding-left: 40px;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules.zero {
+  counter-reset: my-awesome-counter -1 !important;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules li {
+  margin: 0 0 0.3rem 0;
+  counter-increment: my-awesome-counter 1;
+  position: relative;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #f5f5f5;
+  border: 1px solid #E0E0E0;
+  border-radius: 0 5px 5px 0;
+  line-height: 24px;
+  font-weight: bold;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules li:hover {
+  background-color: #F0F0F0;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules li a {
+  display: block;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules li a:hover {
+  text-decoration: none;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules li::before {
+  content: counter(my-awesome-counter);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 50px;
+  left: -40px;
+  line-height: 40px;
+  width: 45px;
+  top: -1px;
+  background: #4b2e83;
+  text-align: center;
+  min-height: 100%;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px 0 0 5px;
+}
+
+
+
+/* #kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big {
+  counter-reset: my-awesome-counter none;
+  list-style: none;
+  padding-left: 40px;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big.zero {
+  counter-reset: my-awesome-counter -1 !important;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big li {
+  margin: 0 0 0.3rem 0;
+  counter-increment: my-awesome-counter 1;
+  position: relative;
+  padding-left: 110px;
+  background: #f5f5f5;
+  border: 1px solid #E0E0E0;
+  border-radius: 0 5px 5px 0;
+  line-height: 40px;
+  font-weight: bold;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big li a {
+  display: block;
+}
+#kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big li::before {
+  content: "Module " counter(my-awesome-counter);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 50px;
+  left: -40px;
+  line-height: 40px;
+  width: 120px;
+  top: -1px;
+  background: #4b2e83;
+  text-align: left;
+  padding-left: 15px;
+  min-height: 100%;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px 0 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+*/
+
 
 /*********************************************************************/
 /***** END DESIGN TOOLS THEME CUSTOMIZATIONS *************************/
