@@ -13,6 +13,6 @@
 
     // Custom text for simcheck info
     $('label[for="assignment_vericite_enabled"]').whenExists(function () {
-        $(this).next().append(simcheck_info);
+        //$(this).next().append(simcheck_info);
     });
 }(jQuery));
