@@ -3,8 +3,8 @@
 (function ($) {
     'use strict';
 
-    var simcheck_info = '<p>Did the course you\'re copying use VeriCite plagiarism detection?  Starting June 15, 2020, all new and copied assignments must use SimCheck.  After copying the course, you’ll need to change each assignment to use SimCheck.</p>',
-        panopto_info = '<p>When copying a course, students in the new course will be granted access to any Panopto recordings in the original course. If you do not want your new class to have access to recordings from your old class, learn how to <a href="https://itconnect.uw.edu" target="_blank">remove access to recordings</a>.</p>';
+    var simcheck_info = '<p><strong>Try SimCheck, the new plagiarism detection tool.</strong>  Did the course you&apos;re copying use VeriCite for plagiarism detection? Starting June 15th, 2020, all new and copied assignments must use SimCheck instead. After copying the course, you&apos;ll need to change each assignment to <a href="https://itconnect.uw.edu/learn/tools/canvas/canvas-help-for-instructors/assignments-grading/simcheck-faqs/#assignment" target="_blank">use SimCheck.</a></p>',
+        panopto_info = '<p><strong>Access to Panopto recordings:</strong> When copying any Canvas content from one course to another, students in the new course will be granted access to the Panopto recordings in the original course. <a href="https://itconnect.uw.edu/learn/tools/panopto/remove-access-recordings/" target="_blank">You may remove access to recordings.</a></p>';
 
     // Custom text for simcheck
     $('#content').whenExists(function () {
