@@ -9,6 +9,6 @@
     // Custom text for simcheck
     $('#content').whenExists(function () {
         $(this).prepend(panopto_info);
-        //$(this).prepend(simcheck_info);
+        $(this).prepend(simcheck_info);
     });
 }(jQuery));
