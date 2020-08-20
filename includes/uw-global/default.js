@@ -34,21 +34,43 @@ var setUWCanvas = function ($) {
         var base_url = (window.location.hostname === 'canvas.uw.edu') ?
             'https://apps.canvas.uw.edu' : 'https://canvas-test.s.uw.edu';
         $.getScript(base_url + path);
-    }
+    };
 
     function update_report_problem_form(ev, xhr, obj) {
         if (obj.url === '/help_links') {
             $("label[for='error-comments'] small").remove();
             $(document).off('ajaxComplete', update_report_problem_form);
         }
-    }
+    };
 
     function show_unauthorized() {
         if ($('#unauthorized_holder').length) {
             $(document).prop('title', unauthorized_title);
             $('#unauthorized_message').replaceWith(unauthorized_message);
         }
-    }
+    };
+
+    function uw_modal_dialog(title, text, footer) {
+        var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">'
+            + '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">'
+            + '<div style="position:static;top:0px;left:0px;right:auto;bottom:auto;border-radius:0px;border:none;padding:0px;" class="ReactModal__Content ReactModal__Content--after-open ReactModal__Content--canvas" tabindex="-1">'
+            + '<div class="ReactModal__Layout"><div class="ReactModal__Header"><div class="ReactModal__Header-Title"><h4>'
+            + title
+            + '</h4></div><div class="ReactModal__Header-Actions"><button class="Button Button--icon-action uw-modal-close" type="button">'
+            + '<i class="icon-x"></i><span class="screenreader-only">Close</span></button></div></div><div class="ReactModal__Body">'
+            + text
+	    + ((typeof footer !== "undefined" && footer.length > 0) ? '</div><div class="ReactModal__Footer"><div class="ReactModal__Footer-Actions">' + footer + '</div>' : '')
+	    + '</div></div></div></div></div>');
+
+        if ($('#uw-modal-dialog').length) {
+            $('#uw-modal-dialog').replaceWith($dialog);
+        } else {
+            $('body').append($dialog);
+            $('body').on('click', '#uw-modal-dialog .uw-modal-close', function () {
+                $(this).closest('.ReactModalPortal').hide();
+            });
+        }
+    };
 
     function add_right_nav_button(icon, label, href, position) {
         var $right = $('#not_right_side #right-side-wrapper'),
@@ -84,12 +106,14 @@ var setUWCanvas = function ($) {
             $right.find('> aside > div').append($a);
         }
         $('body').addClass('with-right-side');
-    }
+    };
 
     $(document).ready(function () {
         var href = window.location.href;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
             load_script('/includes/uw-global/settings.js');
+        } else if (href.match(/\/courses(\/)?$/)) {
+            load_script('/includes/uw-global/courses.js');
         } else if (href.match(/\/courses\/\d+\/assignments/)) {
             load_script('/includes/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/(#.*)?)?$/)) {
@@ -120,6 +144,7 @@ var setUWCanvas = function ($) {
     return {
         load_script: load_script,
         add_right_nav_button: add_right_nav_button,
+        uw_modal_dialog: uw_modal_dialog,
         add_users_external_id: add_users_external_id,
         uw_groups_external_id: uw_groups_external_id,
         course_photos_external_id: course_photos_external_id
