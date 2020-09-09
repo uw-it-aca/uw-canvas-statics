@@ -14,16 +14,16 @@ script:
 
 deploy:
 - provider: gcs
-  access_key_id: $GCS_ACCESS_KEY_ID
-  secret_access_key: $GCS_SECRET_ACCESS_KEY
+  access_key_id: "$GCS_ACCESS_KEY_ID"
+  secret_access_key: "$GCS_SECRET_ACCESS_KEY"
   bucket: canvas-static-test
   dot_match: false
   acl: public-read
   on:
     branch: develop
 - provider: gcs
-  access_key_id: $GCS_ACCESS_KEY_ID
-  secret_access_key: $GCS_SECRET_ACCESS_KEY
+  access_key_id: "$GCS_ACCESS_KEY_ID"
+  secret_access_key: "$GCS_SECRET_ACCESS_KEY"
   bucket: canvas-static
   dot_match: false
   acl: public-read
