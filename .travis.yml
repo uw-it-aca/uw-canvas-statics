@@ -1,0 +1,27 @@
+language: python
+
+env:
+  global:
+  - secure: tIhP4/MpJNkyzou3NlCVK0ecLT5RNgbOkQG8ndSFNcNg0ZEgKUGwufm/w8ocC2DVz73deHvSG7ZW/ZCNLKGn9Zf8gPR0i1yc7OuVNWFyZEbdYr4i2UQBwiX1JF4sllXXuiooNY3RciTu+Na8fbAttAOdWP8iH+aU22TPdGnVB1UO5SSMSpy5hhA7R9nDakiELmaU/jfKrszbR4OnafAZ9mxoPgzeCSvnMZfAXKWxCu3ud4xU8CB76lRb6n1HDW2NjaggOPgRdBRen65PYBHPd/NeV5oqeZ3foLYoThfI30z4Zkn0G1luCHwQDkep1sYjMk+osSXuW0lb7xXwpuj/M2kt9DMI3jgVNzYV7Jl2ZXj0tnPbi4XmW1W0gU6b6JhFBBl7p4nuZHPktcYv/gM9GjMBjRXNw4h7YiBCf8Sj9HENukyl3Yp+gRdys4sPk6bKdLb37+F6D3uefI0bbYLtOojTy8B/yD3cuFBZ7pvUMtLa2FYHI+H0mpP4KeSUn58sDUA7/7EtrQDq7lNrSf1Zex/0Sj7v2VUeiwUBMy4bAsiwjVYQ+hfSnCRhswMUASTyDOeyq9zUXlKt61BaZB/Tml0dmTjYNAa62QIGpYYX7ZIUSMPO+wyiBLi2vGCA59XKIhiddP0wByMvxZSTcssrGYgrhq76NQqfjV2mjcq5mNQ=
+  - secure: yYmzesAKHm27PoGoMaXyJ361IP0tUQF6oHhHWnwxBUC1eKzsERf/FeRmfJ9UKfr9x4VJu3R2zkFXtX8XlA5BWELKCmaSc2B+pkrKI/iaLQcnrs0qAsv7AFlmzlEqzDUjB3g0moulFIkd7P47/p19Xvp8uKOeYyzkY7lgpeX1rO5xTo42IVmh6flYI5mGDJy7pfVjTsJ20JA4Rb3a7SDfKh8esIoxfNyBgf6wZd8KuBKjtbbjgEDkO5buDYhlJDSdwWK2c6F2qEOYfuDuaR5Ja6+Oo9imZUGU1tAoGDCHvppuOXxRHnAatwtau3IaMSkA1QDk7kHVdP7WvNAEJAxrbNIrMT+AcUk08bz0pgV4nMHlvkCw2scj3gWXkNaORkm5giryx6C5W7OuZrZ/FP6AE9v3Tu2KW8EjoxBLXr3Jj4nmj3wKIZc5H+pDjBQ83BUZ0j2lPsspEQIMnQbyXXb7qHVvWJphDrieTl/iTwLxodB2VvWqIZ48SmGBrvHue9XDr0PdloQGbBUgQDj1awLna3B4IrRECNY8tNQtRL17Zn3KL0nWSL31grBxqVH37WvHCj5OGZ3CUSWGFkTTSTqb8dOtgPuZ+F4NXOq1qauvyhip9OdnFpyFyWQXD2XyDDa6hsxBcY8EJQLB9z+lLtCPw0j0NQPi2o/rkTJ+ZuqKa+c=
+
+install:
+- npm install -g jshint
+
+script:
+- jshint includes/ --verbose
+- jshint wayf/ --verbose
+
+deploy:
+- provider: gcs
+  bucket: canvas-static-test
+  dot_match: false
+  acl: public-read
+  on:
+    branch: develop
+- provider: gcs
+  bucket: canvas-static
+  dot_match: false
+  acl: public-read
+  on:
+    branch: master
