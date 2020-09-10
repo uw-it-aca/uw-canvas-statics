@@ -1,28 +1,26 @@
 language: python
+before_install:
+- openssl aes-256-cbc -K $encrypted_f71162816814_key -iv $encrypted_f71162816814_iv
+  -in uwit-mci-axdd-12b27f63a287.json.enc -out uwit-mci-axdd-12b27f63a287.json -d
 install:
 - npm install -g jshint
 script:
 - jshint includes/ --verbose
 - jshint wayf/ --verbose
 deploy:
-  - provider: gcs
-    edge: true
-    access_key_id:
-      secure: okPtb0xGXOCawJaiY0sHn62a3Ciqw7tnqw1nSxS1adsDAWZDGgFPGY4JLr1OsKTXI2x/RBG014zRbddhuDsT5AMxV0k4lfcfAGNT/dcGzKS6cvYaVHFyfaJ5vas3/IXCuXdzlWxDkFA6W3rUs/OUxv+OWp9h8MerKV6ktSAs7NEuuEgIjcRvaDWtNJwaYRs7DMUvlAWysES8Kq1WMjZqW2K5JMBvv6WY7c7auMwVeuyqVYRJeKS64o5AFNg2c2+2lbBQ6wrS005vWp41OBxbAZAYaaoW2RZqKa3B74v2I4N9gbVLVnQLmjMMpzv5EBnt4b0liGvSzMYFxZmlTYRNIvNGU0c+hXVHGP5nWwhuZoJSH00AzAHM1zQVjgR8b0QiBC5a3BKsw6TVH1ct5+SGCdO6fbY0iP/hRwAHhSl7rVFn5cfihLoFfsYDdZgk7GwV7UasD+lovBH0zZDVbEkvBeieVPloGSRVIgSKr0gvnYQe+SYqDb+AKM62b1pRI7Qw33TIshjt91X0OPDqoVV5uwerYSDcvuBAoTxVIADF8gerVVxDp6eKEfXtDL7LRcEQfSAiqwnGe6ylYcVDNFzfQnyWGr61xy/BNprha/wJ7ydZAEiPIuma53TC2dstSC8oX723N11Jh3BBckgIfGb9utyWBW53Ur8hafqLhTbG3HA=
-    secret_access_key:
-      secure: eX4+Non4+0IZ0E5W58ni6ka7/awF0g8x42o2Uw4C//4j5sIQOBL5E9sHpBPvDopYrOSw+D+nP7XTaaLwhBkk13SiNCUJb7AEAp8n1H7bJCRbcausO7/t/aMZcH2lbiGZJbwMgAqF1dIqAjA8shf7vk/xBd7w+IN1JOcMoKZ/+U9qhRfqR0qWCkfDdoCdIdJm0hcti62+/BP8Y+rk9tOZbELSVWx+aGDhRheyybfN7jU3H8jE4L0FNMfHvnvVewRFcz/4TO0iELhoQlVQR8f5h6eh0CWPH9bm/N2EeRHK5BRUn1LVa/Pev+yqgV7srLVA+xNUff3OhGNZxZKhe8lHVZsyo2h3vJpz16/0x8Lp5sA6OWecUwFJaT5H9NPE7/WMHFqik8a6qum31cHorgPGLBa6MhZgKcwQwtQHVUJNWYPWojPuaWVDIpum+395bP3I9rNPj8WJY23JmKyBfXG8iEOvGwWl8YBmUHGfJPxMknDda9mN645MFwa9zL4oZKAQYssnR+IeCC0oMt/7hjUIO6n/Unw4A1IDzeldYCuwtSYq2i1vLXvw+bLC74hCnAQInfyMVf5A4uHvNhSsR1bVD14qAPmdew1BjxbJfzCTVRogoXx8ZAJ7bmeKuUH1snvwFoYblOiYy2AjuxHlOOvc0NCOQ6+zZaD/qdHQ0xEANPs=
-    bucket: canvas-static-test
-    dot_match: false
-    on:
-      branch: develop
-
-  - provider: gcs
-    edge: true
-    access_key_id:
-      secure: okPtb0xGXOCawJaiY0sHn62a3Ciqw7tnqw1nSxS1adsDAWZDGgFPGY4JLr1OsKTXI2x/RBG014zRbddhuDsT5AMxV0k4lfcfAGNT/dcGzKS6cvYaVHFyfaJ5vas3/IXCuXdzlWxDkFA6W3rUs/OUxv+OWp9h8MerKV6ktSAs7NEuuEgIjcRvaDWtNJwaYRs7DMUvlAWysES8Kq1WMjZqW2K5JMBvv6WY7c7auMwVeuyqVYRJeKS64o5AFNg2c2+2lbBQ6wrS005vWp41OBxbAZAYaaoW2RZqKa3B74v2I4N9gbVLVnQLmjMMpzv5EBnt4b0liGvSzMYFxZmlTYRNIvNGU0c+hXVHGP5nWwhuZoJSH00AzAHM1zQVjgR8b0QiBC5a3BKsw6TVH1ct5+SGCdO6fbY0iP/hRwAHhSl7rVFn5cfihLoFfsYDdZgk7GwV7UasD+lovBH0zZDVbEkvBeieVPloGSRVIgSKr0gvnYQe+SYqDb+AKM62b1pRI7Qw33TIshjt91X0OPDqoVV5uwerYSDcvuBAoTxVIADF8gerVVxDp6eKEfXtDL7LRcEQfSAiqwnGe6ylYcVDNFzfQnyWGr61xy/BNprha/wJ7ydZAEiPIuma53TC2dstSC8oX723N11Jh3BBckgIfGb9utyWBW53Ur8hafqLhTbG3HA=
-    secret_access_key:
-      secure: eX4+Non4+0IZ0E5W58ni6ka7/awF0g8x42o2Uw4C//4j5sIQOBL5E9sHpBPvDopYrOSw+D+nP7XTaaLwhBkk13SiNCUJb7AEAp8n1H7bJCRbcausO7/t/aMZcH2lbiGZJbwMgAqF1dIqAjA8shf7vk/xBd7w+IN1JOcMoKZ/+U9qhRfqR0qWCkfDdoCdIdJm0hcti62+/BP8Y+rk9tOZbELSVWx+aGDhRheyybfN7jU3H8jE4L0FNMfHvnvVewRFcz/4TO0iELhoQlVQR8f5h6eh0CWPH9bm/N2EeRHK5BRUn1LVa/Pev+yqgV7srLVA+xNUff3OhGNZxZKhe8lHVZsyo2h3vJpz16/0x8Lp5sA6OWecUwFJaT5H9NPE7/WMHFqik8a6qum31cHorgPGLBa6MhZgKcwQwtQHVUJNWYPWojPuaWVDIpum+395bP3I9rNPj8WJY23JmKyBfXG8iEOvGwWl8YBmUHGfJPxMknDda9mN645MFwa9zL4oZKAQYssnR+IeCC0oMt/7hjUIO6n/Unw4A1IDzeldYCuwtSYq2i1vLXvw+bLC74hCnAQInfyMVf5A4uHvNhSsR1bVD14qAPmdew1BjxbJfzCTVRogoXx8ZAJ7bmeKuUH1snvwFoYblOiYy2AjuxHlOOvc0NCOQ6+zZaD/qdHQ0xEANPs=
-    bucket: canvas-static
-    dot_match: false
-    on:
-      branch: master
+- provider: gcs
+  key_file: uwit-mci-axdd-12b27f63a287.json
+  edge: true
+  bucket: canvas-static-test
+  acl: public-read
+  dot_match: false
+  on:
+    branch: develop
+- provider: gcs
+  key_file: uwit-mci-axdd-12b27f63a287.json
+  edge: true
+  bucket: canvas-static
+  acl: public-read
+  dot_match: false
+  on:
+    branch: master
