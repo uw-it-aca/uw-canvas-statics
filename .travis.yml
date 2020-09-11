@@ -13,5 +13,6 @@ deploy:
   acl: public-read
   dot_match: false
   on:
+    repo: uw-it-aca/uw-canvas-statics
     branch: develop
   skip_cleanup: 'true'
