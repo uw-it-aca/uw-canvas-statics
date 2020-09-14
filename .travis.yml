@@ -1,0 +1,18 @@
+language: python
+install:
+- npm install -g jshint
+script:
+- jshint includes/ --verbose
+- jshint wayf/ --verbose
+deploy:
+  provider: gcs
+  edge: true
+  access_key_id: GOOG1ETJJGFJZD7SVMM7FVQQQSOKFYRQ3M3UJARJBNPHUDU4VAG5JG3XN3P3I
+  secret_access_key:
+    secure: "N/7TpwwqFdqMXD0R6s/Efm78JikxhCkv4sUhy/mHMDopCmjMVqLJOPk9EUeIeM1/dn/3RJBUjBIzUgjn1tDkHFcjdQSkzIJhW5WuygkZp0yCIfujnt4F65MPs1KP3OcTxbCQ7qUE6EON35cBuI7A+1zb0Mj6yRDPoeyp1Ndb0uNXF1D7wajR48Mgcg0qmMTlcrhj6PlMANyIN9fUel8uw9VOWaORnl7ZDQdsINYi2QqBf8WRVzBpG4rQNLqEta6su/1szsl+4JZTLKzzD4Wt6ZMoMv778p8K/E0tZ2FLdFYEwlrd38Tewo9ZCozDhqP8eu5gXNRbGkS8ulLXBQwJfzLFaSDuKzdq4SBLFpyBae9VtnsKWERgqzjIqQIztdsjozAStfoSb0r3MQnYEReWgh0wzsmeJ0FU8O34mYBPu+gTgSjD5kHhBhw2P20srGbxVZnJGcGRYycOaIIaiVQeOHY3wMZa3iQxOaWjjA8x4TGUDlQ1TYMMio6S5/dzxwMMFcbs5SmRD5wVUeaBM5YGkbTyUQZfQdHIwHLaNqmybQ63WfxR0eFhH93d/pGlPVw46XIuom7NLrl/v0teSuM+hoClG8UM2UeVtKDm8oS+DkmBs9e+OQRt5OVKLW5hdw8OsLSF0PASSXRGukLkFQA1vL/PdtQSFOa/X6ck+uQKTkk="
+  bucket: canvas-static-test
+  acl: public-read
+  dot_match: false
+  on:
+    repo: uw-it-aca/uw-canvas-statics
+    branch: develop

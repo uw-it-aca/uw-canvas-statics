@@ -45,7 +45,7 @@
             return;
         }
 
-	window.UWCanvas.uw_modal_dialog(title, text, '<button type="button" class="Button Button--primary uw-modal-close" data-dismiss="modal">OK, got it!</button>');
+	    window.UWCanvas.uw_modal_dialog(title, text, '<button type="button" class="Button Button--primary uw-modal-close" data-dismiss="modal">OK, got it!</button>');
     }
 
     function openAddUsersModal(e) {
