@@ -141,5 +141,8 @@
     addExternalToolButtons();
     $('#addUsers').whenExists(function () {
         $(this).off('click').on('click', openAddUsersModal);
+        if (window.location.href.match(/\/users\?add_people=true$/)) {
+            $('a.btn#addUsers').click();
+        }
     });
 }(jQuery));
