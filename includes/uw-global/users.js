@@ -41,17 +41,17 @@
     }
 
     function openWarningModal(title, text) {
-        var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">'
-            + '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">'
-            + '<div style="position:static;top:0px;left:0px;right:auto;bottom:auto;border-radius:0px;border:none;padding:0px;" class="ReactModal__Content ReactModal__Content--after-open ReactModal__Content--canvas" tabindex="-1">'
-            + '<div class="ReactModal__Layout"><div class="ReactModal__Header"><div class="ReactModal__Header-Title"><h4>'
-            + title
-            + '</h4></div><div class="ReactModal__Header-Actions"><button class="Button Button--icon-action uw-modal-close" type="button">'
-            + '<i class="icon-x"></i><span class="screenreader-only">Close</span></button></div></div><div class="ReactModal__Body">'
-            + text
-            + '</div><div class="ReactModal__Footer"><div class="ReactModal__Footer-Actions">'
-            + '<button type="button" class="Button Button--primary uw-modal-close" data-dismiss="modal">OK, got it!</button>'
-            + '</div></div></div></div></div></div>');
+        var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">' +
+            '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">' +
+            '<div style="position:static;top:0px;left:0px;right:auto;bottom:auto;border-radius:0px;border:none;padding:0px;" class="ReactModal__Content ReactModal__Content--after-open ReactModal__Content--canvas" tabindex="-1">' +
+            '<div class="ReactModal__Layout"><div class="ReactModal__Header"><div class="ReactModal__Header-Title"><h4>' +
+            title +
+            '</h4></div><div class="ReactModal__Header-Actions"><button class="Button Button--icon-action uw-modal-close" type="button">' +
+            '<i class="icon-x"></i><span class="screenreader-only">Close</span></button></div></div><div class="ReactModal__Body">' +
+            text +
+            '</div><div class="ReactModal__Footer"><div class="ReactModal__Footer-Actions">' +
+            '<button type="button" class="Button Button--primary uw-modal-close" data-dismiss="modal">OK, got it!</button>' +
+            '</div></div></div></div></div></div>');
 
         if ($('a.settings[href$="/settings"]').length === 0) {
             return;
@@ -141,5 +141,8 @@
     addExternalToolButtons();
     $('#addUsers').whenExists(function () {
         $(this).off('click').on('click', openAddUsersModal);
+        if (window.location.href.match(/\/users\?add_people=true$/)) {
+            $('a.btn#addUsers').click();
+        }
     });
 }(jQuery));
