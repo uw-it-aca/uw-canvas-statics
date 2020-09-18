@@ -1,0 +1,97 @@
+/*****Accordion CSS code******/
+.noodle-module-accordion .element_toggler {
+  background-color: #4b2e83;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  border-radius: 2px;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.noodle-module-accordion .element_toggler:hover {
+  background-color: #7750c2;
+}
+
+.element_to_toggle {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.element_to_toggle .module-card {
+  border: none;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  padding: 10px;
+}
+
+.module-card:hover {
+  background-color: #b7a57a;
+  opacity: 0.9;
+}
+
+/***Heading CSS H2, H3***/
+h2 {
+  color: #4b2e83 !important;
+  font-weight: bolder !important;
+  text-transform: uppercase !important;
+  font-family: sans-serif;
+}
+
+h3 {
+  color: #4b2e83 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  font-family: sans-serif;
+}
+
+/***Home page Info block***/
+.grid-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  /*padding: 10px;*/
+}
+
+.col-xs {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-xs {
+  display: flex;
+  /*width: 33.3%;*/
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.noodle-teacher-information-box *[class^=col] {
+  border-right: 1px solid #e3e3e3;
+}
+
+.noodle-live-session-info-box {
+  margin: 0;
+}
+
+.noodle-call-in-info {
+  margin: 0;
+  display: none;
+}
+
+/****End of caode change for Accordion, live session with dropdown
+     and Home page info box****/
