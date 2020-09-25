@@ -22,7 +22,8 @@ var DT_variables = {
 
 window.eesyLaunchConfig = {
     host: 'uw.eesysoft.com',
-    key: 'yrLJv5Hs'
+    key: 'yrLJv5Hs',
+    supportTab: true
 };
 
 (function ($) {
