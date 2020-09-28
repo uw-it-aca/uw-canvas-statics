@@ -10,9 +10,10 @@ deploy:
   access_key_id: GOOG1ED3WK66RYCDZO257RPFC7HLYEA2BGU75KLMZTIRA6OTJKKVV3RWPQWYQ
   secret_access_key:
     secure: "VHuujAuu2lM+IKHWQ5+sRMQnAcxvE5ltMDnXipzgwSJBETVnjFCNnq8qQlgcYXu3piIprACJgj/JVGQavqdXFp0e8YvoNXDTTIvg2HDFsKuibB4Aybvvz3KWW5T2LHwL24LUczflu6Ll9vSn+mbO56kBjGH0Ux+QWIqFOS7MmY26ttV7DPGco1DoCP46bM8Mor2zPils1mruvf4c7OHkBP49q3tJi6sCymy9iegbxTKYjX5X8MUcU0N76Jh4plipL7GReKrvr3/s6WuQa7RoVQdpNgoYdhte/EyePjUNNUo2XYLxQqgkXN1gUpyyrVwXI2xZ5ou64Vjeu9T3i6JBTMYKawYVogEoPCWX9UnnrPKG2LMzevRP9JoDIbKUbanKxFPEbgtiT2nUGXHwXd10eTbJKP0J3qQ3jfjdiF+q3k9NoY1hxA4CQgiRnPJZtZtaBOTGR4v3A+mfNNts1IeM2vd35bXgu/Tr0FLPgZdeN6h3NFc4UPbNo8bcpJWkCNkGb9r/SdJZSeazjFM81Bv/bBxM+TdprE4k/O1QzA6vry85aWR7b9PX0TcscRyHPyFa5XFoOKvRkaADkYI5ktfdmAHFM6fJBbibQRWkMAawRB/US9y63LWZXRURPllmwUHMSSFkLDwDv2a+Qmsx0umIz/i7kqGlnPfHCNaRHkQ+NWQ="
-  bucket: canvas-static-test
+  bucket: canvas-static
   acl: public-read
   dot_match: false
+  local_dir: includes
   on:
     repo: uw-it-aca/uw-canvas-statics
     branch: develop
