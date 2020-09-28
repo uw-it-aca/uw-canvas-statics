@@ -13,6 +13,7 @@ deploy:
   bucket: canvas-static
   acl: public-read
   dot_match: false
+  local_dir: includes
   on:
     repo: uw-it-aca/uw-canvas-statics
-    branch: master
+    branch: develop
