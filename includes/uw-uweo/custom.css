@@ -480,7 +480,7 @@ ul.plain {
   font-weight: bold;
   font-style: oblique;
   color: #336666;
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key2.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/key2.png") no-repeat top left;
   text-indent: 20px;
   display: inline-block;
 }
@@ -774,119 +774,119 @@ span.keyterm {
 }
 
 .actionIcon, .actionicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/action.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/action.png") no-repeat top left;
 }
 
 .actionBox h6, .actionicon h6, .bookIcon, .bookicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/book.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/book.png") no-repeat top left;
 }
 
 .alertIcon, .alerticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/alert.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/alert.png") no-repeat top left;
 }
 
 .assignmentIcon, .assignmenticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/assignment.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/assignment.png") no-repeat top left;
 }
 
 .connectIcon, .connecticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/connect.jpg") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/connect.jpg") no-repeat top left;
 }
 
 .diacriticalBox h6, .diacriticalbox h6, .audioIcon, .audioicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/audio.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/audio.png") no-repeat top left;
 }
 
 .discussionIcon, .discussionicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/discussion.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/discussion.png") no-repeat top left;
 }
 
 .hardhatIcon, .hardhaticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hardhat.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/hardhat.png") no-repeat top left;
 }
 
 .hourglassIcon, .hourglassicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/hourglass.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/hourglass.png") no-repeat top left;
 }
 
 .importantBox h6, .importantbox h6, .importantIcon, .importanticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/important.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/important.png") no-repeat top left;
 }
 
 .infoBox h6, .infobox h6, .infoIcon, .infoicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/info.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/info.png") no-repeat top left;
 }
 
 .keytermBox h6, .keytermbox h6 {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/key.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/key.png") no-repeat top left;
 }
 
 .msite {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mediasite.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/mediasite.png") no-repeat top left;
 }
 
 .popupIcon, .popupicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/popup.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/popup.png") no-repeat top left;
 }
 
 .portfolio, .portfolioIcon, .portfolioicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/portfolio.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/portfolio.png") no-repeat top left;
 }
 
 .postIcon, .posticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/post.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/post.png") no-repeat top left;
 }
 
 .presenterIcon, .presentericon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/presenter.jpg") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/presenter.jpg") no-repeat top left;
 }
 
 .questionIcon, .questionicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/question.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/question.png") no-repeat top left;
 }
 
 .testIcon, .testicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/test.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/test.png") no-repeat top left;
 }
 
 .tickIcon, .tickicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/tick.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/tick.png") no-repeat top left;
 }
 
 .turnIcon, .turnicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/turn.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/turn.png") no-repeat top left;
 }
 
 .videoIcon, .videoicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/video.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/video.png") no-repeat top left;
 }
 
 .chatIcon, .chaticon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/chat.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/chat.png") no-repeat top left;
 }
 
 .emailIcon, .emailicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/email.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/email.png") no-repeat top left;
 }
 
 .mailboxIcon, .mailboxicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mailbox.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/mailbox.png") no-repeat top left;
 }
 
 .mobileIcon, .mobileicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/mobile.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/mobile.png") no-repeat top left;
 }
 
 .printerIcon, .printericon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/printer.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/printer.png") no-repeat top left;
 }
 
 .viewIcon, .viewicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/view.png") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/view.png") no-repeat top left;
 }
 
 .zoomIcon, .zoomicon {
-  background: url("https://apps.canvas.uw.edu/includes/uw-uweo/img/zoom.jpg") no-repeat top left;
+  background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/zoom.jpg") no-repeat top left;
 }
 
 .actionBox li, .diacriticalBox li, .importantBox li, .infoBox li, .instructorBox li, .keytermBox li, .actionbox li, .diacriticalbox li, .importantbox li, .infobox li, .instructorbox li, .keytermbox li, .instructorGoldBox li, .instructorgoldBox li, .instructorGoldbox li, .instructorgoldbox li {
