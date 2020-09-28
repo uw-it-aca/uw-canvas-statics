@@ -9,7 +9,8 @@ var ALLY_CFG = {
 var setUWCanvas = function ($) {
     'use strict';
 
-    var add_users_external_id = '31483',
+    var base_url = 'https://storage.googleapis.com/canvas-static',
+        add_users_external_id = '31483',
         uw_groups_external_id = '31485',
         course_photos_external_id = '37913',
         unauthorized_title = "You don't have access to this content",
@@ -31,8 +32,6 @@ var setUWCanvas = function ($) {
     };
 
     function load_script(path) {
-        var base_url = (window.location.hostname === 'canvas.uw.edu') ?
-            'https://apps.canvas.uw.edu' : 'https://canvas-test.s.uw.edu';
         $.getScript(base_url + path);
     }
 
@@ -89,22 +88,22 @@ var setUWCanvas = function ($) {
     $(document).ready(function () {
         var href = window.location.href;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
-            load_script('/includes/uw-global/settings.js');
+            load_script('/uw-global/settings.js');
         } else if (href.match(/\/courses\/\d+\/assignments/)) {
-            load_script('/includes/uw-global/assignments.js');
+            load_script('/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/)?([?#].*)?$/)) {
-            load_script('/includes/vendor/handlebars-1.3.0.min.js');
-            load_script('/includes/uw-global/users.js');
+            load_script('/vendor/handlebars-1.3.0.min.js');
+            load_script('/uw-global/users.js');
         } else if (href.match(/\/courses\/\d+\/gradebook/)) {
-            load_script('/includes/uw-global/gradebook.js');
+            load_script('/uw-global/gradebook.js');
         } else if (href.match(/\/courses\/\d+\/external_tools/)) {
-            load_script('/includes/uw-global/external_tools.js');
+            load_script('/uw-global/external_tools.js');
         } else if (href.match(/\/courses\/\d+\/content_migrations$/)) {
-            load_script('/includes/uw-global/content_migrations.js');
+            load_script('/uw-global/content_migrations.js');
         } else if (href.match(/\/courses\/\d+\/pages/)) {
-            load_script('/includes/uw-global/pages.js');
+            load_script('/uw-global/pages.js');
         } else if (href.match(/\/profile\/settings$/)) {
-            load_script('/includes/uw-global/profile.js');
+            load_script('/uw-global/profile.js');
         }
 
         if (href.match(/\/courses\/\d+(\/.*)?$/)) {
