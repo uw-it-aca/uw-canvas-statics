@@ -9,7 +9,7 @@ var ALLY_CFG = {
 var setUWCanvas = function ($) {
     'use strict';
 
-    var base_url = 'https://storage.googleapis.com/canvas-static',
+    var base_url = 'https://storage.googleapis.com/',
         add_users_external_id = '31483',
         uw_groups_external_id = '31485',
         course_photos_external_id = '37913',
@@ -32,7 +32,9 @@ var setUWCanvas = function ($) {
     };
 
     function load_script(path) {
-        $.getScript(base_url + path);
+        var base_path = (window.location.hostname === 'canvas.uw.edu') ?
+            'canvas-static' : 'canvas-static-test';
+        $.getScript(base_url + base_path + path);
     }
 
     function update_report_problem_form(ev, xhr, obj) {
