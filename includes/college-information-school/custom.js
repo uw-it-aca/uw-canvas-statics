@@ -20,11 +20,19 @@ var DT_variables = {
     userArray: []
 };
 
-window.eesyLaunchConfig = {
-    host: 'uw.eesysoft.com',
-    key: 'yrLJv5Hs',
-    supportTab: true
-};
+if (window.location.hostname === 'canvas.uw.edu') {
+    window.eesyLaunchConfig = {
+        host: 'uw.eesysoft.com',
+        key: 'yrLJv5Hs',
+        supportTab: true
+    };
+} else {
+    window.eesyLaunchConfig = {
+        host: 'uwstaging.eesysoft.com',
+        key: '5M2g7rk9',
+        supportTab: true
+    };
+}
 
 (function ($) {
     'use strict';
