@@ -8,7 +8,7 @@ after_success:
 - |
   if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     case "$TRAVIS_BRANCH" in
-      "master")
+      "main")
         export GCS_BUCKET_NAME="canvas-static";
         ;;
       "develop")
@@ -19,13 +19,13 @@ after_success:
 deploy:
   provider: gcs
   edge: true
-  access_key_id: GOOG1ED3WK66RYCDZO257RPFC7HLYEA2BGU75KLMZTIRA6OTJKKVV3RWPQWYQ
+  access_key_id: GOOG1EO53IDLR56R2KHHN47MLGFNVEC2VGJY5JKTYLLFAX3LXETJQMLYFX4FQ
   secret_access_key:
-    secure: "VHuujAuu2lM+IKHWQ5+sRMQnAcxvE5ltMDnXipzgwSJBETVnjFCNnq8qQlgcYXu3piIprACJgj/JVGQavqdXFp0e8YvoNXDTTIvg2HDFsKuibB4Aybvvz3KWW5T2LHwL24LUczflu6Ll9vSn+mbO56kBjGH0Ux+QWIqFOS7MmY26ttV7DPGco1DoCP46bM8Mor2zPils1mruvf4c7OHkBP49q3tJi6sCymy9iegbxTKYjX5X8MUcU0N76Jh4plipL7GReKrvr3/s6WuQa7RoVQdpNgoYdhte/EyePjUNNUo2XYLxQqgkXN1gUpyyrVwXI2xZ5ou64Vjeu9T3i6JBTMYKawYVogEoPCWX9UnnrPKG2LMzevRP9JoDIbKUbanKxFPEbgtiT2nUGXHwXd10eTbJKP0J3qQ3jfjdiF+q3k9NoY1hxA4CQgiRnPJZtZtaBOTGR4v3A+mfNNts1IeM2vd35bXgu/Tr0FLPgZdeN6h3NFc4UPbNo8bcpJWkCNkGb9r/SdJZSeazjFM81Bv/bBxM+TdprE4k/O1QzA6vry85aWR7b9PX0TcscRyHPyFa5XFoOKvRkaADkYI5ktfdmAHFM6fJBbibQRWkMAawRB/US9y63LWZXRURPllmwUHMSSFkLDwDv2a+Qmsx0umIz/i7kqGlnPfHCNaRHkQ+NWQ="
+    secure: "lhy/o01UCN4qp7cX7jEuSj5VXzNSDOZoJ7InB+in1w/A3htTBgirNcuGmctkkjcQ85dQTCm1NXwZSCkSAFhMKuhwYChskyDuYl2ihzr3itdC4H8RnYOh8CZfdNF+8Kax4JXypJ78LEpEVVYu9ABsdxP48nNyu5MfvEywpXWxxV/99JQ9rWk7oivoz95GWKorwnbLIHlv4UIOVcifeFo9LIxMaklHWRZLjlBjPsBQF9R6zSdfCRMMs4EbcQ9bg0kLfDsvCSI/vLBqjEr+qE9lKVIxEbP8epumXRz6Qj59GXW6xuGo6ggmszC0DMaAZmzsAQzzUaGsWsJZZtUn9bpZxKxr+cvLcxHSNP8mYzADKYDHhVKXTP6WsFbMb8CV0WXcZnbqZ4DBzZ+4jstZqf9b+zlVLz3Vix7Lz/lMIcztyFmslxkgO3IAnjw0QTlsg4TReZXY3LXRLj04FFmEwItaE2yBnZG9vn2m4OHxHbUNCXz3BJm7/WRAjDIlQq7e4maHyb9AgkjkfCwni/btwN61F4hyB2I2FYJ54xZ21i4zppv46A7x3QxtwYm3g4lLqQHAc5ag2kIFKWa+6IpUgUnbqOPEa/jU6JqquOZ1i9RW3b3TsnetaR9oLr+FobILU5ZUzrtGTGZLVGk5D104guGRJZ+Sw2kMo/zvg73oUswWQp8="
   bucket: $GCS_BUCKET_NAME
   acl: public-read
   dot_match: false
   local_dir: includes
   on:
     all_branches: true
-    condition: $TRAVIS_BRANCH =~ ^(master|develop)$
+    condition: $TRAVIS_BRANCH =~ ^(main|develop)$
