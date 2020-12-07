@@ -1672,6 +1672,9 @@ table caption {
   margin-top: 10px;
 }
 
+#kl_wrapper_3.kl_uw_ischool_1 ul li ul, #kl_wrapper_3.kl_uw_ischool_1_mod ul li ul {
+  margin-top: 0;
+}
 #kl_wrapper_3.kl_uw_ischool_1 h4:not(.ui-state-default), #kl_wrapper_3.kl_uw_ischool_1_mod h4:not(.ui-state-default) {
   font-weight: bold;
   font-size: 20px;
@@ -2600,6 +2603,9 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   border-radius: 5px 0 0 5px;
 }
 
+.ajas-search-widget--course {
+  top: -40px !important;
+}
 
 
 /* #kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big {
