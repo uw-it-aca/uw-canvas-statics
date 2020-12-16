@@ -2603,10 +2603,11 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   border-radius: 5px 0 0 5px;
 }
 
+/*
 .ajas-search-widget--course {
-  top: -40px !important;
+  top: 17px !important;
 }
-
+*/
 
 /* #kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big {
   counter-reset: my-awesome-counter none;
