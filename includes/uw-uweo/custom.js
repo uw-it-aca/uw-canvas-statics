@@ -1,4 +1,4 @@
-/*jslint browser: true, regexp:true */
+/*jslint browser: true, regexp:true, esversion: 6 */
 /*global jQuery */
 (function ($) {
     "use strict";
