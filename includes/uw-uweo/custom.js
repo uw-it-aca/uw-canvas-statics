@@ -1,4 +1,4 @@
-/*jslint browser: true, regexp:true */
+/*jslint browser: true, regexp:true, esversion: 6 */
 /*global jQuery */
 (function ($) {
     "use strict";
@@ -149,4 +149,17 @@
     }
   }
 
+})();
+
+//H5P additional resize code for Course Presentations and hidden on load values
+(function () {
+  const summaries = document.querySelectorAll('details');
+  summaries.forEach(function(summary) {
+  summary.addEventListener('toggle', function () {
+    const iframe = summary.querySelector('iframe');
+    if (summary.hasAttribute('open') && iframe.src.indexOf('h5p') !== -1) {
+      iframe.contentWindow.postMessage({context: 'h5p', action: 'ready'}, '*');
+    }
+  });
+});
 })();
