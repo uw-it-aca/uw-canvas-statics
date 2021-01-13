@@ -24,20 +24,22 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
 
-    if: github.ref == 'refs/heads/main'
-    env:
-        GCS_BUCKET_NAME: 'canvas-static'
-
-    if: github.ref == 'refs/heads/develop'
-    env:
-        GCS_BUCKET_NAME: 'canvas-static-test'
-
     steps:
+      - name: Set GCS Bucket Name (Staging)
+        if: endsWith(github.ref, '/develop')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static-test' >> $GITHUB_ENV
+
+      - name: Set GCS Bucket Name (Production)
+        if: endsWith(github.ref, '/main')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static' >> $GITHUB_ENV
+
       - name: Deploy Files
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           service_account_email: ${{ secrets.CANVAS_STATICS_GCP_SA_EMAIL }}
           service_account_key: ${{ secrets.CANVAS_STATICS_GCP_SA_KEY }}
 
           run: gsutil -m rsync -d -c -r includes/ gs://${GCS_BUCKET_NAME}
-          run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://${GCS_BUCKET_NAME}/**/*
+          run: gsutil -m setmeta -h 'Cache-Control:public, max-age=31536000' gs://${GCS_BUCKET_NAME}/**/*
