@@ -16,10 +16,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Set up Tests
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '12'
+
+      - name: Install jshint
         run: npm install jshint
 
       - name: Run Tests
