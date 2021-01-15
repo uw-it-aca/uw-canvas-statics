@@ -1,0 +1,45 @@
+---
+name: Test, Deploy
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Run Tests
+        run: |
+          npm install -g jshint
+          jshint includes/ --verbose
+
+  deploy:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Set GCS Bucket Name (Staging)
+        if: endsWith(github.ref, '/develop')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static-test' >> $GITHUB_ENV
+
+      - name: Set GCS Bucket Name (Production)
+        if: endsWith(github.ref, '/main')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static' >> $GITHUB_ENV
+
+      - name: Deploy Files
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+
+          run: gsutil -m rsync -d -c -r includes/ gs://${GCS_BUCKET_NAME}
+          run: gsutil -m setmeta -h 'Cache-Control:public, max-age=31536000' gs://${GCS_BUCKET_NAME}/**/*
