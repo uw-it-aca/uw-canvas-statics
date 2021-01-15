@@ -17,9 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Tests
-        shell: bash
         run: |
-          npm install -g jshint
+          npm install jshint
           jshint includes/ --verbose
 
   deploy:
