@@ -9,7 +9,12 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
+  environment:
+    runs-on: ubuntu-18.04
+
   build:
+    needs: environment
+
     runs-on: ubuntu-18.04
 
     steps:
@@ -17,14 +22,23 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Tests
+        shell: bash
         run: |
           npm install -g jshint
           jshint includes/ --verbose
 
   deploy:
+    needs: [environment, build]
+
     runs-on: ubuntu-18.04
 
     steps:
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
       - name: Set GCS Bucket Name (Staging)
         if: endsWith(github.ref, '/develop')
         run: |
@@ -35,11 +49,7 @@ jobs:
         run: |
           echo 'GCS_BUCKET_NAME=canvas-static' >> $GITHUB_ENV
 
-      - name: Deploy Files
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-
-          run: gsutil -m rsync -d -c -r includes/ gs://${GCS_BUCKET_NAME}
-          run: gsutil -m setmeta -h 'Cache-Control:public, max-age=31536000' gs://${GCS_BUCKET_NAME}/**/*
+      - name: Sync Files to GCS
+        run: |
+          gsutil -m rsync -d -c -r includes/ gs://${GCS_BUCKET_NAME}
+          gsutil -m setmeta -h 'Cache-Control:public, max-age=31536000' gs://${GCS_BUCKET_NAME}/**/*
