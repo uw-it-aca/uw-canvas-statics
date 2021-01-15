@@ -22,7 +22,7 @@ jobs:
           node-version: '12'
 
       - name: Install jshint
-        run: npm install jshint
+        run: npm install -g jshint
 
       - name: Run Tests
         run: jshint includes/ --verbose
