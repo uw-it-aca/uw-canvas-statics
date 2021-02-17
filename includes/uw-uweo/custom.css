@@ -434,10 +434,15 @@ ul.plain {
   border-bottom: 5px solid #b7a57a;
 }
 
-.goldStyle img, .goldstyle img {
+.goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, huskystyle img, .purpleStyle img, .purplestyle img {
   width: 50px;
   padding-right: 15px;
   height: 100%;
+}
+
+.grayStyle, .graystyle {
+  background-color: #999999;
+  border-bottom: 5px solid #4b2e83;
 }
 
 .halfBlock, .halfblock {
@@ -461,6 +466,11 @@ ul.plain {
 }
 .highlight{
   background: #FFFF99;
+}
+
+.huskyStyle, huskystyle {
+  background-color: #e8e3d3;
+  border-bottom: 5px solid #4b2e83;
 }
 
 .indent {
@@ -588,6 +598,11 @@ span.keyterm {
 
 .padRight, .padright {
   padding-right: 50px;
+}
+
+.purpleStyle, .purplestyle {
+  background-color: #f5f5f5;
+  border-bottom: 5px solid #4b2e83;
 }
 
 .quote {
