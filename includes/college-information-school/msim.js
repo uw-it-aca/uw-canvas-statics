@@ -44,7 +44,7 @@ var myFunction = function() {
 	}
 	tabcontents[tabchange].classList.add('tab-active');
 	this.classList.add('current-tab');
-}
+};
 
 
 for(var index=0;index<tabs.length;index++){
