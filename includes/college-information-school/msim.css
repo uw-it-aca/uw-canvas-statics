@@ -1,70 +1,86 @@
 /*****Tabs code block******/
-.icetab {
-    box-sizing: border-box;
-    transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -webkit-transition: all ease-in-out .5s;
-  }
-  .tabcontent-block {
-    box-sizing: border-box;
-    transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -webkit-transition: all ease-in-out .5s;
-  }
-  .icetab {
-    display: inline-block;
-    margin: 0px;
-    color: #000;
-    cursor: pointer;
-  }
+.tab_wrapper{
+  width: 100%;
+  /*margin: 150px auto;*/
+}
 
-  #icetab-content {
-    overflow: hidden;
-    position: relative;
-  }
+.tabs ul{
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  margin: 0px;
+}
 
-  .tabcontent-block {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: #e0dce5;
-    width: 100%;
-    border: 2px solid #4B2E83;
-    transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-  }
+.tabs li {
+  background-color: #e0dce5;
+  margin-right: 5px;
+  border: none;
+  align-items: flex-start;
+  list-style-type: none;
+  padding-left: 0px;
+}
 
-  .tabcontent-block:first-child {
-    position: relative;
-  }
-  .tabcontent-block.tab-active {
-    display: block;
-    transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-  }
+.tabs ul li{
+  /*width: 250px;*/
+  padding: 15px;
+  border-right: 1px solid #dddddd;
 
-  /* A tiny wee bit of visual formating */
-  .icetab-delux-container {
-  max-width: 90%x;
-  margin: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  .tabcontent-block {
-    padding: 40px;
-  }
-  .icetab {
-    padding: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #e0dce5;
-  }
-  .current-tab {
-    background: #4B2E83;
-    color: #fff;
-  }
+  color: #4B2E83;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+
+.tabs ul li:last-child{
+  border-right: 0px;
+}
+
+.tabs ul li:before{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4B2E83;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+  background: #4B2E83;
+  color: #fff;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+  opacity: 1;
+}
+
+.tab_container_content{
+  background-color: #e0dce5;
+  border: 2px solid #4B2E83;
+  border-radius: none;
+  padding: 20px;
+}
+
+.tab_wrap .title{
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.tab_wrap .tab_content p{
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
 
   /***End of Tab code**/
 
@@ -409,3 +425,138 @@
   }
 
   /***End of homepage info block***/
+
+
+/* request to not make the Canvas generated quiz subheader uppercase ------------------------*/
+
+/*
+Make the class more specific, so that it only effects H2 headings that people add, not the ones built into Canvas
+Hala has flagged this subheading as an issue. Im not sure if removing the uppercase will be sufficient for her, though I think it may well be
+
+So, instead of them using this class: */
+
+h2 {
+    font-weight: bolder !important;
+    text-transform: uppercase !important;
+    font-family: sans-serif;
+}
+
+
+/* they should replace it with this class: */
+
+.user_content h2, .user_content .h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #4b2e83
+}
+
+/* could also do the same change for H3s */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* list spacing --------------------------------------------*/
+
+/* this is what they use for Ross */
+
+.user_content li
+{
+   margin-bottom: 1.25rem;
+}
+
+/* this would effect all lists that people make. We could make it specific to only lists we make, by making it so that we need to add the
+following class to the <ul>: */
+
+.construct-list-spacing li
+{
+    margin-bottom: 1.25rem;
+}
+
+/* as for the size of the spacing, Im not sure this is best. Less may be better? Like paragraph spacing: “margin-top: 12px;” and “margin-bottom:12px;” */
+
+
+
+/* ability to have lowercase letters for H2 and H3 headings, if needed. */
+
+.construct-regular-H2-and-H3 {
+    text-transform: none!important;
+}
+
+
+/* ability to change the font weight of things */
+
+.construct-font-weight-600 {
+    font-weight: 600;
+}
+
+.construct-font-weight-400 {
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* getting rid of the thick purple line in the assignment rubrics */
+/* please change this */
+
+table caption {
+    background-color: #4b2e83 !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    padding: 5px !important;
+}
+
+
+/* to this */
+.user_content table caption {
+    background-color: #4b2e83 !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    padding: 5px !important;
+}
+
+/* accordions ---------------------------------- */
+
+/* Would also like a plus symbol for the accordions please */
+
+/* please add the color styling also to darken the font. This is to increase the contrast.
+If the grey background could also be made lighter (along with the hover state), would be great, thanks */
+
+.element_to_toggle .module-card {
+    border: none;
+    border-radius: 2px;
+    background-color: #d5d5d5;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 40px;
+
+    color:black
+}

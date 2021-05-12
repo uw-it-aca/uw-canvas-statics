@@ -1552,8 +1552,8 @@ table caption {
 
 #kl_wrapper_3.kl_uw_ischool_1>div, #kl_wrapper_3.kl_uw_ischool_1_mod>div {
   margin: 10px 0;
-  position: relative;
-  overflow-x: auto
+  /* position: relative;
+  overflow-x: auto */
 }
 #kl_wrapper_3.kl_uw_ischool_1>div>i:before, #kl_wrapper_3.kl_uw_ischool_1_mod>div>i:before {
   font-size: 25px;
@@ -2602,6 +2602,20 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   border: 1px solid #E0E0E0;
   border-radius: 5px 0 0 5px;
 }
+
+/* .page-title {
+  color: #333333 !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 0 !important;
+  margin: 10px 0 0 0 !important;
+}
+
+#kl_custom_css {
+  visibility: hidden !important;
+}
+*/
 
 /*
 .ajas-search-widget--course {
