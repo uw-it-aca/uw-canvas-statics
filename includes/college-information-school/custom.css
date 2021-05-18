@@ -1541,13 +1541,15 @@ table caption {
   float: left;
   position: relative;
   padding: 10px 10px 8px 0 !important;
-  max-width: 105px !important;
+  /*max-width: 105px !important;*/
+  width: 105px !important;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column .photo img {
   padding: 0 !important;
   margin: 0 !important;
-  width: 100%;
+  /* width: 100%; */
+  width: 105px !important;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1>div, #kl_wrapper_3.kl_uw_ischool_1_mod>div {
@@ -1857,6 +1859,9 @@ table caption {
   border: 2px solid #f1efe6;
   background-color: #f7f4ea;
   padding: 0px 15px;
+}
+#kl_wrapper_3.kl_uw_ischool_1 .highlight a {
+  color: #004FA3 !important;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1 .highlight2 {
