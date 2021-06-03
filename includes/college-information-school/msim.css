@@ -1,73 +1,75 @@
 /*****Tabs code block******/
-.icetab {
-    box-sizing: border-box;
-    transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -webkit-transition: all ease-in-out .5s;
-  }
-  .tabcontent-block {
-    box-sizing: border-box;
-    transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -webkit-transition: all ease-in-out .5s;
-  }
-  .icetab {
-    display: inline-block;
-    margin: 0px;
-    color: #000;
-    cursor: pointer;
-  }
-
-  #icetab-content {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .tabcontent-block {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: #e0dce5;
-    width: 100%;
-    border: 2px solid #4B2E83;
-    transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-  }
-
-  .tabcontent-block:first-child {
-    position: relative;
-  }
-  .tabcontent-block.tab-active {
-    display: block;
-    transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-  }
-
-  /* A tiny wee bit of visual formating */
-  .icetab-delux-container {
-  max-width: 90%x;
-  margin: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  .tabcontent-block {
-    padding: 40px;
-  }
-  .icetab {
-    padding: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #e0dce5;
-  }
-  .current-tab {
-    background: #4B2E83;
-    color: #fff;
-  }
-
+.tab_wrapper{
+  width: 100%;
+  /*margin: 150px auto;*/
+}
+.tabs ul{
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  margin: 0px;
+}
+.tabs li {
+  background-color: #e0dce5;
+  margin-right: 5px;
+  border: none;
+  align-items: flex-start;
+  list-style-type: none;
+  padding-left: 0px;
+}
+.tabs ul li{
+  /*width: 250px;*/
+  padding: 15px;
+  border-right: 1px solid #dddddd;
+  color: #4B2E83;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.tabs ul li:last-child{
+  border-right: 0px;
+}
+.tabs ul li:before{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4B2E83;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.tabs ul li:hover,
+.tabs ul li.active{
+  background: #4B2E83;
+  color: #fff;
+}
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+  opacity: 1;
+}
+.tab_container_content{
+  background-color: #e0dce5;
+  border: 2px solid #4B2E83;
+  border-radius: none;
+  padding: 20px;
+}
+.tab_wrap .title{
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.tab_wrap .tab_content p{
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
   /***End of Tab code**/
-
   /****Flip card code*****/
 .flip-card-ext {
     display: flex;
@@ -79,15 +81,12 @@
     justify-content: center;
     align-content: center;
   }
-
   @media only screen and (max-width: 1080px) {
     .flip-card-ext {
       display: flex;
       flex-direction: column;
-
     }
   }
-
   @media only screen and (max-width: 375px) {
     .flip-card-ext {
         -ms-transform: scale(0.8,0.8);
@@ -96,20 +95,17 @@
         -moz-transform: scale(0.8,0.8);
     }
   }
-
   .middle {
     top: 0%;
     left: 0%;
     transform: translate(0%,0%);
     margin: 5px;
   }
-
   .card {
     cursor: pointer;
     width: 300px;
     height: 400px;
   }
-
   .front,.back {
     width: 100%;
     height: 100%;
@@ -118,7 +114,6 @@
     transition: transform 0.6s linear;
     border-radius: 10px;
   }
-
   .front {
     background-color: #4b2e83;
     transform: perspective(600px) rotateY(0deg);
@@ -129,7 +124,6 @@
     align-items: center;
     justify-content: center;
   }
-
   .back {
     background-color: #d9d9d9;
     transform: perspective(600px) rotateY(180deg);
@@ -137,36 +131,30 @@
     align-items: center;
     justify-content: center;
   }
-
   .back-content {
     text-align: center;
     width: 90%;
     overflow: auto;
   }
-
   .card:hover > .front {
     transform: perspective(600px) rotateY(-180deg);
     -webkit-transform: perspective(600px) rotateY(-180deg);
     -ms-transform: perspective(600px) rotateY(-180deg);
     -moz-transform: perspective(600px) rotateY(-180deg);
   }
-
   .card:hover > .back {
     transform: perspective(600px) rotateY(0deg);
     -webkit-transform: perspective(600px) rotateY(0deg);
     -ms-transform: perspective(600px) rotateY(0deg);
     -moz-transform: perspective(600px) rotateY(0deg);
   }
-
   /***End of flip card quote**/
-
   /***Standard Quote box***/
 .quote_box_container {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
-
   .quote_outer_shell {
     background-color: #4b2e83;
     padding: 5px;
@@ -175,21 +163,18 @@
     border-radius: 5px;
     box-shadow: 2px 2px 2px #a3a3a3;
   }
-
   .quote_inner_shell p {
     color: #fff;
     padding: 20px;
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
   }
-
   /*Small block*/
   .quote_block_container {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
   }
-
   .block_outer_shell {
     background-color: #4b2e83;
     padding: 5px;
@@ -198,18 +183,14 @@
     border-radius: 5px;
     box-shadow: 2px 2px 2px #a3a3a3;
   }
-
   .block_inner_shell p {
     color: #fff;
     padding: 20px;
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
   }
-
   /***end of Quote box code***/
-
   /****Button code*****/
-
 .btn_link a {
     padding: 10px 40px;
     width: 100px;
@@ -218,35 +199,26 @@
     text-decoration: none;
     border-radius: 4px;
   }
-
   .btn_link a:hover {
     text-decoration: none;
     background-color: #7750c2;
   }
-
   /**End of button code***/
-
   /**Gold Horizontal rule***/
-
   .UW_rule {
     border-bottom: 3px solid #B7A57A;
   }
-
   /**end***/
-
   /****Shortcut button****/
-
   .shortcut_container {
     width: 100%;
   }
-
   .shortcut_grid {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
   }
-
   .shortcut_button {
     border-bottom: 3px solid #4b2e83;
     border-width: 50%;
@@ -256,14 +228,11 @@
     font-size: 14pt;
     color: #4b2e83;
   }
-
   .shortcut_button:hover {
     width: 22%;
     cursor: pointer;
   }
-
   /****Shortcut end****/
-
   /*****Accordion CSS code******/
 .noodle-module-accordion .element_toggler {
     background-color: #4b2e83;
@@ -279,18 +248,15 @@
     margin-top: 5px;
     margin-bottom: 5px;
   }
-
   .noodle-module-accordion .element_toggler:hover {
     background-color: #7750c2;
   }
-
   .element_to_toggle {
     padding: 0;
     display: none;
     background-color: white;
     overflow: hidden;
   }
-
   .element_to_toggle .module-card {
     border: none;
     border-radius: 2px;
@@ -302,35 +268,38 @@
     margin-top: 5px;
     margin-left: 40px;
   }
-
   .element_to_toggle .module-card:hover {
     background-color: #e5e5e5;
   }
-
   /***End of accordion code**/
-
   /***Heading CSS H2, H3***/
-  h2 {
+  .user_content h2, .user_content .h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #4b2e83
+}
+  /* h2 {
     font-weight: bolder !important;
     text-transform: uppercase !important;
     font-family: sans-serif;
-  }
-
-  h3 {
+  } */
+  /* h3 {
     font-weight: 500 !important;
     text-transform: uppercase !important;
     font-family: sans-serif;
-  }
-
+  } */
+  .user_content h3, .user_content .h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
   /***Heading end**/
-
   /*****Home Page tiles*****/
-
   .tile_container {
     max-width: 100%;
     padding: 0;
   }
-
   .tile_card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -339,7 +308,6 @@
     padding-bottom: 1px;
     position: inherit;
   }
-
   .tile_image img {
     display: flex;
     justify-content: left;
@@ -347,18 +315,13 @@
     line-height: 2rem;
     max-width: 200px;
   }
-
   .tile_card img:hover {
     box-shadow: 5px 8px 16px 0 rgb(0, 0, 0);
   }
-
   .tile_locked {
     opacity: 0.6;
   }
-
-
   /*****end of tiles******/
-
   /***Home page Info block***/
   .grid-row {
     box-sizing: border-box;
@@ -370,13 +333,11 @@
     border-radius: 5px;
     margin: 0px;
   }
-
   .col-xs {
     flex-grow: 1;
     flex-basis: 0;
     max-width: 100%;
   }
-
   .col-xs {
     display: flex;
     width: 33.3%;
@@ -386,26 +347,57 @@
     padding-right: 12px;
     padding-left: 12px;
   }
-
   .live_link {
     margin-top: 10px;
   }
-
   .noodle-teacher-information-box *[class^=col] {
     border-right: 1px solid #e3e3e3;
   }
-
   .noodle-teacher-information-box *[class^=col]:last-child {
     border-right: none;
   }
-
   .noodle-live-session-info-box {
     margin: 0;
   }
-
   .noodle-call-in-info {
     margin: 0;
     display: none;
   }
-
   /***End of homepage info block***/
+/* list spacing */
+.user_content li
+{
+   margin-bottom: 1.25rem;
+}
+/* ability to have lowercase letters for H2 and H3 headings, if needed. */
+.construct-regular-H2-and-H3 {
+    text-transform: none!important;
+}
+/* ability to change the font weight of things */
+.construct-font-weight-600 {
+    font-weight: 600;
+}
+ .construct-font-weight-400 {
+    font-weight: 400;
+}
+/* getting rid of the thick purple line in the assignment rubrics */
+.user_content table caption {
+    background-color: #4b2e83;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+/* please add the color styling also to darken the font. This is to increase the contrast. */
+.element_to_toggle .module-card {
+    border: none;
+    border-radius: 2px;
+    background-color: #d5d5d5;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 40px;
+    color:black
+}
