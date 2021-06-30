@@ -1,3 +1,4 @@
+/*jslint browser: true, regexp:true, esversion: 6 */
 // H5P iframe Resizer
 (function () {
   if (!window.postMessage || !window.addEventListener || window.h5pResizerInitialized) {
