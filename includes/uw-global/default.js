@@ -111,7 +111,8 @@ var setUWCanvas = function ($) {
             load_script('/uw-global/profile.js');
         }
 
-        if (match = href.match(/\/courses\/(\d+)(\/.*)?$/)) {
+        match = href.match(/\/courses\/(\d+)(\/.*)?$/);
+        if (match !== null) {
             $('#unauthorized_holder').whenExists(show_unauthorized);
             if (ALLY_CFG.loadScript) {
                 $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
