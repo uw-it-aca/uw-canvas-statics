@@ -3,9 +3,6 @@
 (function ($) {
     'use strict';
 
-    // H5P iframe Resizer
-    $.getScript('https://storage.googleapis.com/canvas-static/vendor/h5p.js');
-
     function hideLastEditedBy(ev, xhr, settings) {
         if (settings.url.match(/\/api\/v1\/courses\/[\d]+\/pages/)) {
             $('tbody.collectionViewItems tr').find('td:eq(2)').each(function () {
