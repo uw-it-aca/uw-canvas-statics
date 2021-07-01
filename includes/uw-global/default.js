@@ -14,7 +14,9 @@ var setUWCanvas = function ($) {
         uw_groups_external_id = '31485',
         course_photos_external_id = '37913',
         unauthorized_title = "You don't have access to this content",
-        unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>';
+        unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>',
+        h5p_course_ids = ['1457478', '1457478', '1458036', '1458045', '1485032',
+                          '1458121', '1470645', '1457927'];
 
     $.fn.whenExists = function (handler) {
         var selector = this.selector,
@@ -88,7 +90,8 @@ var setUWCanvas = function ($) {
     }
 
     $(document).ready(function () {
-        var href = window.location.href;
+        var href = window.location.href,
+            match;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
             load_script('/uw-global/settings.js');
         } else if (href.match(/\/courses\/\d+\/assignments/)) {
@@ -108,10 +111,14 @@ var setUWCanvas = function ($) {
             load_script('/uw-global/profile.js');
         }
 
-        if (href.match(/\/courses\/\d+(\/.*)?$/)) {
+        if (match = href.match(/\/courses\/(\d+)(\/.*)?$/)) {
             $('#unauthorized_holder').whenExists(show_unauthorized);
             if (ALLY_CFG.loadScript) {
                 $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
+            }
+
+            if (h5p_course_ids.includes(match[1])) {
+                load_script('/vendor/h5p.js');
             }
         }
     });
