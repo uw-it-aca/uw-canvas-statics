@@ -113,6 +113,7 @@ var setUWCanvas = function ($) {
             if (ALLY_CFG.loadScript) {
                 $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
             }
+            load_script('/vendor/h5p-utils.js');
         }
     });
 
