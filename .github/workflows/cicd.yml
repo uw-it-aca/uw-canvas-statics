@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout Repo
@@ -32,14 +32,14 @@ jobs:
 
     needs: build
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
       - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@main
         with:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
