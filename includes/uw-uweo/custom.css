@@ -327,14 +327,14 @@ ul.plain {
   display: inline-block;
   float: left;
   margin: 10px;
-  background-color: #85754d;
+/*  background-color: #85754d; */
   font-weight: bold;
   text-rendering: optimizeLegibility;
   border: thin solid #85754d;
 }
 
 .btnBG a, .btnbg a, .btnBg a {
-  color: #FFFFFF;
+/*  color: #FFFFFF; */
   text-decoration: none;
 }
 
@@ -1294,7 +1294,7 @@ div.entry-content {
   border-top: medium solid #4b2e83;
   border-bottom: medium solid #4b2e83;
   background-color: #f5f5f5;
-  color: #cccccc;
+/*  color: #cccccc; */
   margin: auto;
   font-weight: bold;
   font-size: 0.875rem;
