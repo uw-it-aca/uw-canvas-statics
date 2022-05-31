@@ -43,15 +43,20 @@ var DT_variables = {
             '987654'
         ]
 };
-
-// Run the necessary code when a page loads
-$(document).ready(function () {
-    'use strict';
-    // This runs code that looks at each page and determines what controls to create
-    $.getScript(DT_variables.path + 'js/master_controls.js', function () {
-        console.log('master_controls.js loaded');
-    });
-});
 ////////////////////////////////////////////////////
 // END DESIGN TOOLS CONFIG                        //
 ////////////////////////////////////////////////////
+
+(function ($) {
+    'use strict';
+
+    var now = new Date().getTime();
+
+    $(document).ready(function () {
+        // Design Tools JS
+        $.getScript(DT_variables.path + 'js/master_controls.js');
+
+        // Atomic Search JS
+        $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
+    });
+}(jQuery));
