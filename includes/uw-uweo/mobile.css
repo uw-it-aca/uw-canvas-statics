@@ -210,6 +210,7 @@ ul.plain {
   margin-top: 0px;
   top: 0;
   font: bold 24px Helvetica, Sans-Serif;
+  color: #262626;
 }
 
 .banner100 h1, .banner100 h2, .banner100 h4 {
@@ -463,7 +464,7 @@ ul.plain {
 }
 
 .highlight{
-  background-color: #FFFF99;
+  background-color: #dbdb4d;
 }
 
 .huskyStyle, huskystyle {
@@ -724,7 +725,7 @@ span.keyterm {
   line-height: 200%;
 }
 
-.actionBox, .diacriticalBox, .importantBox, .infoBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox, .actionbox, .diacriticalbox, .importantbox, .infobox, .keytermbox, .bluebox, .goldbox, .graybox, .orangebox, .purplebox {
+.actionBox, .diacriticalBox, .importantBox, .infoBox, .instructorBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox, .actionbox, .diacriticalbox, .importantbox, .infobox, .instructorbox, .keytermbox, .bluebox, .goldbox, .graybox, .orangebox, .purplebox {
   color: #262626;
   float:right;
   width: 160px;
