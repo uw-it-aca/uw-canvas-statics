@@ -336,6 +336,19 @@ table caption {
 #announcements_on_home_page {
   padding-bottom: 0px;
 }
+
+/** Module Zero **/
+
+li.module-zero {
+  counter-reset: my-awesome-counter -1 !important;
+}
+
+/** Hide External Link Icon **/
+
+.external img {
+  display:none !important
+}
+
 /*********************************************************************/
 /***** END UW CUSTOM CSS  ********************************************/
 /*********************************************************************/
