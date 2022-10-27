@@ -336,6 +336,19 @@ table caption {
 #announcements_on_home_page {
   padding-bottom: 0px;
 }
+
+/** Module Zero **/
+
+li.module-zero {
+  counter-reset: my-awesome-counter -1 !important;
+}
+
+/** Hide External Link Icon **/
+
+.external img {
+  display:none !important
+}
+
 /*********************************************************************/
 /***** END UW CUSTOM CSS  ********************************************/
 /*********************************************************************/
@@ -1750,7 +1763,7 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 .modules li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/numbers.png) no-repeat;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
   border-radius: 5px;
@@ -1794,7 +1807,7 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 .modules-zero li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/numbers.png) no-repeat;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   background-position: 0 -905px;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
@@ -1872,10 +1885,10 @@ table caption {
 }
 
 .kl_uw_ischool_1 .ui-state-default {
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
 }
 .kl_uw_ischool_1 .ui-state-default:hover {
-  background: #F0F0F0 url(https://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
+  background: #F0F0F0 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
   color: #000000 !important;
 }
 .kl_uw_ischool_1 .ui-icon {
@@ -3382,7 +3395,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 
     font-family: sans-serif;
 
-  } 
+  }
 
   .user_content h3, .user_content .h3 {
 
@@ -3570,12 +3583,12 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   /***End of homepage info block***/
 
 
-/* list spacing */
+/* list spacing
 .user_content li
 {
    margin-bottom: 1.25rem;
 }
-
+*/
 
 
 /* ability to have lowercase letters for H2 and H3 headings, if needed. */
@@ -3595,7 +3608,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 
 
 
-/* getting rid of the thick purple line in the assignment rubrics */
+/* getting rid of the thick purple line in the assignment rubrics
 
 .user_content table caption {
 
@@ -3643,4 +3656,3 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 /*********************************************************************/
 /*********************END MSIM Online*********************************/
 /*********************************************************************/
-
