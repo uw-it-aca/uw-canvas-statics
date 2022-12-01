@@ -131,8 +131,8 @@
 })();
 
 //H5P additional resize code for Course Presentations and hidden on load values
-(function () {
-  const summaries = document.querySelectorAll('details');
+document.addEventListener('DOMContentLoaded', function () {
+ const summaries = document.querySelectorAll('details');
   summaries.forEach(function(summary) {
     summary.addEventListener('toggle', function () {
       const iframe = summary.querySelector('iframe');
@@ -141,4 +141,4 @@
       }
     });
   });
-})();
+}, false);
