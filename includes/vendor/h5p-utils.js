@@ -130,9 +130,9 @@
   }
 })();
 
-//H5P additional resize code for Course Presentations and hidden on load values
-document.addEventListener('DOMContentLoaded', function () {
- const summaries = document.querySelectorAll('details');
+// H5P additional resize code for Course Presentations and hidden on load values 
+const setupH5PResize = function () {
+  const summaries = document.querySelectorAll('details');
   summaries.forEach(function(summary) {
     summary.addEventListener('toggle', function () {
       const iframe = summary.querySelector('iframe');
@@ -141,4 +141,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-}, false);
+};
+if (document.readyState === "complete") {
+  // Document has already been loaded
+  setupH5PResize();
+}
+else {
+  // Not loaded yet, so let's listen for the event
+  document.addEventListener("DOMContentLoaded", setupH5PResize);
+}
