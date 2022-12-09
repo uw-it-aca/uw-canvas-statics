@@ -148,5 +148,5 @@ if (document.readyState === "complete") {
 }
 else {
   // Not loaded yet, so let's listen for the event
-  document.addEventListener("DOMContentLoaded", setupH5PResize);
+  window.addEventListener("load", setupH5PResize);
 }
