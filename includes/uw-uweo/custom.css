@@ -275,6 +275,14 @@ ul.plain {
   margin: 4px;
 }
 
+.bordergray, .borderGray {
+  border: thin solid grey;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius: 10px;
+  padding: 3px;
+}
+
 .breakhere { /*page break*/
   page-break-before: always;
 }
@@ -364,6 +372,12 @@ ul.plain {
   text-align: center;
 }
 
+.cornsilk, .cornSilk, .Cornsilk, .CornSilk {
+  background-color: cornsilk;
+  color: #000000;
+  cursor: pointer;
+}
+
 .decimal {
   list-style-type: decimal;
 }
@@ -423,6 +437,12 @@ ul.plain {
 
 .frontpagelist li, .frontPageList li, .frontpageList li, .frontpagelistwithimages li, .frontPageListWithImages li, .frontpageListWithImages li {
   line-height: 1.5;
+}
+
+.gainsboro {
+  background-color: gainsboro;
+  color: #000000;
+  cursor: pointer;
 }
 
 .giant {
@@ -582,6 +602,10 @@ span.keyterm {
 
 .oneptfiveM, .oneptfiveEm, .oneptfiveem, .oneptfiveEM, .oneptfivem {
   font-size: 1.5em;
+}
+
+.padTen, .padten, .pad10 {
+  padding: 10px; 
 }
 
 .padded {
