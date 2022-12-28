@@ -439,7 +439,7 @@ ul.plain {
   line-height: 1.5;
 }
 
-.gainsboro {
+.gainsboro, .Gainsboro {
   background-color: gainsboro;
   color: #000000;
   cursor: pointer;
