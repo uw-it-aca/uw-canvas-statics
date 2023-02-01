@@ -1,13 +1,3 @@
-/*jslint browser: true, plusplus: true */
-/*global jQuery */
-
-/*EvaluationKIT START*/
-var evalkit_jshosted = document.createElement('script');
-evalkit_jshosted.setAttribute('type', 'text/javascript');
-evalkit_jshosted.setAttribute('src', 'https://uwsom.evaluationkit.com/CanvasScripts/uwsom.js?v=7');
-document.getElementsByTagName('head')[0].appendChild(evalkit_jshosted);
-/*EvaluationKIT END*/
-
 ////////////////////////////////////////////////////
 // DESIGN TOOLS CONFIG                            //
 ////////////////////////////////////////////////////
@@ -16,7 +6,7 @@ var DT_variables = {
         iframeID: '',
         // Path to the hosted USU Design Tools
         path: 'https://designtools.ciditools.com/',
-        templateCourse: '1313636',
+        templateCourse: '1509543',
         // OPTIONAL: Button will be hidden from view until launched using shortcut keys
         hideButton: true,
     	 // OPTIONAL: Limit by course format
@@ -43,20 +33,15 @@ var DT_variables = {
             '987654'
         ]
 };
+
+// Run the necessary code when a page loads
+$(document).ready(function () {
+    'use strict';
+    // This runs code that looks at each page and determines what controls to create
+    $.getScript(DT_variables.path + 'js/master_controls.js', function () {
+        console.log('master_controls.js loaded');
+    });
+});
 ////////////////////////////////////////////////////
 // END DESIGN TOOLS CONFIG                        //
 ////////////////////////////////////////////////////
-
-(function ($) {
-    'use strict';
-
-    var now = new Date().getTime();
-
-    $(document).ready(function () {
-        // Design Tools JS
-        $.getScript(DT_variables.path + 'js/master_controls.js');
-
-        // Atomic Search JS
-        $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
-    });
-}(jQuery));

@@ -1,0 +1,63 @@
+---
+name: tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+
+      - name: Install jshint
+        run: npm install -g jshint
+
+      - name: Run Tests
+        run: jshint includes/ --verbose
+
+  deploy:
+    if: github.event_name == 'push'
+
+    needs: build
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - id: 'auth'
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+
+      - name: Set GCS Bucket Name (Staging)
+        if: endsWith(github.ref, '/develop')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static-test' >> $GITHUB_ENV
+
+      - name: Set GCS Bucket Name (Production)
+        if: endsWith(github.ref, '/main')
+        run: |
+          echo 'GCS_BUCKET_NAME=canvas-static' >> $GITHUB_ENV
+
+      - name: Sync Files to GCS
+        uses: uw-it-aca/actions/sync-gcs@main
+        with:
+          source_dir: includes
+          bucket_name: ${GCS_BUCKET_NAME}

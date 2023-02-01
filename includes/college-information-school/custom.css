@@ -336,6 +336,19 @@ table caption {
 #announcements_on_home_page {
   padding-bottom: 0px;
 }
+
+/** Module Zero **/
+
+li.module-zero {
+  counter-reset: my-awesome-counter -1 !important;
+}
+
+/** Hide External Link Icon **/
+
+.external img {
+  display:none !important
+}
+
 /*********************************************************************/
 /***** END UW CUSTOM CSS  ********************************************/
 /*********************************************************************/
@@ -1541,19 +1554,21 @@ table caption {
   float: left;
   position: relative;
   padding: 10px 10px 8px 0 !important;
-  max-width: 105px !important;
+  /*max-width: 105px !important;*/
+  width: 105px !important;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo .kl_flex_column .photo img {
   padding: 0 !important;
   margin: 0 !important;
-  width: 100%;
+  /* width: 100%; */
+  width: 105px !important;
 }
 
 #kl_wrapper_3.kl_uw_ischool_1>div, #kl_wrapper_3.kl_uw_ischool_1_mod>div {
   margin: 10px 0;
-  position: relative;
-  overflow-x: auto
+  /* position: relative;
+  overflow-x: auto */
 }
 #kl_wrapper_3.kl_uw_ischool_1>div>i:before, #kl_wrapper_3.kl_uw_ischool_1_mod>div>i:before {
   font-size: 25px;
@@ -1672,6 +1687,9 @@ table caption {
   margin-top: 10px;
 }
 
+#kl_wrapper_3.kl_uw_ischool_1 ul li ul, #kl_wrapper_3.kl_uw_ischool_1_mod ul li ul {
+  margin-top: 0;
+}
 #kl_wrapper_3.kl_uw_ischool_1 h4:not(.ui-state-default), #kl_wrapper_3.kl_uw_ischool_1_mod h4:not(.ui-state-default) {
   font-weight: bold;
   font-size: 20px;
@@ -1745,7 +1763,7 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 .modules li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/numbers.png) no-repeat;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
   border-radius: 5px;
@@ -1789,7 +1807,7 @@ table caption {
 #kl_wrapper_3.kl_uw_ischool_1 .modules-zero li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/numbers.png) no-repeat;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   background-position: 0 -905px;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
@@ -1855,6 +1873,9 @@ table caption {
   background-color: #f7f4ea;
   padding: 0px 15px;
 }
+#kl_wrapper_3.kl_uw_ischool_1 .highlight a {
+  color: #004FA3 !important;
+}
 
 #kl_wrapper_3.kl_uw_ischool_1 .highlight2 {
   background-color: #e8e3d3;
@@ -1864,10 +1885,10 @@ table caption {
 }
 
 .kl_uw_ischool_1 .ui-state-default {
-  background: #f5f5f5 url(https://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
+  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
 }
 .kl_uw_ischool_1 .ui-state-default:hover {
-  background: #F0F0F0 url(https://staff.washington.edu/putrih/canvastemplates/expand.png) no-repeat !important;
+  background: #F0F0F0 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
   color: #000000 !important;
 }
 .kl_uw_ischool_1 .ui-icon {
@@ -2600,7 +2621,25 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   border-radius: 5px 0 0 5px;
 }
 
+/* .page-title {
+  color: #333333 !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 0 !important;
+  margin: 10px 0 0 0 !important;
+}
 
+#kl_custom_css {
+  visibility: hidden !important;
+}
+*/
+
+/*
+.ajas-search-widget--course {
+  top: 17px !important;
+}
+*/
 
 /* #kl_wrapper_3.kl_uw_ischool_1 ol.new-modules-big {
   counter-reset: my-awesome-counter none;
@@ -2654,3 +2693,966 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 /*********************************************************************/
 /***** END DESIGN TOOLS THEME CUSTOMIZATIONS *************************/
 /********************************************************************
+
+
+
+/*********************************************************************/
+/*********************************************************************/
+/*************** MSIM Online CSS a*************************************/
+
+
+
+
+/*****Tabs code block******/
+
+.tab_wrapper{
+
+  width: 100%;
+
+  /*margin: 150px auto;*/
+
+}
+
+
+
+.tabs ul{
+
+  display: flex;
+
+  margin-bottom: 0px;
+
+  padding-left: 0px;
+
+  margin: 0px;
+
+}
+
+
+
+.tabs li {
+
+  background-color: #e0dce5;
+
+  margin-right: 5px;
+
+  border: none;
+
+  align-items: flex-start;
+
+  list-style-type: none;
+
+  padding-left: 0px;
+
+}
+
+
+
+.tabs ul li{
+
+  /*width: 250px;*/
+
+  padding: 15px;
+
+  border-right: 1px solid #dddddd;
+
+
+
+  color: #4B2E83;
+
+  text-transform: uppercase;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  position: relative;
+
+}
+
+
+
+
+
+.tabs ul li:last-child{
+
+  border-right: 0px;
+
+}
+
+
+
+.tabs ul li:before{
+
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: #4B2E83;
+
+  opacity: 0;
+
+  transition: all 0.2s ease;
+
+}
+
+
+
+.tabs ul li:hover,
+
+.tabs ul li.active{
+
+  background: #4B2E83;
+
+  color: #fff;
+
+}
+
+
+
+.tabs ul li:hover:before,
+
+.tabs ul li.active:before{
+
+  opacity: 1;
+
+}
+
+
+
+.tab_container_content{
+
+  background-color: #e0dce5;
+
+  border: 2px solid #4B2E83;
+
+  border-radius: none;
+
+  padding: 20px;
+
+}
+
+
+
+.tab_wrap .title{
+
+  font-size: 20px;
+
+  margin-bottom: 15px;
+
+  font-weight: 600;
+
+}
+
+
+
+.tab_wrap .tab_content p{
+
+  font-size: 14px;
+
+  line-height: 22px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+  /***End of Tab code**/
+
+  /*********************************************************************/
+  /*********************************************************************/
+  /*********************************************************************/
+
+
+  /****Flip card code*****/
+
+.flip-card-ext {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    width: 80%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    justify-content: center;
+
+    align-content: center;
+
+  }
+
+
+
+  @media only screen and (max-width: 1080px) {
+
+    .flip-card-ext {
+
+      display: flex;
+
+      flex-direction: column;
+
+
+
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 375px) {
+
+    .flip-card-ext {
+
+        -ms-transform: scale(0.8,0.8);
+
+        transform: scale(0.8,0.8);
+
+        -webkit-transform: scale(0.8,0.8);
+
+        -moz-transform: scale(0.8,0.8);
+
+    }
+
+  }
+
+
+
+  .middle {
+
+    top: 0%;
+
+    left: 0%;
+
+    transform: translate(0%,0%);
+
+    margin: 5px;
+
+  }
+
+
+
+  .card {
+
+    cursor: pointer;
+
+    width: 300px;
+
+    height: 400px;
+
+  }
+
+
+
+  .front,.back {
+
+    width: 100%;
+
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    position: absolute;
+
+    transition: transform 0.6s linear;
+
+    border-radius: 10px;
+
+  }
+
+
+
+  .front {
+
+    background-color: #4b2e83;
+
+    transform: perspective(600px) rotateY(0deg);
+
+    color: #fff;
+
+    margin-top: auto;
+
+    margin-bottom: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+
+
+  .back {
+
+    background-color: #d9d9d9;
+
+    transform: perspective(600px) rotateY(180deg);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+
+
+  .back-content {
+
+    text-align: center;
+
+    width: 90%;
+
+    overflow: auto;
+
+  }
+
+
+
+  .card:hover > .front {
+
+    transform: perspective(600px) rotateY(-180deg);
+
+    -webkit-transform: perspective(600px) rotateY(-180deg);
+
+    -ms-transform: perspective(600px) rotateY(-180deg);
+
+    -moz-transform: perspective(600px) rotateY(-180deg);
+
+  }
+
+
+
+  .card:hover > .back {
+
+    transform: perspective(600px) rotateY(0deg);
+
+    -webkit-transform: perspective(600px) rotateY(0deg);
+
+    -ms-transform: perspective(600px) rotateY(0deg);
+
+    -moz-transform: perspective(600px) rotateY(0deg);
+
+  }
+
+
+
+  /***End of flip card quote**/
+
+
+
+  /***Standard Quote box***/
+
+.quote_box_container {
+
+    width: 90%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+  }
+
+
+
+  .quote_outer_shell {
+
+    background-color: #4b2e83;
+
+    padding: 5px;
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 2px #a3a3a3;
+
+  }
+
+
+
+  .quote_inner_shell p {
+
+    color: #fff;
+
+    padding: 20px;
+
+    border-left: 2px solid #fff;
+
+    border-right: 2px solid #fff;
+
+  }
+
+
+
+  /*Small block*/
+
+  .quote_block_container {
+
+    width: 40%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+  }
+
+
+
+  .block_outer_shell {
+
+    background-color: #4b2e83;
+
+    padding: 5px;
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 2px #a3a3a3;
+
+  }
+
+
+
+  .block_inner_shell p {
+
+    color: #fff;
+
+    padding: 20px;
+
+    border-left: 2px solid #fff;
+
+    border-right: 2px solid #fff;
+
+  }
+
+
+
+  /***end of Quote box code***/
+
+
+
+  /****Button code*****/
+
+
+
+.btn_link a {
+
+    padding: 10px 40px;
+
+    width: 100px;
+
+    background-color: #4b2e83;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+  }
+
+
+
+  .btn_link a:hover {
+
+    text-decoration: none;
+
+    background-color: #7750c2;
+
+  }
+
+
+
+  /**End of button code***/
+
+
+
+  /**Gold Horizontal rule***/
+
+
+
+  .UW_rule {
+
+    border-bottom: 3px solid #B7A57A;
+
+  }
+
+
+
+  /**end***/
+
+
+
+  /****Shortcut button****/
+
+
+
+  .shortcut_container {
+
+    width: 100%;
+
+  }
+
+
+
+  .shortcut_grid {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    justify-content: space-evenly;
+
+  }
+
+
+
+  .shortcut_button {
+
+    border-bottom: 3px solid #4b2e83;
+
+    border-width: 50%;
+
+    width: 20%;
+
+    text-align: center;
+
+    transition: 0.5s;
+
+    font-size: 14pt;
+
+    color: #4b2e83;
+
+  }
+
+
+
+  .shortcut_button:hover {
+
+    width: 22%;
+
+    cursor: pointer;
+
+  }
+
+
+
+  /****Shortcut end****/
+
+
+
+  /*****Accordion CSS code******/
+
+.noodle-module-accordion .element_toggler {
+
+    background-color: #4b2e83;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    border: none;
+
+    border-radius: 1px;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 12pt;
+
+    transition: 0.4s;
+
+    margin-top: 5px;
+
+    margin-bottom: 5px;
+
+  }
+
+
+
+  .noodle-module-accordion .element_toggler:hover {
+
+    background-color: #7750c2;
+
+  }
+
+
+
+  .element_to_toggle {
+
+    padding: 0;
+
+    display: none;
+
+    background-color: white;
+
+    overflow: hidden;
+
+  }
+
+
+
+  .element_to_toggle .module-card {
+
+    border: none;
+
+    border-radius: 2px;
+
+    background-color: #d5d5d5;
+
+    padding: 1px;
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+    margin-bottom: 10px;
+
+    margin-top: 5px;
+
+    margin-left: 40px;
+
+  }
+
+
+
+  .element_to_toggle .module-card:hover {
+
+    background-color: #e5e5e5;
+
+  }
+
+
+
+  /***End of accordion code**/
+
+
+
+
+  /***Heading CSS H2, H3***/
+
+/*  .user_content h2, .user_content .h2 {
+
+    font-weight: bolder;
+
+    text-transform: uppercase;
+
+    font-family: sans-serif;
+
+    color: #4b2e83
+
+}
+
+  /* h2 {
+
+    font-weight: bolder !important;
+
+    text-transform: uppercase !important;
+
+    font-family: sans-serif;
+
+  } */
+
+
+
+  /* h3 {
+
+    font-weight: 500 !important;
+
+    text-transform: uppercase !important;
+
+    font-family: sans-serif;
+
+  }
+
+  .user_content h3, .user_content .h3 {
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    font-family: sans-serif;
+/*
+}
+
+
+  /***Heading end**/
+
+
+
+  /*****Home Page tiles*****/
+
+
+
+  .tile_container {
+
+    max-width: 100%;
+
+    padding: 0;
+
+  }
+
+
+
+  .tile_card {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+
+    grid-auto-rows: minmax(250px, 1fr);
+
+    grid-gap: 10px;
+
+    padding-bottom: 1px;
+
+    position: inherit;
+
+  }
+
+
+
+  .tile_image img {
+
+    display: flex;
+
+    justify-content: left;
+
+    flex-direction: column;
+
+    line-height: 2rem;
+
+    max-width: 200px;
+
+  }
+
+
+
+  .tile_card img:hover {
+
+    box-shadow: 5px 8px 16px 0 rgb(0, 0, 0);
+
+  }
+
+
+
+  .tile_locked {
+
+    opacity: 0.6;
+
+  }
+
+
+
+
+
+  /*****end of tiles******/
+
+
+
+  /***Home page Info block***/
+
+  .grid-row {
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    background-color: #f0f0f0;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 5px;
+
+    margin: 0px;
+
+  }
+
+
+
+  .col-xs {
+
+    flex-grow: 1;
+
+    flex-basis: 0;
+
+    max-width: 100%;
+
+  }
+
+
+
+  .col-xs {
+
+    display: flex;
+
+    width: 33.3%;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    padding-right: 12px;
+
+    padding-left: 12px;
+
+  }
+
+
+
+  .live_link {
+
+    margin-top: 10px;
+
+  }
+
+
+
+  .noodle-teacher-information-box *[class^=col] {
+
+    border-right: 1px solid #e3e3e3;
+
+  }
+
+
+
+  .noodle-teacher-information-box *[class^=col]:last-child {
+
+    border-right: none;
+
+  }
+
+
+
+  .noodle-live-session-info-box {
+
+    margin: 0;
+
+  }
+
+
+
+  .noodle-call-in-info {
+
+    margin: 0;
+
+    display: none;
+
+  }
+
+
+
+  /***End of homepage info block***/
+
+
+/* list spacing
+.user_content li
+{
+   margin-bottom: 1.25rem;
+}
+*/
+
+
+/* ability to have lowercase letters for H2 and H3 headings, if needed. */
+.construct-regular-H2-and-H3 {
+    text-transform: none!important;
+}
+
+
+/* ability to change the font weight of things */
+.construct-font-weight-600 {
+    font-weight: 600;
+}
+
+ .construct-font-weight-400 {
+    font-weight: 400;
+}
+
+
+
+/* getting rid of the thick purple line in the assignment rubrics
+
+.user_content table caption {
+
+    background-color: #4b2e83;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    padding: 5px;
+
+}
+
+
+
+
+/* please add the color styling also to darken the font. This is to increase the contrast. */
+
+.element_to_toggle .module-card {
+
+    border: none;
+
+    border-radius: 2px;
+
+    background-color: #d5d5d5;
+
+    padding: 1px;
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+    margin-bottom: 10px;
+
+    margin-top: 5px;
+
+    margin-left: 40px;
+
+    color:black
+
+}
+
+/*********************************************************************/
+/*********************END MSIM Online*********************************/
+/*********************************************************************/

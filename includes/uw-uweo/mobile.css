@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-body {
-  color: #262626;
-}
-
 /* Orig DLD Course CSS */
 cite {
   font-style: italic;
@@ -12,8 +8,8 @@ cite {
 
 code {
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-  color: #990000;
-  background: transparent;
+/*  color: #990000;
+  background: transparent;*/
   border: none;
   font-size: 95%;
   padding: 0px;
@@ -25,7 +21,7 @@ code.ln:before{
   content: counter(line);
   -webkit-user-select: none;
   margin-right: 12px;
-  color: #999999;
+/*  color: #999999;*/
   text-align: right;
 }
 
@@ -35,7 +31,7 @@ h1 {
 
 h2, h3, h4, h5, h6 {
   font-weight: bold;
-  color: #262626;
+/*  color: #262626;*/
 }
 
 h2, .h2 {
@@ -70,14 +66,14 @@ h3, .user_content h3, .user_content .h3, .mceContentBody h3, .mceContentBody .h3
 
 /* Speed Grader Header Fix */
 #gradebook_header h2 {
-  color: #FFFFFF;
+/*  color: #FFFFFF;*/
 }
 
 pre {
   color:#990000;
   white-space: pre;
   font-size: 95%;
-  background: #F3F3E9;
+  background-color: #F3F3E9;
   border: thin solid #85754d;
   padding: 6px;
   border-radius: 10px 10px 10px 10px;
@@ -102,12 +98,13 @@ li.btn, .btnlist li, .btnList li {
   margin: 6px;
   font-weight: bold;
   color:   #0081bd;
-  background:#FFFFFF;
+  background-color:#FFFFFF;
 }
 
 li.btn a, .btnList a, .btnlist a {
   font-weight: bold;
   color:   #0081bd;
+  background-color:#FFFFFF;
   text-decoration: none;
 }
 
@@ -211,9 +208,9 @@ ul.plain {
 
 .gbanner h1, .gbanner h2, .gbanner h3, .gbanner h4 {
   margin-top: 0px;
-
   top: 0;
   font: bold 24px Helvetica, Sans-Serif;
+  color: #262626;
 }
 
 .banner100 h1, .banner100 h2, .banner100 h4 {
@@ -234,12 +231,12 @@ ul.plain {
 
 .banner span, .banner span, .banner span, .banner span, .banner100 span, .banner100 span, .banner100 span, .banner100 span, .banner125 span, .banner125 span, .banner125 span, .banner125 span {
   opacity: .8;
-  background: #262626;
+  background-color: #262626;
 }
 
 .gbanner span, .gbanner span, .gbanner span, .gbanner span, .gbanner100 span, .gbanner100 span, .gbanner100 span, .gbanner100 span, .gbanner125 span, .gbanner125 span, .gbanner125 span, .gbanner125 span {
   opacity: .8;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .bgnone {
@@ -275,14 +272,6 @@ ul.plain {
   margin: 4px;
 }
 
-.bordergray, .borderGray {
-  border: thin solid grey;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius:10px;
-  -webkit-border-radius: 10px;
-  padding: 3px;
-}
-
 .breakhere { /*page break*/
   page-break-before: always;
 }
@@ -299,7 +288,7 @@ ul.plain {
 .btn100 a:link,
 .btn100 a:visited,
 .btn100 a:hover {
-  color: #1f76b1;
+/*  color: #92d2fc;*/
   text-decoration: none;
 }
 
@@ -314,8 +303,8 @@ ul.plain {
 .btn150 a:link,
 .btn150 a:visited,
 .btn150 a:hover {
-  color: #1f76b1;
-  text-decoration: none;
+/*  color: #92d2fc; */
+	text-decoration: none;
 }
 
 .btnlist, .btnList, .btnBG, .btnbg, .btnBg {
@@ -335,14 +324,12 @@ ul.plain {
   display: inline-block;
   float: left;
   margin: 10px;
-/*  background-color: #85754d; */
   font-weight: bold;
   text-rendering: optimizeLegibility;
   border: thin solid #85754d;
 }
 
 .btnBG a, .btnbg a, .btnBg a {
-/*  color: #FFFFFF; */
   text-decoration: none;
 }
 
@@ -372,12 +359,6 @@ ul.plain {
   text-align: center;
 }
 
-.cornsilk, .cornSilk, .Cornsilk, .CornSilk {
-  background-color: cornsilk;
-  color: #000000;
-  cursor: pointer;
-}
-
 .decimal {
   list-style-type: decimal;
 }
@@ -402,7 +383,7 @@ ul.plain {
 
 .foreign {
   font-style: oblique;
-  color: #6A6A00;
+  color: #baba47;
 }
 
 .frontpageBlock, .frontpageblock, .frontPageBlock {
@@ -439,12 +420,6 @@ ul.plain {
   line-height: 1.5;
 }
 
-.gainsboro, .Gainsboro {
-  background-color: gainsboro;
-  color: #000000;
-  cursor: pointer;
-}
-
 .giant {
   font-size: 200%;
 }
@@ -452,6 +427,7 @@ ul.plain {
 .goldStyle, .goldstyle {
   background-color: #e8e3d3;
   border-bottom: 5px solid #b7a57a;
+  color: #262626;
 }
 
 .goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, huskystyle img, .purpleStyle img, .purplestyle img {
@@ -463,6 +439,7 @@ ul.plain {
 .grayStyle, .graystyle {
   background-color: #999999;
   border-bottom: 5px solid #4b2e83;
+  color: #ffffff;
 }
 
 .halfBlock, .halfblock {
@@ -478,19 +455,22 @@ ul.plain {
 .hlist {
   list-style-type: none;
   background-color: lavender;
+  color: #262626;
 }
 
 .hlist li {
   display: inline-block;
   padding: 10px;
 }
+
 .highlight{
-  background: #FFFF99;
+  background-color: #dbdb4d;
 }
 
 .huskyStyle, huskystyle {
   background-color: #e8e3d3;
   border-bottom: 5px solid #4b2e83;
+  color: #262626;
 }
 
 .indent {
@@ -498,7 +478,7 @@ ul.plain {
 }
 
 .mlis, .MLIS {
-  color: #085586;
+  font-weight: bold;
 }
 
 .italics {
@@ -509,7 +489,6 @@ ul.plain {
   letter-spacing: 1px;
   font-weight: bold;
   font-style: oblique;
-  color: #336666;
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/key2.png") no-repeat top left;
   text-indent: 20px;
   display: inline-block;
@@ -554,6 +533,7 @@ span.keyterm {
   position: absolute;
   top: 10px;
   background-color: #e8e3d3;
+  color: #000000;
   font-size: 1.3em;
 }
 
@@ -570,7 +550,7 @@ span.keyterm {
 }
 
 .note {
-  color: #333399;
+/*  color: #333399;*/
   font-weight: normal;
   font-size: 90%;
   line-height: 110%;
@@ -582,14 +562,14 @@ span.keyterm {
 }
 
 .oddrow, .oddRow {
-  background: #F3F3E9;
-   color: #000000;
+  background-color: #F3F3E9;
+  color: #000000;
 }
 
 .oddrow a:link, .oddRow a:link,
 .oddrow a:visited, .oddRow a:visited,
 .oddrow a:hover, oddRow a:hover {
-  color: #000000;
+/*  color: #000000;*/
 }
 
 .oneM, .oneEm, .oneem, .oneEM, .onem, .oneem {
@@ -602,10 +582,6 @@ span.keyterm {
 
 .oneptfiveM, .oneptfiveEm, .oneptfiveem, .oneptfiveEM, .oneptfivem {
   font-size: 1.5em;
-}
-
-.padTen, .padten, .pad10 {
-  padding: 10px; 
 }
 
 .padded {
@@ -626,13 +602,14 @@ span.keyterm {
 
 .purpleStyle, .purplestyle {
   background-color: #f5f5f5;
+  color: #4b2e83;
   border-bottom: 5px solid #4b2e83;
 }
 
 .quote {
   float: right;
   width: 200px;
-  color: #003366;
+/*  color: #003366;*/
   margin-left: 8px;
   border-top: thin solid #CCCCFF;
   border-right: none;
@@ -645,7 +622,7 @@ span.keyterm {
 
 .quote h4,
 .quote h5 {
-  color: #003366;
+/*  color: #003366;*/
 }
 
 .quoteMark, .quotemark {
@@ -679,7 +656,8 @@ span.keyterm {
 }
 
 .rowhead, .rowHead {
-  background: #e8e3d3;
+  background-color: #e8e3d3;
+  color: #262626;
 }
 
 .singlespace, .singleSpace {
@@ -691,7 +669,7 @@ span.keyterm {
 }
 
 .title{
-   text-align: left;
+  text-align: left;
   font-weight: bold;
 }
 
@@ -709,7 +687,7 @@ span.keyterm {
 #level2 {
   position: relative;
   background: none;
-  background-color: #FFFFFF;
+/*  background-color: #FFFFFF;*/
   text-align: left;
 }
 
@@ -717,13 +695,13 @@ span.keyterm {
   margin-left:10px;
   margin-right:179px;
   padding-right: 5px;
-  background-color: #FFFFFF;
+/*  background-color: #FFFFFF;*/
 }
 
 #top {
   overflow: hidden;
   position: relative;
-  background-color: #e8e3d3;
+/*  background-color: #e8e3d3;*/
   text-align: center;
 }
 
@@ -733,7 +711,7 @@ span.keyterm {
   list-style-type: none;
   float: right;
   width: 20%;
-  background-color: #F3F3E9;
+/*  background-color: #F3F3E9;*/
   padding: 5px 5px 20px 5px;
   text-align: left;
   border-radius: 4px;
@@ -747,7 +725,8 @@ span.keyterm {
   line-height: 200%;
 }
 
-.actionBox, .diacriticalBox, .importantBox, .infoBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox, .actionbox, .diacriticalbox, .importantbox, .infobox, .keytermbox, .bluebox, .goldbox, .graybox, .orangebox, .purplebox {
+.actionBox, .diacriticalBox, .importantBox, .infoBox, .instructorBox, .keytermBox, .blueBox, .goldBox, .grayBox, .orangeBox, .purpleBox, .actionbox, .diacriticalbox, .importantbox, .infobox, .instructorbox, .keytermbox, .bluebox, .goldbox, .graybox, .orangebox, .purplebox {
+  color: #262626;
   float:right;
   width: 160px;
   right: 10px;
@@ -791,6 +770,7 @@ span.keyterm {
 .actionBox p, .infoBox p, .importantBox p, .keytermBox p, .diacriticalBox p, .actionbox p, .infobox p, .importantbox p, .keytermbox p, .diacriticalbox p  {
   line-height: 150%;
   margin: 1em 1em 1em .5em;
+  color: #262626;
 }
 
 .actionIcon, .alertIcon, .assignmentIcon, .audioIcon, .discussionIcon, .hardhatIcon, .importantIcon, .msite, .popupIcon, .portfolioIcon, .postIcon, .questionIcon, .tickIcon, .turnIcon,
@@ -996,7 +976,8 @@ span.keyterm {
 }
 
 .bigBox, .bigbox {
-  background: #F3F3E9;
+  background-color: #F3F3E9;
+  color: #262626;
   border: thin solid #85754d;
   padding: 8px;
   margin: 8px;
@@ -1008,12 +989,13 @@ span.keyterm {
 }
 
 .readingBox, .readingBox {
-   border: groove #6A6A00;
+  border: groove #6A6A00;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: #FFFFFF;
+  color: #262626;
   padding-top: 8px;
   margin-top: 8px;
   border-radius: 10px 10px 10px 10px;
@@ -1197,7 +1179,7 @@ div.readingBox p, div.readingbox p {
 /* Canvas Icon Overrides*/
 
 .icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
-  color: #4b2e83;
+  color: #815ec4;
 }
 
 /* Modules Page */
@@ -1231,18 +1213,18 @@ icon-publish,
 .context_module_item .item_name .title a,
 .ig-list .type.icon,
 .ig-list .ig-row .ig-published item_name {
-  color: #0081bd;
+/*  color: #0081bd;*/
 }
 
 .item-group-container {
   border: 1px solid #4b2e83;
-  background: #FFFFFF;
+/*  background-color: #FFFFFF;*/
 }
 
 /* Assignment Page */
 
 div.ig-type-icon i {
-  color: #ffffff;
+/*  color: #ffffff;*/
 }
 
 /* Discussion Forum Threading */
@@ -1263,7 +1245,7 @@ div.entry-content {
 .caH2, .caH3, .caH4  {
   font-family: "Open Sans", sans-serif;
   line-height: 130%;
-  color: #4b2e83;
+/*  color: #4b2e83;*/
 }
 
 .caH2 {
@@ -1289,7 +1271,7 @@ div.entry-content {
 
 /*adapted from Using Canvas Styleguide Buttons from Jeremy Perkins*/
 .caBtn {
-  background: #f7f7f7;
+  background-color: #f7f7f7;
   color: #000000;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
@@ -1318,7 +1300,7 @@ div.entry-content {
   border-top: medium solid #4b2e83;
   border-bottom: medium solid #4b2e83;
   background-color: #f5f5f5;
-/*  color: #cccccc; */
+  color: #000000;
   margin: auto;
   font-weight: bold;
   font-size: 0.875rem;
@@ -1327,10 +1309,12 @@ div.entry-content {
 /* iSchool layout styles */
 .bgGold {
   background-color: #e8e3d3;
+  color: #000000;
 }
 
 .bgPurple {
   background-color: #4b2e83;
+  color: #ffffff;
 }
 
 .columns {
