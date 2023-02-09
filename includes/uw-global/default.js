@@ -42,26 +42,26 @@ var setUWCanvas = function ($) {
             $("label[for='error-comments'] small").remove();
             $(document).off('ajaxComplete', update_report_problem_form);
         }
-    };
+    }
 
     function show_unauthorized() {
         if ($('#unauthorized_holder').length) {
             $(document).prop('title', unauthorized_title);
             $('#unauthorized_message').replaceWith(unauthorized_message);
         }
-    };
+    }
 
     function uw_modal_dialog(title, text, footer) {
-        var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">'
-            + '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">'
-            + '<div style="position:static;top:0px;left:0px;right:auto;bottom:auto;border-radius:0px;border:none;padding:0px;" class="ReactModal__Content ReactModal__Content--after-open ReactModal__Content--canvas" tabindex="-1">'
-            + '<div class="ReactModal__Layout"><div class="ReactModal__Header"><div class="ReactModal__Header-Title"><h4>'
-            + title
-            + '</h4></div><div class="ReactModal__Header-Actions"><button class="Button Button--icon-action uw-modal-close" type="button">'
-            + '<i class="icon-x"></i><span class="screenreader-only">Close</span></button></div></div><div class="ReactModal__Body">'
-            + text
-	    + ((typeof footer !== "undefined" && footer.length > 0) ? '</div><div class="ReactModal__Footer"><div class="ReactModal__Footer-Actions">' + footer + '</div>' : '')
-	    + '</div></div></div></div></div>');
+        var $dialog = $('<div id="uw-modal-dialog" class="ReactModalPortal">' +
+            '<div class="ReactModal__Overlay ReactModal__Overlay--after-open ReactModal__Overlay--canvas" style="background-color: rgba(0, 0, 0, 0.498039);">' +
+            '<div style="position:static;top:0px;left:0px;right:auto;bottom:auto;border-radius:0px;border:none;padding:0px;" class="ReactModal__Content ReactModal__Content--after-open ReactModal__Content--canvas" tabindex="-1">' +
+            '<div class="ReactModal__Layout"><div class="ReactModal__Header"><div class="ReactModal__Header-Title"><h4>' +
+            title +
+            '</h4></div><div class="ReactModal__Header-Actions"><button class="Button Button--icon-action uw-modal-close" type="button">' +
+            '<i class="icon-x"></i><span class="screenreader-only">Close</span></button></div></div><div class="ReactModal__Body">' +
+            text +
+	        ((typeof footer !== "undefined" && footer.length > 0) ? '</div><div class="ReactModal__Footer"><div class="ReactModal__Footer-Actions">' + footer + '</div>' : '') +
+	        '</div></div></div></div></div>');
 
         if ($('#uw-modal-dialog').length) {
             $('#uw-modal-dialog').replaceWith($dialog);
@@ -71,7 +71,7 @@ var setUWCanvas = function ($) {
                 $(this).closest('.ReactModalPortal').hide();
             });
         }
-    };
+    }
 
     function add_right_nav_button(icon, label, href, position) {
         var $right = $('#not_right_side #right-side-wrapper'),
@@ -107,7 +107,7 @@ var setUWCanvas = function ($) {
             $right.find('> aside > div').append($a);
         }
         $('body').addClass('with-right-side');
-    };
+    }
 
     $(document).ready(function () {
         var href = window.location.href;
