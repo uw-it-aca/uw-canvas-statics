@@ -7,11 +7,23 @@
         moment_js = canvas_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
         help_title = 'About UW Course Expiration',
-        help_markup = '<p>Courses are removed from UW Canvas five years after they are created.</p><p>As the instructor, you will received notification emails one year, six months and one month prior to expiration.</p><p>Live long and prosper.</p>',
-        header_markup = '<th scope="col" class="course-list-expiration-column course-list-no-left-border"><!-- <a class="uw_course_expiration_sort_link" title="Sort by Expiration Date" href="#"> -->Expires<!-- </a> --> <button class="Button Button--icon-action uw_course_expiration_help" type="button"><i class="icon-question"></i><span class="screenreader-only">About course expiration</span></button></th>',
+        help_markup = '<p>Courses are removed from UW Canvas five years after ' +
+            'they are created.</p><p>As the instructor, you will received ' +
+            'notification emails one year, six months and one month prior to ' +
+            'expiration.</p><p>Live long and prosper.</p>',
+        header_markup = '<th scope="col" class="course-list-expiration-column ' +
+            'course-list-no-left-border">' +
+            '<!-- <a class="uw_course_expiration_sort_link" title="Sort by Expiration Date" href="#"> -->' +
+            'Expires<!-- </a> -->' +
+            ' <button class="Button Button--icon-action uw_course_expiration_help"' +
+            ' type="button"><i class="icon-question"></i><span' +
+            ' class="screenreader-only">About course expiration</span></button></th>',
 //<a class="uw_course_expiration_help no-hover" title="Help with expiration date" href="#"><i class="icon-question" aria-hidden="true"></i></a></th>';
-        expire_markup_outer = '<td class="course-list-no-left-border course-list-expiration-column" data-expiration-date="0"></td>',
-        expire_markup_inner = '<span title="This course will be removed $DATE."$STYLE>$DATE</span><span class="screenreader-only">This course will be removed $DATE.</span>';
+        expire_markup_outer = '<td class="course-list-no-left-border' +
+            ' course-list-expiration-column" data-expiration-date="0"></td>',
+        expire_markup_inner = '<span title="This course will be removed ' +
+            '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
+            'This course will be removed $DATE.</span>';
 
     function add_course_expiration_date($row) {
         $row.append(expire_markup_outer);
