@@ -3,8 +3,7 @@
 (function ($) {
     'use strict';
 
-    var x_canvas_api_server = 'https://apps.canvas.uw.edu',
-        canvas_api_server = '',
+    var canvas_api_server = 'https://apps.canvas.uw.edu',
         moment_js = canvas_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
         help_title = 'About UW Course Expiration',
