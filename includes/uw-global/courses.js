@@ -15,14 +15,14 @@
             'expiration.</p><p>Live long and prosper.</p>',
         header_markup = '<th scope="col" class="course-list-expiration-column ' +
             'course-list-no-left-border">' +
-            '<!-- <a class="uw_course_expiration_sort_link" title="Sort by Expiration Date" href="#"> -->' +
-            'Expires<!-- </a> -->' +
+            '<a class="uw_course_expiration_sort_link" title="Sort by Expiration Date" href="#">' +
+            'Expires</a>' +
             ' <button class="Button Button--icon-action uw_course_expiration_help"' +
             ' type="button"><i class="icon-question"></i><span' +
             ' class="screenreader-only">About course expiration</span></button></th>',
 //<a class="uw_course_expiration_help no-hover" title="Help with expiration date" href="#"><i class="icon-question" aria-hidden="true"></i></a></th>';
         expire_markup_outer = '<td class="course-list-no-left-border' +
-            ' course-list-expiration-column" data-expiration-date="0"></td>',
+            ' course-list-expiration-column" data-expiration-date="3153600000000"></td>',
         expire_markup_inner = '<span title="This course will be removed ' +
             '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
             'This course will be removed $DATE.</span>';
@@ -96,12 +96,12 @@
     }
 
     function add_course_expiration() {
-        var $courses = $('table#my_courses_table'),
+        var $my_courses = $('table#my_courses_table'),
             $past_enrollments = $('table#past_enrollments_table'),
             $future_enrollments = $('table#future_enrollments_table');
 
-        $('thead tr', $courses).append(header_markup);
-        $('tbody tr.course-list-table-row', $courses).each(function() {
+        $('thead tr', $my_courses).append(header_markup);
+        $('tbody tr.course-list-table-row', $my_courses).each(function() {
             add_course_expiration_date($(this));
         });
 
@@ -124,9 +124,28 @@
         $(".course-list-table .course-list-expiration-column").css("width", "10%");
 
         $("a.uw_course_expiration_sort_link").on('click', function (e) {
-            alert("sort the courses by expiration date");
             e.preventDefault();
             e.stopPropagation();
+
+            function row_compare($row) {
+                var expires = function (row) {
+                    return parseInt($(row).find('td[data-expiration-date]').attr('data-expiration-date'));
+                };
+
+                return function(a, b) {
+                    return expires(a) - expires(b)
+                };
+            }
+
+            $.each([$my_courses, $past_enrollments, $future_enrollments], function (i, $table) {
+                var rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare($(this)));
+
+                this.asc = !this.asc;
+                if (!this.asc) {
+                    rows = rows.reverse();
+                }
+                $table.children('tbody').empty().html(rows);
+            });
         });
 
         $("button.uw_course_expiration_help").on('click', function (e) {
