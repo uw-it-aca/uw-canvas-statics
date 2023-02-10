@@ -134,7 +134,7 @@
                 };
 
                 return function(a, b) {
-                    return expires(a) - expires(b)
+                    return expires(a) - expires(b);
                 };
             }
 
