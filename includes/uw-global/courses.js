@@ -4,8 +4,9 @@
 (function ($) {
     'use strict';
 
-    var course_api_server = (window.ENV.hasOwnProperty('DEEP_LINKING_POST_MESSAGE_ORIGIN')) ?
+    var x_course_api_server = (window.ENV.hasOwnProperty('DEEP_LINKING_POST_MESSAGE_ORIGIN')) ?
             'https://apps.canvas.uw.edu' : '',
+        course_api_server = (window.ENV.DEEP_LINKING_POST_MESSAGE_ORIGIN == 'https://uw.test.instructure.com') ? 'https://test-apps.canvas.uw.edu' : (window.ENV.DEEP_LINKING_POST_MESSAGE_ORIGIN == 'https://canvas.uw.edu') ? 'https://apps.canvas.uw.edu' : '',
         moment_js = course_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
         help_title = 'About UW Course Expiration',
