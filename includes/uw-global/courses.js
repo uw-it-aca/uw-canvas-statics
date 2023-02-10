@@ -4,8 +4,9 @@
 (function ($) {
     'use strict';
 
-    var canvas_api_server = 'https://apps.canvas.uw.edu',
-        moment_js = canvas_api_server + '/static/vendor/js/moment.min.js',
+    var course_api_server = (window.ENV.hasOwnProperty('DEEP_LINKING_POST_MESSAGE_ORIGIN')) ?
+            'https://apps.canvas.uw.edu' : '',
+        moment_js = course_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
         help_title = 'About UW Course Expiration',
         help_markup = '<p>Courses are removed from UW Canvas five years after ' +
@@ -42,7 +43,7 @@
         if (course_id) {
             $.ajax({
                 type: 'GET',
-                url: canvas_api_server + '/api/v1/course/' + course_id + '/expiration',
+                url: course_api_server + '/api/v1/course/' + course_id + '/expiration',
                 contentType: 'text/plain',
                 dataType: 'json'
             }).done(function (data) {
