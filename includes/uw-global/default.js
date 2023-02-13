@@ -126,6 +126,8 @@ var setUWCanvas = function ($) {
             load_script('/uw-global/content_migrations.js');
         } else if (href.match(/\/courses\/\d+\/pages/)) {
             load_script('/uw-global/pages.js');
+        } else if (href.match(/\/courses\/?$/)) {
+            load_script('/uw-global/courses.js');
         } else if (href.match(/\/profile\/settings$/)) {
             load_script('/uw-global/profile.js');
         }
