@@ -100,7 +100,7 @@
 
     function sort_table($button, row_compare) {
         var $table = $button.closest('table'),
-            rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare($(this))),
+            rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare()),
             ascending = $button.data('ascending');
 
         ascending = !ascending;
@@ -151,7 +151,7 @@
             e.preventDefault();
             e.stopPropagation();
 
-            sort_table($(this), function ($row) {
+            sort_table($(this), function () {
                 var expires = function (row) {
                     return parseInt($(row).find('td[data-expiration-date]').attr('data-expiration-date'));
                 };
@@ -172,7 +172,7 @@
             e.preventDefault();
             e.stopPropagation();
 
-            sort_table($(this), function ($row) {
+            sort_table($(this), function () {
                 var original_index = function (row) {
                     return parseInt($(row).attr('data-original-index'));
                 };
