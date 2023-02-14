@@ -86,7 +86,7 @@
 
         expiration_date = moment(data.expiration_date);
         expires = (expiration_date.diff(now, 'months') > 6) ?
-            expiration_date.fromNow() : expiration_date.format('MMM D, YYYY');
+            expiration_date.fromNow(true) : expiration_date.format('MMM D, YYYY');
         markup = expire_markup_inner.
             replace(/\$DATE/g, expires).
             replace(/\$STYLE/g, (now.isSame(expiration_date, 'year')) ?
@@ -125,6 +125,9 @@
         $(".course-list-table .course-list-expiration-column").css("width", "10%");
 
         $("a.uw_course_expiration_sort_link").on('click', function (e) {
+            var $table = $(this).closest('table'),
+                rows;
+
             e.preventDefault();
             e.stopPropagation();
 
@@ -138,15 +141,13 @@
                 };
             }
 
-            $.each([$my_courses, $past_enrollments, $future_enrollments], function (i, $table) {
-                var rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare($(this)));
+            rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare($(this)));
+            this.asc = !this.asc;
+            if (!this.asc) {
+                rows = rows.reverse();
+            }
 
-                this.asc = !this.asc;
-                if (!this.asc) {
-                    rows = rows.reverse();
-                }
-                $table.children('tbody').empty().html(rows);
-            });
+            $table.children('tbody').empty().html(rows);
         });
 
         $("button.uw_course_expiration_help").on('click', function (e) {
