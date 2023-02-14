@@ -21,15 +21,17 @@
             ' <button class="Button Button--icon-action uw_course_expiration_help"' +
             ' type="button"><i class="icon-question"></i><span' +
             ' class="screenreader-only">About course expiration</span></button></th>',
-//<a class="uw_course_expiration_help no-hover" title="Help with expiration date" href="#"><i class="icon-question" aria-hidden="true"></i></a></th>';
+        header_course_markup = '<a class="uw_course_name_sort_link" ' +
+        'title="Sort by Course Name" href="#">Course</a>',
         expire_markup_outer = '<td class="course-list-no-left-border' +
             ' course-list-expiration-column" data-expiration-date="3153600000000"></td>',
         expire_markup_inner = '<span title="This course will be removed ' +
             '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
             'This course will be removed $DATE.</span>';
 
-    function add_course_expiration_date($row) {
+    function add_course_expiration_date($row, i) {
         $row.append(expire_markup_outer);
+        $row.attr('data-original-index', i);
 
         if ($('td.course-list-enrolled-as-column:contains("Teacher")', $row).length) {
             fetch_course_expiration_date($row);
@@ -96,24 +98,45 @@
         $expiration_cell.closest('td').attr('data-expiration-date', expiration_date.valueOf());
     }
 
+    function sort_table($button, row_compare) {
+        var $table = $button.closest('table'),
+            rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare()),
+            ascending = $button.data('ascending');
+
+        ascending = !ascending;
+        if (!ascending) {
+            rows = rows.reverse();
+        }
+
+        $button.data('ascending', ascending);
+        $table.children('tbody').empty().html(rows);
+    }
+
     function add_course_expiration() {
         var $my_courses = $('table#my_courses_table'),
             $past_enrollments = $('table#past_enrollments_table'),
-            $future_enrollments = $('table#future_enrollments_table');
+            $future_enrollments = $('table#future_enrollments_table'),
+            $thead_row;
 
-        $('thead tr', $my_courses).append(header_markup);
-        $('tbody tr.course-list-table-row', $my_courses).each(function() {
-            add_course_expiration_date($(this));
+        $thead_row = $('thead tr', $my_courses);
+        $thead_row.append(header_markup);
+        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
+        $('tbody tr.course-list-table-row', $my_courses).each(function(i) {
+            add_course_expiration_date($(this), i);
         });
 
-        $('thead tr', $past_enrollments).append(header_markup);
-        $('tbody tr.course-list-table-row', $past_enrollments).each(function() {
-            add_course_expiration_date($(this));
+        $thead_row = $('thead tr', $past_enrollments);
+        $thead_row.append(header_markup);
+        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
+        $('tbody tr.course-list-table-row', $past_enrollments).each(function(i) {
+            add_course_expiration_date($(this), i);
         });
 
-        $('thead tr', $future_enrollments).append(header_markup);
-        $('tbody tr.course-list-table-row', $future_enrollments).each(function() {
-            add_course_expiration_date($(this));
+        $thead_row = $('thead tr', $future_enrollments);
+        $thead_row.append(header_markup);
+        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
+        $('tbody tr.course-list-table-row', $future_enrollments).each(function(i) {
+            add_course_expiration_date($(this), i);
         });
 
         /* star is width: 3% */
@@ -125,13 +148,10 @@
         $(".course-list-table .course-list-expiration-column").css("width", "10%");
 
         $("a.uw_course_expiration_sort_link").on('click', function (e) {
-            var $table = $(this).closest('table'),
-                rows;
-
             e.preventDefault();
             e.stopPropagation();
 
-            function row_compare($row) {
+            sort_table($(this), function () {
                 var expires = function (row) {
                     return parseInt($(row).find('td[data-expiration-date]').attr('data-expiration-date'));
                 };
@@ -139,21 +159,28 @@
                 return function(a, b) {
                     return expires(a) - expires(b);
                 };
-            }
-
-            rows = $('tr.course-list-table-row', $table).toArray().sort(row_compare($(this)));
-            this.asc = !this.asc;
-            if (!this.asc) {
-                rows = rows.reverse();
-            }
-
-            $table.children('tbody').empty().html(rows);
+            });
         });
 
         $("button.uw_course_expiration_help").on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             window.UWCanvas.uw_modal_dialog(help_title, help_markup);
+        });
+
+        $("a.uw_course_name_sort_link").on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            sort_table($(this), function () {
+                var original_index = function (row) {
+                    return parseInt($(row).attr('data-original-index'));
+                };
+
+                return function(a, b) {
+                    return original_index(a) - original_index(b);
+                };
+            });
         });
     }
 
