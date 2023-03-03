@@ -10,10 +10,19 @@
         moment_js = course_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
         help_title = 'About UW Course Expiration',
-        help_markup = '<p>Courses are removed from UW Canvas five years after ' +
-            'they are created.</p><p>As the instructor, you will received ' +
-            'notification emails one year, six months and one month prior to ' +
-            'expiration.</p><p>Live long and prosper.</p>',
+        help_markup = '<p>An expiration date is displayed for each course in which ' +
+            'you have a Teacher role.</p>' +
+            '<p>Courses are removed from UW Canvas five years after the end of the ' +
+            'academic year in which they are taught, in accordance with the ' +
+            '<a href="https://itconnect.uw.edu/tools-services-support/teaching-learning' +
+            '/canvas/canvas-policies/data-retention/" target="_blank">UW Canvas Course ' +
+            'Data Retention Policy</a>.</p>' +
+            '<p>As expiration for each academic year approaches, reminders will be sent ' +
+            'via email and posted in Canvas.</p>' +
+            '<ul><li><a href="https://itconnect.uw.edu/tools-services-support/teaching-learning' +
+            '/canvas/canvas-help-for-instructors/designing-your-course/what-do-i-need-to-do-at-the' +
+            '-end-of-the-quarter/archive-content/" target="_blank">Learn how to archive ' +
+            'your course</a></li></ul>',
         header_markup = '<th scope="col" class="course-list-expiration-column ' +
             'course-list-no-left-border">' +
             '<a class="uw_course_expiration_sort_link" title="Sort by Expiration Date" href="#">' +
