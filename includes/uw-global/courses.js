@@ -127,6 +127,8 @@
             $future_enrollments = $('table#future_enrollments_table'),
             $thead_row;
 
+        moment.relativeTimeThreshold('M', 23);
+
         $thead_row = $('thead tr', $my_courses);
         $thead_row.append(header_markup);
         $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
