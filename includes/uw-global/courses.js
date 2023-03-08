@@ -36,7 +36,8 @@
             ' course-list-expiration-column" data-expiration-date="3153600000000"></td>',
         expire_markup_inner = '<span title="This course will be removed ' +
             '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
-            'This course will be removed $DATE.</span>';
+            'This course will be removed $DATE.</span>',
+        teacher_regex = new RegExp('^\\s*[Tt]eacher\\s*$');
 
     function add_course_expiration_date($row, i) {
         $row.append(expire_markup_outer);
@@ -65,23 +66,15 @@
     }
 
     function get_expiration_cell(course_id) {
-        var $star_cell,
-            $row,
-            $expire_cell;
+        var $expire_cell = $('table tbody tr td.course-list-star-column span[data-course-id="' + course_id + '"]').
+            closest('tr').
+            find('td.course-list-enrolled-as-column').
+            filter(function () {
+                return teacher_regex.test($(this).text());
+            }).
+            closest('tr').find('td.course-list-expiration-column');
 
-        $star_cell = $('table tbody tr td.course-list-star-column ' +
-                       'span[data-course-id="' + course_id + '"]');
-        if ($star_cell.length === 1) {
-            $row = $($star_cell.closest('tr'));
-            if ($row.length === 1) {
-                $expire_cell = $('td.course-list-expiration-column', $row);
-                if ($expire_cell.length === 1) {
-                    return $expire_cell;
-                }
-            }
-        }
-
-        return null;
+        return ($expire_cell.length === 1) ? $expire_cell : null;
     }
 
     function update_course_expiration_date(data) {
