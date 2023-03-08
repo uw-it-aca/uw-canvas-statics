@@ -65,23 +65,12 @@
     }
 
     function get_expiration_cell(course_id) {
-        var $star_cell,
-            $row,
-            $expire_cell;
+        var $expire_cell = $('table tbody tr td.course-list-star-column span[data-course-id="' + course_id + '"]').
+            closest('tr').
+            find('td.course-list-enrolled-as-column:contains("Teacher")').
+            closest('tr').find('td.course-list-expiration-column');
 
-        $star_cell = $('table tbody tr td.course-list-star-column ' +
-                       'span[data-course-id="' + course_id + '"]');
-        if ($star_cell.length === 1) {
-            $row = $($star_cell.closest('tr'));
-            if ($row.length === 1) {
-                $expire_cell = $('td.course-list-expiration-column', $row);
-                if ($expire_cell.length === 1) {
-                    return $expire_cell;
-                }
-            }
-        }
-
-        return null;
+        return ($expire_cell.length === 1) ? $expire_cell : null;
     }
 
     function update_course_expiration_date(data) {
