@@ -1,10 +1,12 @@
 /*jslint browser: true, plusplus: true */
 /*global jQuery */
-var ALLY_CFG = {
-    'loadScript': true,  // Set to true to enable ally
-    'baseUrl': 'https://prod.ally.ac',
-    'clientId': 5
+/* Ally config/script required for indicators on course sub pages */
+window.ALLY_CFG = {
+  'baseUrl': 'https://prod.ally.ac',
+  'clientId': 5,
+  'lti13Id': '100000000000546'
 };
+$.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
 
 var setUWCanvas = function ($) {
     'use strict';
@@ -134,9 +136,6 @@ var setUWCanvas = function ($) {
 
         if (href.match(/\/courses\/\d+(\/.*)?$/)) {
             $('#unauthorized_holder').whenExists(show_unauthorized);
-            if (ALLY_CFG.loadScript) {
-                $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
-            }
             load_script('/vendor/h5p-utils.js');
         }
     });
