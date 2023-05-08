@@ -1357,3 +1357,90 @@ div.entry-content {
 .twoThirdColumn, .twothirdColumn {
   width: 60%;
 }
+
+/* Shenlan's styles for Instructor Development site *?
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #4b2e83;
+  font-family: Roboto;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: cornflowerblue;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #dddddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/*creating columns
+.col3{
+	padding: 15px;
+	background-color: #ffffff;
+	color: #262626;
+	columns: 200px 3;
+	column-fill: balance;
+	column-gap: 335px;
+	column-rule: 4px dash #2275c8;
+}
+*/
