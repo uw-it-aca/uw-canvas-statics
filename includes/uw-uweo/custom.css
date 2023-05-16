@@ -1361,14 +1361,16 @@ div.entry-content {
 /* Shenlan's styles for Instructor Development site *?
 /* Navbar container */
 .navbar {
+  height: 58px;
   background-color: #4b2e83;
+  font-size: 1rem;
   color: #ffffff;
+  text-align: center;
 }
 
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 1rem;
   color: #ffffff;
   text-align: center;
   height: 58px;
