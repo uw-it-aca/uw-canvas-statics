@@ -1372,6 +1372,8 @@ div.entry-content {
 .navbar a {
   float: left;
   color: #ffffff;
+  text-align: center;
+  height: 58px;
   padding: 14px 16px;
   text-decoration: none;
 }
