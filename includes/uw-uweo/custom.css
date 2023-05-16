@@ -1361,9 +1361,8 @@ div.entry-content {
 /* Shenlan's styles for Instructor Development site *?
 /* Navbar container */
 .navbar {
-  overflow: hidden;
   background-color: #4b2e83;
-  font-family: Roboto;
+  color: #ffffff;
 }
 
 /* Links inside the navbar */
@@ -1372,6 +1371,7 @@ div.entry-content {
   font-size: 1rem;
   color: #ffffff;
   text-align: center;
+  height: 58px;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -1401,8 +1401,6 @@ div.entry-content {
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
