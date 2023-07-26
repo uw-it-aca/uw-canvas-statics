@@ -9,6 +9,7 @@
         x_course_api_server = (window.ENV.DEEP_LINKING_POST_MESSAGE_ORIGIN == 'https://uw.test.instructure.com') ? 'https://test-apps.canvas.uw.edu' : (window.ENV.DEEP_LINKING_POST_MESSAGE_ORIGIN == 'https://canvas.uw.edu') ? 'https://apps.canvas.uw.edu' : '',
         moment_js = course_api_server + '/static/vendor/js/moment.min.js',
         course_roles = ['teacher', 'admin', 'root_admin'],
+        course_enrollments = ['Teacher', 'Designer', 'Program Staff'],
         help_title = 'About UW Course Expiration',
         help_markup = '<p>An expiration date is displayed for each course in which ' +
             'you have a Teacher role.</p>' +
@@ -37,14 +38,14 @@
         expire_markup_inner = '<span title="This course will be removed ' +
             '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
             'This course will be removed $DATE.</span>',
-        teacher_regex = new RegExp('^\\s*[Tt]eacher\\s*$');
+        teacher_regex = new RegExp('^\\s*(' + course_enrollments.join('|') + ')\\s*$');
 
     function add_course_expiration_date($row, i) {
         var enrolled_as = $('td.course-list-enrolled-as-column', $row).text().trim();
 
         $row.append(expire_markup_outer);
         $row.attr('data-original-index', i);
-        if (['Teacher', 'Designer', 'Program Staff'].indexOf(enrolled_as) >= 0) {
+        if (course_enrollments.indexOf(enrolled_as) >= 0) {
             fetch_course_expiration_date($row);
         }
     }
@@ -115,33 +116,23 @@
         $table.children('tbody').empty().html(rows);
     }
 
-    function add_course_expiration() {
-        var $my_courses = $('table#my_courses_table'),
-            $past_enrollments = $('table#past_enrollments_table'),
-            $future_enrollments = $('table#future_enrollments_table'),
-            $thead_row;
+    function add_course_expiration_to_table($table) {
+        var $thead_row = $('thead tr', $table);
 
+        $thead_row.append(header_markup);
+        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
+        $('tbody tr.course-list-table-row', $table).each(function(i) {
+            add_course_expiration_date($(this), i);
+        });
+    }
+
+    function add_course_expiration() {
         moment.relativeTimeThreshold('M', 23);
 
-        $thead_row = $('thead tr', $my_courses);
-        $thead_row.append(header_markup);
-        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
-        $('tbody tr.course-list-table-row', $my_courses).each(function(i) {
-            add_course_expiration_date($(this), i);
-        });
-
-        $thead_row = $('thead tr', $past_enrollments);
-        $thead_row.append(header_markup);
-        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
-        $('tbody tr.course-list-table-row', $past_enrollments).each(function(i) {
-            add_course_expiration_date($(this), i);
-        });
-
-        $thead_row = $('thead tr', $future_enrollments);
-        $thead_row.append(header_markup);
-        $thead_row.find('th.course-list-course-title-column').html(header_course_markup);
-        $('tbody tr.course-list-table-row', $future_enrollments).each(function(i) {
-            add_course_expiration_date($(this), i);
+        $('table#my_courses_table, '
+          + 'table#past_enrollments_table, '
+          + 'table#future_enrollments_table').each(function () {
+            add_course_expiration_to_table($(this));
         });
 
         /* star is width: 3% */
