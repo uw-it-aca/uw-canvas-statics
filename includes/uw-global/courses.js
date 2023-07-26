@@ -40,10 +40,11 @@
         teacher_regex = new RegExp('^\\s*[Tt]eacher\\s*$');
 
     function add_course_expiration_date($row, i) {
+        var enrolled_as = $('td.course-list-enrolled-as-column', $row).text().trim();
+
         $row.append(expire_markup_outer);
         $row.attr('data-original-index', i);
-
-        if ($('td.course-list-enrolled-as-column:contains("Teacher")', $row).length) {
+        if (['Teacher', 'Designer', 'Program Staff'].indexOf(enrolled_as) >= 0) {
             fetch_course_expiration_date($row);
         }
     }
