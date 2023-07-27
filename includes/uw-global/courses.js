@@ -129,9 +129,9 @@
     function add_course_expiration() {
         moment.relativeTimeThreshold('M', 23);
 
-        $('table#my_courses_table, '
-          + 'table#past_enrollments_table, '
-          + 'table#future_enrollments_table').each(function () {
+        $('table#my_courses_table, ' +
+          'table#past_enrollments_table, ' +
+          'table#future_enrollments_table').each(function () {
             add_course_expiration_to_table($(this));
         });
 
