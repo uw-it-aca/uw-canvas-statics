@@ -4,7 +4,7 @@
     "use strict";
 
     function update_library_links() {
-        var library_url = "https://liblawuw.libguides.com/lawlibrarycanvas",
+        var library_url = "https://lib.law.uw.edu/lawlibrarycanvas",
             link_text = "Law Library";
 
         if (window.location.href.match(/\/courses\/\d+/)) {
