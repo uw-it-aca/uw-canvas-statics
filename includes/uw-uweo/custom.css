@@ -684,6 +684,10 @@ span.keyterm {
   background-color: #ffffff;
 }
 
+.purpleLine, .purpleline, .PurpleLine, .Purpleline {
+  border-bottom: 24px solid #4b2e83;
+}
+
 .purpleStyle, .purplestyle {
   background-color: #f5f5f5;
   border-bottom: 5px solid #4b2e83;
