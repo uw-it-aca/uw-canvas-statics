@@ -385,9 +385,14 @@ ul.plain {
   cursor: pointer;
 }
 
-.decimal {
+.decimal, .Decimal {
   list-style-type: decimal;
 }
+
+.disc, .Disc {
+  list-style-type: disc;
+}
+
 /* Nov 2019 */
 .doubleu, .doubleU {
   border-bottom: double;
@@ -693,7 +698,7 @@ span.keyterm {
   padding-bottom: 1em;
 }
 
-.right{
+.right, .Right {
    text-align: right;
 }
 
@@ -714,12 +719,16 @@ span.keyterm {
   line-height: 110%;
 }
 
-.small {
+.small, .Small {
   font-size: 90%;
 }
 
-.smaller {
+.smaller, .Smaller {
   font-size: 80%;
+}
+
+.square, .Square {
+  list-style-type: square;
 }
 
 .title{
