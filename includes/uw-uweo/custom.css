@@ -242,7 +242,11 @@ ul.plain {
   background: #FFFFFF;
 }
 
-.bgnone {
+.bgColumn, .bgcolumn {
+  background-color: #f2ede3;
+}
+	
+.bgnone, .bgNone {
   background: none;
 }
 
@@ -375,6 +379,10 @@ ul.plain {
 .cornsilk, .cornSilk, .Cornsilk, .CornSilk {
   background-color: cornsilk;
   color: #000000;
+  cursor: pointer;
+}
+
+.cursor, .Cursor {
   cursor: pointer;
 }
 
@@ -1338,11 +1346,11 @@ div.entry-content {
 }
 
 /* iSchool layout styles */
-.bgGold {
+.bgGold, .bggold {
   background-color: #e8e3d3;
 }
 
-.bgPurple {
+.bgPurple, .bgpurple {
   background-color: #4b2e83;
 }
 
