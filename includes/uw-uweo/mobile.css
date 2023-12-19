@@ -363,6 +363,16 @@ ul.plain {
   text-align: center;
 }
 
+.cornsilk, .cornSilk, .Cornsilk, .CornSilk {
+  background-color: cornsilk;
+  color: #000000;
+  cursor: pointer;
+}
+
+.cursor, .Cursor {
+  cursor: pointer;
+}
+
 .decimal {
   list-style-type: decimal;
 }
@@ -602,6 +612,10 @@ span.keyterm {
 
 .padRight, .padright {
   padding-right: 50px;
+}
+
+.padTop, .padtop {
+  padding-top: 20px;
 }
 
 .purpleStyle, .purplestyle {
