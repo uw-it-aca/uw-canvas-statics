@@ -241,6 +241,7 @@ ul.plain {
 
 .bgColumn, .bgcolumn {
   background-color: #f2ede3;
+  color: #262626;
 }
 	
 .bgnone, .bgNone {
@@ -566,7 +567,6 @@ span.keyterm {
   line-height: 200%;
 }
 
-
 .math {
   font-family: "Courier New", Courier, monospace;
   font-size: 90%;
@@ -653,6 +653,10 @@ span.keyterm {
 
 .padTop, .padtop {
   padding-top: 16px;
+}
+
+.pointer, .Pointer {
+  cursor: pointer;
 }
 
 .purpleStyle, .purplestyle {
