@@ -454,7 +454,7 @@ ul.plain {
   border-bottom: 5px solid #b7a57a;
 }
 
-.goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, huskystyle img, .purpleStyle img, .purplestyle img {
+.goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, .huskystyle img, .purpleStyle img, .purplestyle img {
   width: 50px;
   padding-right: 15px;
   height: 100%;
@@ -697,6 +697,10 @@ span.keyterm {
 
 .small {
   font-size: 90%;
+}
+
+.smaller {
+  font-size: 80%;
 }
 
 .title{
