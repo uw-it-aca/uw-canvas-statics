@@ -664,6 +664,11 @@ span.keyterm {
   cursor: pointer;
 }
 
+.purple, .Purple, .capurple, .Capurple, .CApurple, .CAPurple, .CaPurple {
+  color: #4b2e83;
+  background-color: #ffffff;
+}
+
 .purpleLine, .purpleline, .PurpleLine, .Purpleline {
   border-bottom: 24px solid #4b2e83;
 }
