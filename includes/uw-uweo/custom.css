@@ -413,6 +413,26 @@ ul.plain {
   color: #6A6A00;
 }
 
+.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, ..FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
+  background-color: ghostwhite;
+  border: thin solid lightgray;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
+}
+
+.FrontPageHP, .FrontPagehp, .FrontpageHP, .frontpagerhp, .frontpageHP {
+  background-color: ghostwhite;
+  border: thin solid #4b2e83;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
+}
+
 .frontpageBlock, .frontpageblock, .frontPageBlock {
   float: left;
   width: 200px;
