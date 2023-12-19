@@ -276,6 +276,18 @@ ul.plain {
   margin: 4px;
 }
 
+.borderGray, .bordergray, .BorderGray, .Bordergray, .borderGrey, .bordergrey, .BorderGrey, .Bordergrey {
+  background-color: ghostwhite;
+  border: thin solid lightgray;
+  color: #262626;
+}
+
+.borderHP, .borderhp, .BorderHP, .Borderhp {
+  background-color: ghostwhite;
+  border: thin solid #4b2e83;
+  color: #262626;
+}
+
 .breakhere { /*page break*/
   page-break-before: always;
 }
@@ -398,6 +410,26 @@ ul.plain {
 .foreign {
   font-style: oblique;
   color: #baba47;
+}
+
+.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, ..FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
+  background-color: ghostwhite;
+  border: thin solid lightgray;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
+}
+
+.FrontPageHP, .FrontPagehp, .FrontpageHP, .frontpagerhp, .frontpageHP {
+  background-color: ghostwhite;
+  border: thin solid #4b2e83;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
 }
 
 .frontpageBlock, .frontpageblock, .frontPageBlock {
