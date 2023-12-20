@@ -289,6 +289,11 @@ ul.plain {
   color: #262626;
 }
 
+.borders, .Borders {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; 
+}
+
 .breakhere { /*page break*/
   page-break-before: always;
 }
@@ -657,6 +662,15 @@ span.keyterm {
 
 .pointer, .Pointer {
   cursor: pointer;
+}
+
+.purple, .Purple, .capurple, .Capurple, .CApurple, .CAPurple, .CaPurple {
+  color: #4b2e83;
+  background-color: #ffffff;
+}
+
+.purpleLine, .purpleline, .PurpleLine, .Purpleline {
+  border-bottom: 24px solid #4b2e83;
 }
 
 .purpleStyle, .purplestyle {
