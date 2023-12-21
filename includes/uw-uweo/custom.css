@@ -46,7 +46,7 @@ h2, .h2 {
 h3, .user_content h3, .user_content .h3, .mceContentBody h3, .mceContentBody .h3 {
   margin-bottom: 0px;
   line-height: inherit;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
 }
 
 /* Canvas Icons class fontsize Jan2017 */
@@ -242,7 +242,12 @@ ul.plain {
   background: #FFFFFF;
 }
 
-.bgnone {
+.bgColumn, .bgcolumn {
+  background-color: #f2ede3;
+  color: #262626;
+}
+	
+.bgnone, .bgNone {
   background: none;
 }
 
@@ -276,11 +281,24 @@ ul.plain {
 }
 
 .bordergray, .borderGray {
+  background-color: ghostwhite;
   border: thin solid grey;
   border-radius: 10px 10px 10px 10px;
+  color: #262626;
   -moz-border-radius:10px;
   -webkit-border-radius: 10px;
   padding: 3px;
+}
+
+.borderHP, .borderhp, .BorderHP, .Borderhp {
+  background-color: ghostwhite;
+  border: thin solid #4b2e83;
+  color: #262626;
+}
+
+.borders, .Borders {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; 
 }
 
 .breakhere { /*page break*/
@@ -378,9 +396,18 @@ ul.plain {
   cursor: pointer;
 }
 
+.cursor, .Cursor {
+  cursor: pointer;
+}
+
 .decimal {
   list-style-type: decimal;
 }
+
+.disc {
+  list-style-type: disc;
+}
+
 /* Nov 2019 */
 .doubleu, .doubleU {
   border-bottom: double;
@@ -403,6 +430,26 @@ ul.plain {
 .foreign {
   font-style: oblique;
   color: #6A6A00;
+}
+
+.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, ..FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
+  background-color: ghostwhite;
+  border: thin solid lightgray;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
+}
+
+.FrontPageHP, .FrontPagehp, .FrontpageHP, .frontpagerhp, .frontpageHP {
+  background-color: ghostwhite;
+  border: thin solid #4b2e83;
+  color: #262626;
+  border-radius: 10px; 
+  margin-bottom: 6px; 
+  padding-left: 10px; 
+  width: 90%;
 }
 
 .frontpageBlock, .frontpageblock, .frontPageBlock {
@@ -454,7 +501,7 @@ ul.plain {
   border-bottom: 5px solid #b7a57a;
 }
 
-.goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, huskystyle img, .purpleStyle img, .purplestyle img {
+.goldStyle img, .goldstyle img, .grayStyle img, .graystyle img, .huskyStyle img, .huskystyle img, .purpleStyle img, .purplestyle img {
   width: 50px;
   padding-right: 15px;
   height: 100%;
@@ -624,6 +671,23 @@ span.keyterm {
   padding-right: 50px;
 }
 
+.padTop, .padtop {
+  padding-top: 16px;
+}
+
+.pointer, .Pointer {
+  cursor: pointer;
+}
+
+.purple, .Purple, .capurple, .Capurple, .CApurple, .CAPurple, .CaPurple {
+  color: #4b2e83;
+  background-color: #ffffff;
+}
+
+.purpleLine, .purpleline, .PurpleLine, .Purpleline {
+  border-bottom: 24px solid #4b2e83;
+}
+
 .purpleStyle, .purplestyle {
   background-color: #f5f5f5;
   border-bottom: 5px solid #4b2e83;
@@ -688,6 +752,14 @@ span.keyterm {
 
 .small {
   font-size: 90%;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.square {
+  list-style-type: square;
 }
 
 .title{
@@ -1325,11 +1397,11 @@ div.entry-content {
 }
 
 /* iSchool layout styles */
-.bgGold {
+.bgGold, .bggold {
   background-color: #e8e3d3;
 }
 
-.bgPurple {
+.bgPurple, .bgpurple {
   background-color: #4b2e83;
 }
 
@@ -1357,3 +1429,90 @@ div.entry-content {
 .twoThirdColumn, .twothirdColumn {
   width: 60%;
 }
+
+/* Shenlan's styles for Instructor Development site *?
+/* Navbar container */
+.navbar {
+  height: 58px;
+  background-color: #4b2e83;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  height: 58px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: cornflowerblue;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #dddddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/*creating columns
+.col3{
+	padding: 15px;
+	background-color: #ffffff;
+	color: #262626;
+	columns: 200px 3;
+	column-fill: balance;
+	column-gap: 335px;
+	column-rule: 4px dash #2275c8;
+}
+*/
