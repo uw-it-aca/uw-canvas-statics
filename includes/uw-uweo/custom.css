@@ -246,7 +246,12 @@ ul.plain {
   background-color: #f2ede3;
   color: #262626;
 }
-	
+
+.bgGhost {
+  background-color: ghostwhite; 
+  color: #262626;"
+}
+
 .bgnone, .bgNone {
   background: none;
 }
@@ -607,6 +612,10 @@ span.keyterm {
 .noBottomPad, .nobottompad {
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+.noLine, .noline, NoLine, .noLine a, .noline a, NoLine a, .FrontPageHP a, .FrontPagehp a, .FrontpageHP a, .frontpagerhp a, .frontpageHP a  {
+  text-decoration: none;
 }
 
 .nopad, .noPad {
@@ -1403,6 +1412,7 @@ div.entry-content {
 
 .bgPurple, .bgpurple {
   background-color: #4b2e83;
+  color: #ffffff;
 }
 
 .columns {
