@@ -1,3 +1,4 @@
+/*jshint esversion: 11 */
 /*jslint browser: true */
 /*global jQuery */
 (function ($) {
@@ -19,7 +20,6 @@
 ////////////////////////////////////////////////////
 // DESIGNPLUS CONFIG                            //
 ////////////////////////////////////////////////////
-/*jshint esversion: 6 */
 DpPrimary = {
     lms: 'canvas',
     templateCourse: '1736861',
