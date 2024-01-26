@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////
 // DESIGNPLUS MOBILE APP                          //
 ////////////////////////////////////////////////////
+/*jshint esversion: 6 */
 DpConfig = {};
 var script = document.createElement("script");
 let id = Date.now();
