@@ -14,7 +14,7 @@ a.context_external_tool_31485 { display: none !important; }
 a.context_external_tool_31483 { display: none !important; }
 
 /* hide simcheck admin settings nav link */
-a.[href*="lti/basic_lti_launch_request/50?"] { display: none !important; }
+a[href*="lti/basic_lti_launch_request/50?"] { display: none !important; }
 
 .uw-groups-button-image {
   height: 16px;
