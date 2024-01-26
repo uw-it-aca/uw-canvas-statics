@@ -134,6 +134,10 @@ var setUWCanvas = function ($) {
             load_script('/uw-global/profile.js');
         }
 
+        if (href.match(/\/accounts\/\d+)) {
+            load_script('/uw-global/accounts.js');
+        }
+
         if (href.match(/\/courses\/\d+(\/.*)?$/)) {
             $('#unauthorized_holder').whenExists(show_unauthorized);
             load_script('/vendor/h5p-utils.js');
