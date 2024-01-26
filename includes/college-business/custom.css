@@ -1,0 +1,32 @@
+/*********************************************************************/
+/***** BEGIN DESIGNPLUS THEME IMPORT & CUSTOMIZATION  ****************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+
+/* For Main CSS files */
+@import url(https://designplus.ciditools.com/css/content.css);
+@import url(https://designplus.ciditools.com/css/editor.css);
+/* For Mobile app CSS file */
+/*@import url(https://designplus.ciditools.com/css/mobile.css);*/
+
+:root {
+    --dt-color-primary: #4B2E83;
+    --dt-color-primary-contrast: #FFFFFF;
+    --dt-color-primary-dark-text: #4B2E83;
+    --dt-color-secondary: #E8E3D3;
+    --dt-color-secondary-contrast: #000000;
+    --dt-color-secondary-dark-text: #444444;
+    --dt-color-accent: #615738;
+    --dt-color-accent-contrast: #FFFFFF;
+    --dt-color-accent-dark-text: #575436;
+    --dt-color-gray: #CCCCCC;
+    --dt-color-gray-contrast: #000000;
+    --dt-color-gray-dark-text: #525252;
+    --dt-color-white: #FFFFFF;
+    --dt-color-white-contrast: #000000;
+    --dt-color-white-dark-text: #525252;
+}
+
+/*********************************************************************/
+/***** END DESIGNPLUS THEME IMPORT & CUSTOMIZATION   *****************/
+/*********************************************************************/
