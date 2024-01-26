@@ -1,3 +1,4 @@
+/*jshint esversion: 11 */
 /*jslint browser: true */
 /*global jQuery */
 (function ($) {
@@ -15,3 +16,36 @@
     });
 
 }(jQuery));
+
+////////////////////////////////////////////////////
+// DESIGNPLUS CONFIG                            //
+////////////////////////////////////////////////////
+DpPrimary = {
+    lms: 'canvas',
+    templateCourse: '1736861',
+    hideButton: true,
+    hideLti: false,
+    extendedCourse: '', // added in sub-account theme
+    sharedCourse: '', // added from localStorage
+    courseFormats: [],
+    canvasRoles: [],
+    canvasUsers: [],
+    canvasCourseIds: [],
+    plugins: [],
+    excludedModules: [],
+    includedModules: [],
+    lang: 'en',
+};
+
+// merge with extended/shared customizations config
+DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) };
+
+$(function () {
+    const uriPrefix = (location.href.includes('.beta.')) ? 'beta.' : '';
+    const toolsUri = (DpConfig.toolsUri) ? DpConfig.toolsUri : `https://${uriPrefix}designplus.ciditools.com/`;
+    $.getScript(`${toolsUri}js/controller.js`);
+});
+
+////////////////////////////////////////////////////
+// END DESIGNPLUS CONFIG                        //
+////////////////////////////////////////////////////
