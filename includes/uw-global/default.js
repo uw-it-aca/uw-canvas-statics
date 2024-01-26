@@ -134,7 +134,7 @@ var setUWCanvas = function ($) {
             load_script('/uw-global/profile.js');
         }
 
-        if (href.match(/\/accounts\/\d+)) {
+        if (href.match(/\/accounts\/\d+/)) {
             load_script('/uw-global/accounts.js');
         }
 
