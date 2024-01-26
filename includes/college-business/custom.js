@@ -35,10 +35,10 @@ DpPrimary = {
     excludedModules: [],
     includedModules: [],
     lang: 'en',
-}
+};
 
 // merge with extended/shared customizations config
-DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) }
+DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) };
 
 $(function () {
     const uriPrefix = (location.href.includes('.beta.')) ? 'beta.' : '';
