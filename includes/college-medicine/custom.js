@@ -61,7 +61,7 @@ DpPrimary = {
     excludedModules: [],
     includedModules: [],
     lang: 'en',
-    defaultToLegacy: false,
+    defaultToLegacy: true,
     enableVersionSwitching: true,
     hideSwitching: false,
 };
