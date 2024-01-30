@@ -1,15 +1,18 @@
 /*jslint browser: true */
-// Load APP JS File
+/*jshint esversion: 11 */
+
+////////////////////////////////////////////////////
+// DESIGNPLUS MOBILE APP                          //
+////////////////////////////////////////////////////
+// Legacy
 (function () {
-    "use strict";
     function loadScript(url, scriptID, callback) {
         var script = document.createElement("script");
         script.type = "text/javascript";
         script.id = scriptID;
         if (script.readyState) { //IE
             script.onreadystatechange = function () {
-                if (script.readyState === "loaded" ||
-                        script.readyState === "complete") {
+                if (script.readyState == "loaded" || script.readyState == "complete") {
                     script.onreadystatechange = null;
                     callback();
                 }
@@ -23,11 +26,21 @@
         document.getElementsByTagName("head")[0].appendChild(script);
     }
     var today = new Date(),
-        appScript = document.getElementById("dt_app_script"),
-        url = "https://designtools.ciditools.com/js/tools_liveView_app.js?";
+        appScript = document.getElementById('dt_app_script');
     if (appScript === null && window.jQuery === undefined) {
-        loadScript(url + today.getDate(), 'dt_app_script', function () {
-            console.log("Global App Stylesheet Ran");
+        loadScript("https://designtools.ciditools.com/js/tools_liveView_app.js?" + today.getDate(), 'dt_app_script', function () {
+             console.log('DP Live View JS Ran');
         });
     }
 })();
+
+// New
+DpConfig = {};
+var script = document.createElement("script");
+let id = Date.now();
+script.src = `https://designplus.ciditools.com/js/mobile.js?${id}`;
+document.body.appendChild(script);
+////////////////////////////////////////////////////
+// END DESIGNPLUS MOBILE APP                      //
+////////////////////////////////////////////////////
+

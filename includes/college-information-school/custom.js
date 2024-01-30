@@ -1,8 +1,14 @@
 /*jslint browser: true, plusplus: true */
+/*jshint esversion: 11 */
 /*global jQuery, UWCanvas */
 
 // DESIGN TOOLS CONFIG
 // Copyright (C) 2016  Utah State University
+
+////////////////////////////////////////////////////
+// DESIGNPLUS CONFIG                            //
+////////////////////////////////////////////////////
+// Legacy
 var DT_variables = {
     iframeID: '',
     // Path to the hosted USU Design Tools
@@ -19,6 +25,39 @@ var DT_variables = {
     // add users to array (Canvas user ID not SIS user ID)
     userArray: []
 };
+
+// New
+DpPrimary = {
+    lms: 'canvas',
+    templateCourse: '1737169',
+    hideButton: true,
+    hideLti: false,
+    extendedCourse: '', // added in sub-account theme
+    sharedCourse: '', // added from localStorage
+    courseFormats: [],
+    canvasRoles: [],
+    canvasUsers: [],
+    canvasCourseIds: [],
+    plugins: [],
+    excludedModules: [],
+    includedModules: [],
+    lang: 'en',
+    defaultToLegacy: false,
+    enableVersionSwitching: true,
+    hideSwitching: false,
+};
+
+// merge with extended/shared customizations config
+DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) };
+
+$(function () {
+    const uriPrefix = (location.href.includes('.beta.')) ? 'beta.' : '';
+    const toolsUri = (DpConfig.toolsUri) ? DpConfig.toolsUri : `https://${uriPrefix}designplus.ciditools.com/`;
+    $.getScript(`${toolsUri}js/controller.js`);
+});
+////////////////////////////////////////////////////
+// END DESIGNPLUS CONFIG                        //
+////////////////////////////////////////////////////
 
 if (window.location.hostname === 'canvas.uw.edu') {
     window.eesyLaunchConfig = {
