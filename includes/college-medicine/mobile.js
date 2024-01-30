@@ -1,7 +1,9 @@
+/*jshint esversion: 11 */
+
 ////////////////////////////////////////////////////
-// DESIGN TOOLS MOBILE APP                        //
+// DESIGNPLUS MOBILE APP                          //
 ////////////////////////////////////////////////////
-// Copyright (C) 2017  Utah State University
+// Legacy
 (function () {
     function loadScript(url, scriptID, callback) {
         var script = document.createElement("script");
@@ -26,10 +28,18 @@
         appScript = document.getElementById('dt_app_script');
     if (appScript === null && window.jQuery === undefined) {
         loadScript("https://designtools.ciditools.com/js/tools_liveView_app.js?" + today.getDate(), 'dt_app_script', function () {
-             console.log('Global App Stylesheet Ran');
+             console.log('DP Live View JS Ran');
         });
     }
 })();
+
+// New
+DpConfig = {};
+var script = document.createElement("script");
+let id = Date.now();
+script.src = `https://designplus.ciditools.com/js/mobile.js?${id}`;
+document.body.appendChild(script);
 ////////////////////////////////////////////////////
-// END DESIGN TOOLS CODE                          //
+// END DESIGNPLUS MOBILE APP                      //
 ////////////////////////////////////////////////////
+
