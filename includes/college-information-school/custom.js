@@ -82,12 +82,6 @@ if (window.location.hostname === 'canvas.uw.edu') {
     $.getScript('//' + window.eesyLaunchConfig.host + '/resources/js/canvas/launch.js?stmp=' + now);
 
     $(document).ready(function () {
-        // Design Tools JS
-        $.getScript(DT_variables.path + 'js/master_controls.js');
-
-        // Design Tools Mobile JS
-        //$.getScript(DT_variables.path + 'js/tools_liveView_app.js?' + now);
-
         // Atomic Search JS
         $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
     });
