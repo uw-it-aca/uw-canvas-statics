@@ -1,3 +1,6 @@
+/*jslint browser: true, plusplus: true */
+/*jshint esversion: 11 */
+
 ////////////////////////////////////////////////////
 // DESIGN TOOLS CONFIG                            //
 ////////////////////////////////////////////////////
@@ -34,13 +37,33 @@ var DT_variables = {
         ]
 };
 
-// Run the necessary code when a page loads
-$(document).ready(function () {
-    'use strict';
-    // This runs code that looks at each page and determines what controls to create
-    $.getScript(DT_variables.path + 'js/master_controls.js', function () {
-        console.log('master_controls.js loaded');
-    });
+DpPrimary = {
+    lms: 'canvas',
+    templateCourse: '1738979',
+    hideButton: true,
+    hideLti: false,
+    extendedCourse: '', // added in sub-account theme
+    sharedCourse: '', // added from localStorage
+    courseFormats: [],
+    canvasRoles: [],
+    canvasUsers: [],
+    canvasCourseIds: [],
+    plugins: [],
+    excludedModules: [],
+    includedModules: [],
+    lang: 'en',
+    defaultToLegacy: false,
+    enableVersionSwitching: true,
+    hideSwitching: false,
+};
+
+// merge with extended/shared customizations config
+DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) };
+
+$(function () {
+    const uriPrefix = (location.href.includes('.beta.')) ? 'beta.' : '';
+    const toolsUri = (DpConfig.toolsUri) ? DpConfig.toolsUri : `https://${uriPrefix}designplus.ciditools.com/`;
+    $.getScript(`${toolsUri}js/controller.js`);
 });
 ////////////////////////////////////////////////////
 // END DESIGN TOOLS CONFIG                        //
