@@ -1,0 +1,26 @@
+/*********************************************************************/
+/***** BEGIN DESIGN TOOLS THEME IMPORT & CUSTOMIZATION  **************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+/* For Main CSS file */
+/*@import url(https://designtools.ciditools.com/css/themes.css);*/
+/* For Mobile app CSS file */
+@import url(https://designtools.ciditools.com/css/app.css);
+/* Institution color customizations */
+@import url(https://designtools.ciditools.com/css/inst_theme_overrides.css);
+/* Theme Colors */
+:root {
+  --dt-color-primary: #4B2E83;
+  --dt-color-primary-contrast: #FFFFFF;
+  --dt-color-primary-dark-text: #4B2E83;
+  --dt-color-secondary: #E8E3D3;
+  --dt-color-secondary-contrast: #000000;
+  --dt-color-secondary-dark-text: #000000;
+  --dt-color-accent: #85754D;
+  --dt-color-accent-contrast: #FFFFFF;
+  --dt-color-graybg: #E6E6E6;
+  --dt-color-graybg-contrast: #000000;
+}
+/*********************************************************************/
+/***** END DESIGN TOOLS HEME IMPORT & CUSTOMIZATION   ****************/
+/*********************************************************************/
