@@ -19,16 +19,16 @@
 /*@import url(https://designplus.ciditools.com/css/mobile.css);*/
 
 :root {
-    --dt-color-primary: #4B2E83;
+    --dt-color-primary: #32006E;
     --dt-color-primary-contrast: #FFFFFF;
-    --dt-color-primary-dark-text: #4b2e83;
-    --dt-color-secondary: #85754D;
+    --dt-color-primary-dark-text: #32006E;
+    --dt-color-secondary: #B7A57A;
     --dt-color-secondary-contrast: #000000;
-    --dt-color-secondary-dark-text: #736743;
-    --dt-color-accent: #FFFFFF;
+    --dt-color-secondary-dark-text: #5C5235;
+    --dt-color-accent: #C5B4E3;
     --dt-color-accent-contrast: #000000;
-    --dt-color-accent-dark-text: #6B6B6B;
-    --dt-color-gray: #D9D9D9;
+    --dt-color-accent-dark-text: #564E63;
+    --dt-color-gray: #E6E6E6;
     --dt-color-gray-contrast: #000000;
     --dt-color-gray-dark-text: #636363;
     --dt-color-white: #FFFFFF;

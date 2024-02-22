@@ -10,14 +10,14 @@
 @import url(https://designtools.ciditools.com/css/inst_theme_overrides.css);
 /* Theme Colors */
 :root {
-  --dt-color-primary: #4B2E83;
+  --dt-color-primary: #32006E;
   --dt-color-primary-contrast: #FFFFFF;
-  --dt-color-primary-dark-text: #4B2E83;
-  --dt-color-secondary: #E8E3D3;
+  --dt-color-primary-dark-text: #32006e;
+  --dt-color-secondary: #B7A57A;
   --dt-color-secondary-contrast: #000000;
-  --dt-color-secondary-dark-text: #000000;
-  --dt-color-accent: #85754D;
-  --dt-color-accent-contrast: #FFFFFF;
+  --dt-color-secondary-dark-text: #5C5235;
+  --dt-color-accent: #C5B4E3;
+  --dt-color-accent-contrast: #000000;
   --dt-color-graybg: #E6E6E6;
   --dt-color-graybg-contrast: #000000;
 }
