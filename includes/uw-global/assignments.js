@@ -15,4 +15,9 @@
     $('label[for="assignment_vericite_enabled"]').whenExists(function () {
         $(this).next().append(simcheck_info);
     });
+
+    // Hide external tool option
+    $('a:contains("Google Assignments (LTI 1.3)")').whenExists(function () {
+        $(this).closest('li').hide();
+    });
 }(jQuery));
