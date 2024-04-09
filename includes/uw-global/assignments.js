@@ -17,6 +17,7 @@
     });
 
     // Hide external tool option
+    /*
     $(document).ajaxComplete(function (ev, xhr, data) {
         if (data.url.match(/launch_definitions/)) {
             $('a:contains("Google Assignments (LTI 1.3)")').whenExists(function () {
@@ -24,4 +25,5 @@
             });
         }
     });
+    */
 }(jQuery));
