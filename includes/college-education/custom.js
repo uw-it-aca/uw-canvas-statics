@@ -9,7 +9,7 @@ var DT_variables = {
         iframeID: '',
         // Path to the hosted USU Design Tools
         path: 'https://designtools.ciditools.com/',
-        templateCourse: '1436647',
+        templateCourse: '1756272',
         // OPTIONAL: Button will be hidden from view until launched using shortcut keys
         hideButton: true,
     	 // OPTIONAL: Limit by course format
@@ -40,7 +40,7 @@ var DT_variables = {
 // New
 DpPrimary = {
     lms: 'canvas',
-    templateCourse: '1738987',
+    templateCourse: '1756272',
     hideButton: true,
     hideLti: false,
     extendedCourse: '', // added in sub-account theme
