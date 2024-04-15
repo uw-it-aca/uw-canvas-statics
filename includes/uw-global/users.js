@@ -126,7 +126,7 @@
     });
 
     addExternalToolButtons();
-    setupLaunchButton():
+    setupLaunchButton();
     $('#addUsers').whenExists(function () {
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('a.btn#addUsers').click();
