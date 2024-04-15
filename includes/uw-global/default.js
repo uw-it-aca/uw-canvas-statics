@@ -157,15 +157,11 @@ var setUWCanvas = function ($) {
 };
 
 (function() {
-    if (window.jQuery) {
+    var script = document.createElement('script');
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
+    script.type = 'text/javascript';
+    script.onload = function() {
         window.UWCanvas = setUWCanvas(window.jQuery);
-    } else {
-        var script = document.createElement('script');
-        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
-        script.type = 'text/javascript';
-        script.onload = function() {
-            window.UWCanvas = setUWCanvas(window.jQuery);
-        };
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
+    };
+    document.getElementsByTagName('head')[0].appendChild(script);
 })();
