@@ -69,9 +69,10 @@
     }
 
     function setupLaunchButton() {
-        var el = document.getElementById('addUsers');
-        el.replaceWith(el.cloneNode(true));
-        el.addEventListener('click', openAddUsersModal);
+        var el = document.getElementById('addUsers'),
+            cl = el.cloneNode(true);
+        el.replaceWith(cl);
+        cl.addEventListener('click', openAddUsersModal);
     }
 
     function addExternalToolButtons() {
