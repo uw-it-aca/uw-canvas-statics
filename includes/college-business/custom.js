@@ -28,7 +28,7 @@ DpPrimary = {
     extendedCourse: '', // added in sub-account theme
     sharedCourse: '', // added from localStorage
     courseFormats: [],
-    canvasRoles: [],
+    canvasRoles: ['admin'],
     canvasUsers: [],
     canvasCourseIds: [],
     plugins: [],
