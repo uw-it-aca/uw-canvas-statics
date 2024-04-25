@@ -124,7 +124,7 @@
     });
 
     addExternalToolButtons();
-    $(document).ready(function () {
+    $(window).load(function () {
         setupLaunchButton();
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('a.btn#addUsers').click();
