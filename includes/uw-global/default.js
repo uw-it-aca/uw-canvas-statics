@@ -115,13 +115,13 @@ var setUWCanvas = function ($) {
         var href = window.location.href;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
             load_script('/uw-global/settings.js');
-        } else if (href.match(/\/courses\/\d+\/assignments/)) {
-            load_script('/uw-global/assignments.js');
+//        } else if (href.match(/\/courses\/\d+\/assignments/)) {
+//            load_script('/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/)?([?#].*)?$/)) {
             load_script('/vendor/handlebars-1.3.0.min.js');
             load_script('/uw-global/users.js');
-        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
-            load_script('/uw-global/gradebook.js');
+//        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
+//            load_script('/uw-global/gradebook.js');
         } else if (href.match(/\/courses\/\d+\/external_tools/)) {
             load_script('/uw-global/external_tools.js');
         } else if (href.match(/\/courses\/\d+\/content_migrations$/)) {
@@ -157,11 +157,15 @@ var setUWCanvas = function ($) {
 };
 
 (function() {
-    var script = document.createElement('script');
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
-    script.type = 'text/javascript';
-    script.onload = function() {
+    if (window.jQuery) {
         window.UWCanvas = setUWCanvas(window.jQuery);
-    };
-    document.getElementsByTagName('head')[0].appendChild(script);
+    } else {
+        var script = document.createElement('script');
+        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js';
+        script.type = 'text/javascript';
+        script.onload = function() {
+            window.UWCanvas = setUWCanvas(window.jQuery);
+        };
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
 })();
