@@ -8,16 +8,19 @@
         $('span:contains("View Ungraded as 0")').closest('li').css('display', 'none');
     }
 
-    hide_view_ungraded_as_0();
-
-    var MenuObserver = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            hide_view_ungraded_as_0();
+    function setUpMenuObserver() {
+        var MenuObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                hide_view_ungraded_as_0();
+            });
         });
-    });
 
-    MenuObserver.observe(document.getElementById('gradebook-toolbar'), {
-        attributes: true, subtree: true
-    });
+        MenuObserver.observe(document.getElementById('gradebook-toolbar'), {
+            attributes: true, subtree: true
+        });
+    }
+
+    hide_view_ungraded_as_0();
+    $(window).load(setUpMenuObserver);
 
 }(jQuery));

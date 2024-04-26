@@ -69,10 +69,7 @@
     }
 
     function setupLaunchButton() {
-        var el = document.getElementById('addUsers'),
-            cl = el.cloneNode(true);
-        el.replaceWith(cl);
-        cl.addEventListener('click', openAddUsersModal);
+        $("#addUsers").off().on('click', openAddUsersModal);
     }
 
     function addExternalToolButtons() {
@@ -127,8 +124,8 @@
     });
 
     addExternalToolButtons();
-    setupLaunchButton();
-    $('#addUsers').whenExists(function () {
+    $(window).load(function () {
+        setupLaunchButton();
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('a.btn#addUsers').click();
         }
