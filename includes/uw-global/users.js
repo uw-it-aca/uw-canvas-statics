@@ -71,6 +71,7 @@
     function setupLaunchButton() {
         var iid = window.setInterval(function () {
             var listeners = $._data($('#addUsers').get(0), 'events');
+            console.log(listeners)
             if (listeners !== undefined) {
                 $('#addUsers').off().on('click', openAddUsersModal);
                 window.clearInterval(iid);
