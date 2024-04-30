@@ -120,8 +120,6 @@ var setUWCanvas = function ($) {
         } else if (href.match(/\/courses\/\d+\/users(\/)?([?#].*)?$/)) {
             load_script('/vendor/handlebars-1.3.0.min.js');
             load_script('/uw-global/users.js');
-//        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
-//            load_script('/uw-global/gradebook.js');
         } else if (href.match(/\/courses\/\d+\/external_tools/)) {
             load_script('/uw-global/external_tools.js');
         } else if (href.match(/\/courses\/\d+\/content_migrations$/)) {
