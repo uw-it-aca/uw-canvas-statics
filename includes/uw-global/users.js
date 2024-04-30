@@ -69,8 +69,13 @@
     }
 
     function setupLaunchButton() {
-        var listeners = $._data($('#addUsers').get(0), 'events');
-        // $("#addUsers").off().on('click', openAddUsersModal);
+        var iid = window.setInterval(function () {
+            var listeners = $._data($('#addUsers').get(0), 'events');
+            if (listeners !== undefined) {
+                $('#addUsers').off().on('click', openAddUsersModal);
+                window.clearInterval(iid);
+            }
+        }, 50);
     }
 
     function addExternalToolButtons() {
