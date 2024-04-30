@@ -70,9 +70,6 @@
 
     function setupLaunchButton() {
         $('#addUsers').off().on('click', openAddUsersModal);
-        $(window).load(function() {
-            $('#addUsers').off().on('click', openAddUsersModal);
-        });
     }
 
     function addExternalToolButtons() {
@@ -127,7 +124,7 @@
     });
 
     addExternalToolButtons();
-    $('#addUsers').whenExists(function () {
+    $(window).load(function() {
         setupLaunchButton();
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('a.btn#addUsers').click();
