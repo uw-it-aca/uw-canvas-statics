@@ -18,20 +18,17 @@ var setUWCanvas = function ($) {
         unauthorized_title = "You don't have access to this content",
         unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>';
 
-    $.fn.whenExists = function (handler) {
-        var selector = this.selector,
-            n = 0,
-            $nodes,
-            iid = window.setInterval(function () {
-                $nodes = $(selector);
-                $nodes.each(handler);
-                if ($nodes.length > 0 || ++n > 200) {
+    $.fn.extend({
+        whenExists: function(handler) {
+        var n = 0,
+            iid = window.setInterval(function() {
+                $(this).each(handler);
+                if (this.length > 0 || ++n > 200) {
                     window.clearInterval(iid);
                 }
             }, 50);
-
-        return $(selector);
-    };
+        }
+    });
 
     function load_script(path) {
         var base_path = (window.location.hostname === 'canvas.uw.edu') ?
