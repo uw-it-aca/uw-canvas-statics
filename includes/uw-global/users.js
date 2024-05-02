@@ -121,9 +121,9 @@
 
     addExternalToolButtons();
     $('#addUsers').whenExists(function () {
-        this.off().on('click', openAddUsersModal);
+        $('#addUsers').off().on('click', openAddUsersModal);
         if (window.location.href.match(/\/users\?add_people=true$/)) {
-            this.click();
+            $('#addUsers').click();
         }
     });
 }(jQuery));

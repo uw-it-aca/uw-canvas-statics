@@ -7,7 +7,7 @@
 
     // Custom text for grading scale modal
     $('#gpa-scale-dialog').whenExists(function () {
-        this.html(gpa_scale_info);
+        $('#gpa-scale-dialog').html(gpa_scale_info);
     });
 
     // Hide external tool option
