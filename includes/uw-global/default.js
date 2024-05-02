@@ -20,8 +20,8 @@ var setUWCanvas = function ($) {
 
     $.fn.extend({
         whenExists: function(handler) {
-        var n = 0,
-            iid = window.setInterval(function() {
+            var n = 0,
+                iid = window.setInterval(function() {
                 $(this).each(handler);
                 if (this.length > 0 || ++n > 200) {
                     window.clearInterval(iid);
