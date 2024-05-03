@@ -27,6 +27,7 @@ var setUWCanvas = function ($) {
                     window.clearInterval(iid);
                 }
             }, 50);
+            return $(this);
         }
     });
 
