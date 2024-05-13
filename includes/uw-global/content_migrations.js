@@ -8,7 +8,7 @@
 
     // Custom text for migrating course content
     $('#content').whenExists(function () {
-        $(this).prepend(panopto_info);
-        $(this).prepend(zoom_info);
+        $('#content').prepend(panopto_info);
+        $('#content').prepend(zoom_info);
     });
 }(jQuery));
