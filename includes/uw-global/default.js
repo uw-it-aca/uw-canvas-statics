@@ -18,20 +18,18 @@ var setUWCanvas = function ($) {
         unauthorized_title = "You don't have access to this content",
         unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>';
 
-    $.fn.whenExists = function (handler) {
-        var selector = this.selector,
-            n = 0,
-            $nodes,
-            iid = window.setInterval(function () {
-                $nodes = $(selector);
-                $nodes.each(handler);
-                if ($nodes.length > 0 || ++n > 200) {
+    $.fn.extend({
+        whenExists: function(handler) {
+            var n = 0,
+                iid = window.setInterval(function() {
+                $(this).each(handler);
+                if (this.length > 0 || ++n > 200) {
                     window.clearInterval(iid);
                 }
             }, 50);
-
-        return $(selector);
-    };
+            return $(this);
+        }
+    });
 
     function load_script(path) {
         var base_path = (window.location.hostname === 'canvas.uw.edu') ?
@@ -115,19 +113,17 @@ var setUWCanvas = function ($) {
         var href = window.location.href;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
             load_script('/uw-global/settings.js');
-//        } else if (href.match(/\/courses\/\d+\/assignments/)) {
-//            load_script('/uw-global/assignments.js');
+        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
+            load_script('/uw-global/gradebook.js');
+        } else if (href.match(/\/courses\/\d+\/assignments/)) {
+            load_script('/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/)?([?#].*)?$/)) {
             load_script('/vendor/handlebars-1.3.0.min.js');
             load_script('/uw-global/users.js');
-//        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
-//            load_script('/uw-global/gradebook.js');
         } else if (href.match(/\/courses\/\d+\/external_tools/)) {
             load_script('/uw-global/external_tools.js');
         } else if (href.match(/\/courses\/\d+\/content_migrations$/)) {
             load_script('/uw-global/content_migrations.js');
-        } else if (href.match(/\/courses\/\d+\/pages/)) {
-            load_script('/uw-global/pages.js');
         } else if (href.match(/\/courses\/?$/)) {
             load_script('/uw-global/courses.js');
         } else if (href.match(/\/profile\/settings$/)) {
