@@ -33,22 +33,25 @@
     }
 
     function update_app_info() {
-        var el = $('span.externalApps_label_text').closest('h2').next();
+        var el = $('header');
         el.children('p').css('display', 'none');
         el.append(app_center_info);
     }
 
     // Custom text for App Center
-    $('#tab-tools-link').whenExists(function () {
-        $(this).on('click', update_app_info);
-        update_app_info();
-    });
+    $(window).load(function () {
+        $('#tab-tools-link').whenExists(function () {
+            $('#tab-tools-link').on('click', update_app_info);
+            update_app_info();
+        });
 
-    // Custom text for "public syllabus" option
-    $('label[for="course_syllabus_visibility_option"]').whenExists(function () {
-        $(this).closest('div').append(public_syllabus_label);
-    });
+        // Custom text for "public syllabus" option
+        $('label[for="course_syllabus_visibility_option"]').whenExists(function () {
+            $('label[for="course_syllabus_visibility_option"]').closest(
+                'div').append(public_syllabus_label);
+        });
 
-    add_navigation_warnings();
+        add_navigation_warnings();
+    });
 
 }(jQuery));

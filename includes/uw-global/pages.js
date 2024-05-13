@@ -44,13 +44,13 @@
     function add_deselect_front_page_option() {
         /*jshint validthis: true */
         // This is the table of contents view
-        var item = $(this).closest('tr').find('a.delete-menu-item').first(),
-            url = $(this).closest('tr').find('a.wiki-page-link').first().attr('href'),
+        var item = $('span.front-page').closest('tr').find('a.delete-menu-item').first(),
+            url = $('span.front-page').closest('tr').find('a.wiki-page-link').first().attr('href'),
             label = 'Deselect as Front Page';
 
         if (item.length === 0) {
             // This is the page edit view
-            item = $(this).closest('div').find('a.delete_page').first();
+            item = $('span.front-page').closest('div').find('a.delete_page').first();
             url = window.location.href;
         }
 
