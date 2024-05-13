@@ -113,8 +113,10 @@ var setUWCanvas = function ($) {
         var href = window.location.href;
         if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
             load_script('/uw-global/settings.js');
-//        } else if (href.match(/\/courses\/\d+\/assignments/)) {
-//            load_script('/uw-global/assignments.js');
+        } else if (href.match(/\/courses\/\d+\/gradebook/)) {
+            load_script('/uw-global/gradebook.js');
+        } else if (href.match(/\/courses\/\d+\/assignments/)) {
+            load_script('/uw-global/assignments.js');
         } else if (href.match(/\/courses\/\d+\/users(\/)?([?#].*)?$/)) {
             load_script('/vendor/handlebars-1.3.0.min.js');
             load_script('/uw-global/users.js');
