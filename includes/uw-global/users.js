@@ -70,6 +70,7 @@
 
     function initAddUsers() {
         $('#addUsers').off().on('click', openAddUsersModal);
+        $('#add_people_modal').remove();
     }
 
     function addExternalToolButtons() {
