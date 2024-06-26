@@ -126,7 +126,7 @@
 
     addExternalToolButtons();
     $('#addUsers').whenExists(initAddUsers);
-    $(window).load(function () {
+    $(window).on('load', function () {
         initAddUsers();
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('#addUsers').click();

@@ -39,7 +39,7 @@
     }
 
     // Custom text for App Center
-    $(window).load(function () {
+    $(window).on('load', function () {
         $('#tab-tools-link').whenExists(function () {
             $('#tab-tools-link').on('click', update_app_info);
             update_app_info();
