@@ -68,6 +68,11 @@
         }
     }
 
+    function initAddUsers() {
+        $('#addUsers').off().on('click', openAddUsersModal);
+        $('#add_people_modal').remove();
+    }
+
     function addExternalToolButtons() {
         var $groups = $('a.context_external_tool_' + UWCanvas.uw_groups_external_id),
             $photos = $('a.context_external_tool_' + UWCanvas.course_photos_external_id);
@@ -120,8 +125,9 @@
     });
 
     addExternalToolButtons();
-    $('#addUsers').whenExists(function () {
-        $('#addUsers').off().on('click', openAddUsersModal);
+    $('#addUsers').whenExists(initAddUsers);
+    $(window).on('load', function () {
+        initAddUsers();
         if (window.location.href.match(/\/users\?add_people=true$/)) {
             $('#addUsers').click();
         }
