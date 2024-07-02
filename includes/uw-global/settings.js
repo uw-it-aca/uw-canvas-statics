@@ -33,8 +33,8 @@
     }
 
     function update_app_info() {
-        var el = $('header');
-        el.children('p').css('display', 'none');
+        var el = $('div.AppList').children('header').first();
+        el.find('p').css('display', 'none');
         el.append(app_center_info);
     }
 
