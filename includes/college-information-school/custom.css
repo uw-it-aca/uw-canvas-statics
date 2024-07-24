@@ -992,7 +992,7 @@ li.module-zero {
 }
 #kl_wrapper_3.kl_colored_headings_box_left .well,
 #kl_wrapper_3.kl_colored_headings .well {
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   border: 1px solid #e3e3e3;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
@@ -1177,7 +1177,7 @@ li.module-zero {
 }
 #kl_wrapper_3.kl_flat_sections_main .well,
 #kl_wrapper_3.kl_flat_sections .well {
-   background-color: #f5f5f5;
+   background-color: #f7f7f7;
    border: 1px solid #e3e3e3;
    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
@@ -1556,7 +1556,7 @@ li.module-zero {
   margin: 5px 0
 }
 #kl_wrapper_3.kl_uw_ischool_1 #instructorclassinfo {
-  background: #f5f5f5;
+  background: #f7f7f7;
   padding: 5px 20px 15px 20px;
   overflow: auto;
 }
@@ -1626,7 +1626,7 @@ li.module-zero {
 #kl_wrapper_3.kl_uw_ischool_1 h3:not(.ui-state-default), #kl_wrapper_3.kl_uw_ischool_1_mod h3:not(.ui-state-default) {
   margin: 15px 0 10px 0;
   padding: 5px 14px;
-  background: #f5f5f5;
+  background: #f7f7f7;
   color: #4b2e83;
   line-height: 36px;
   text-transform: uppercase;
@@ -1650,7 +1650,7 @@ li.module-zero {
 }
 #kl_wrapper_3.kl_uw_ischool_1 #kl_banner {
   margin: 0;
-  background: #f5f5f5;
+  background: #f7f7f7;
   padding: 12px 20px;
 }
 #kl_wrapper_3.kl_uw_ischool_1 #kl_banner h2 {
@@ -1681,7 +1681,7 @@ li.module-zero {
   font-weight: bold;
   margin: 0 auto;
   padding: 8px 12px;
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   text-align: center;
   display: table;
 }
@@ -1795,7 +1795,7 @@ li.module-zero {
 #kl_wrapper_3.kl_uw_ischool_1 .modules li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
+  background: #f7f7f7 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
   border-radius: 5px;
@@ -1839,7 +1839,7 @@ li.module-zero {
 #kl_wrapper_3.kl_uw_ischool_1 .modules-zero li {
   list-style-type: none;
   padding: 8px 10px 8px 58px;
-  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
+  background: #f7f7f7 url(https://staff.washington.edu/ellepl/canvastemplates/numbers.png) no-repeat;
   background-position: 0 -905px;
   margin-bottom: 5px;
   border: 1px solid #E0E0E0;
@@ -1893,7 +1893,7 @@ li.module-zero {
   border: 3px solid #dcdcdc;
   padding: 12px 20px 17px 20px;
   margin-bottom: 20px;
-  background: #f5f5f5;
+  background: #f7f7f7;
 }
 #kl_wrapper_3.kl_uw_ischool_1 .modules li a:hover,
 #kl_wrapper_3.kl_uw_ischool_1 .modules-zero li a:hover {
@@ -1917,7 +1917,7 @@ li.module-zero {
 }
 
 .kl_uw_ischool_1 .ui-state-default {
-  background: #f5f5f5 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
+  background: #f7f7f7 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
 }
 .kl_uw_ischool_1 .ui-state-default:hover {
   background: #F0F0F0 url(https://staff.washington.edu/ellepl/canvastemplates/expand.png) no-repeat !important;
@@ -1974,7 +1974,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 
 @media screen and (max-width: 499px) {
   .kl_uw_ischool_1 .ui-state-default {
-    background: #f5f5f5 !important;
+    background: #f7f7f7 !important;
     background-image: none !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
@@ -2097,7 +2097,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 #kl_wrapper_3.kl_uw_ischool_2 h5 {
 }
 #kl_wrapper_3.kl_uw_ischool_2 #kl_navigation ul {
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
 }
 #kl_wrapper_3.kl_uw_ischool_2 #kl_navigation li a,
 #kl_wrapper_3.kl_uw_ischool_2 #kl_navigation li a:hover,
@@ -2209,7 +2209,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   margin: 20px 0 0 0;
   border-left: 5px solid #4b2e83;
   padding: 5px 14px;
-  background: #f5f5f5;
+  background: #f7f7f7;
   color: #4b2e83;
   line-height: 36px;
   text-transform: uppercase;
@@ -2235,7 +2235,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   display: table;
   table-layout: fixed;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   overflow: hidden;
   margin: 0 0 10px 0;
   padding: 0;
@@ -2430,7 +2430,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
 }
 #kl_wrapper_3.kl_flat_sections_ischool_main .well,
 #kl_wrapper_3.kl_flat_sections_ischool .well {
-   background-color: #f5f5f5;
+   background-color: #f7f7f7;
    border: 1px solid #e3e3e3;
    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
@@ -2620,7 +2620,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background: #f5f5f5;
+  background: #f7f7f7;
   border: 1px solid #E0E0E0;
   border-radius: 0 5px 5px 0;
   line-height: 24px;
@@ -2686,7 +2686,7 @@ body:not(.course-menu-expanded) #kl_wrapper_3.kl_uw_ischool_1 #kl_navigation li 
   counter-increment: my-awesome-counter 1;
   position: relative;
   padding-left: 110px;
-  background: #f5f5f5;
+  background: #f7f7f7;
   border: 1px solid #E0E0E0;
   border-radius: 0 5px 5px 0;
   line-height: 40px;
