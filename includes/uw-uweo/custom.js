@@ -1,5 +1,4 @@
 /*jslint browser: true, regexp:true, esversion: 11 */
-/*global jQuery */
 
 ////////////////////////////////////////////////////
 // DESIGNPLUS CONFIG                            //
@@ -33,6 +32,7 @@ $(function () {
 // END DESIGNPLUS CONFIG                        //
 ////////////////////////////////////////////////////
 
+/*global jQuery */
 (function ($) {
     'use strict';
 
