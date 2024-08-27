@@ -1,6 +1,41 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*********************************************************************/
+/***** BEGIN DESIGNPLUS THEME IMPORT & CUSTOMIZATION  ****************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+
+/* For Main CSS files */
+@import url(https://designplus.ciditools.com/css/content.css);
+@import url(https://designplus.ciditools.com/css/editor.css);
+/* For Mobile app CSS file */
+/*@import url(https://designplus.ciditools.com/css/mobile.css);*/
+
+:root {
+    --dt-color-primary: #4B2E83;
+    --dt-color-primary-contrast: #FFFFFF;
+    --dt-color-primary-dark-text: #4B2E83;
+    --dt-color-secondary: #E8E3D3;
+    --dt-color-secondary-contrast: #000000;
+    --dt-color-secondary-dark-text: #000000;
+    --dt-color-accent: #85754D;
+    --dt-color-accent-contrast: #000000;
+    --dt-color-accent-dark-text: #756A44;
+    --dt-color-gray: #CCCCCC;
+    --dt-color-gray-contrast: #000000;
+    --dt-color-gray-dark-text: #636363;
+    --dt-color-white: #FFFFFF;
+    --dt-color-white-contrast: #000000;
+    --dt-color-white-dark-text: #707070;
+    --dt-color-graybg: #E6E6E6;
+    --dt-color-graybg-contrast: #000000;
+}
+
+/*********************************************************************/
+/***** END DESIGNPLUS THEME IMPORT & CUSTOMIZATION   *****************/
+/*********************************************************************/
+
 /* Orig DLD Course CSS */
 cite {
   font-style: italic;
