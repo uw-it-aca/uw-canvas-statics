@@ -18,7 +18,7 @@ var DT_variables = {
         iframeID: '',
         // Path to the hosted USU Design Tools
         path: 'https://designtools.ciditools.com/',
-        templateCourse: '1737171',
+        templateCourse: '1792776',
         // OPTIONAL: Button will be hidden from view until launched using shortcut keys
         hideButton: true,
     	 // OPTIONAL: Limit by course format
