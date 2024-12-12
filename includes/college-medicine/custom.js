@@ -85,9 +85,6 @@ $(function () {
     var now = new Date().getTime();
 
     $(document).ready(function () {
-        // Design Tools JS
-        $.getScript(DT_variables.path + 'js/master_controls.js');
-
         // Atomic Search JS
         $.getScript('https://d2u53n8918fnto.cloudfront.net/atomic_search_widget.js?ts=' + now);
     });
