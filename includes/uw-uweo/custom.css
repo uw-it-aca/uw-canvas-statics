@@ -1496,13 +1496,13 @@ div.entry-content {
 }
 
 /* The dropdown container */
-.dropdown {
+.dropdown:not('.main-nav-more') {
   float: left;
   overflow: hidden;
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+.dropdown:not('.main-nav-more') .dropbtn {
   font-size: 1rem;
   border: none;
   outline: none;
@@ -1513,7 +1513,7 @@ div.entry-content {
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:not('.main-nav-more'):hover .dropbtn {
   background-color: cornflowerblue;
 }
 
@@ -1541,7 +1541,7 @@ div.entry-content {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:not('.main-nav-more'):hover .dropdown-content {
   display: block;
 }
 
