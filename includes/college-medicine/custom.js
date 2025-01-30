@@ -114,27 +114,10 @@ $(function () {
 // END DESIGNPLUS CONFIG                        //
 ////////////////////////////////////////////////////
 
-if (window.location.hostname === 'canvas.uw.edu') {
-    window.eesyLaunchConfig = {
-        host: 'uw.eesysoft.com',
-        key: 'yrLJv5Hs',
-        supportTab: true
-    };
-} else {
-    window.eesyLaunchConfig = {
-        host: 'uwstaging.eesysoft.com',
-        key: '5M2g7rk9',
-        supportTab: true
-    };
-}
-
 (function ($) {
     'use strict';
 
     var now = new Date().getTime();
-
-    // EesySoft
-    $.getScript('//' + window.eesyLaunchConfig.host + '/resources/js/canvas/launch.js?stmp=' + now);
 
     $(document).ready(function () {
         // Atomic Search JS
