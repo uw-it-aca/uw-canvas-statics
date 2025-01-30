@@ -2,6 +2,14 @@
 /*jshint esversion: 11 */
 /*global jQuery, UWCanvas */
 
+/*EvaluationKIT START*/
+var evalkit_jshosted = document.createElement('script');
+evalkit_jshosted.setAttribute('defer', 'defer');
+evalkit_jshosted.setAttribute('type', 'text/javascript');
+evalkit_jshosted.setAttribute('src', 'https://uwsom.evaluationkit.com/canvas/js');
+document.getElementsByTagName('head')[0].appendChild(evalkit_jshosted);
+/*EvaluationKIT END*/
+
 // DESIGN TOOLS CONFIG
 // Copyright (C) 2016  Utah State University
 
@@ -13,7 +21,7 @@ var DT_variables = {
     iframeID: '',
     // Path to the hosted USU Design Tools
     path: 'https://designtools.ciditools.com/',
-    templateCourse: '1705122',
+    templateCourse: '1792776',
     // OPTIONAL: Button will be hidden from view until launched using shortcut keys
     hideButton: true,
     // OPTIONAL: Limit tools loading by users role
@@ -29,7 +37,7 @@ var DT_variables = {
 // New
 DpPrimary = {
     lms: 'canvas',
-    templateCourse: '1737169',
+    templateCourse: '1737171',
     hideButton: true,
     hideLti: false,
     extendedCourse: '', // added in sub-account theme
@@ -42,7 +50,7 @@ DpPrimary = {
     excludedModules: [],
     includedModules: [],
     lang: 'en',
-    defaultToLegacy: false,
+    defaultToLegacy: true,
     enableVersionSwitching: true,
     hideSwitching: false,
     beforeUpgrade: function($content) {
