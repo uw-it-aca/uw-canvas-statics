@@ -65,6 +65,53 @@ DpPrimary = {
     defaultToLegacy: true,
     enableVersionSwitching: true,
     hideSwitching: false,
+    beforeUpgrade: function($content) {
+        function cleanupStyleAttribute(element) {
+            let style = $(element).attr('style');
+            if (!style) {
+                return; // No style attribute to clean up
+            }
+            let styles = style.split(';');
+            let cleanedStyles = {};
+            for (let i = 0; i < styles.length; i++) {
+                let styleItem = styles[i].trim();
+                if (styleItem === "") {
+                   continue;
+                }
+                let parts = styleItem.split(':');
+                let property = parts[0].trim();
+                let value = parts[1].trim();
+                // Keep only the last occurrence of each property
+                cleanedStyles[property] = value;
+            }
+            // Reconstruct the style attribute
+            let cleanedStyleString = Object.keys(cleanedStyles)
+                .map(key => `${key}: ${cleanedStyles[key]}`)
+                .join('; ');
+            $(element).attr('style', cleanedStyleString).attr('data-mce-style', cleanedStyleString);
+        }
+        // Move accordion heading children styles to heading and unwrap children
+        $content.find('.kl_panels_wrapper.kl_panels_accordion .kl_panel_heading').each(function(index, heading) {
+            let headingStyle = ($(heading).attr('style')) ? $(heading).attr('style') : '';
+            if ($(this).find('*').length > 0) {
+                $(this).find('*').each(function(ind, child) {
+                    let childStyle = ($(child).attr('style'));
+                    if (childStyle) {
+                        headingStyle += childStyle;
+                    }
+                    if ($(this).prop('tagName') === 'STRONG') {
+                        $(this).attr('style', '').attr('data-mce-style', '');
+                    } else {
+                        $(this).contents().unwrap();
+                    }
+                })
+            }
+            if (headingStyle) {
+               $(heading).attr('style', headingStyle).attr('data-mce-style', headingStyle);
+               cleanupStyleAttribute(heading);
+            }
+        });
+    },
 };
 
 // merge with extended/shared customizations config
