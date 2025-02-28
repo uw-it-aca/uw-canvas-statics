@@ -104,7 +104,7 @@ DpPrimary = {
                     } else {
                         $(this).contents().unwrap();
                     }
-                })
+                });
             }
             if (headingStyle) {
                $(heading).attr('style', headingStyle).attr('data-mce-style', headingStyle);
