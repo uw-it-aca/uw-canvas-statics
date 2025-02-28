@@ -1,3 +1,381 @@
+/* DesignPlus 2025 Jan27 additions START */
+
+body .dp-wrapper.dp-flat-sections .dp-link-grid.dp-flat-sections li,
+body .dp-wrapper.dp-flat-sections .dp-link-grid.dp-flat-sections-main li,
+body .dp-wrapper.dp-flat-sections-main .dp-link-grid.dp-flat-sections li,
+body .dp-wrapper.dp-flat-sections-main .dp-link-grid.dp-flat-sections-main li {
+	font-size: 1.2em
+}
+
+body .dp-wrapper.dp-flat-sections .dp-link-grid.dp-flat-sections>ul>li a i,
+body .dp-wrapper.dp-flat-sections .dp-link-grid.dp-flat-sections-main>ul>li a i,
+body .dp-wrapper.dp-flat-sections-main .dp-link-grid.dp-flat-sections>ul>li a i,
+body .dp-wrapper.dp-flat-sections-main .dp-link-grid.dp-flat-sections-main>ul>li a i {
+	min-width: unset !important
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections {
+	margin-bottom: 10px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections .dp-header-pre,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections .dp-header-pre {
+	font-size: .5625em;
+	line-height: 30px;
+	min-width: 250px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections .dp-header-title,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections .dp-header-title {
+	font-size: .94em;
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections .dp-heading,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections .dp-heading {
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections .dp-header-subtitle,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections .dp-header-subtitle {
+	font-size: 20px;
+	padding: 10px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections .dp-header-description,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections .dp-header-description {
+	font-size: 18px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections-main,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections-main {
+	padding: 0 0 7px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections-main .dp-header-title,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections-main .dp-header-title {
+	font-size: .94em;
+	line-height: 1.5;
+	font-weight: 400;
+	padding-bottom: 10px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections-main .dp-header-subtitle,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections-main .dp-header-subtitle {
+	font-size: 20px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-header.dp-flat-sections-main .dp-header-description,
+body .dp-wrapper.dp-flat-sections-main .dp-header.dp-flat-sections-main .dp-header-description {
+	font-size: 18px;
+	line-height: 1.2
+}
+
+body .dp-wrapper.dp-flat-sections .dp-banner-image img,
+body .dp-wrapper.dp-flat-sections-main .dp-banner-image img {
+	padding-bottom: 3px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-content-block,
+body .dp-wrapper.dp-flat-sections-main .dp-content-block {
+	padding: 20px 40px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title):not(.dp-panel-content h3):not(.dp-panel-content .dp-wrapper .h3):not(.dp-wrapper .dp-panel-content .h3),
+body .dp-wrapper.dp-flat-sections-main .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title):not(.dp-panel-content h3):not(.dp-panel-content .dp-wrapper .h3):not(.dp-wrapper .dp-panel-content .h3) {
+	color: #000;
+	font-size: 1.375em;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: 3px;
+	line-height: 1.5;
+	margin-top: .7em
+}
+
+body .dp-wrapper.dp-flat-sections .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title):not(.dp-panel-content h3):not(.dp-panel-content .dp-wrapper .h3):not(.dp-wrapper .dp-panel-content .h3)>i,
+body .dp-wrapper.dp-flat-sections-main .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title):not(.dp-panel-content h3):not(.dp-panel-content .dp-wrapper .h3):not(.dp-wrapper .dp-panel-content .h3)>i {
+	font-size: 25px;
+	line-height: 49px;
+	padding-left: 3px
+}
+
+body .dp-wrapper.dp-flat-sections .dp-content-block h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body .dp-wrapper.dp-flat-sections-main .dp-content-block h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.125em;
+	letter-spacing: 3px;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #000;
+	font-weight: 400;
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-badge .dp-header.dp-badge {
+	margin-bottom: 10px
+}
+
+body .dp-wrapper.dp-badge .dp-header.dp-badge .dp-header-title {
+	padding: .625rem;
+	line-height: 1.5em;
+	font-family: PT Sans;
+	font-weight: 400
+}
+
+body .dp-wrapper.dp-badge .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	margin: 1.25rem 0;
+	font-size: 1.5rem;
+	font-family: PT Sans;
+	font-weight: 400;
+	line-height: 1.54;
+	padding: 0 .625rem
+}
+
+body .dp-wrapper.dp-badge .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title)>i {
+	margin-right: .625rem
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-heading {
+	background: var(--dt-color-primary)
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-pre {
+	padding: 5px;
+	margin-right: 0
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-pre .dp-header-pre-1 {
+	font-size: .625em;
+	padding: 0px 7px
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-pre .dp-header-pre-2 {
+	font-size: .9em;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+	background: #fff;
+	color: var(--dt-color-primary-dark-text);
+	padding: 0px 2px;
+	margin: 3px 0 0 0;
+	font-weight: 700;
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-title {
+	font-size: .875em;
+	font-weight: 500;
+	line-height: 1.6;
+	padding: 5px 10px
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-subtitle {
+	margin-top: 17px;
+	line-height: 34px;
+	padding: 0px 40px 0px 10px;
+	font-family: PT Sans
+}
+
+body .dp-wrapper.dp-bookmark .dp-header.dp-bookmark .dp-header-description {
+	padding: 10px;
+	font-family: PT Sans
+}
+
+body .dp-wrapper.dp-bookmark .dp-link-grid {
+	margin-bottom: 5px
+}
+
+body .dp-wrapper.dp-bookmark .dp-link-grid a {
+	padding: 1px 10px;
+	border-radius: 5px;
+	margin: 0 10px 2px 0;
+	background: #fff;
+	color: var(--dt-color-primary-dark-text);
+	text-decoration: none;
+	font-size: 1.2em;
+	border: 1px solid #f4f4f4;
+	line-height: 30px
+}
+
+body .dp-wrapper.dp-bookmark .dp-content-block {
+	padding-bottom: 0px;
+	margin-bottom: 0px
+}
+
+body .dp-wrapper.dp-bookmark .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.25em;
+	font-weight: 400;
+	font-family: PT Sans;
+	line-height: 1.7;
+	padding: 0 80px 0 10px;
+	margin-bottom: 20px
+}
+
+body .dp-wrapper.dp-bookmark .dp-content-block h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.125em;
+	font-weight: 400;
+	font-family: PT Sans;
+	line-height: 1.5;
+	padding: 0 65px 0 10px
+}
+
+body .dp-wrapper.dp-bookmark .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title)>i {
+	margin-right: .625rem
+}
+
+.user_content .dp-wrapper.dp-basic-bar .dp-link-grid li a:not(.btn):not(.Button):not(.ui-button):not([role=button]) {
+	text-decoration-style: solid;
+	text-decoration-line: underline;
+	text-decoration-color: var(--ic-link-color)
+}
+
+body .dp-wrapper.dp-basic-bar .dp-link-grid li {
+	font-size: 1.2em;
+	padding: .625em
+}
+
+body .dp-wrapper.dp-basic-bar .dp-link-grid li a {
+	text-wrap-mode: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+
+body .dp-wrapper.dp-basic-bar .dp-link-grid li a i {
+	margin-right: .25em
+}
+
+body .dp-wrapper.dp-basic-bar .dp-header.dp-basic-bar {
+	margin-bottom: 10px
+}
+
+body .dp-wrapper.dp-basic-bar .dp-header.dp-basic-bar .dp-heading {
+	padding: 5px 10px 5px 2px;
+	font-size: 1.8em
+}
+
+body .dp-wrapper.dp-basic-bar .dp-header.dp-basic-bar .dp-header-subtitle {
+	padding: 10px;
+	margin: 5px 0px;
+	font-size: 1.25em
+}
+
+body .dp-wrapper.dp-basic-bar .dp-header.dp-basic-bar .dp-header-description {
+	margin: 10px 0px;
+	padding: 10px
+}
+
+body .dp-wrapper.dp-basic-bar .dp-banner-image {
+	padding-top: 10px;
+	padding-bottom: 0px
+}
+
+body .dp-wrapper.dp-basic-bar .dp-banner-image img {
+	border-radius: unset
+}
+
+body .dp-wrapper.dp-basic-bar .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	color: #000;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-basic-bar .dp-content-block h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.125em;
+	font-weight: 400;
+	line-height: 1.5
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color {
+	margin-bottom: 3px
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color .dp-heading {
+	font-size: 1.565em
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color .dp-header-pre {
+	font-size: .96em;
+	padding: 10px 6px;
+	margin-right: 0px
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color .dp-header-title {
+	padding: 10px
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color .dp-header-subtitle {
+	padding: 5px 20px;
+	font-family: PT Sans
+}
+
+body .dp-wrapper.dp-basic-color .dp-header.dp-basic-color .dp-header-description {
+	padding: 10px 20px;
+	font-family: PT Sans
+}
+
+body .dp-wrapper.dp-basic-color .dp-link-grid.dp-link-grid-angle-r li {
+	padding-top: .2em
+}
+
+body .dp-wrapper.dp-basic-color .dp-link-grid.dp-link-grid-angle-r li a {
+	padding: .2em .75em
+}
+
+body .dp-wrapper.dp-basic-color .dp-content-block {
+	margin-bottom: 5px;
+	padding-bottom: 5px
+}
+
+body .dp-wrapper.dp-basic-color .dp-content-block h3:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.5em;
+	color: #000
+}
+
+body .dp-wrapper.dp-basic-color .dp-content-block h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.125em
+}
+
+body .dp-wrapper.dp-square-right h2:not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h2:not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	background: var(--dt-color-primary);
+	color: var(--dt-color-primary-contrast);
+	padding: 5px;
+	margin-top: 20px;
+	line-height: 30px
+}
+
+body .dp-wrapper.dp-square-right h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.125em
+}
+
+body .dp-wrapper.dp-square-right h5:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h5:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.075em
+}
+
+body .dp-wrapper.dp-square-right h6:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h6:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	font-size: 1.025em
+}
+
+body .dp-wrapper.dp-square-right h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body .dp-wrapper.dp-square-right h5:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body .dp-wrapper.dp-square-right h6:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h4:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h5:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right h6:not(.dp-heading):not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	border-bottom: none;
+	padding: 0
+}
+
+body .dp-wrapper.dp-square-right.variation-2 h2:not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title),
+body #dp-wrapper.dp-square-right.variation-2 h2:not(.dp-panel-heading):not(.dp-ignore-theme):not(.card-title) {
+	background: var(--dt-color-secondary);
+	color: var(--dt-color-secondary-contrast)
+}
+
+/* DesignPlus 2025 Jan27 additions END */
+
 /*EvaluationKIT START*/
 @import 'https://uwsom.evaluationkit.com/canvas/css';
 /*EvaluationKIT END*/
