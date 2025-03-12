@@ -3,6 +3,8 @@
 /*********************************************************************/
 /* Import statements need to be at the top of your CSS file */
 
+@import url(https://designplus.ciditools.com/css/legacy_overrides.css);
+
 /*** Legacy Sidebar ***/
 /* For Main CSS file */
 /*@import url(https://designtools.ciditools.com/css/themes.css);*/
