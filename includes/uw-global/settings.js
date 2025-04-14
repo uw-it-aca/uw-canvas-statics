@@ -9,12 +9,10 @@
         app_center_info = '<p>Apps are an easy way to add new features to Canvas. They can be added to individual courses, or to all courses in an account. Once configured, you can link to them through course modules and create assignments for assessment tools.</p><p>UW-IT has reviewed the third-party apps listed below, and found they meet our established minimum criteria. <a href="https://itconnect.uw.edu/learn/tools/canvas/canvas-help-for-instructors/canvas-app-center/" target="_blank">Find more information</a> or get help with the App Center.</p>';
 
     function add_navigation_warnings() {
-        var $add = $('#nav_edit_tab_id_context_external_tool_' +
-                UWCanvas.add_users_external_id),
-            $groups = $('#nav_edit_tab_id_context_external_tool_' +
-                UWCanvas.uw_groups_external_id),
-            $photos = $('#nav_edit_tab_id_context_external_tool_' +
-                UWCanvas.course_photos_external_id);
+        var tool_id_prefix = '#nav_edit_tab_id_context_external_tool_',
+            $add = $(UWCanvas.add_users_external_ids.map(id => tool_id_prefix + id).join(',')),
+            $groups = $(UWCanvas.uw_groups_external_ids.map(id => tool_id_prefix + id).join(',')),
+            $photos = $(UWCanvas.course_photos_external_ids.map(id => tool_id_prefix + id).join(','));
 
         $add.append(nav_link_text_shown);
         $add.find('.disabled_message')

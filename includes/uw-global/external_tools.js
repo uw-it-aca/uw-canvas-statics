@@ -29,8 +29,8 @@
         }
     }
 
-    $.each([UWCanvas.uw_groups_external_id,
-            UWCanvas.course_photos_external_id], function () {
+    $.each([UWCanvas.uw_groups_external_ids[0],
+            UWCanvas.course_photos_external_ids[0]], function () {
         if ($('body.context_external_tool_' + this).length === 1) {
             add_back_button_users();
             add_breadcrumbs_users(this);

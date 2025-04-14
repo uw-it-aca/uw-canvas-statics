@@ -11,10 +11,15 @@ $.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
 var setUWCanvas = function ($) {
     'use strict';
 
+    /*
+     *  NOTE: add users, grups and course photo external id order is significant.
+     *  All listed ids are hidden in course navigation, but the first id is
+     *  the integration launched on the embedded action button or link.
+     */
     var base_url = 'https://storage.googleapis.com/',
-        add_users_external_id = '31483',
-        uw_groups_external_id = '31485',
-        course_photos_external_id = '37913',
+        add_users_external_ids = ['208228', '31483'],
+        uw_groups_external_ids = ['31485'],
+        course_photos_external_ids = ['37913'],
         unauthorized_title = "You don't have access to this content",
         unauthorized_message = '<div id="uw_unauthorized_message"><span role="alert"><h3 class="unauth-alert-head">You don\'t have access to this content.</h3><p class="unauth-alert unauth-alert-bold">Please contact the course instructor.</span><p class="unauth-alert">Describe the resource that you are trying to access and provide your UW NetID.</p></span><hr style="width:675px;"><div class="unauth-extra"><p>Common reasons content is unavailable include:</p><ul class="unauth-extra-list"><li>Content has not yet been published</li><li>You are not enrolled in the course</li><li>Link provided is incorrect</li><li>Content has been deleted</li></ul></div></div>';
 
@@ -146,9 +151,9 @@ var setUWCanvas = function ($) {
         load_script: load_script,
         add_right_nav_button: add_right_nav_button,
         uw_modal_dialog: uw_modal_dialog,
-        add_users_external_id: add_users_external_id,
-        uw_groups_external_id: uw_groups_external_id,
-        course_photos_external_id: course_photos_external_id
+        add_users_external_ids: add_users_external_ids,
+        uw_groups_external_ids: uw_groups_external_ids,
+        course_photos_external_id: course_photos_external_ids
     };
 };
 
