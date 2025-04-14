@@ -1,4 +1,4 @@
-/*jslint browser: true, plusplus: true */
+/*jslint browser: true, plusplus: true, esversion: 6 */
 /*global jQuery, UWCanvas */
 (function ($) {
     'use strict';
@@ -10,24 +10,18 @@
 
     function add_navigation_warnings() {
         var tool_id_prefix = '#nav_edit_tab_id_context_external_tool_',
-            $add = $(UWCanvas.add_users_external_ids.map(id => tool_id_prefix + id).join(',')),
-            $groups = $(UWCanvas.uw_groups_external_ids.map(id => tool_id_prefix + id).join(',')),
-            $photos = $(UWCanvas.course_photos_external_ids.map(id => tool_id_prefix + id).join(','));
+            add_users_external_ids = (UWCanvas.add_users_external_ids === undefined ) ? [UWCanvas.add_users_external_id] : UWCanvas.add_users_external_ids,
+            uw_groups_external_ids = (UWCanvas.uw_groups_external_ids === undefined ) ? [UWCanvas.uw_groups_external_id] : UWCanvas.uw_groups_external_ids,
+            course_photos_external_ids = (UWCanvas.course_photos_external_ids === undefined ) ? [UWCanvas.course_photos_external_id] : UWCanvas.course_photos_external_ids;
 
-        $add.append(nav_link_text_shown);
-        $add.find('.disabled_message')
-            .text(nav_link_text_hidden)
-            .addClass('uw_disabled_message');
-
-        $groups.append(nav_link_text_shown);
-        $groups.find('.disabled_message')
-               .text(nav_link_text_hidden)
-               .addClass('uw_disabled_message');
-
-        $photos.append(nav_link_text_shown);
-        $photos.find('.disabled_message')
-               .text(nav_link_text_hidden)
-               .addClass('uw_disabled_message');
+        $(add_users_external_ids.concat(
+            uw_groups_external_ids).concat(
+                course_photos_external_ids).map(
+                    id => tool_id_prefix + id).join(',')).append(
+                        nav_link_text_shown).find(
+                            '.disabled_message').text(
+                                nav_link_text_hidden).addClass(
+                                    'uw_disabled_message');
     }
 
     function update_app_info() {

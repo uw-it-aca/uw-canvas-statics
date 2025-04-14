@@ -50,7 +50,7 @@
 
     function openAddUsersModal(e) {
         var add_users_external_id = UWCanvas.add_users_external_ids[0],
-        var $users = $('a.context_external_tool_' + add_users_external_id);
+            $users = $('a.context_external_tool_' + add_users_external_id);
 
         e.preventDefault();
         e.stopPropagation();
@@ -75,8 +75,8 @@
     }
 
     function addExternalToolButtons() {
-        var uw_groups_external_id = UWCanvas.uw_groups_external_ids[0],
-            course_photos_external_id = UWCanvas.course_photos_external_ids[0],
+        var uw_groups_external_id = (UWCanvas.uw_groups_external_ids === undefined ) ? UWCanvas.uw_groups_external_id : UWCanvas.uw_groups_external_ids[0],
+            course_photos_external_id = (UWCanvas.course_photos_external_ids === undefined ) ? UWCanvas.course_photos_external_id : UWCanvas.course_photos_external_ids[0],
             $groups = $('a.context_external_tool_' + uw_groups_external_id),
             $photos = $('a.context_external_tool_' + course_photos_external_id);
 
