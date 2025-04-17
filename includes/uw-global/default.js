@@ -153,7 +153,7 @@ var setUWCanvas = function ($) {
         uw_modal_dialog: uw_modal_dialog,
         add_users_external_ids: add_users_external_ids,
         uw_groups_external_ids: uw_groups_external_ids,
-        course_photos_external_id: course_photos_external_ids
+        course_photos_external_ids: course_photos_external_ids
     };
 };
 
