@@ -12,7 +12,7 @@
         }
     }
 
-    function add_breadcrumbs_users($tool_link) {
+    function add_breadcrumbs_users(tool_id) {
         var $ul = $('#breadcrumbs ul'),
             $li,
             $a;
@@ -24,15 +24,13 @@
             $li.append($a);
             $ul.append($li);
             $li = $('<li>');
-            $li.text($tool_link.text());
+            $li.text($('a.context_external_tool_' + tool_id).text());
             $ul.append($li);
         }
     }
 
     function add_page_cues() {
-        var external_link_prefix = 'body.context_external_tool_',
-            external_link_ids,
-            $external_links;
+        var external_link_ids;
 
         if (typeof UWCanvas.uw_groups_external_ids === 'undefined') {
             external_link_ids = [UWCanvas.uw_groups_external_id,
@@ -42,11 +40,13 @@
                                  UWCanvas.course_photos_external_ids[0]];
         }
 
-        $external_links = $(external_link_ids.map(id => external_link_prefix + id).join(','));
-        if ($external_links.length == 1) {
-            add_back_button_users();
-            add_breadcrumbs_users($external_links.first());
-        }
+        $.each(external_link_ids, function () {
+            if ($('body.context_external_tool_' + this).length === 1) {
+                add_back_button_users();
+                add_breadcrumbs_users(this);
+                return false;
+            }
+        });
     }
 
     $(document).ready(add_page_cues);
