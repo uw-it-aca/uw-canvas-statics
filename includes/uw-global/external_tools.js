@@ -42,7 +42,7 @@
                                  UWCanvas.course_photos_external_ids[0]];
         }
 
-        $external_links = $(external_ids.map(id => external_link_prefix + id).join(','));
+        $external_links = $(external_link_ids.map(id => external_link_prefix + id).join(','));
         if ($external_links.length == 1) {
             add_back_button_users();
             add_breadcrumbs_users($external_links.first());
