@@ -1,4 +1,4 @@
-/*jslint browser: true, plusplus: true */
+/*jslint browser: true, plusplus: true, esversion: 6 */
 /*global jQuery, UWCanvas */
 (function ($) {
     'use strict';
@@ -29,12 +29,25 @@
         }
     }
 
-    $.each([UWCanvas.uw_groups_external_id,
-            UWCanvas.course_photos_external_id], function () {
-        if ($('body.context_external_tool_' + this).length === 1) {
-            add_back_button_users();
-            add_breadcrumbs_users(this);
-            return false;
+    function add_page_cues() {
+        var external_link_ids;
+
+        if (typeof UWCanvas.uw_groups_external_ids === 'undefined') {
+            external_link_ids = [UWCanvas.uw_groups_external_id,
+                                 UWCanvas.course_photos_external_id];
+        } else {
+            external_link_ids = [UWCanvas.uw_groups_external_ids[0],
+                                 UWCanvas.course_photos_external_ids[0]];
         }
-    });
+
+        $.each(external_link_ids, function () {
+            if ($('body.context_external_tool_' + this).length === 1) {
+                add_back_button_users();
+                add_breadcrumbs_users(this);
+                return false;
+            }
+        });
+    }
+
+    $(document).ready(add_page_cues);
 }(jQuery));
