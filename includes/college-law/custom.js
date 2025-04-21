@@ -4,7 +4,7 @@
     "use strict";
 
     function update_library_links() {
-        var library_external_ids = ["208227", "12299"],
+        var library_external_ids = ["210510", "12299"],
             library_url = "https://lib.law.uw.edu/lawlibrarycanvas",
             link_text = "Law Library",
             link_id_prefix;
