@@ -17,7 +17,7 @@ var setUWCanvas = function ($) {
      *  the integration launched on the embedded action button or link.
      */
     var base_url = 'https://storage.googleapis.com/',
-        add_users_external_ids = ['210509', '31483'],
+        add_users_external_ids = ['211348', '31483'],
         uw_groups_external_ids = ['31485'],
         course_photos_external_ids = ['37913'],
         unauthorized_title = "You don't have access to this content",
