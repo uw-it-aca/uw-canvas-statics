@@ -116,7 +116,7 @@ var setUWCanvas = function ($) {
 
     $(document).ready(function () {
         var href = window.location.href;
-        if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)$/)) {
+        if (href.match(/\/(accounts|courses)\/\d+\/(settings|details)([?#].*)?$/)) {
             load_script('/uw-global/settings.js');
         } else if (href.match(/\/courses\/\d+\/gradebook/)) {
             load_script('/uw-global/gradebook.js');
