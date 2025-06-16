@@ -14,6 +14,8 @@ var DT_variables = {
     // Path to the hosted USU Design Tools
     path: 'https://designtools.ciditools.com/',
     templateCourse: '1705122',
+    // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
+    overrideAllyHeadings: true,
     // OPTIONAL: Button will be hidden from view until launched using shortcut keys
     hideButton: true,
     // OPTIONAL: Limit tools loading by users role
