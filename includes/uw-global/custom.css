@@ -8,7 +8,7 @@ a[href$="confirm_action?event=conclude"] { display: none !important; }
 a.context_external_tool_213237, a.context_external_tool_37913 { display: none !important; }
 
 /* hide uw groups nav link */
-a.context_external_tool_31485 { display: none !important; }
+a.context_external_tool_213239, a.context_external_tool_31485 { display: none !important; }
 
 /* hide uw people nav link */
 a.context_external_tool_31483, a.context_external_tool_211348 { display: none !important; }
