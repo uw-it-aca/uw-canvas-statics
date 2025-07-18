@@ -19,21 +19,21 @@
 @import url(https://designplus.ciditools.com/css/mobile.css);
 
 :root {
-    --dt-color-primary: #4B2E83;
-    --dt-color-primary-contrast: #FFFFFF;
-    --dt-color-primary-dark-text: #4b2e83;
-    --dt-color-secondary: #85754D;
-    --dt-color-secondary-contrast: #000000;
-    --dt-color-secondary-dark-text: #736743;
-    --dt-color-accent: #FFFFFF;
-    --dt-color-accent-contrast: #000000;
-    --dt-color-accent-dark-text: #6B6B6B;
-    --dt-color-gray: #D9D9D9;
-    --dt-color-gray-contrast: #000000;
-    --dt-color-gray-dark-text: #636363;
-    --dt-color-white: #FFFFFF;
-    --dt-color-white-contrast: #000000;
-    --dt-color-white-dark-text: #707070;
+    --dt-color-primary: #32006E; /* Husky Purple */
+    --dt-color-primary-contrast: #FFFFFF; /* White */
+    --dt-color-primary-dark-text: #32006E; /* Husky Purple */
+    --dt-color-secondary: #E8E3D3; /* Husky Gold */
+    --dt-color-secondary-contrast: #000000; /* Black */
+    --dt-color-secondary-dark-text: #736743; /* Yellow Metal like Heritage Gold - not web safe */
+    --dt-color-accent: #C5B4E3; /* Accent Lavender */
+    --dt-color-accent-contrast: #000000; /* Black */
+    --dt-color-accent-dark-text: #32006E; /* Husky Purple */
+    --dt-color-gray: #D9D9D9; /* Grey85 */
+    --dt-color-gray-contrast: #000000; /* Black*/
+    --dt-color-gray-dark-text: #636363; /* Grey39 or Very Dark Grey * /
+    --dt-color-white: #FFFFFF; /* White * /
+    --dt-color-white-contrast: #000000; /* Black * /
+    --dt-color-white-dark-text: #707070; /* Grey44 or Very Dark Grey */
 }
 
 /*********************************************************************/
