@@ -5,7 +5,7 @@
 a[href$="confirm_action?event=conclude"] { display: none !important; }
 
 /* hide course photos nav link */
-a.context_external_tool_214315, a.context_external_tool_37913 { display: none !important; }
+a.context_external_tool_214724, a.context_external_tool_37913 { display: none !important; }
 
 /* hide uw groups nav link */
 a.context_external_tool_214313, a.context_external_tool_31485 { display: none !important; }
