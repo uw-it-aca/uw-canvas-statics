@@ -272,29 +272,7 @@
     background-color: #e5e5e5;
   }
   /***End of accordion code**/
-  /***Heading CSS H2, H3***/
-  .user_content h2, .user_content .h2 {
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    color: #4b2e83
-}
-  /* h2 {
-    font-weight: bolder !important;
-    text-transform: uppercase !important;
-    font-family: sans-serif;
-  } */
-  /* h3 {
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    font-family: sans-serif;
-  } */
-  .user_content h3, .user_content .h3 {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: sans-serif;
-}
-  /***Heading end**/
+
   /*****Home Page tiles*****/
   .tile_container {
     max-width: 100%;
