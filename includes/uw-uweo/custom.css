@@ -1347,7 +1347,7 @@ icon-publish,
 .context_module_item .item_name .title a,
 .ig-list .type.icon,
 .ig-list .ig-row .ig-published item_name {
-  color: #0081bd;
+  color: var(--ic-link-color:);
 }
 
 .item-group-container {
@@ -1356,10 +1356,9 @@ icon-publish,
 }
 
 /* Assignment Page */
-
-div.ig-type-icon i {
-  color: #ffffff;
-}
+/* div.ig-type-icon i {  */
+/*  color: #ffffff;      */
+/*}                      */
 
 /* Discussion Forum Threading */
 .replies {
