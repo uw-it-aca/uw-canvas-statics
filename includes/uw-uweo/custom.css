@@ -436,6 +436,12 @@ ul.plain {
   cursor: pointer;
 }
 
+/* style Canvas H1 */
+.course-list { 
+	color: #4b2e83;
+    border-bottom: solid 2px #4b2e83;
+}
+
 .cursor, .Cursor {
   cursor: pointer;
 }
@@ -717,6 +723,11 @@ span.keyterm {
 
 .padTop, .padtop {
   padding-top: 16px;
+}
+
+/* style Canvas H1 */
+.page-heading {
+	width: 100%;
 }
 
 .pointer, .Pointer {
