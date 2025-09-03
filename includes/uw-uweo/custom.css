@@ -112,7 +112,7 @@ pre {
   color:#990000;
   white-space: pre;
   font-size: 95%;
-  background: #F3F3E9;
+  background: #FDFDFB;
   border: thin solid #85754d;
   padding: 6px;
   border-radius: 10px 10px 10px 10px;
@@ -437,7 +437,7 @@ ul.plain {
 }
 
 /* style Canvas H1 */
-.course-list { 
+.page-title { 
 	color: #4b2e83;
     border-bottom: solid 2px #4b2e83;
 }
@@ -629,7 +629,6 @@ span.keyterm {
   line-height: 200%;
 }
 
-
 .math {
   font-family: "Courier New", Courier, monospace;
   font-size: 90%;
@@ -646,6 +645,7 @@ span.keyterm {
 .mobileheader, .mobileHeader {
   position: absolute;
   top: 10px;
+  color: #4b2e83;
   background-color: #e8e3d3;
   font-size: 1.3em;
 }
@@ -679,8 +679,8 @@ span.keyterm {
 }
 
 .oddrow, .oddRow {
-  background: #F3F3E9;
-   color: #000000;
+  background-color: #F3F3E9;
+  color: #000000;
 }
 
 .oddrow a:link, .oddRow a:link,
@@ -744,6 +744,7 @@ span.keyterm {
 }
 
 .purpleStyle, .purplestyle {
+  color: #4b2e83;
   background-color: #f5f5f5;
   border-bottom: 5px solid #4b2e83;
 }
@@ -1323,7 +1324,7 @@ div.readingBox p, div.readingbox p {
 
 /* Canvas Icon Overrides*/
 
-.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
+.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
   color: #4b2e83;
 }
 
