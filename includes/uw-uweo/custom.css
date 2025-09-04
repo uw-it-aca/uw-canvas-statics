@@ -436,12 +436,6 @@ ul.plain {
   cursor: pointer;
 }
 
-/* style Canvas H1 */
-.page-title { 
-	color: #4b2e83;
-    border-bottom: solid 2px #4b2e83;
-}
-
 .cursor, .Cursor {
   cursor: pointer;
 }
@@ -818,9 +812,11 @@ span.keyterm {
   list-style-type: square;
 }
 
+  /* style Canvas H1 Assignments and Quizzes */
 .title{
-   text-align: left;
+  text-align: left;
   font-weight: bold;
+  color: #4b2e83;
 }
 
 .top{
@@ -830,7 +826,6 @@ span.keyterm {
 .underline {
   text-decoration: underline;
 }
-
 
 /* *-*-*-*-  Positioning Elements  *-*-* * */
 
@@ -1318,8 +1313,11 @@ div.readingBox p, div.readingbox p {
   text-decoration: none;
 }
 
-.pages.show .page-title, .page-title {
-  font-size: 2.0em;
+  /* style Canvas H1 on Pages */
+.pages.show .course-title, .course-title {
+    font-size: 2.0em;
+	color: #4b2e83;
+    border-bottom: solid 2px #4b2e83;
 }
 
 /* Canvas Icon Overrides*/
