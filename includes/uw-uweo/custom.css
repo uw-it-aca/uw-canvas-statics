@@ -1316,7 +1316,6 @@ div.readingBox p, div.readingbox p {
 
   /* style Canvas H1 on Pages, main course page, and quizzes */
 .pages.show .course-title, .course-title, .pages.show .page-title, .page-title, .ic-Action-header__Heading {
-    font-size: 2.0em;
 	color: #4b2e83;
     border-bottom: solid 2px #4b2e83;
 }
