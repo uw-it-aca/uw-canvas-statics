@@ -45,10 +45,10 @@
             h2.after(add_access_token_info);
         });
 
-        add_settings_hint();
-        replace_full_name_hint();
-        replace_display_name_hint();
-        replace_sortable_name_hint();
+        // add_settings_hint();
+        // replace_full_name_hint();
+        // replace_display_name_hint();
+        // replace_sortable_name_hint();
     });
 
 }(jQuery));
