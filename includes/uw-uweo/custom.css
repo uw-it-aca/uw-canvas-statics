@@ -66,6 +66,7 @@ code.ln:before{
 
 h1 {
   font-size: 2.2rem;
+  color: #4b2e83;
 }
 
 h2, h3, h4, h5, h6 {
@@ -812,8 +813,8 @@ span.keyterm {
   list-style-type: square;
 }
 
-  /* style Canvas H1 Assignments and Quizzes */
-.title{
+  /* style Canvas H1 Assignments */
+.title, .assignment_header h1 {
   text-align: left;
   font-weight: bold;
   color: #4b2e83;
@@ -1313,11 +1314,10 @@ div.readingBox p, div.readingbox p {
   text-decoration: none;
 }
 
-  /* style Canvas H1 on Pages */
-.pages.show .course-title, .course-title {
-    font-size: 2.0em;
+  /* style Canvas H1 on Pages, main course page, and Syllabus */
+.pages.show .course-title, .course-title, .pages.show .page-title, .page-title, .ic-Action-header__Heading, quiz-header h1 {
 	color: #4b2e83;
-    border-bottom: solid 2px #4b2e83;
+    border-bottom: solid thin #4b2e83;
 }
 
 /* Canvas Icon Overrides*/
