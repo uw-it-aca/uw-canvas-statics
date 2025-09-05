@@ -65,7 +65,8 @@ code.ln:before{
 }
 
 h1 {
-  font-size: 2.2rem;
+  color: #4b2e83;
+  border-bottom: solid thin #4b2e83;
 }
 
 h2, h3, h4, h5, h6 {
@@ -112,7 +113,7 @@ pre {
   color:#990000;
   white-space: pre;
   font-size: 95%;
-  background: #F3F3E9;
+  background: #FDFDFB;
   border: thin solid #85754d;
   padding: 6px;
   border-radius: 10px 10px 10px 10px;
@@ -284,7 +285,7 @@ ul.plain {
 
 .bgGhost {
   background-color: ghostwhite; 
-  color: #262626;"
+  color: #262626;
 }
 
 .bgnone, .bgNone {
@@ -472,7 +473,7 @@ ul.plain {
   color: #6A6A00;
 }
 
-.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, ..FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
+.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, .FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
   background-color: ghostwhite;
   border: thin solid lightgray;
   color: #262626;
@@ -623,7 +624,6 @@ span.keyterm {
   line-height: 200%;
 }
 
-
 .math {
   font-family: "Courier New", Courier, monospace;
   font-size: 90%;
@@ -640,6 +640,7 @@ span.keyterm {
 .mobileheader, .mobileHeader {
   position: absolute;
   top: 10px;
+  color: #4b2e83;
   background-color: #e8e3d3;
   font-size: 1.3em;
 }
@@ -673,8 +674,8 @@ span.keyterm {
 }
 
 .oddrow, .oddRow {
-  background: #F3F3E9;
-   color: #000000;
+  background-color: #F3F3E9;
+  color: #000000;
 }
 
 .oddrow a:link, .oddRow a:link,
@@ -719,6 +720,11 @@ span.keyterm {
   padding-top: 16px;
 }
 
+/* style Canvas H1 */
+.page-heading {
+	width: 100%;
+}
+
 .pointer, .Pointer {
   cursor: pointer;
 }
@@ -733,6 +739,7 @@ span.keyterm {
 }
 
 .purpleStyle, .purplestyle {
+  color: #4b2e83;
   background-color: #f5f5f5;
   border-bottom: 5px solid #4b2e83;
 }
@@ -806,9 +813,15 @@ span.keyterm {
   list-style-type: square;
 }
 
-.title{
-   text-align: left;
-  font-weight: bold;
+  /* style Canvas H1 Assignments */
+.assignment_header h1 {
+  text-align: left;
+  color: #4b2e83;
+  border-bottom: solid thin #4b2e83;
+}
+
+.title {
+  color: #4b2e83;
 }
 
 .top{
@@ -818,7 +831,6 @@ span.keyterm {
 .underline {
   text-decoration: underline;
 }
-
 
 /* *-*-*-*-  Positioning Elements  *-*-* * */
 
@@ -1306,13 +1318,23 @@ div.readingBox p, div.readingbox p {
   text-decoration: none;
 }
 
-.pages.show .page-title, .page-title {
-  font-size: 2.0em;
+  /* style Canvas H1 on Pages, main course page, and Syllabus */
+.pages.show .course-title, .course-title, .pages.show .page-title, .page-title, .ic-Action-header__Heading, quiz-header h1 {
+	color: #4b2e83;
+    border-bottom: solid thin #4b2e83;
 }
 
+.pages.show .course-title, .course-title {
+	font-weight: 400;
+}
+
+/* Bump up heading size on Syllabus */
+.ic-Action-header__Heading {
+	font-size:  2.2em;
+}
 /* Canvas Icon Overrides*/
 
-.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-gradebook, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
+.icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
   color: #4b2e83;
 }
 
@@ -1347,7 +1369,7 @@ icon-publish,
 .context_module_item .item_name .title a,
 .ig-list .type.icon,
 .ig-list .ig-row .ig-published item_name {
-  color: #0081bd;
+  color: #1f76b1;
 }
 
 .item-group-container {
@@ -1356,10 +1378,9 @@ icon-publish,
 }
 
 /* Assignment Page */
-
-div.ig-type-icon i {
-  color: #ffffff;
-}
+/* div.ig-type-icon i {  */
+/*  color: #ffffff;      */
+/*}                      */
 
 /* Discussion Forum Threading */
 .replies {
@@ -1473,81 +1494,6 @@ div.entry-content {
 
 .twoThirdColumn, .twothirdColumn {
   width: 60%;
-}
-
-/* Shenlan's styles for Instructor Development site *?
-/* Navbar container */
-.navbar {
-  height: 58px;
-  background-color: #4b2e83;
-  font-size: 1rem;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  color: #ffffff;
-  text-align: center;
-  height: 58px;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown:not('.main-nav-more') {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown:not('.main-nav-more') .dropbtn {
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-.navbar a:hover, .dropdown:not('.main-nav-more'):hover .dropbtn {
-  background-color: cornflowerblue;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: #000000;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #dddddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:not('.main-nav-more'):hover .dropdown-content {
-  display: block;
-}
-
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
 }
 
 /*creating columns
