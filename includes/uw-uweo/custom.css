@@ -65,8 +65,8 @@ code.ln:before{
 }
 
 h1 {
-  font-size: 2.2rem;
   color: #4b2e83;
+  border-bottom: solid thin #4b2e83;
 }
 
 h2, h3, h4, h5, h6 {
@@ -816,8 +816,8 @@ span.keyterm {
   /* style Canvas H1 Assignments */
 .title, .assignment_header h1 {
   text-align: left;
-  font-weight: bold;
   color: #4b2e83;
+  border-bottom: solid thin #4b2e83;
 }
 
 .top{
@@ -1320,6 +1320,14 @@ div.readingBox p, div.readingbox p {
     border-bottom: solid thin #4b2e83;
 }
 
+.pages.show .course-title, .course-title {
+	font-weight: 400;
+}
+
+/* Bump up heading size on Syllabus */
+.ic-Action-header__Heading {
+	font-size:  2.2em;
+}
 /* Canvas Icon Overrides*/
 
 .icon-forward, .icon-collection, .icon-discussion, .icon-user, .icon-syllabus, .icon-document, .icon-rubric, .icon-student-view, .icontext, .iconText, icon-check, icon-module {
