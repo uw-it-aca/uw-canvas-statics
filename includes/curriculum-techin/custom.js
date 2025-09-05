@@ -1,3 +1,5 @@
+/*jslint browser: true, plusplus: true */
+/*jshint esversion: 11 */
 ////////////////////////////////////////////////////
 // DESIGNPLUS CONFIG                            //
 ////////////////////////////////////////////////////
@@ -17,10 +19,10 @@ DpPrimary = {
     excludedModules: [],
     includedModules: [],
     lang: 'en',
-}
+};
 
 // merge with extended/shared customizations config
-DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) }
+DpConfig = { ...DpPrimary, ...(window.DpConfig ?? {}) };
 
 $(function () {
     const uriPrefix = (location.href.includes('.beta.')) ? 'beta.' : '';
