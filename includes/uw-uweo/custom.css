@@ -285,7 +285,7 @@ ul.plain {
 
 .bgGhost {
   background-color: ghostwhite; 
-  color: #262626;"
+  color: 262626;
 }
 
 .bgnone, .bgNone {
@@ -473,7 +473,7 @@ ul.plain {
   color: #6A6A00;
 }
 
-.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, ..FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
+.FrontPageGray, .FrontPagegray, .FrontpageGray, .frontpagegray, .FrontPageGrey, .FrontPagegrey, .FrontpageGrey, .frontpagegrey {
   background-color: ghostwhite;
   border: thin solid lightgray;
   color: #262626;
@@ -822,7 +822,7 @@ span.keyterm {
 
 .title {
   color: #4b2e83;
-)
+}
 
 .top{
   vertical-align: top;
