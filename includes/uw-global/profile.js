@@ -45,10 +45,13 @@
             h2.after(add_access_token_info);
         });
 
-        // add_settings_hint();
-        // replace_full_name_hint();
-        // replace_display_name_hint();
-        // replace_sortable_name_hint();
+        // if full name editing is disabled, add identity.uw pointer and hints to name fields
+        if ($('table.profile_table tr td span.full_name + input.edit_data').length === 0) {
+            add_settings_hint();
+            replace_full_name_hint();
+            replace_display_name_hint();
+            replace_sortable_name_hint();
+        }
     });
 
 }(jQuery));
