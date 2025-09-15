@@ -8,6 +8,20 @@
 ////////////////////////////////////////////////////
 // DESIGNPLUS CONFIG                            //
 ////////////////////////////////////////////////////
+
+/* Duplicated from top level default.js due to 'a timing issue. DesignPLUS
+looks for the window.ALLY_CFG variable before doing anything. Canvas isn't
+reliable in the order in which it loads the files in the sub-account, and
+so the sub-account JS may be loading before or after the root account JS,
+resulting in none of the Ally Relocate code running.
+ */
+/* Ally config/script required for indicators on course sub pages */
+window.ALLY_CFG = {
+  'baseUrl': 'https://prod.ally.ac',
+  'clientId': 5,
+  'lti13Id': '100000000000546'
+};
+
 // Legacy
 var DT_variables = {
     iframeID: '',
@@ -57,6 +71,7 @@ $(function () {
     const toolsUri = (DpConfig.toolsUri) ? DpConfig.toolsUri : `https://${uriPrefix}designplus.ciditools.com/`;
     $.getScript(`${toolsUri}js/controller.js`);
 });
+
 ////////////////////////////////////////////////////
 // END DESIGNPLUS CONFIG                        //
 ////////////////////////////////////////////////////
