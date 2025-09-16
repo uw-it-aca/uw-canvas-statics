@@ -23,9 +23,9 @@
         if ($('table.profile_table tr td span.full_name + input.edit_data').length === 0) {
             $.each(['name', 'short_name', 'sortable_name'], function(i, label_for) {
                 var profile_label = $(`tr th label[for=user_${label_for}]`).text().replace(/:$/, ''),
-                    preferred_name_hint = `<br>${profile_label} cannot be edited in UW Canvas. `
-                      + `Visit <a href="${identity_url}" target="_blank">Identity.UW</a> `
-                      + 'to change your Preferred Name.',
+                    preferred_name_hint = `<br>${profile_label} cannot be edited in UW Canvas. ` +
+                        `Visit <a href="${identity_url}" target="_blank">Identity.UW</a> ` +
+                        'to change your Preferred Name.',
                     hint_span = `span#hints_${label_for}`;
 
                 $(hint_span).html(preferred_name_hint);
