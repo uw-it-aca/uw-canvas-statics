@@ -1,4 +1,5 @@
 /*jslint browser: true, plusplus: true */
+/*jshint esversion: 6 */
 /*global jQuery, UWCanvas */
 (function ($) {
     'use strict';
