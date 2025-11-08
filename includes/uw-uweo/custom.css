@@ -944,7 +944,7 @@ span.keyterm {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/action.png") no-repeat top left;
 }
 
-.actionBox h6, .actionicon h6, .bookIcon, .bookicon {
+.actionBox h6, .actionicon h6, .actionBox h2, .actionicon h2, .actionBox h3, .actionicon h3, .actionBox h4, .actionicon h4, .actionBox h5, .actionicon h5, .bookIcon, .bookicon {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/book.png") no-repeat top left;
 }
 
@@ -960,7 +960,7 @@ span.keyterm {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/connect.jpg") no-repeat top left;
 }
 
-.diacriticalBox h6, .diacriticalbox h6, .audioIcon, .audioicon {
+.diacriticalBox h6, .diacriticalbox h6, .diacriticalBox h2, .diacriticalbox h2, .diacriticalBox h3, .diacriticalbox h3, .diacriticalBox h4, .diacriticalbox h4, .diacriticalBox h5, .diacriticalbox h5, .audioIcon, .audioicon {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/audio.png") no-repeat top left;
 }
 
@@ -976,15 +976,15 @@ span.keyterm {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/hourglass.png") no-repeat top left;
 }
 
-.importantBox h6, .importantbox h6, .importantIcon, .importanticon {
+.importantBox h6, .importantbox h6, .importantBox h5, .importantbox h5, .importantBox h4, .importantbox h4, .importantBox h3, .importantbox h3, .importantBox h2, .importantbox h2, .importantIcon, .importanticon {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/important.png") no-repeat top left;
 }
 
-.infoBox h6, .infobox h6, .infoIcon, .infoicon {
+.infoBox h6, .infobox h6, .infoBox h5, .infobox h5, .infoBox h4, .infobox h4, .infoBox h3, .infobox h3, .infoBox h2, .infobox h2, .infoIcon, .infoicon {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/info.png") no-repeat top left;
 }
 
-.keytermBox h6, .keytermbox h6 {
+.keytermBox h6, .keytermbox h6, .keytermBox h5, .keytermbox h5, .keytermBox h4, .keytermbox h4, .keytermBox h3, .keytermbox h3, .keytermBox h2, .keytermbox h2 {
   background: url("https://storage.googleapis.com/canvas-static/uw-uweo/img/key.png") no-repeat top left;
 }
 
@@ -1070,12 +1070,7 @@ span.keyterm {
   padding-left: 1.5em;
 }
 
-.actionBox h5, .diacriticalBox h5, .importantBox h5, .infoBox h5, .keytermBox h5, .actionbox h5, .diacriticalbox h5, .importantbox h5, .infobox h5, .keytermbox h5 {
-  color: #262626;
-  font-weight: bold;
-}
-
-.importantBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .importantbox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6 {
+.importantBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .importantbox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6, .importantBox h5, .keytermBox h5, .blueBox h5, .goldBox h5, .grayBox h5, .orangeBox h5, .purpleBox h5, .importantbox h5, .keytermbox h5, .bluebox h5, .goldbox h5, .graybox h5, .orangebox h5, .purplebox h5, .importantBox h4, .keytermBox h4, .blueBox h4, .goldBox h4, .grayBox h4, .orangeBox h4, .purpleBox h4, .importantbox h4, .keytermbox h4, .bluebox h4, .goldbox h4, .graybox h4, .orangebox h4, .purplebox h4, .importantBox h3, .keytermBox h3, .blueBox h3, .goldBox h3, .grayBox h3, .orangeBox h3, .purpleBox h3, .importantbox h3, .keytermbox h3, .bluebox h3, .goldbox h3, .graybox h3, .orangebox h3, .purplebox h3, .importantBox h2, .keytermBox h2, .blueBox h2, .goldBox h2, .grayBox h2, .orangeBox h2, .purpleBox h2, .importantbox h2, .keytermbox h2, .bluebox h2, .goldbox h2, .graybox h2, .orangebox h2, .purplebox h2 {
   text-indent: 25px;
   padding-bottom: 4px;
   font-weight: bold;
@@ -1086,7 +1081,7 @@ span.keyterm {
   margin-top: 0px;
 }
 
-.actionBox h6, .actionbox h6, .diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6 {
+.actionBox h6, .actionbox h6, .diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6, .actionBox h5, .actionbox h5, .diacriticalBox h5, .diacriticalbox h5, .infoBox h5, .infobox h5, .actionBox h4, .actionbox h4, .diacriticalBox h4, .diacriticalbox h4, .infoBox h4, .infobox h4, .actionBox h3 .actionbox h3, .diacriticalBox h3, .diacriticalbox h3, .infoBox h3, .infobox h3, .actionBox h2, .actionbox h2, .diacriticalBox h2, .diacriticalbox h2, .infoBox h2, .infobox h2  {
   text-indent: 30px;
   padding-bottom: 4px;
   font-weight: bold;
