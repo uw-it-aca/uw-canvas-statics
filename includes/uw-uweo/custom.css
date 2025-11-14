@@ -1074,22 +1074,40 @@ span.keyterm {
   text-indent: 25px;
   padding-bottom: 4px;
   font-weight: bold;
-  font-size: 105%;
   line-height: 200%;
   color: #262626;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
-.actionBox h6, .actionbox h6, .diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6, .actionBox h5, .actionbox h5, .diacriticalBox h5, .diacriticalbox h5, .infoBox h5, .infobox h5, .actionBox h4, .actionbox h4, .diacriticalBox h4, .diacriticalbox h4, .infoBox h4, .infobox h4, .actionBox h3 .actionbox h3, .diacriticalBox h3, .diacriticalbox h3, .infoBox h3, .infobox h3, .actionBox h2, .actionbox h2, .diacriticalBox h2, .diacriticalbox h2, .infoBox h2, .infobox h2  {
+.actionBox h6, .actionbox h6, .diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6, .actionBox h5, .actionbox h5, .diacriticalBox h5, .diacriticalbox h5, .infoBox h5, .infobox h5, .actionBox h4, .actionbox h4, .diacriticalBox h4, .diacriticalbox h4, .infoBox h4, .infobox h4, .actionBox h3, .actionbox h3, .diacriticalBox h3, .diacriticalbox h3, .infoBox h3, .infobox h3, .actionBox h2, .actionbox h2, .diacriticalBox h2, .diacriticalbox h2, .infoBox h2, .infobox h2  {
   text-indent: 30px;
   padding-bottom: 4px;
   font-weight: bold;
-  font-size: 105%;
   line-height: 200%;
   color: #262626;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.actionBox h6, .actionbox h6, .diacriticalBox h6, .diacriticalbox h6, .infoBox h6, .infobox h6, .importantBox h6, .keytermBox h6, .blueBox h6, .goldBox h6, .grayBox h6, .orangeBox h6, .purpleBox h6, .importantbox h6, .keytermbox h6, .bluebox h6, .goldbox h6, .graybox h6, .orangebox h6, .purplebox h6 {
+  font-size: 105%;
+}
+
+.actionBox h5, .actionbox h5, .diacriticalBox h5, .diacriticalbox h5, .infoBox h5, .infobox h5, .importantBox h5, .keytermBox h5, .blueBox h5, .goldBox h5, .grayBox h5, .orangeBox h5, .purpleBox h5, .importantbox h5, .keytermbox h5, .bluebox h5, .goldbox h5, .graybox h5, .orangebox h5, .purplebox h5 {
+  font-size: 110%;
+}
+
+.actionBox h4, .actionbox h4, .diacriticalBox h4, .diacriticalbox h4, .infoBox h4, .infobox h4, .importantBox h4, .keytermBox h4, .blueBox h4, .goldBox h4, .grayBox h4, .orangeBox h4, .purpleBox h4, .importantbox h4, .keytermbox h4, .bluebox h4, .goldbox h4, .graybox h4, .orangebox h4, .purplebox h4 {
+  font-size: 115%;
+}
+
+.actionBox h3, .actionbox h3, .diacriticalBox h3, .diacriticalbox h3, .infoBox h3, .infobox h3, .importantBox h3, .keytermBox h3, .blueBox h3, .goldBox h3, .grayBox h3, .orangeBox h3, .purpleBox h3, .importantbox h3, .keytermbox h3, .bluebox h3, .goldbox h3, .graybox h3, .orangebox h3, .purplebox h3 {
+  font-size: 120%;
+}
+
+.actionBox h2, .actionbox h2, .diacriticalBox h2, .diacriticalbox h2, .infoBox h2, .infobox h2, .importantBox h2, .keytermBox h2, .blueBox h2, .goldBox h2, .grayBox h2, .orangeBox h2, .purpleBox h2, .importantbox h2, .keytermbox h2, .bluebox h2, .goldbox h2, .graybox h2, .orangebox h2, .purplebox h2 {
+  font-size: 125%;
 }
 
 .actionBox img, .diacriticalBox img, .infoBox img, .importantBox img, .keytermBox img, .actionbox img, .diacriticalbox img, .infobox img, .importantbox img, .keytermbox img {
