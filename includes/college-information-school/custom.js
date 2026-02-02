@@ -61,6 +61,7 @@ DpPrimary = {
     defaultToLegacy: false,
     enableVersionSwitching: true,
     hideSwitching: false,
+    allyRelocate: true,
 };
 
 // merge with extended/shared customizations config
