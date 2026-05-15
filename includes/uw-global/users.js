@@ -77,8 +77,16 @@
     function addExternalToolButtons() {
         var uw_groups_external_id = (UWCanvas.uw_groups_external_ids === undefined ) ? UWCanvas.uw_groups_external_id : UWCanvas.uw_groups_external_ids[0],
             course_photos_external_id = (UWCanvas.course_photos_external_ids === undefined ) ? UWCanvas.course_photos_external_id : UWCanvas.course_photos_external_ids[0],
+            coda_external_id = (UWCanvas.coda_external_ids === undefined ) ? UWCanvas.coda_external_id : UWCanvas.coda_external_ids[0],
             $groups = $('a.context_external_tool_' + uw_groups_external_id),
-            $photos = $('a.context_external_tool_' + course_photos_external_id);
+            $photos = $('a.context_external_tool_' + course_photos_external_id),
+            $coda = $('a.context_external_tool_' + coda_external_id);
+
+        if ($coda.length) {
+            add_people_option('icon-user',
+                              $coda.text(),
+                              $coda.attr('href'));
+        }
 
         if ($photos.length) {
             add_people_option('icon-student-view',
