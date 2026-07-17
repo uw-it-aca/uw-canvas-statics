@@ -69,7 +69,7 @@
     }
 
     function get_expiration_cell(course_id) {
-        var $expire_cell = $('table tbody tr td.course-list-star-column span[data-course-id="' + course_id + '"]').
+        var $expire_cell = $('table tbody tr td.course-list-course-title-column a[href="/courses/' + course_id + '"]').
             closest('tr').
             find('td.course-list-enrolled-as-column').
             filter(function () {
