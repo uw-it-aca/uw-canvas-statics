@@ -38,7 +38,8 @@
         expire_markup_inner = '<span title="This course will be removed ' +
             '$DATE."$STYLE>$DATE</span><span class="screenreader-only">' +
             'This course will be removed $DATE.</span>',
-        teacher_regex = new RegExp('^\\s*(' + course_enrollments.join('|') + ')\\s*$');
+        teacher_regex = new RegExp('^\\s*(' + course_enrollments.join('|') + ')\\s*$'),
+        course_id_regex = new RegExp('^/courses/([0-9]+)$');
 
     function add_course_expiration_date($row, i) {
         var enrolled_as = $('td.course-list-enrolled-as-column', $row).text().trim();
@@ -51,9 +52,9 @@
     }
 
     function fetch_course_expiration_date($row) {
-        var star_cell = $('td.course-list-star-column', $row),
-            span = (star_cell.length) ? $('span[data-course-id]', $(star_cell.get(0))) : null,
-            course_id = (span.length) ? $(span).attr('data-course-id'): null;
+        var course_href = $('td.course-list-course-title-column a', $row).attr('href'),
+            course_match = course_href ? course_id_regex.exec(course_href) : null,
+            course_id = course_match ? course_match[1] : null;
 
         if (course_id) {
             $.ajax({
@@ -68,7 +69,7 @@
     }
 
     function get_expiration_cell(course_id) {
-        var $expire_cell = $('table tbody tr td.course-list-star-column span[data-course-id="' + course_id + '"]').
+        var $expire_cell = $('table tbody tr td.course-list-course-title-column a[href="/courses/' + course_id + '"]').
             closest('tr').
             find('td.course-list-enrolled-as-column').
             filter(function () {
