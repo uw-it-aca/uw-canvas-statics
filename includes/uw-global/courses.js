@@ -52,7 +52,7 @@
     }
 
     function fetch_course_expiration_date($row) {
-        var course_href = $('td.course-list-course-title-column a', $row).attr('href'),
+        var course_href = $('.course-list-course-title-column a', $row).attr('href'),
             course_match = course_href ? course_id_regex.exec(course_href) : null,
             course_id = course_match ? course_match[1] : null;
 
@@ -69,7 +69,7 @@
     }
 
     function get_expiration_cell(course_id) {
-        var $expire_cell = $('table tbody tr td.course-list-course-title-column a[href="/courses/' + course_id + '"]').
+        var $expire_cell = $('table tbody tr .course-list-course-title-column a[href="/courses/' + course_id + '"]').
             closest('tr').
             find('td.course-list-enrolled-as-column').
             filter(function () {
