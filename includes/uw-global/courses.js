@@ -42,7 +42,7 @@
         course_id_regex = new RegExp('^/courses/([0-9]+)$');
 
     function add_course_expiration_date($row, i) {
-        var enrolled_as = $('td.course-list-enrolled-as-column', $row).text().trim();
+        var enrolled_as = $('.course-list-enrolled-as-column', $row).text().trim();
 
         $row.append(expire_markup_outer);
         $row.attr('data-original-index', i);
@@ -52,9 +52,10 @@
     }
 
     function fetch_course_expiration_date($row) {
-        var course_href = $('.course-list-course-title-column a', $row).attr('href'),
+        var course_href = $('a[href^="/courses/"]', $row).first().attr('href'),
             course_match = course_href ? course_id_regex.exec(course_href) : null,
-            course_id = course_match ? course_match[1] : null;
+            course_id = course_match ? course_match[1] : null,
+            $expiration_cell = $('.course-list-expiration-column', $row);
 
         if (course_id) {
             $.ajax({
@@ -63,41 +64,19 @@
                 contentType: 'text/plain',
                 dataType: 'json'
             }).done(function (data) {
-                update_course_expiration_date(data);
+                update_course_expiration_date($expiration_cell, data);
             });
         }
     }
 
-    function get_expiration_cell(course_id) {
-        var $expire_cell = $('table tbody tr .course-list-course-title-column a[href="/courses/' + course_id + '"]').
-            closest('tr').
-            find('td.course-list-enrolled-as-column').
-            filter(function () {
-                return teacher_regex.test($(this).text());
-            }).
-            closest('tr').find('td.course-list-expiration-column');
-
-        return ($expire_cell.length === 1) ? $expire_cell : null;
-    }
-
-    function update_course_expiration_date(data) {
-        var $expiration_cell = get_expiration_cell(data.course_id),
-            expiration_date,
-            now = moment(),
-            expires,
-            markup;
-
-        if (!$expiration_cell) {
-            return;
-        }
-
-        expiration_date = moment(data.expiration_date);
-        expires = (expiration_date.diff(now, 'months') > 6) ?
-            expiration_date.fromNow(true) : expiration_date.format('MMM D, YYYY');
-        markup = expire_markup_inner.
-            replace(/\$DATE/g, expires).
-            replace(/\$STYLE/g, (now.isSame(expiration_date, 'year')) ?
-                    ' style="color: red;"': '');
+    function update_course_expiration_date($expiration_cell, data) {
+        var now = moment(),
+            expiration_date = moment(data.expiration_date),
+            expires = (expiration_date.diff(now, 'months') > 6) ?
+                expiration_date.fromNow(true) : expiration_date.format('MMM D, YYYY'),
+            markup = expire_markup_inner.
+                replace(/\$DATE/g, expires).
+                replace(/\$STYLE/g, (now.isSame(expiration_date, 'year')) ? ' style="color: red;"': '');
 
         $expiration_cell.html(markup);
         $expiration_cell.closest('td').attr('data-expiration-date', expiration_date.valueOf());
